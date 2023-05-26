@@ -3166,6 +3166,10 @@
     padding: 20px 0 10px;
     border-top: 1px solid #DFE2E9;
   }
+  .item-trigger__cell--favorite {
+    -ms-flex-order: 2;
+        order: 2;
+  }
   .bf-cell._button .delete-basket {
     padding: 0;
     height: auto;
