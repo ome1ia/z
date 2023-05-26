@@ -1,0 +1,808 @@
+//= template/header.html
+//= template/breadcrumbs.html
+<div class="box">
+    <div class="header">
+        <h1>Оформление заказа</h1>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-js/1.3.0/sticky.min.js" integrity="sha512-3z3zGiu0PabNyuTAAfznBJFpOg4owG9oQQasE5BwiiH5BBwrAjbfgIe0RCdtHJ0BQV1YF2Shgokbz2NziLnkuQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    
+<div class="box"  data-sticky-container>
+    <div class="order" >
+        <div class="order-half">
+            <div class="order-block shadow-block">
+                <div class="order-block__header flex-jcsb">
+                    <div class="ob-title">Ваши данные</div> 
+                    <div class="ob-login">
+                        <ul class="scl flex">
+                            <li class="scl-title">Войти с помощью:</li>
+                            <li class="scl_item"><a class="i-ya" target="_blank" href="#"></a></li>
+                            <li class="scl_item"><a class="i-goo" target="_blank" href="#"></a></li>
+                            <li class="scl_item"><a class="i-vkgr" target="_blank" href="#"></a></li>
+                        </ul>
+                    </div> 
+                </div>
+                <div class="order-auth">
+                    <div class="form-row">
+                        <input class="js-order-name" type="text" placeholder="Имя*"  name="name"/>
+                    </div>
+                    <div class="form-row">
+                        <input class="js-order-email" type="text" placeholder="Email" name="email" />
+                    </div>
+                    <div class="form-row flex-jcsb">
+                        <div class="form-cell __full"><input class="js-order-phone" type="text" placeholder="Ваш номер телефона*" name="phone" data-mask /></div>
+                    </div>
+                    <div class="form-row">
+                        <div class="sms-note js-sms-note" style="display: none;">Для подтверждения номера Введите код, отправленный в sms на номер </div>
+                        <button type="button" class="send-code btn btn-fill r10 js-order-get-code">Получить код</button>
+                    </div>
+                    <div class="form-row order-to-auth">
+                        <a href="#">Авторизоваться для ускорения оформления заказа</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="order-block shadow-block">
+                <div class="order-block__header b-border flex-jcsb">
+                    <div class="ob-title">Способы доставки</div>
+                    <div class="delivery-tabs js-delivery-tabs">
+                        <span class="delivery-tab-item active" data-tab="courier">Курьером</span>
+                        <span class="delivery-tab-item" data-tab="pickup">Самовывоз</span>
+                        <span class="delivery-tab-item" data-tab="country">Доставка по России</span>
+                    </div>
+                </div>
+
+                <div data-tab-target="courier" class="active">
+                    <div class="b-border">
+                        <div class="order-delivery-trigger" data-modal-delivery="#modal-delivery">
+                            <div class="delivery-trigger__inner" >
+                                <!--<span class="delivery-empty">Указать адрес доставки</span>-->
+                                <div class="delivery-current flex-jcsb">
+                                    <div class="delivery-current__pic"><img src="img/svg/deliv_grey.svg" alt=""></div>
+                                    <div class="delivery-current__info">
+                                        <div class="dci-title">Доставка по адресу</div>
+                                        <div class="dci-body">
+                                            43003, Московская обл., г. Одинцово, ул. Маршала Жукова, дом 38, помещение 86
+                                        </div>
+                                        <i class="dci-note">Для курьера, например код домофона, последний подъезд</i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="delivery-note">
+                        Сумма заказа 777 ₽, до бесплатной доставки по Мск не хватает 1 244 ₽
+                    </div>
+
+                    <!--Выбор даты-->
+                    <div class="form-row flex-jcsb selected">
+                        <div class="form-cell __half select-date">
+                            <select name="delive-date" id="select-date">
+                                <option value="19.04.2022">19.04.2022</option>
+                                <option value="20.04.2022">20.04.2022</option>
+                                <option value="21.04.2022">21.04.2022</option>
+                                <option data-calendar="Y">Другая дата</option>
+                            </select>
+                            <input id="date-calendar" class="custom-date-delivery --hidden" type="text" name="date" />
+                        </div>
+                        <div class="form-cell __half select-time">
+                            <select name="delive-time" id="select-time">
+                                <option value="14:00 - 20:00">14:00 - 20:00</option>
+                                <option value="15:00 - 21:00">15:00 - 21:00</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!--Яндекс доставка-->
+                    <div class="form-row">
+                        <div class="custom-checkbox">
+                            <input type="checkbox" name="yandexDelivery"  id="yandexDelivery">
+                            <label for="yandexDelivery" class="width-icon">
+                                <span class="yandex-icon"></span>
+                                <span>
+                                    Яндекс доставка за 4 часа по Москве <br>
+                                    Дата доставки: <a href="#">сегодня</a>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div data-tab-target="pickup">
+
+                    <div class="order-delivery-trigger" data-modal-delivery="#modal-delivery">
+                        <div class="delivery-trigger__inner">
+                            <!--<span class="delivery-empty">Указать адрес доставки</span>-->
+                            <div class="delivery-current flex-jcsb">
+                                <div class="delivery-current__pic"><img src="img/svg/pickup_grey.svg" alt=""></div>
+                                <div class="delivery-current__info">
+                                    <div class="dci-title-bold">Пункт выдачи магазин “Самис Усами”</div>
+                                    <div class="delivery-tab-grid">
+                                        <div class="dtg-item">
+                                            <div class="dtg-item-title --address">Адрес: </div>
+                                            <div class="dtg-item-text">
+                                                ТЦ “Парк” г. Сергиев-Посад, МО Сергиев Посад, ул. Птицеградская д.25
+                                            </div>
+                                        </div>
+                                        <div class="dtg-item">
+                                            <div class="dtg-item-title --delivery">Можно забрать: </div>
+                                            <div class="dtg-item-text">
+                                                Дату доставки в магазин уточняйте у оператора
+                                            </div>
+                                        </div>
+                                        <div class="dtg-item">
+                                            <div class="dtg-item-title --schedule">Режим работы: </div>
+                                            <div class="dtg-item-text">
+                                                Пн-пт: с 10:00 до 22:00 <br> Вс: выходной
+                                            </div>
+                                        </div>
+                                        <div class="dtg-item">
+                                            <div class="dtg-item-title --price">Стоимость услуги: </div>
+                                            <div class="dtg-item-text">
+                                                Бесплатно
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div data-tab-target="country" >
+                    <div class="order-delivery-trigger" data-modal-delivery="#modal-delivery">
+                        <div class="delivery-trigger__inner">
+                            <div class="delivery-current flex-jcsb">
+                                <div class="delivery-current__pic"><img src="img/test/pickup/sdek-logo.png" alt="SDEK"></div>
+                                <div class="delivery-current__info">
+                                    <div class="dci-title-bold">Курьерская доставка от компании СДЕК</div>
+                                    <div class="dtg-item-text-grey">193079, Санкт-Петербург г, Народная ул, д.4А</div>
+                                    <div class="dtg-item-info flex">
+                                        <span>Срок доставки 1 рабочий день</span>
+                                        <span>Стоимость:<strong>250 ₽</strong></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-row">
+                    <label>Комментарий к заказу</label>
+                    <textarea name="comment"  rows="4"></textarea>
+                </div>
+                <div class="form-row">
+                    <i>*Доставка по удаленным направлениям за МКАД осуществляется в определенные дни недели. Уточнить день можно по телефону +7
+                    495 916 94 94</i>
+                </div>
+            </div>
+
+            <div class="order-block shadow-block">
+                <div class="order-block__header">
+                    <div class="ob-title">Способы оплаты</div>
+                </div>
+
+                <div class="order-pays pays flex">
+                    <div class="pays-item">
+                        <input type="radio" name="pay" value="1" hidden checked id="pay-1" />
+                        <label class="pay-item__inner" for="pay-1">
+                            <div class="pays-item__icon"><img src="img/pays/1.png" alt="1"></div>
+                            <div class="pays-item__text">
+                                Наличными при получении
+                            </div>
+                        </label>
+                    </div>
+                    <div class="pays-item">
+                        <input type="radio" name="pay" value="2" hidden id="pay-2"/>
+                        <label class="pay-item__inner" for="pay-2">
+                            <div class="pays-item__icon"><img src="img/pays/2.png" alt="2"></div>
+                            <div class="pays-item__text">
+                                Картой при получении
+                            </div>
+                        </label>
+                    </div>
+                    <div class="pays-item">
+                        <input type="radio" name="pay" value="3" hidden id="pay-3"/>
+                        <label class="pay-item__inner" for="pay-3">
+                            <div class="pays-item__icon"><img src="img/pays/3.png" alt="3"></div>
+                            <div class="pays-item__text">
+                                Онлайн оплата
+                            </div>
+                        </label>
+                    </div>
+                    <div class="pays-item">
+                        <input type="radio" name="pay" value="4" hidden id="pay-4"/>
+                        <label class="pay-item__inner" for="pay-4">
+                            <div class="pays-item__icon"><img src="img/pays/4.png" alt="4"></div>
+                            <div class="pays-item__text">
+                                SberPay
+                            </div>
+                        </label>
+                    </div>
+                    <div class="pays-item">
+                        <input type="radio" name="pay" value="5" hidden id="pay-5"/>
+                        <label class="pay-item__inner" for="pay-5">
+                            <div class="pays-item__icon"><img src="img/pays/5.png" alt="5"></div>
+                            <div class="pays-item__text">
+                                СБП
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="order-block shadow-block">
+                <div class="order-bonus">
+                    <div class="order-bonus-range">
+                        <div class="order-block__header">
+                            <div class="ob-title">Мои бонУсы</div>
+                        </div>
+                        
+                        <div class="bonus-slider-wrap">
+                            <label>Списать бонусов</label>
+                            <input type="text" id="bonus-input" class="bonus-input" name="user_bonus" autocomplete="off"/>
+                            <input type="text" id="bonus-slider" value="" data-min="0" data-max="123" data-from="0" data-to="123" readonly />
+                        </div>
+                    </div>
+                    <div class="order-bonus-check">
+                        <div class="order-bonus-value">
+                            <div class="bonus-count">
+                                <span class="bonus-count-values" id="b-count">123</span>
+                                <span class="bonus-hint">
+                                    <div class="bonus-hint__pic">?</div>
+                                    <div class="bonus-hint__text">
+                                        1 бонус = 1 рубль <br>
+                                        <a href="#">Больше о БонУсах</a>
+                                    </div>
+                                </span>
+                            </div>
+                            <span class="bonus-title">Ваши бонусы</span>
+                        </div>
+                        <div class="apply-bonus-note">Будет списано с вашего баланса</div>
+                        <button type="button" class="apply-bonus btn btn-fill r10" id="apply-bonus" disabled>Списать</button>
+                        <button type="button" class="cancel-bonus btn btn-dark r10" id="cancel-bonus">Отменить списание</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="order-block shadow-block">
+                <div class="order-interactive-list">
+                    <div class="order-interactive-item b-border">
+                        <div class="switchBox">
+                            <input type="checkbox" id="switch" name="no-call" />
+                            <span class="check-switcher"></span>
+                            <label for="switch">Не звонить для подтверждения заказа</label>
+                        </div>
+                    </div>
+                    <div class="order-interactive-item b-border">
+                        <div class="custom-radio">
+                            <input type="radio" name="aaa" value="aaa" id="aaa" checked >
+                            <label for="aaa">Предложить замены <span class="under-label">Наш оператор свяжется с Вами и предложит замену</span></label>
+                        </div>
+                    </div>
+                    <div class="order-interactive-item">
+                        <div class="custom-radio">
+                            <input type="radio" name="aaa" value="aaa" id="bbb">
+                            <label for="bbb">Удалить позиции из заказа <span class="under-label">Мы удалим товары и вернем вам деньги</span></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <!--//////////////  Правая колонка  //////////////-->
+
+
+        <div class="order-half sticky"> 
+            <div class="b-border order-basket-header">
+                <div class="order-half-title">Товары в заказе</div>
+                <a href="products.html" class="ob-back">Вернуться к покупкам</a>
+            </div>
+            <div class="order-basket b-border">
+                <!--Товар-->
+                <div class="order-basket-item">
+                    <div class="obi-cell --img">
+                        <a href="card.html"><img class="lazy" data-src="img/test/products/1.png" alt="Product"></a>
+                    </div>
+                    <div class="obi-cell --main">
+                        <a href="card.html" class="order-product">TARHONG Миска для собак и кошек двойная "Gibraltar", бирюзовая с рисунком, 38.4х23.1х7.7см/2x950мл</a>
+                        <div class="offers-color_item _single">
+                            <span class="prop-name">Цвет:</span>
+                            <span class="color-value" style="background-color: #49B900"></span>
+                        </div>
+                    </div>
+                    <div class="obi-cell --price">
+                        <div class="order-product-count">2 шт.</div>
+                        <div class="order-product-price">
+                            <div class="item-price flex">
+                                <span class="price-value discount-price">1 190 ₽</span>
+                                <div class="item-discount">
+                                    <span class="price-old">2 190 ₽</span>
+                                    <span class="discount-value">-10%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--//-->
+                <!--Товар-->
+                <div class="order-basket-item">
+                    <div class="obi-cell --img">
+                        <a href="card.html"><img class="lazy" data-src="img/test/products/2.png" alt="Product" ></a>
+                    </div>
+                    <div class="obi-cell --main">
+                        <a href="card.html" class="order-product">TARHONG Миска для собак и кошек двойная "Gibraltar", бирюзовая с
+                            рисунком, 38.4х23.1х7.7см/2x950мл</a>
+                        <div class="offers-text_item">
+                            <span class="prop-name">Размер:</span>
+                            <span class="prop-value">120х175х40см</span>
+                        </div>
+                    </div>
+                    <div class="obi-cell --price">
+                        <div class="order-product-count">1 шт.</div>
+                        <div class="order-product-price">
+                            <div class="item-price flex">
+                                <span class="price-value">2 500 ₽</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--//-->
+
+                <!--Товар-->
+                <div class="order-basket-item">
+                    <div class="obi-cell --img">
+                        <a href="card.html"><img class="lazy" data-src="img/test/products/3.png" alt="Product"></a>
+                    </div>
+                    <div class="obi-cell --main">
+                        <a href="card.html" class="order-product">TARHONG Миска для собак и кошек двойная "Gibraltar"</a>
+                        <div class="offers-text_item">
+                            <span class="prop-name">Вес:</span>
+                            <span class="prop-value">100 кг</span>
+                            <span class="prop-warning">Крупногабаритный товар</span>
+                        </div>
+                    </div>
+                    <div class="obi-cell --price">
+                        <div class="order-product-count">11 шт.</div>
+                        <div class="order-product-price">
+                            <div class="item-price flex">
+                                <span class="price-value">4 600 ₽</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--//-->
+
+            </div>
+            <div class="basket-total" data-sticky data-margin-top="80">
+                <div class="basket-total-title">Сумма заказа:</div>
+                <div class="basket-total-row">
+                    <span class="total-row__name">Товаров</span><span class="total-row__value">55 000 ₽</span>
+                </div>
+                <div class="basket-total-row">
+                    <span class="total-row__name">Списано бонусами</span><span class="total-row__value">1 000 ₽</span>
+                </div>
+                <div class="basket-total-row">
+                    <span class="total-row__name">Скидка</span><span class="total-row__value">5 000 ₽</span>
+                </div>
+                <div class="basket-total-row">
+                    <span class="total-row__name">Сумма заказа со скидкой</span><span class="total-row__value">50 000 ₽</span>
+                </div>
+                <div class="basket-total-row">
+                    <span class="total-row__name">Стоимость доставки</span><span class="total-row__value">250 ₽</span>
+                </div>
+            
+                <div class="basket-total-price">
+                    <span class="total-price__name">Итого к оплате:</span>
+                    <span class="total-price__value">49 250 ₽</span>
+                </div>
+            
+                <div class="basket-total-buttons">
+                    <button type="button" class="btn btn-transp r10">Купить в 1 клик</button>
+                    <button type="submit" class="btn btn-fill r10">Оформить заказ</button>
+                </div>
+            
+                <div class="basket-total-info">
+                    <div class="subscribe-agree">
+                        <div class="custom-checkbox">
+                            <input type="checkbox" name="subscribe" value="Y" id="subscribe-agree">
+                            <label for="subscribe-agree">
+                                Хочу получать рассылку с новинками ассортимента,
+                                акциями и персональными предложениями.
+                            </label>
+                        </div>
+                    </div>
+                    <div class="basket-total-policy">
+                        Нажимая кнопку Оформить заказ, я даю свое согласие на обработку персональных данных и
+                        подтверждаю, что <a target="_blank" href="#">ознакомился с правилами</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="modal modal-delivery" id="modal-delivery">
+    <div class="modal-inner">
+        <div class="modal-title">Выберите способ доставки</div>
+        <!--Если нет ещё доставок
+
+        <div class="m-delivery-empty b-border">
+            <div class="m-delivery-add">
+                 <div class="roundAdd__icon">
+                    <svg><use href="sprite/sprite.svg#plus" /></svg>
+                 </div>
+                 <div class="m-delivery-add__text">
+                    Добавить пункт выдачи, постомат, или адрес доставки
+                 </div>
+            </div>
+        </div>
+
+        -->
+
+        <div class="m-delivery-grid">
+            <div class="m-delivery-item current">
+                <div class="corner-controls">
+                    <div class="corner-controls__button"><svg><use href="sprite/sprite.svg#points" /></svg></div>
+                    <div class="corner-controls__block">
+                        <a class="corner-edit" href="order-delivery-self.html"><svg><use href="sprite/sprite.svg#pencil" /></svg>Редактировать</a>
+                        <a class="corner-delete"><svg><use href="sprite/sprite.svg#bucket" /></svg>Удалить</a>
+                    </div>
+                </div>
+                <div class="mdi-header">
+                    <span class="mdit-icon"><img src="img/svg/deliv_green.svg" alt="Icon" /></span>
+                    <span class="mdit-title">Доставка по адресу</span>
+                </div>
+                <div class="mdi-text">
+                    <p>143003, Московская обл., г. Одинцово, ул. Маршала Жукова, дом 38, помещение 86</p>
+                </div>
+                <button class="btn btn-transp r10 desctop-overlay" data-delivery="Доставка по адресу" >Выбрать</button>
+            </div>
+
+            <div class="m-delivery-item">
+                <div class="corner-controls">
+                    <div class="corner-controls__button"><svg><use href="sprite/sprite.svg#points" /></svg></div>
+                    <div class="corner-controls__block">
+                        <a class="corner-edit" href="order-delivery-self.html"><svg><use href="sprite/sprite.svg#pencil" /></svg>Редактировать</a>
+                        <a class="corner-delete"><svg><use href="sprite/sprite.svg#bucket" /></svg>Удалить</a>
+                    </div>
+                </div>
+                <div class="mdi-header">
+                    <span class="mdit-icon"><img src="img/adv-icons/country.svg" alt="Icon"></span>
+                    <span class="mdit-title">Доставка по России</span>
+                </div>
+                <div class="mdi-text">
+                    <p>143003, Московская обл., г. Одинцово, ул. Маршала Жукова, дом 38, помещение 86</p>
+                </div>
+                <button class="btn btn-transp r10 desctop-overlay" data-delivery="Доставка по России">Выбрать</button>
+            </div>
+
+            <div class="m-delivery-item" >
+                <div class="corner-controls">
+                    <div class="corner-controls__button"><svg><use href="sprite/sprite.svg#points" /></svg></div>
+                    <div class="corner-controls__block">
+                        <a class="corner-edit" href="order-delivery-self.html"><svg><use href="sprite/sprite.svg#pencil" /></svg>Редактировать</a>
+                        <a class="corner-delete"><svg><use href="sprite/sprite.svg#bucket" /></svg>Удалить</a>
+                    </div>
+                </div>
+                <div class="mdi-header">
+                    <span class="mdit-icon"><img src="img/adv-icons/pickup.svg" alt="Icon"></span>
+                    <span class="mdit-title">Самоывоз</span>
+                </div>
+                <div class="mdi-text">
+                    <p>
+                        Пункт 1 - Магазин “Кукушка” <br>
+                        <small>Россия, Ростов-на-Дону, Халтуринский переулок, 45/30</small>
+                    </p>
+                    <p>
+                        Привезем за 2 дня
+                        <small>График работы с 8:00 до 20:00 8 863 333 50 50</small>
+                    </p>
+                </div>
+                <button class="btn btn-transp r10 desctop-overlay" data-delivery="Самоывоз">Выбрать</button>
+            </div>
+
+            <div class="m-delivery-add" onclick="window.location = 'add-address.html'">
+                <div class="roundAdd__icon">
+                    <svg><use href="sprite/sprite.svg#plus" /></svg>
+                </div>
+                <div class="roundAdd__text">
+                    Добавить пункт выдачи, постомат, или адрес доставки
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+<script>
+    $(document).ready(function () {
+
+       
+        const breakpoint750 = window.matchMedia('(max-width: 750px)');
+        const breakpoint420 = window.matchMedia('(max-width: 420px)');
+
+        const breakpointChecker750 = function () {
+            if (breakpoint750.matches === true) {
+                let sticky = new Sticky('[data-sticky]');
+                sticky.destroy();
+                return;
+            } else if (breakpoint750.matches === false) {
+                let sticky = new Sticky('[data-sticky]');
+                return;
+            }
+        };
+
+        const breakpointChecker420 = function () {
+            if (breakpoint420.matches === true) {
+                
+            }
+        };
+
+        breakpoint750.addListener(breakpointChecker750);
+        breakpoint420.addListener(breakpointChecker420);
+
+        breakpointChecker750();
+        breakpointChecker420();
+        
+
+        let dp = new AirDatepicker('#date-calendar', {
+            autoClose: true,
+            minDate: [new Date()],
+            position: 'bottom center',
+            onSelect(date){
+                let $inpt = date.datepicker.$el;
+                $($inpt).removeClass('--hidden').closest('.selected').css('margin-bottom', '60px');
+            }
+        });
+
+        //Смена доставки в модалке
+        $('body').on('click', '[data-delivery]', function(){
+            let $this = $(this);
+            let val = $this.data('delivery');
+            $this.parent().addClass('current').siblings().removeClass('current');
+            alert('Выбрано: '+ val);
+        });
+
+        //Табы доставки
+        if (localStorage.getItem('delivery_type')) {
+            let type = localStorage.getItem('delivery_type');
+            $('[data-tab=' + type + ']').addClass('active').siblings().removeClass('active');
+            $('[data-tab-target=' + type + ']').addClass('active').siblings().removeClass('active');
+        }
+
+        $('body').on('click', '[data-tab]', function () {
+            let delivery_type = $(this).data('tab')
+            $(this).addClass('active').siblings().removeClass('active');
+            localStorage.setItem('delivery_type', delivery_type);
+            $('[data-tab-target=' + delivery_type + ']').addClass('active').siblings().removeClass('active');
+        });
+        
+        //Выбор даты
+        $('#select-date').on('select2:select', function (e) {
+            var data = e.params.data;
+            console.log(data);
+            if($(data.element).data('calendar')){
+                dp.show();
+            }else{
+                $('#date-calendar').addClass('--hidden').closest('.selected').css('margin-bottom', '25px');
+            }
+        });
+        
+        //Вызов попапа с доставкой
+        $('body').on('click', '[data-modal-delivery]', function () {
+            $.fancybox.open({
+                src: $(this).data('modal-delivery'),
+                opts: {
+                    touch : false
+                }
+            });
+        });
+
+        //Списание бонусов
+        let $range = $("#bonus-slider"),
+            $input = $("#bonus-input"),
+            min = $range.data('min'),
+            max = $range.data('max'),
+            instance;
+
+        function rangeSlider() {
+            $range.ionRangeSlider({
+                onStart: function (data) {
+                    $input.prop("value", data.from);
+                },
+                onChange: function (data) {
+                    $input.prop("value", data.from);
+                    activeButton(data.from);
+                },
+            });
+
+            instance = $range.data("ionRangeSlider");
+        }
+
+        //Движение ползунка
+
+        function activeButton(val){
+            if(val > 0)
+                $('#apply-bonus').prop('disabled', false);
+            else
+                $('#apply-bonus').prop('disabled', true);
+        }
+
+        rangeSlider();
+
+        $input.on("focus", function () {
+            if($(this).prop("value") <= 0 ){
+                $(this).val('');
+            }
+        });
+
+        $input.on("blur", function () {
+            if ($(this).prop("value") <= 0) {
+                $(this).val(0);
+            }else{
+                $(this).val($(this).val());
+            }
+        });
+
+        //Ручной ввод бонусов
+        $input.on("input", function () {
+            let val = $(this).prop("value");
+
+            if (val.match(/^0+[0-9]/g)) {
+                $(this).val(val.replace(/^0+[0-9]/g, ''));
+            }
+
+            // validate
+            if (val < min) {
+                val = min;
+                $(this).val(val);
+            } else if (val > max) {
+                val = max;
+                $(this).val(val);
+            } else if (val == ''){
+                val = 0;
+                $(this).val(val);
+            }
+
+            instance.update({from: val});
+            activeButton(val);
+        });
+
+        //Кнопка списать
+        $('body').on('click', '#apply-bonus', function(e){
+            e.preventDefault();
+            instance.destroy();
+            $range.hide();
+            $input.addClass('is-ready').prop('disabled', true).siblings('label').css('visibility', 'hidden');
+            $(this).addClass('--hidden');
+            $('#cancel-bonus').addClass('--visible')
+                    .siblings('.apply-bonus-note').show();
+        });
+
+        //Кнопка отменить списаие
+        $('body').on('click', '#cancel-bonus', function (e) {
+            e.preventDefault();
+            rangeSlider();
+            $range.show();
+            $input.removeClass('is-ready').prop('disabled', false).siblings('label').css('visibility', 'visible');
+            $('#apply-bonus').removeClass('--hidden');
+            $(this).removeClass('--visible')
+                .siblings('.apply-bonus-note').hide();
+        })
+
+        /////
+        
+        $('body').on( 'click', '.js-order-get-code',function () {
+            getCode();
+        });
+
+        $('body').on('click', '.js-order-confirm-code', function(){
+            let codeInpt = $('.js-order-code-input');
+            if(codeInpt.val() == code){
+                let succesCode = $('<div/>',{class: 'code-success', text: 'Телефон подтвержден'});
+                $(codeInpt).before(succesCode);
+                $(codeInpt).remove();
+                clearInterval(timerId);
+                btnStart.remove();
+                $('.order-to-auth').remove();
+            }else{
+                codeInpt.addClass('error');
+                $('.js-sms-note').addClass('error').html('<span>Неверный код проверки</span>').fadeIn();
+            }
+            
+        });
+    });
+
+    
+
+    //Добавление кода (Для вёрстки)
+
+    let timerId;
+    let btnStart = $('.js-order-get-code');
+    let sendNote = btnStart.siblings('.js-sms-note');
+    let cendNoteText = 'Для подтверждения номера Введите код, отправленный в sms на номер ';
+    let code = '';
+
+    function getCode(){
+        let name = $('.js-order-name').val();
+        let phone = $('.js-order-phone').val();
+        let intPhone = phone.replace(/\D+/g, '');
+        let email = $('.js-order-email').val();
+        let path = 'assets/sms-code.json';
+        let auth = $('.js-confirm-phone-container').data('auth');
+
+        if (intPhone.length == 11) {
+            $.ajax({
+                type: 'GET',
+                dataType: "json",
+                url: path,
+                data: { phone: phone, email: email, action: 'sendSmsCode', auth: auth, personal: 'Y', name: name },
+                success: function (data) {
+                    let obAnswer = data;
+
+                    console.log(obAnswer);
+                    if (obAnswer['result'] != 'success') {
+
+                    } else {
+
+                        let nextBlockHtml = '';
+                        let timeLife = parseInt(obAnswer['timer']);
+                        if (timeLife > 0) {
+                            alert('Ваш код: ' + obAnswer['test_code']);
+                            code = obAnswer['test_code'];
+                            sendNote.empty().fadeIn().text(cendNoteText + phone);
+                            nextBlockHtml += '<span class="js-code-timer">Отправить повторно через <span id="timelife">' + Math.floor(timeLife / 60) + ':' + ((timeLife % 60 < 10) ? '0' + timeLife % 60 : timeLife % 60) + 'сек. </span></span>';
+                            $(btnStart).toggleClass('active js-order-get-code js-order-wait-code').html(nextBlockHtml).attr('disabled', true);
+                            let codeInput = '<div class="form-cell __half"><input type="text" name="code" class="sms-code js-order-code-input" value="" placeholder="Введите код _ _ _ _" maxlength="4" autocomplete="off"></div>';
+                            $('.js-order-phone').parent().removeClass('__full').addClass('__half').after(codeInput);
+                            clearInterval(timerId);
+                            timerId = setInterval(function () {
+                                timeLife--;
+                                if (timeLife > 0) {
+                                    $('#timelife').html(Math.floor(timeLife / 60) + ':' + ((timeLife % 60 < 10) ? '0' + timeLife % 60 : timeLife % 60) + ' сек.');
+                                    $('body').on('keyup', '.js-order-code-input', function(){
+                                        if($(this).val().length > 0){
+                                            sendNote.empty().fadeOut();
+                                            btnStart.removeClass('active js-order-wait-code');
+                                            btnStart.addClass('js-order-confirm-code btn btn-fill').text('Подтвердить').attr('disabled', false);
+                                        }
+                                        
+                                    });
+
+                                } else {
+                                    clearInterval(timerId);
+                                    btnStart.removeClass('active js-order-wait-code js-order-confirm-code').text('Получить код').attr('disabled', false);
+                                    btnStart.addClass('js-order-get-code').text('Получить код').attr('disabled', false);
+                                    
+                                    sendNote.empty().fadeOut();
+                                    $('.js-order-phone').parent().addClass('__full').removeClass('__half').next().remove();
+                                    
+                                }
+                            }, 1000);
+                        }
+
+                    }
+                }
+            });
+        } else {
+            $(btnStart).addClass('js-order-get-code').removeClass('active js-order-wait-code').html('Получить код');
+        }
+    }
+</script>
+
+//= template/footer.html

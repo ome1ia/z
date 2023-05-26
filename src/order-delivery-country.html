@@ -1,0 +1,88 @@
+//= template/header.html
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&coordorder=longlat&apikey=cbcdfe6a-f0c7-4bda-b9eb-28f404cb55d8"></script>
+<script src="assets/delivery-map.js"></script>
+
+<div class="box">
+    <a href="order.html" class="back-catalog">Назад в корзину</a>
+    <div class="header">
+        <h1>Укажите способ доставки</h1>
+    </div>
+</div>
+
+<div class="box">
+    <div class="delivery-and-map delivery-page">
+        <div class="delivery-leftBlock order-block">
+            <div class="delivery-tabs --justify">
+                <a href="order-delivery-curier.html" class="delivery-tab-item">Курьером</a>
+                <a href="order-delivery-self.html" class="delivery-tab-item">Самовывоз</a>
+                <a href="order-delivery-country.html" class="delivery-tab-item active">Доставка по России</a>
+            </div>
+
+            <div class="ob-title">Город доставки</div>
+            <div class="search-inner">
+                <input list="shops_adress" autocomplete="false" type="text" name="shop-s"
+                    placeholder="Введите название города или области" class="shop-input" id="shop-input">
+                <datalist id="shops_adress"></datalist>
+                <button type="submit" class="search-shop__btn" name="s">
+                    <svg>
+                        <use href="sprite/sprite.svg#search"></use>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="ob-title">Службы доставки по России</div>
+            <div class="ob-underTitle">Укажите город или область для определения доступных способов доставки в ваш регион</div>
+
+            <div class="service-delivery-choice">
+
+                <div class="sdch-item" style="background-image: url(img/test/pickup/2.png);">
+                    <input type="radio" id="serv1" name="service" checked />
+                    <span class="sdch-custom"></span>
+                    <label for="serv1">
+                        <div class="sdch-item-title">Boxberry</div>
+                        <div class="sdch-item-data">
+                            <span class="data-title">Стоимость доставки</span><span class="data-value">250 ₽</span>
+                        </div>
+                        <div class="sdch-item-data">
+                            <span class="data-title">Срок доставки</span><span class="data-value">1-2 дня</span>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="sdch-item" style="background-image: url(img/test/pickup/3.png);">
+                    <input type="radio" id="serv2" name="service" />
+                    <span class="sdch-custom"></span>
+                    <label for="serv2">
+                        <div class="sdch-item-title">ТК СДЭЕК</div>
+                        <div class="sdch-item-data">
+                            <span class="data-title">Стоимость доставки</span><span class="data-value">300 ₽</span>
+                        </div>
+                        <div class="sdch-item-data">
+                            <span class="data-title">Срок доставки</span><span class="data-value">1-2 дня</span>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="sdch-item">
+                    <input type="radio" id="serv3" name="service" />
+                    <span class="sdch-custom"></span>
+                    <label for="serv3">
+                        <div class="sdch-item-title">Другая транспортная компания</div>
+                        <div class="sdch-item-data">
+                            <span class="data-title">Стоимость и срок доставки вам сообщит оператор после оформления заказа</span>
+                        </div>
+                    </label>
+                </div>
+
+            </div>
+
+
+        </div>
+        <div class="shop-map paddTop">
+            <div class="shop-map-wrapper">
+                <div class="shop-map-box" id="samiMap"></div>
+            </div>
+        </div>
+    </div>
+</div>
+//= template/footer.html

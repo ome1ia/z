@@ -1,0 +1,107 @@
+//= template/header.html
+//= template/breadcrumbs.html
+
+<div class="box">
+    <div class="header">
+        <h1>Все товары PUPPIA для животных</h1>
+    </div>
+</div>
+
+<div class="box">
+    <div class="brand-detail shadow-block">
+         <div class="brand-logo">
+            <img src="img/test/brands-set/duvo/duvo.png" alt="Duvo">
+         </div>
+         <div class="brand-description">
+            <div class="brand-text">
+                <p>
+                    Даже самой маленькой собачке необходимы ежедневные прогулки. Вне зависимости от погодных условий вашему питомцу
+                    требуется физическая активность. Защитить собачку от непогоды и обеспечить ей комфортные условия прогулки помогут товары
+                    Puppia для животных, в широком ассортименте представленные в каталоге интернет-магазина «Сами с усами».
+                </p>
+            </div>
+            <div class="catalog-filter-header">Категории</div>
+            <div class="catalog-filter-categories flex --brands">
+                <a href="#" class="cfc-item selected">Все</a>
+                <a href="#" class="cfc-item">Ветаптека</a>
+                <a href="#" class="cfc-item">Собаки</a>
+                <a href="#" class="cfc-item">Кошки</a>
+                <a href="#" class="cfc-item">Рыбки</a>
+                <a href="#" class="cfc-item">Грызуны</a>
+                <a href="#" class="cfc-item">Птицы</a>
+                <a href="#" class="cfc-item">Лошади</a>
+                <a href="#" class="cfc-item">Рептилии</a>
+            </div>
+         </div>
+    </div>
+
+
+    <!--*******************  ТОВАРЫ  **************-->
+    
+    <div class="catalog-wrapper d-grid last-level">
+        <div class="catalog-aside">
+            <div class="catalog-aside__top">
+                <a href="sections.html" class="back-catalog">В список брендов</a>
+            </div>
+            <div class="catalog-aside__top__mobile">
+                <div class="mobile-filter-title">Фильтры</div>
+                <button id="closeAsideFilter" type="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 24 24"><path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"></path></svg>
+                </button>
+            </div>
+            //= template/aside-filter.html
+        </div>
+    
+        <div class="catalog-main">
+    
+            //= template/horizont-filter.html
+    
+            <div class="catalog-list" data-type="grid" id="template">
+                //= template/prod-item_1.html
+                //= template/prod-item_2.html
+                //= template/prod-item_3.html
+                //= template/prod-item_1.html
+                //= template/prod-item_2.html
+                //= template/prod-item_1.html
+                //= template/prod-item_2.html
+                //= template/prod-item_3.html
+                //= template/prod-item_1.html
+                //= template/prod-item_2.html
+                //= template/prod-item_2.html
+                //= template/prod-item_1.html
+            </div>
+    
+            //= template/pagination.html
+        </div>
+    
+    </div>
+    
+    
+    <script>
+    
+
+        $('body').on('click', '[data-view]', function () {
+            let list_view = $(this).data('view')
+            $(this).addClass('current').siblings().removeClass('current');
+            $('#template').attr('data-type', list_view);
+            localStorage.setItem('temp_view', list_view);
+        });
+
+        //Выбор сортировки
+        $('body').on('click', '[data-sort] div.current', function () {
+            $(this).siblings().show();
+        });
+
+
+        $('body').on('click', '[data-sort] div:not(.current)', function () {
+            $(this).addClass('current').siblings().removeClass('current').hide();
+            let key = $(this).parent().data('sort');
+
+            console.log({ [key]: $(this).data('value') });
+        });
+    </script>
+
+
+</div>
+
+//= template/footer.html

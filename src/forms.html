@@ -1,0 +1,322 @@
+//= template/header.html
+//= template/breadcrumbs.html
+<div class="box">
+    <div class="header">
+        <h1>Пример форм</h1>
+    </div>
+</div>
+<div class="box">
+    <a href="#custom-form" data-fancybox class="btn btn-fill r10">Показать форму</a>
+    <a href="#text-form" data-fancybox class="btn btn-fill r10">Форма с текстом</a>
+    <a href="#success" data-fancybox class="btn btn-fill r10">Что-то удачное</a>
+    <a href="#discount" data-fancybox class="btn btn-fill r10">Хочу скидку</a>
+    <a href="#one-click" data-fancybox class="btn btn-fill r10">Купить в один клик</a>
+    <a href="#log-register" data-fancybox class="btn btn-fill r10">Вход или регистрация</a>
+    <a href="#bonus" data-fancybox class="btn btn-pink r10">Получить бонус</a>
+</div>
+
+
+<!--Бонусы-->
+<div class="modal modal-bg mobile-bottom" id="bonus" style="background-image: url(img/modal-bonus.png);">
+    <img class="m-bonus-image" src="img/modal-bonus-pets.png" alt="Img" />
+    <div class="modal-inner">
+        <div class="m-bonus">
+            <div class="m-bonus__title">
+                Заполни почту! <br> И получи БонУсы
+            </div>
+            <p>Покупай товары за бонусы своим любимцам!</p>
+            <div class="m-bonus__fields">
+                <div class="form-row">
+                    <input type="text" placeholder="Email" />
+                </div>
+                <div class="form-row">
+                    <button class="btn btn-yell r10">Получить</button>
+                </div>
+            </div>
+            <div class="m-bonus__bottom">
+                Срок действия акции ограничен до 10.01.2023
+            </div>
+        </div>
+    </div>
+</div>
+<!--//-->
+
+<div class="modal modal-sm mobile-bottom" id="text-form">
+    <div class="modal-inner">
+        <div class="modal-title --center">Заголовочег</div>
+        <div class="form-row --text">
+            <h3>Заголовочег</h3>
+            <b>Отправляйте заявку</b>
+            <p>
+                Вы можете указать желаемую цену на товар и отправить заявку на скидку. Мы рассмотрим вашу заявку на скидку, не позднее
+                48 часов или будет отклонена автоматически.
+            </p>
+
+            <b>Ожидайте решения</b>
+            <p>
+                Если запрошенная цена приемлема, мы можем предоставить вам персональную скидку на товар по запрошенной цене. Если цена в
+                заявке сильно занижена, мы а праве отклонить заявку или предоставить вам скидку в размере на свое усмотрение.
+            </p>
+            <b>Заголовочег</b>
+            <p>
+                В случае предоставления скидки вы получите уведомление о предоставленной скидке в виде письма на почту.
+            </p>
+        </div>
+        <div class="form-row">
+            <a href="#" class="btn btn-transp r10 --back">Назад</a>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-sm" id="one-click">
+    <div class="modal-inner">
+        <div class="modal-title --center">Покупка в один клик</div>
+
+        <div class="b-border">
+            <div class="modal-preview d-grid">
+                <div class="bic-img"><a href="card.html"><img src="img/test/products/1.png"></a>
+                </div>
+                <div class="modal-preview__info">
+                    <div class="modal-preview__info__top">
+                        <div class="m-prod-title">
+                            Сухой диетический корм для собак Purina Pro Plan Veterinary diets EN
+                        </div>
+                    </div>
+                    <div class="modal-preview__info__bottom">
+                        <div class="m-prod-price">52 190 ₽</div>
+                        <div class="basket-item__cell cell-modal">
+                            <div class="prod-counter js-prod-counter">
+                                <div class="prod-counter_btn js-basket-minus"><span>-</span></div>
+                                <div class="prod-counter_value">
+                                    <input type="hidden" class="js-basket-input" data-measure="шт" data-min="1" data-max="3"
+                                        data-price="1190" value="1">
+                                    <div class="prod-count">1шт</div>
+                                </div>
+                                <div class="prod-counter_btn js-basket-plus"><span>+</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="delivery-note --center">
+                Бесплатная доставка от N NNN ₽
+            </div>
+        </div>
+        <div class="modal-fields">
+            <label>Контактные данные</label>
+            <div class="form-row">
+                <input type="text" name="aaa" placeholder="Имя" />
+            </div>
+            <div class="form-row">
+                <input type="text" name="bbb" placeholder="Телефон" data-phone />
+            </div>
+            <div class="form-row --text _center _bold">
+                С Вами свяжется сотрудник <br> магазина для уточения заказа
+            </div>
+            <div class="form-row">
+                <button type="submit" class="btn btn-fill r10">Отправить</button>
+            </div>
+            <div class="form-policy">
+                Нажимая кнопку «Отправить», я даю свое согласие на обработку <a target="_blank" href="#">персональных данных</a> и
+                подтверждаю, что ознакомился с
+                правилами
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-sm mobile-bottom" id="log-register">
+    <div class="modal-inner">
+        <div class="modal-title --center">Вход или регистрация</div>
+        <div class="modal-fields">
+            <div class="form-row">
+                <input type="text" name="bbb" placeholder="Телефон" data-mask />
+            </div>
+            <div class="form-row">
+                <input type="text" name="bbb" placeholder="Email" class="error"/>
+                <label class="error">Ошибка заполнения</label>
+            </div>
+            <div class="form-row">
+                <input type="password" name="bbb" placeholder="Пароль" class="pass-dinamic" />
+            </div>
+            <div class="form-row">
+                <button type="submit" class="btn btn-fill r10">Получить код</button>
+                <button type="reset" class="btn btn-grey r10">Отменить</button>
+            </div>
+            <div class="form-row --text _center">
+                Для подтверждения номера Введите код, отправленный в sms на номер
+                <b>+7 978 701-68-84</b>
+            </div>
+
+            <div class="form-row --text _hint">
+                <span class="hint-title">Не пришла смс?</span>
+                <span class="bonus-hint phone-info">
+                    <div class="bonus-hint__pic">?</div>
+                    <div class="bonus-hint__text">
+                        <b>• Нет доступа к старому номеру телефона</b><br>
+                        Если вам нужно ввести код из СМС, но доступа к старому номеру телефона нет, позвоните нам, мы отвяжем ваш старый номер
+                        телефона +7 495 916 94 94
+                        <b>• Не приходит СМС с кодом</b><br>
+                        Проверьте, что:
+                        <ul>
+                            <li>- Ваш телефон включен и находится в зоне приема сети;</li>
+                            <li>- Вы ввели правильный номер телефона или адрес электронной почты.</li>
+                            <li>- Иногда СМС приходит не сразу. Если СМС нет 20 минут, попробуйте получить код еще раз.</li>
+                        </ul>
+                    </div>
+                </span>
+            </div>
+
+            <div class="m-links">
+                <a href="#">Зелёная ссылка</a>
+            </div>
+
+            <div class="form-social ob-login">
+                <p>Войти с помощью:</p>
+                <ul class="scl flex">
+                    <li class="scl_item"><a class="i-ya" target="_blank" href="#"></a></li>
+                    <li class="scl_item"><a class="i-goo" target="_blank" href="#"></a></li>
+                    <li class="scl_item"><a class="i-vkgr" target="_blank" href="#"></a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="modal modal-sm" id="discount">
+    <div class="modal-inner">
+        <div class="modal-title --center">Хотите скидку?</div>
+        <div class="form-row --text">
+            Предложите свою цену! Персональная скидка действует на одну единицу уникального товара. Вы можете заказать несколько
+            разных товаров. <br>
+            <a href="#">Условия акции</a> <br>
+            <p>Текущая цена товара - <b>3 500 ₽</b></p>
+        </div>
+        <div class="modal-fields">
+            <div class="form-row flex-jcsb">
+                <div class="form-cell __half">
+                    <label>Предложить свою, <b>₽</b></label>
+                    <input type="text" name="sum" placeholder="Введите сумму">
+                </div>
+                <div class="form-cell __half">
+                    <label>Скидка в %</label>
+                    <div class="sq-variants flex-jcsb">
+                        <div class="sq-variant">
+                            <input type="radio" id="var-1" name="sale" value="-3%" checked="checked">
+                            <label for="var-1">-3%</label>
+                        </div>
+                        <div class="sq-variant">
+                            <input type="radio" id="var-2" name="sale" value="-5%">
+                            <label for="var-2">-5%</label>
+                        </div>
+                        <div class="sq-variant">
+                            <input type="radio" id="var-3" name="sale" value="-7%">
+                            <label for="var-3">-7%</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <label>Название поля*</label>
+                <select name="select" style="width: 100%">
+                    <option value="раз">11111111</option>
+                    <option value="два">2222222</option>
+                    <option value="три">33333333</option>
+                    <option value="четыре">44444444</option>
+                </select>
+            </div>
+            <label>Контакты</label>
+            <div class="form-row">
+                <input type="text" name="aaa" placeholder="Имя" />
+            </div>
+            <div class="form-row">
+                <input type="text" name="bbb" placeholder="Email" />
+            </div>
+            <div class="form-row">
+                <button type="submit" class="btn btn-fill r10">Ок</button>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-sm" id="success">
+    <div class="modal-inner">
+        <div class="modal-title --center">Заголовок</div>
+        <div class="modal-pict">
+            <div class="pict-success"></div>
+        </div>
+        <div class="modal-fields">
+            <div class="form-row --text --center">
+                Спасибо! Ваша заявка принята. Ваш промокод ожидает Вас в <a href="#">личном кабинете</a>
+            </div>
+            <br>
+            <div class="form-row">
+                <button type="submit" class="btn btn-fill r10">Ок</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-sm" id="custom-form" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-inner">
+        <div class="modal-title --center">Заголовок формы</div>
+        <div class="modal-fields">
+            <div class="form-row --text">
+                <p>Отправляемые данные:</p>
+                <ul>
+                    <li>ваш логин (если авторизован)</li>
+                    <li>браузер</li>
+                    <li>операционная система</li>
+                    <li>тип устройства</li>
+                </ul>
+                <b>Мы заметили, что Вы неавторизованы.</b>
+                <p>
+                    Пожалуйста, войдите в личный кабинет используя логин и пароль, если Вы уже зарегистрированы на нашем сайте. Это ускорит
+                    определение причины неполадок, а также даст нам возможность сообщить Вам о решении проблемы. Или укажите адрес Вашей
+                    электронной почты:
+                </p>
+            </div>
+            <div class="form-row">
+                <input type="text" name="aaa" placeholder="Текстовое поле" />
+            </div>
+            <div class="form-row">
+                <input type="text" name="bbb" placeholder="Обязательное поле*" />
+            </div>
+            <div class="form-row">
+                <label>Название поля*</label>
+                <select name="select" style="width: 100%" data-label="Название поля">
+                    <option value="1">Тормозит сайт</option>
+                    <option value="2">Не могу оформить заказ</option>
+                    <option value="3">Проблемы с адресом доставки</option>
+                    <option value="4">Другое</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <textarea name="text" rows="6" placeholder="Текстовое поле"></textarea>
+            </div>
+            <div class="form-captcha">
+                <label>Введите код с картинки*</label>
+                <div class="form-row flex">
+                    <div class="form-cell --image">
+                        <img src="img/test/captcha.png" alt="captcha">
+                    </div>
+                    <div class="form-cell --code">
+                        <input type="text" name="captcha" placeholder="Код" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <button type="submit" class="btn btn-fill r10">Отправить</button>
+            </div>
+            <div class="form-policy">
+                Нажимая кнопку «Отправить», я даю свое согласие на обработку <a target="_blank" href="#">персональных данных</a> и
+                подтверждаю, что ознакомился с
+                правилами
+            </div>
+        </div>
+    </div>
+</div>
+
+//= template/footer.html

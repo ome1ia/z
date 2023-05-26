@@ -1,0 +1,63 @@
+//= template/header.html
+//= template/breadcrumbs.html
+<div class="box">
+    <div class="header">
+        <h1>Вопросы и ответы</h1>
+    </div>
+</div>
+
+<div class="box">
+    <div class="accordeons">
+        <div class="accordeon-item js-accord">
+             <div class="accordeon-quest">
+                Как получить скидку на повторный заказ?
+             </div>
+             <div class="accordeon-answer">
+                Молча!
+             </div>
+        </div>
+
+        <div class="accordeon-item js-accord">
+            <div class="accordeon-quest">
+                Самовывоз из магазина?
+            </div>
+            <div class="accordeon-answer">
+                Да, конечно
+            </div>
+        </div>
+
+        <div class="accordeon-item js-accord">
+            <div class="accordeon-quest">
+                Отличаются ли цены в розничной сети и интернет-магазине?
+            </div>
+            <div class="accordeon-answer">
+                Да, цены в розничных магазинах и на сайте могут отличаться.
+            </div>
+        </div>
+
+        <div class="accordeon-item js-accord">
+            <div class="accordeon-quest">
+                Могу ли я заказать корм с доставкой сегодня (доставка «день в день»)?
+            </div>
+            <div class="accordeon-answer">
+                Да, заказ может быть доставлен вам в этот же день, при условии: <br>
+                <ul>
+                    <li>- Подтверждения заказа с оператором до 12-00;</li>
+                    <li>- Будний день;</li>
+                    <li>- Доставка только по Москве в пределах МКАД;</li>
+                    <li>- Интервал доставки с 14-00 до 20-00.</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script>
+    $(document).ready(function(){
+        $('.js-accord').on('click', function () {
+            $(this).toggleClass('is-opened').find('.accordeon-answer').stop().slideToggle();
+            $(this).siblings().removeClass('.is-opened');
+        })
+    });
+</script>
+//= template/footer.html

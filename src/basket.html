@@ -1,0 +1,491 @@
+//= template/header.html
+//= template/breadcrumbs.html
+<div class="box">
+    <div class="header">
+        <h1>Корзина</h1>
+    </div>
+</div>
+
+<div class="box">
+    <div class="basket-area">
+        <div class="basket-main"> 
+
+            <!--Предупреждалка если наличие больше-->
+            <div id="available-note" style="display: none;">
+                <div class="available-note">
+                    <p>В наличии только <span class="dinamic-value"></span>. Нужное количество уточните у оператора</p>
+                    <button type="button" class="btn btn-fill r5" onclick="this.parentElement.remove();">Ok</button>
+                </div>
+            </div>
+            
+            <!--Список товаров-->
+            <div class="basket-items">
+
+                <div class="delivery-note show_mobile">
+                    Сумма заказа 777 ₽, до бесплатной доставки по Мск не хватает 1 244 ₽
+                </div>
+                <div class="yellow-note show_mobile">
+                    Вашем заказе есть крупногабаритный товар. Данный товар можно забрать самовывозом только со склада Сами с Усами или
+                    курьерской доставкой Сами с Усами.
+                </div>
+                <div class="basket-caption">
+                    <div class="basket-caption__cell">Товары</div>
+                    <div class="basket-caption__cell">Параметры</div>
+                    <div class="basket-caption__cell">Количество</div>
+                    <div class="basket-caption__cell">Цена</div>
+                </div>
+
+                <div class="basket-item" id="itemId-1">
+                    <div class="basket-item__body">
+                        <div class="basket-item__cell _img-title">
+                            <div class="bic-img"><a href="card.html"><img class="lazy" data-src="img/test/products/1.png" alt="" src="img/test/products/1.png"></a></div>
+                            <a href="card.html" class="bic-title">TARHONG Миска для собак и кошек двойная "Gibraltar", бирюзовая с рисунком, 38.4х23.1х7.7см/2x950мл</a>
+                        </div>
+
+                        <div class="basket-item__cell --props">
+                            <div class="offers-colors flex">
+                                <div class="offers-color_item">
+                                    <span class="prop-name">Цвет:</span>
+                                    <input id="prod_0_color_0_0" type="radio" name="color_0" value="#49B900" checked="checked">
+                                    <label for="prod_0_color_0_0" class="color-value" style="background-color: #49B900"></label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="basket-item__cell">
+                            <div class="prod-counter js-prod-counter">
+                                <div class="prod-counter_btn js-basket-minus"><span>-</span></div>
+                                <div class="prod-counter_value">
+                                    <input type="hidden" class="js-basket-input" data-measure="шт" data-min="1" data-max="3" data-price="1190" value="1">
+                                    <div class="prod-count">1шт</div>
+                                </div>
+                                <div class="prod-counter_btn js-basket-plus"><span>+</span></div>
+                            </div>
+                        </div>
+
+                        <div class="basket-item__cell --price">
+                            <div class="item-price flex">
+                                <span class="price-value">1 190 ₽</span>
+                                <div class="price-bonus">+20</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="basket-item__footer">
+                        <div class="props-row">
+                            <div class="prop-cell"><span>Код: </span>8320188553</div>
+                            <div class="prop-cell"><span>Арт.: </span>8320188553</div>
+                            <div class="prop-cell"><span>Цена за 1 шт: </span><span class="p-price"> 980 ₽</span> </div>
+                        </div>
+                        <div class="item-trigger">
+                            <div class="item-trigger__cell">
+                                <span class="prod-favorite" data-title="В избранное" onclick="this.classList.toggle('is_added');" title="Избранное">
+                                    <svg><use href="sprite/sprite.svg#favorite"></use></svg>
+                                    <svg> <use href="sprite/sprite.svg#heart-full"></use></svg>
+                                </span>
+                            </div>
+                            <div class="item-trigger__cell">
+                                <span title="Удалить" class="basket-item-delete" onclick="BasketItemDelete('itemId-1');">
+                                    <svg><use href="sprite/sprite.svg#bucket"></use></svg>
+                                    Убрать</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="basket-item" id="itemId-2">
+                    <div class="basket-item__body">
+                        <div class="basket-item__cell _img-title">
+                            <div class="bic-img"><a href="card.html"><img class="lazy" data-src="img/test/products/2.png" alt="Картинка"></a></div>
+                            <a href="card.html" class="bic-title">Padovan Mineral Block Rody Минеральный</a>
+                        </div>
+                
+                        <div class="basket-item__cell --props">
+                            <div class="offers-text_item">
+                                <span class="prop-name">Размер:</span>
+                                <span class="prop-value">120х175х40см</span>
+                            </div>
+                        </div>
+                
+                        <div class="basket-item__cell">
+                            <div class="prod-counter js-prod-counter">
+                                <div class="prod-counter_btn js-basket-minus"><span>-</span></div>
+                                <div class="prod-counter_value">
+                                    <input type="hidden" class="js-basket-input" data-measure="шт" data-min="1" data-max="2"
+                                        data-price="1190" value="1">
+                                    <div class="prod-count">1шт</div>
+                                </div>
+                                <div class="prod-counter_btn js-basket-plus"><span>+</span></div>
+                            </div>
+                        </div>
+                
+                        <div class="basket-item__cell --price">
+                            <div class="item-price flex">
+                                <span class="price-value">1 190 ₽</span>
+                                <div class="price-bonus">+20</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="basket-item__footer">
+                        <div class="props-row">
+                            <div class="prop-cell prod-data"><span>Код: </span>8320188553</div>
+                            <div class="prop-cell prod-data"><span>Арт.: </span>8320188553</div>
+                            <div class="prop-cell price-variations">
+                                <span>Цена за 1 шт: </span><span class="p-oldprice"> 36 980 ₽</span>
+                                <span class="p-price"> 26 980 ₽</span>
+                                <span class="discount-value">-10%</span>
+                                <span class="p-warning">Крупногабаритный товар</span>
+                            </div>
+                        </div>
+                        <div class="item-trigger">
+                            <div class="item-trigger__cell">
+                                <span class="prod-favorite" data-title="В избранное" onclick="this.classList.toggle('is_added');"
+                                    title="Избранное">
+                                    <svg>
+                                        <use href="sprite/sprite.svg#favorite"></use>
+                                    </svg>
+                                    <svg>
+                                        <use href="sprite/sprite.svg#heart-full"></use>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="item-trigger__cell">
+                                <span title="Удалить" class="basket-item-delete"
+                                    onclick="BasketItemDelete('itemId-2');">
+                                    <svg><use href="sprite/sprite.svg#bucket"></use></svg>
+                                    Убрать
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--END-->
+
+            <div class="basket-footer flex">
+                <span class="bf-cell _params __count">Товаров: 3шт.</span>
+                <span class="bf-cell _params __weight">Общий вес: 0.80кг.</span>
+                <span class="bf-cell _button __code">
+                    <button type="button" class="add-promocode" id="addPromocode">
+                        <svg><use href="sprite/sprite.svg#ticket"></use></svg>
+                        Использовать промокод
+                    </button>
+                </span>
+                <span class="bf-cell _button __delete">
+                    <button type="button" class="delete-basket">
+                        <svg><use href="sprite/sprite.svg#bucket"></use></svg>
+                        Очистить корзину
+                    </button>
+                </span>
+                <span class="bf-cell _button __back hide_mobile">
+                    <button type="button" class="to-buy">Вернуться к покупкам</button>
+                </span>
+            </div>
+
+            <!--блок промокода-->
+            <div class="basket-promoCode" data-block="addPromocode">
+                <div class="basket-promoCode__inner">
+                    <div class="basket-promoCode__form">
+                        <div class="basket-total-title">Использовать промокод</div>
+                        <div class="bpf-row">
+                            <!--  --error, --success, --used -->
+                            <div class="bpf-cell _input --used" data-note="Уже использован">
+                                <input type="text" value="12345" class="promoCode" placeholder="Введите промокод" />
+                            </div>
+                            <div class="bpf-cell">
+                                <!--<button type="button" class="btn btn-fill r10">Применить</button>-->
+                                <button type="button" class="btn btn-dark r10">Отменить промокод</button>
+                            </div>
+                        </div>
+                        <div class="bpf-warning">Промокод действует только от суммы заказа 200 руб</div>
+                    </div>
+                    <div class="basket-promoCode__pict">
+                        <img src="img/test/pngwing.png" alt="img" />
+                    </div>
+                </div>
+            </div>
+
+            <!--Удвоить заказ-->
+            <div class="double-order flex-jcsb">
+                <div class="double-order__img">
+                    <picture>
+                        <source srcset="img/gift-sm.png" media="(max-width: 750px)">
+                        <img class="lazy" data-src="img/gift.png" alt="gift">
+                    </picture>
+                </div>
+                <div class="double-order__row">
+                    <div class="double-order__cell --text">
+                        <div class="doc-text">
+                            <div class="doc-text__title">
+                                Вы собрали корзину на <span class="c-pink"> 2 500 руб!</span>
+                            </div>
+                            <div class="doc-text__description">
+                                Выберите еще товаров на 2 500 руб из специальной подборки и получите <br> скидку <b>10% на весь заказ!</b>
+                            </div>
+                            <a class="doc-more" href="#">Подробнее</a>
+                        </div>
+                        
+                    </div>
+                    <div class="double-order__cell --form">
+                        <div class="get-sale">
+                            <div class="get-sale__title">Хотите получить скидку?</div>
+                            <div class="get-sale__buttons flex">
+                                <button type="button" class="btn btn-fill r10">Да</button>
+                                <button type="button" class="btn btn-transp r10">Нет</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="basket-aside">
+            <div class="basket-aside-total">
+
+                <div class="delivery-note hide_mobile">
+                    Сумма заказа 777 ₽, до бесплатной доставки по Мск не хватает 1 244 ₽
+                </div>
+
+                <div class="yellow-note hide_mobile">
+                    Вашем заказе есть крупногабаритный товар. Данный товар можно забрать самовывозом только со склада Сами с Усами или
+                    курьерской доставкой Сами с Усами.
+                </div>
+
+                <div class="basket-total">
+                    <div class="basket-total-title">Сумма заказа:</div>
+                    <div class="basket-total-row">
+                        <span class="total-row__name">Товаров</span><span class="total-row__value">55 000 ₽</span>
+                    </div>
+                    <div class="basket-total-row">
+                        <span class="total-row__name">Списано бонусами</span><span class="total-row__value">1 000 ₽</span>
+                    </div>
+                    <div class="basket-total-row">
+                        <span class="total-row__name">Скидка</span><span class="total-row__value">5 000 ₽</span>
+                    </div>
+                    <div class="basket-total-row">
+                        <span class="total-row__name">Сумма заказа со скидкой</span><span class="total-row__value">50 000 ₽</span>
+                    </div>
+                    <div class="basket-total-row">
+                        <span class="total-row__name">Стоимость доставки</span><span class="total-row__value">250 ₽</span>
+                    </div>
+
+                    <div class="basket-total-price">
+                        <span class="total-price__name">Итого к оплате:</span>
+                        <span class="total-price__value">49 250 ₽</span>
+                    </div>
+
+                    <div class="basket-total-buttons">
+                        <button type="submit" onclick="window.open('order.html'); " class="btn btn-fill r10">Оформить заказ</button>
+                        <button type="button" class="btn btn-transp r10">Купить в 1 клик</button>
+                    </div>
+
+                    <div class="basket-total-info">
+                        <div class="subscribe-agree">
+                            <div class="custom-checkbox">
+                                <input type="checkbox" name="subscribe" value="Y" id="subscribe-agree">
+                                <label for="subscribe-agree">
+                                    Хочу получать рассылку с новинками ассортимента,
+                                    акциями и персональными предложениями.
+                                </label>
+                            </div>
+                        </div>
+                        <div class="basket-total-policy">
+                            Нажимая кнопку Оформить заказ, я даю свое согласие на обработку персональных данных и
+                            подтверждаю, что <a target="_blank" href="#">ознакомился с правилами</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="aside-double-order">
+                <button class="btn btn-pink r10" type="button">Удвоить заказ</button>
+            </div>
+        </div>
+    </div>    
+    
+    
+    <!--Каруселька-->
+    <div class="header flex-jcsb">
+        <h3>Вас также может заинтересовать</h3>
+        <div class="custom-buttons" data-buttons="slider_1">
+            <div class="pagination__item pagination__item_prev">
+                <span><svg><use href="sprite/sprite.svg#prev"></use></svg></span>
+            </div>
+            <div class="pagination__item pagination__item_next">
+                <span><svg> <use href="sprite/sprite.svg#next"></use></svg></span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="prods-carousel-wrapp">
+        <div class="prods-carousel" data-prod-carousel="slider_1">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    //= template/prod-item_small.html
+                </div>
+                <div class="swiper-slide">
+                    //= template/prod-item_small.html
+                </div>
+                <div class="swiper-slide">
+                    //= template/prod-item_small.html
+                </div>
+                <div class="swiper-slide">
+                    //= template/prod-item_small.html
+                </div>
+                <div class="swiper-slide">
+                    //= template/prod-item_small.html
+                </div>
+                <div class="swiper-slide">
+                    //= template/prod-item_small.html
+                </div>
+                <div class="swiper-slide">
+                    //= template/prod-item_small.html
+                </div>
+                <div class="swiper-slide">
+                    //= template/prod-item_small.html
+                </div>
+                <div class="swiper-slide">
+                    //= template/prod-item_small.html
+                </div>
+                <div class="swiper-slide">
+                    //= template/prod-item_small.html
+                </div>
+                <div class="swiper-slide">
+                    //= template/prod-item_small.html
+                </div>
+                <div class="swiper-slide">
+                    //= template/prod-item_small.html
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+
+<script>
+    //Удаление товара в корзине
+    function BasketItemDelete(itemId) {
+        let toRemove = $('#'+itemId);
+        let temp_row = $('<div/>', {class: 'is-deletedItem', html: '<span data-delete-id="'+ itemId +'">Восстановить</span>'});
+        toRemove.after(temp_row);
+        let removeItem = $('#' + itemId).detach();
+        //Восстановить удалённый товар в корзине
+        temp_row.on('click', 'span', function(){
+            $(this).parent().before(removeItem);
+            $(this).parent().remove();
+        })
+    }
+
+     $(document).ready(function(){
+        //Кнопка добавить промокод
+        $('#addPromocode').on('click', function(){
+            let close_btn = $('<div/>', {class: 'mobile-close js-close'});
+            $('[data-block="'+$(this).prop('id')+'"]').fadeIn().prepend(close_btn);
+            $('#mobile-overlay').fadeIn();
+        });
+
+        $('body').on('click', '.js-close',function () {
+             $(this).parent().fadeOut();
+             $('#mobile-overlay').fadeOut();
+             $(this).remove();
+         });
+
+
+        // Убавляем кол-во по клику в списке товаров
+        const noteBlock = $('#available-note').html();
+         $('.js-basket-minus').on('click', function () {
+             $(this).siblings('.available-note').remove();
+             let $block = $(this).parent('.js-prod-counter'),
+                 $input = $block.find('.js-basket-input'),
+                 count = parseInt($input.val()) - 1,
+                 limit = $input.data('min'),
+                 measure = $input.data('measure');
+             if (count <= parseInt(limit)) {
+                 $input.val(limit)
+                     .next('.prod-count').text(limit + measure);
+             } else {
+                 $input.val(parseInt(count))
+                     .next('.prod-count').text(parseInt(count) + measure);
+             }
+         });
+
+
+         // Прибавляем кол-во по клику в списке товаров
+         $('.js-basket-plus').on('click', function () {
+            let $block = $(this).parent('.js-prod-counter'),
+                $input = $block.find('.js-basket-input'),
+                count = parseInt($input.val()) + 1,
+                limit = $input.data('max'),
+                measure = $input.data('measure');
+             if(count > limit){
+                $(this).siblings('.available-note').remove();
+                let note = $(noteBlock).clone();
+                    note.find('.dinamic-value').text(limit + measure);
+                  note.appendTo($block);
+                setTimeout(function(){
+                    note.addClass('--visible');
+                }, 100);
+             }
+             count = count > parseInt(limit) ? parseInt(limit) : count;
+             $input.val(parseInt(count))
+                 .next('.prod-count').text(parseInt(count) + measure);
+         });
+
+        
+         //Карусели 
+
+         $('[data-prod-carousel]').each(function (i, slider) {
+
+             const breakpoint = window.matchMedia('(max-width: 1024px)');
+
+             let prodCarousel;
+             let pagination = $(slider).data('prod-carousel');
+
+             const breakpointChecker = function () {
+                 if (breakpoint.matches === true) {
+                     slider.classList.add("not-slider");
+                     if (prodCarousel !== undefined) {
+                         prodCarousel.destroy(true, true);
+
+                     }
+                     return;
+                 } else if (breakpoint.matches === false) {
+                     slider.classList.remove("not-slider");
+                     return enableSwiper();
+                 }
+             };
+
+             const enableSwiper = function () {
+                 prodCarousel = new Swiper(slider, {
+                     slidesPerView: 6,
+                     spaceBetween: 15,
+                     watchOverflow: true,
+                     watchSlidesVisibility: true,
+                     watchSlidesProgress: true,
+                     followFinger: false,
+                     navigation: {
+                         prevEl: '[data-buttons="' + pagination + '"] .pagination__item_prev',
+                         nextEl: '[data-buttons="' + pagination + '"] .pagination__item_next'
+                     },
+                     on: {
+                         init: function () {
+                             if (this.slides.length <= this.params.slidesPerView) {
+                                 $('[data-buttons="' + pagination + '"]').remove();
+                             }
+                         },
+                     },
+                 });
+
+             };
+
+             breakpoint.addListener(breakpointChecker);
+
+             breakpointChecker();
+
+
+         });
+
+
+     })
+</script>
+//= template/footer.html

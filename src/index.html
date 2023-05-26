@@ -1,0 +1,469 @@
+//= template/header.html
+    <div class="box">
+        <div class="promo d-grid">
+            <div class="promo__slider swiper" id="promo-slider">
+                <div class="swiper-wrapper">
+                    <a href="sales.html" class="swiper-slide">
+                        <picture>
+                            <source type="image/webp" src-set="img/test/slide1.webp" />
+                            <img class="lazy" data-src="img/test/slide1.png" alt="Слайд 1" />
+                        </picture>
+                    </a>
+                    <a href="sales.html" class="swiper-slide">
+                        <picture>
+                            <source type="image/webp" src-set="img/test/slide2.webp" />
+                            <img class="lazy" data-src="img/test/slide2.png" alt="Слайд 2" />
+                        </picture>
+                    </a>
+                </div>
+                <div class="swiper-navigation">
+                    <div class="swiper-button-next"><svg><use href="sprite/sprite.svg#next" /></svg></div>
+                    <div class="swiper-button-prev"><svg><use href="sprite/sprite.svg#prev" /></svg></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+            <div class="promo__sales">
+                <div class="ps-actions flex-jcsb">
+
+
+
+                    <!--Бекграунд задал инлайном, думаю этот градиент в свойстве элеиента должен быть задан-->
+                    <div class="small-actions-slider" >
+                        <div class="swiper" data-action-carousel>
+                            <div class="swiper-wrapper">
+                                <a href="sale-detail.html" class="ps-actions__item flex-jcsb swiper-slide"
+                                    style="background: linear-gradient(to right, #eae4de, #faf5f0);">
+                                    <span class="ps-actions__item__text">
+                                        <h3>Дом для кошки</h3>
+                                        <p>Большой выбор когтеточек для кошек..Большой выбор когтеточек для кошек..</p>
+                                    </span>
+                                    <span class="ps-actions__item__img">
+                                        <picture>
+                                            <source type="image/webp" src-set="img/test/sale-cat.webp" />
+                                            <img class="lazy" data-src="img/test/sale-cat.png" alt="Дом для кошки" />
+                                        </picture>
+                                    </span>
+                                </a>
+                            
+                                <a href="sale-detail.html" class="ps-actions__item flex-jcsb swiper-slide"
+                                    style="background: linear-gradient(to right, #e9f2ef, #e5f3db);">
+                                    <span class="ps-actions__item__text">
+                                        <h3>Скидка на аквариумы</h3>
+                                        <p>Большой выбор когтеточек для кошекБольшой выбор когтеточек для кошек</p>
+                                    </span>
+                                    <span class="ps-actions__item__img">
+                                        <picture>
+                                            <source type="image/webp" src-set="img/test/sale-aquar.webp" />
+                                            <img class="lazy" data-src="img/test/sale-aquar.png" alt="Дом для кошки" />
+                                        </picture>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="small-actions-slider">
+                        <div class="swiper" data-action-carousel>
+                            <div class="swiper-wrapper">
+
+                                <div class="ps-actions__item flex-jcsb swiper-slide" style="background: linear-gradient(to right, #e9f2ef, #e5f3db);">
+                                    <span class="ps-actions__item__text">
+                                        <h3>Скидка на аквариумы</h3>
+                                        <p>Большой выбор когтеточек для кошекБольшой выбор когтеточек для кошек</p>
+                                    </span>
+                                    <span class="ps-actions__item__img">
+                                        <picture>
+                                            <source type="image/webp" src-set="img/test/sale-aquar.webp" />
+                                            <img class="lazy" data-src="img/test/sale-aquar.png" alt="Дом для кошки" />
+                                        </picture>
+                                    </span>
+                                </div>
+
+                                <div class="ps-actions__item flex-jcsb swiper-slide"
+                                    style="background: linear-gradient(to right, #eae4de, #faf5f0);">
+                                    <span class="ps-actions__item__text">
+                                        <h3>Дом для кошки</h3>
+                                        <p>Большой выбор когтеточек для кошек..Большой выбор когтеточек для кошек..</p>
+                                    </span>
+                                    <span class="ps-actions__item__img">
+                                        <picture>
+                                            <source type="image/webp" src-set="img/test/sale-cat.webp" />
+                                            <img class="lazy" data-src="img/test/sale-cat.png" alt="Дом для кошки" />
+                                        </picture>
+                                    </span>
+                                </div>
+
+                                
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                    <a class="btn btn-fill r10" href="sales.html">Все акции</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Разделы для мобилки-->
+    <div class="box">
+        <div class="sections-grid_wrapper mobile-only">
+            //= template/section_grid.html
+        </div>
+    </div>
+    <!--Конец Разделы для мобилки-->
+
+    <div class="box">
+        <div class="advantages-wrap">
+            <div class="advantages d-grid">
+                <div class="advantages__item flex">
+                    <span class="advantage-icon"><img src="img/adv-icons/deliv.svg" alt="Icon"></span>
+                    <span class="advantage-text">
+                        Доставка день в день!
+                        Бесплатно от 2500 руб.
+                    </span>
+                </div>
+                <div class="advantages__item flex">
+                    <span class="advantage-icon"><img src="img/adv-icons/cross.svg" alt="Icon"></span>
+                    <span class="advantage-text">
+                        Большой ассортимент
+                        ветеринарных препаратов
+                    </span>
+                </div>
+                <div class="advantages__item flex">
+                    <span class="advantage-icon"><img src="img/adv-icons/pickup.svg" alt="Icon"></span>
+                    <span class="advantage-text">
+                        Самовывоз из
+                        розничных магазинов
+                    </span>
+                </div>
+                <div class="advantages__item flex">
+                    <span class="advantage-icon"><img src="img/adv-icons/bonus.svg" alt="Icon"></span>
+                    <span class="advantage-text">
+                        Накапливайте
+                        бонусы с покупок
+                    </span>
+                </div>
+                <div class="advantages__item flex">
+                    <span class="advantage-icon"><img src="img/adv-icons/health.svg" alt="Icon"></span>
+                    <span class="advantage-text">
+                        Собственные ветклиники
+                        для здоровья питомцев
+                    </span>
+                </div>
+                <div class="advantages__item flex">
+                    <span class="advantage-icon"><img src="img/adv-icons/country.svg" alt="Icon"></span>
+                    <span class="advantage-text">
+                        Доставка по всей России
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="box">
+        <div class="header h-front flex-jcsb">
+            <h2>Время покупать</h2>
+            <a class="more" href="time_buy.html">Посмотреть все</a>
+        </div>
+    </div>
+    
+    <div class="box-HorizScroll cust-scroll">
+        <div class="time-buy d-grid">
+            <a href="#" class="time-buy__item">
+                <picture>
+                    <source type="image/webp" src-set="img/test/time-buy/1.webp" />
+                    <img class="lazy" data-src="img/test/time-buy/1.png" alt="1" />
+                </picture>
+            </a>
+            <a href="#" class="time-buy__item">
+                <picture>
+                    <source type="image/webp" src-set="img/test/time-buy/2.webp" />
+                    <img class="lazy" data-src="img/test/time-buy/2.png" alt="2" />
+                </picture>
+            </a>
+            <a href="#" class="time-buy__item">
+                <picture>
+                    <source type="image/webp" src-set="img/test/time-buy/3.webp" />
+                    <img class="lazy" data-src="img/test/time-buy/3.png" alt="3" />
+                </picture>
+            </a>
+            <a href="#" class="time-buy__item">
+                <picture>
+                    <source type="image/webp" src-set="img/test/time-buy/4.webp" />
+                    <img class="lazy" data-src="img/test/time-buy/4.png" alt="4" />
+                </picture>
+            </a>
+            <a href="#" class="time-buy__item">
+                <picture>
+                    <source type="image/webp" src-set="img/test/time-buy/5.webp" />
+                    <img class="lazy" data-src="img/test/time-buy/5.png" alt="5" />
+                </picture>
+            </a>
+            <a href="#" class="time-buy__item">
+                <picture>
+                    <source type="image/webp" src-set="img/test/time-buy/6.webp" />
+                    <img class="lazy" data-src="img/test/time-buy/6.png" alt="6" />
+                </picture>
+            </a>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="header h-front flex-jcsb">
+            <h2>Рекомендуемые товары</h2>
+            <a class="more" href="#">Посмотреть все</a>
+        </div>
+    </div>
+
+    <div class="box-HorizScroll cust-scroll">
+        <div class="product-carousel --recommend" data-prod-carousel>
+            <div class="swiper-wrapper">
+                //= template/prod-item_1.html
+                //= template/prod-item_2.html
+                //= template/prod-item_3.html
+                //= template/prod-item_1.html
+                //= template/prod-item_2.html
+            </div>
+        </div>
+    </div>
+
+    <div class="box">
+        <a href="#" class="act-banner flex-jcsb">
+            <span class="act-banner__text flex-jcsb">
+                <div class="act-banner__text__inner">
+                    <h3>ALPHAPET: 80% мясного белка, свежее мясо в составе</h3>
+                    <p>
+                        Здоровый и активный питомец – главная задача каждого хозяина. Команда AlphaPet® создает и производит полезные корма
+                        высшей категории Holistiс, давая возможность каждому владельцу быть уверенным в правильном выборе кормления для
+                        своего
+                        животного.
+                    </p>
+                </div>
+                <div class="act-banner__text__button">
+                    <span class="btn btn-fill r10">Подробнее</span>
+                </div>
+            </span>
+            <span class="act-banner__img">
+                <span class="act-label flex" style="background: #FF9900;">
+                    <div class="act-label__inner">
+                        <div class="act-label_big">10%</div>
+                        <div class="act-label_small">скидка на всю продукцию</div>
+                    </div>
+                </span>
+                <picture>
+                    <source type="image/webp" src-set="img/test/action_dog.webp" />
+                    <img class="lazy" data-src="img/test/action_dog.png" alt="DOG" />
+                </picture>
+            </span>
+        </a>
+    </div>
+    
+    <div class="desctop-only">
+        <div class="box">
+            <div class="header h-front flex-jcsb flex-al-end">
+                <div class="header_left">
+                    <div class="header_filter flex flex-al-end">
+                        <h2>Новинки</h2>
+                        <a class="td-dashed current" href="#">Акции</a>
+                        <a class="td-dashed" href="#">Хиты</a>
+                        <a class="td-dashed" href="#">Рекомендуем</a>
+                    </div>
+        
+                </div>
+                <div class="header_right">
+                    <div class="header_filter flex">
+                        <a class="td-dashed current" href="#">Все товары</a>
+                        <a class="td-dashed" href="#">Рыбки</a>
+                        <a class="td-dashed" href="#">Птицы</a>
+                        <a class="td-dashed" href="#">Собаки</a>
+                        <a class="td-dashed" href="#">Лошади</a>
+                        <a class="td-dashed" href="#">Рептилии</a>
+                        <a class="td-dashed" href="#">Кошки</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box-HorizScroll cust-scroll">
+            <div class="product-carousel" data-prod-carousel>
+                <div class="swiper-wrapper">
+                    //= template/prod-item_1.html
+                    //= template/prod-item_2.html
+                    //= template/prod-item_3.html
+                    //= template/prod-item_1.html
+                    //= template/prod-item_2.html
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <!--Разделы для десктопа-->
+    <div class="box">
+        <div class="sections-grid_wrapper desctop-only">
+            //= template/section_grid.html
+        </div>
+    </div>
+    <!--Конец Разделы для десктопа-->
+
+    <div class="box">
+        <div class="header h-front flex-jcsb">
+            <h3>Популярные бренды</h3>         
+            <a href="#" class="more">Все бренды</a>              
+        </div>
+    </div>
+    <div class="box-HorizScroll cust-scroll">
+        <div class="brands d-grid">
+            <a href="#" class="brands__item">
+                <div class="brands__item__inner flex-jcsb">
+                    <div class="brand-image">
+                        <img class="lazy" src="img/test/brands/1.png" alt="Brand" />
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="brands__item">
+                <div class="brands__item__inner flex-jcsb">
+                    <div class="brand-image">
+                        <img class="lazy" src="img/test/brands/2.png" alt="Brand" />
+                    </div>
+                    <div class="brand-title">США</div>
+                </div>
+            </a>
+            <a href="#" class="brands__item">
+                <div class="brands__item__inner flex-jcsb">
+                    <div class="brand-image">
+                        <img class="lazy" src="img/test/brands/3.png" alt="Brand" />
+                    </div>
+                    <div class="brand-title">Великобритания</div>
+                </div>
+            </a>
+            <a href="#" class="brands__item">
+                <div class="brands__item__inner flex-jcsb">
+                    <div class="brand-image">
+                        <img class="lazy" src="img/test/brands/4.png" alt="Brand" />
+                    </div>
+                    <div class="brand-title">Южная корея</div>
+                </div>
+            </a>
+            <a href="#" class="brands__item">
+                <div class="brands__item__inner flex-jcsb">
+                    <div class="brand-image">
+                        <img class="lazy" src="img/test/brands/5.png" alt="Brand" />
+                    </div>
+                    <div class="brand-title">Великобритания</div>
+                </div>
+            </a>
+            <a href="#" class="brands__item">
+                <div class="brands__item__inner flex-jcsb">
+                    <div class="brand-image">
+                        <img class="lazy" src="img/test/brands/6.png" alt="Brand" />
+                    </div>
+                    <div class="brand-title">Нидерланды</div>
+                </div>
+            </a>
+            <a href="#" class="brands__item">
+                <div class="brands__item__inner flex-jcsb">
+                    <div class="brand-image">
+                        <img class="lazy" src="img/test/brands/7.png" alt="Brand" />
+                    </div>
+                    <div class="brand-title">Бельгия</div> 
+                </div>
+            </a>
+            <a href="#" class="brands__item">
+                <div class="brands__item__inner flex-jcsb">
+                    <div class="brand-image">
+                        <img class="lazy" src="img/test/brands/8.png" alt="Brand" />
+                    </div>
+                    <div class="brand-title">Бельгия</div>
+                </div>
+            </a>
+
+            <a href="#" class="brands__item">
+                <div class="brands__item__inner flex-jcsb">
+                    <div class="brand-image">
+                        <img class="lazy" src="img/test/brands/1.png" alt="Brand" />
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="brands__item">
+                <div class="brands__item__inner flex-jcsb">
+                    <div class="brand-image">
+                        <img class="lazy" src="img/test/brands/2.png" alt="Brand" />
+                    </div>
+                    <div class="brand-title">США</div>
+                </div>
+            </a>
+            <a href="#" class="brands__item">
+                <div class="brands__item__inner flex-jcsb">
+                    <div class="brand-image">
+                        <img class="lazy" src="img/test/brands/3.png" alt="Brand" />
+                    </div>
+                    <div class="brand-title">Великобритания</div>
+                </div>
+            </a>
+            <a href="#" class="brands__item">
+                <div class="brands__item__inner flex-jcsb">
+                    <div class="brand-image">
+                        <img class="lazy" src="img/test/brands/4.png" alt="Brand" />
+                    </div>
+                    <div class="brand-title">Южная корея</div>
+                </div>
+            </a>
+            <a href="#" class="brands__item">
+                <div class="brands__item__inner flex-jcsb">
+                    <div class="brand-image">
+                        <img class="lazy" src="img/test/brands/5.png" alt="Brand" />
+                    </div>
+                    <div class="brand-title">Великобритания</div>
+                </div>
+            </a>
+            <a href="#" class="brands__item">
+                <div class="brands__item__inner flex-jcsb">
+                    <div class="brand-image">
+                        <img class="lazy" src="img/test/brands/6.png" alt="Brand" />
+                    </div>
+                    <div class="brand-title">Нидерланды</div>
+                </div>
+            </a>
+            <a href="#" class="brands__item">
+                <div class="brands__item__inner flex-jcsb">
+                    <div class="brand-image">
+                        <img class="lazy" src="img/test/brands/7.png" alt="Brand" />
+                    </div>
+                    <div class="brand-title">Бельгия</div>
+                </div>
+            </a>
+            <a href="#" class="brands__item">
+                <div class="brands__item__inner flex-jcsb">
+                    <div class="brand-image">
+                        <img class="lazy" src="img/test/brands/8.png" alt="Brand" />
+                    </div>
+                    <div class="brand-title">Бельгия</div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="descripion flex-jcsb">
+            <div class="descripion-left">
+                <h3>Зоомагазин «Сами с Усами» - интернет-магазин товаров для животных</h3>
+            </div>
+            <div class="descripion-right">
+                <p>
+                    В интернет-зоомагазине «Сами с Усами» вы сможете быстро и удобно приобрести всё необходимое для вашего питомца от
+                    игрушек и кормов до витаминных комплексов. Мы предлагаем возможность приобрести весь ассортимент зоотоваров с доставкой.
+                </p>
+                <p>
+                    Для того чтобы сделать заказ или получить помощь при выборе, проконсультироваться с экспертом call-центра нашего
+                    зоомагазина, позвоните нам, будем рады помочь!
+                </p>
+            </div>
+        </div>
+    </div>
+
+//= template/footer.html

@@ -1,0 +1,77 @@
+<!--Товар-->
+<div class="prod-item flex-jcsb">
+    <div class="prod-item__top">
+        <div class="pc-item__labels">
+            <span class="label-round new"><span>new</span></span>
+        </div>
+        <div class="prod-item__top__group">
+            <div class="prod-item__img">
+                <a href="card.html"><img class="lazy" data-src="img/test/products/2.png" alt="2"></a>
+            </div>
+            <div class="prod-item__text">
+                <a href="card.html" class="prod-item__title">
+                    TARHONG Миска для собак и кошек двойная "Gibraltar", бирюзовая с рисунком...
+                </a>
+                <div class="type_3__row flex">
+                    <div class="item-stock">В наличии</div>
+                    <div class="item-prop">Арт. 568998745</div>
+                    <div class="item-prop">Код 859654524</div>
+                </div>
+            </div>
+        </div>
+        <div class="prod-item__offers">
+            <div class="prod-item__offers__title">Варианты</div>
+            <div class="offers-grid">
+                <div class="offers-grid_item">
+                    <input id="weight_1" type="radio" name="weight" value="5 кг" />
+                    <label for="weight_1" class="grid-value">5 кг</label>
+                </div>
+                <div class="offers-grid_item">
+                    <input id="weight_2" type="radio" name="weight" value="10 кг" />
+                    <label for="weight_2" class="grid-value">10 кг</label>
+                </div>
+                <div class="offers-grid_item">
+                    <input id="weight_3" type="radio" name="weight" value="15кг" />
+                    <label for="weight_3" class="grid-value">15кг</label>
+                </div>
+                <div class="offers-grid_item">
+                    <input id="weight_4" type="radio" name="weight" value="" />
+                    <label for="weight_4" class="grid-value">Ещё</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="prod-item__bottom">
+        <div class="item_price-row flex-jcsb">
+            <div class="item-price flex">
+                <span class="price-value discount-price">1 190 ₽</span>
+                <div class="item-discount">
+                    <span class="price-old">2 190 ₽</span>
+                    <span class="discount-value">-10%</span>
+                </div>
+            </div>
+            
+            <div class="item-stock">В наличии</div>
+        </div>
+        <div class="item-buttons">
+            <a class="one-click" href="#">Купить в 1 клик</a>
+            <button class="to-cart btn btn-fill r10" type="button">В корзину</button>
+            
+            <div class="prod-counter btn btn-fill r10 js-prod-counter">
+                <div class="prod-counter_btn js-minus"><span>-</span></div>
+                <div class="prod-counter_value">
+                    <input type="hidden" class="js-input" data-min="0" data-max="10" data-price="1190" value="0" />
+                    <div class="prod-count"></div>
+                    <div class="prod-total"></div>
+                </div>
+                <div class="prod-counter_btn js-plus"><span>+</span></div>
+            </div>
+            
+            <span class="prod-favorite" onclick="this.classList.toggle('is_added');" title="Избранное">
+                <svg><use href="sprite/sprite.svg#favorite" /></svg> 
+                <svg><use href="sprite/sprite.svg#heart-full" /></svg> 
+            </span>
+            
+        </div>
+    </div>
+</div>

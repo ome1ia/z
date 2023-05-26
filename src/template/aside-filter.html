@@ -1,0 +1,323 @@
+<div class="aside-filter">
+    <!--Фильтр по цене-->
+    <div class="aside-filter__block --always-open">
+        <div class="afb-title">По цене</div>
+        <div class="afb-inner">
+            <div class="afb-inner__fields flex-jcsb" id="p-slider-values">
+                <div class="afb-inner__fields__item">
+                    <input class="js-slider-min" type="text" name="from-price" placeholder="От" value="200" />
+                </div>
+                <span class="afb-price__fields__separ">-</span>
+                <div class="afb-inner__fields__item">
+                    <input class="js-slider-max" type="text" name="to-price" placeholder="До" value="2500" />
+                </div>
+            </div>
+            <div class="afb-price__slider">
+                <input type="text" id="p-slider-trigger" name="my_range" value="" data-type="double" data-min="200"
+                    data-max="2500" data-from="200" data-to="2500" />
+            </div>
+        </div>
+    </div>
+    <!--Фильтр по бренду-->
+    <div class="aside-filter__block">
+        <div class="afb-title">Бренд</div>
+        <div class="afb-inner">
+            <div class="afb-inner__fields" id="b-search">
+                <div class="afb-inner__fields__item">
+                    <input class="brands-filter js-b-search" maxlength="25" data-search="brands" type="text"
+                        name="brand" placeholder="Поиск по списку" />
+                </div>
+
+                <!--Которые нужноскрыть по умолчанию ставим класс --hidden  -->
+
+                <div class="afb-checkboxes" data-search-list="brands">
+                    <div class="custom-checkbox">
+                        <input type="checkbox" name="brand[]" value="Royal Canin" id="brand1" />
+                        <label for="brand1">Royal Canin</label>
+                        <span class="count">26</span>
+                    </div>
+                    <div class="custom-checkbox">
+                        <input type="checkbox" name="brand[]" value="Blue Bug Gifts" id="brand2" />
+                        <label for="brand2">Blue Bug Gifts</label>
+                        <span class="count">26</span>
+                    </div>
+                    <div class="custom-checkbox">
+                        <input type="checkbox" name="brand[]" value="Pro Plan" id="brand3" />
+                        <label for="brand3">Pro Plan</label>
+                        <span class="count">6</span>
+                    </div>
+                    <div class="custom-checkbox">
+                        <input type="checkbox" name="brand[]" value="TarHong" id="brand4" />
+                        <label for="brand4">TarHong</label>
+                        <span class="count">126</span>
+                    </div>
+                    <div class="custom-checkbox">
+                        <input type="checkbox" name="brand[]" value="AntePrima" id="brand5" />
+                        <label for="brand5">AntePrima</label>
+                        <span class="count">27</span>
+                    </div>
+                    <div class="custom-checkbox cc-dinamic --hidden">
+                        <input type="checkbox" name="brand[]" value="PUPPIA" id="brand6" />
+                        <label for="brand6">PUPPIA</label>
+                        <span class="count">26</span>
+                    </div>
+                    <div class="custom-checkbox cc-dinamic --hidden">
+                        <input type="checkbox" name="brand[]" value="SHIRES" id="brand7" />
+                        <label for="brand7">SHIRES</label>
+                        <span class="count">73</span>
+                    </div>
+                    <div class="custom-checkbox cc-dinamic --hidden">
+                        <input type="checkbox" name="brand[]" value="AntePrima" id="brand8" />
+                        <label for="brand8">AntePrima</label>
+                        <span class="count">333</span>
+                    </div>
+                    <div class="custom-checkbox cc-dinamic --hidden">
+                        <input type="checkbox" name="brand[]" value="SHIRES" id="brand9" />
+                        <label for="brand9">SHIRES</label>
+                        <span class="count">236</span>
+                    </div>
+                    <div class="custom-checkbox cc-dinamic --hidden">
+                        <input type="checkbox" name="brand[]" value="AntePrima" id="brand5" />
+                        <label for="brand5">AntePrima</label>
+                        <span class="count">16</span>
+                    </div>
+                    <div class="custom-checkbox cc-dinamic --hidden">
+                        <input type="checkbox" name="brand[]" value="PUPPIA" id="brand6" />
+                        <label for="brand6">PUPPIA</label>
+                        <span class="count">76</span>
+                    </div>
+                    <div class="custom-checkbox cc-dinamic --hidden">
+                        <input type="checkbox" name="brand[]" value="SHIRES" id="brand7" />
+                        <label for="brand7">SHIRES</label>
+                        <span class="count">11</span>
+                    </div>
+                    <div class="custom-checkbox cc-dinamic --hidden">
+                        <input type="checkbox" name="brand[]" value="AntePrima" id="brand8" />
+                        <label for="brand8">AntePrima</label>
+                        <span class="count">56</span>
+                    </div>
+                    <div class="custom-checkbox cc-dinamic --hidden">
+                        <input type="checkbox" name="brand[]" value="SHIRES" id="brand9" />
+                        <label for="brand9">SHIRES</label>
+                        <span class="count">33</span>
+                    </div>
+                </div>
+                <!--При скрытых пунктах показывать этот элемент-->
+                <div class="afb__more js-showAll">Показать все</div>
+                <!--///-->
+            </div>
+        </div>
+    </div>
+
+    <!--Фильтр по странам-->
+    <div class="aside-filter__block">
+        <div class="afb-title">Страна</div>
+        <div class="afb-inner">
+            <div class="afb-inner__fields">
+                <div class="afb-checkboxes">
+                    <div class="custom-checkbox">
+                        <input type="checkbox" name="country[]" value="Беларусь" id="country1" />
+                        <label for="country1">Беларусь</label>
+                        <span class="count">3</span>
+                    </div>
+                    <div class="custom-checkbox">
+                        <input type="checkbox" name="country[]" value="Россия" id="country2" />
+                        <label for="country2">Россия</label>
+                        <span class="count">133</span>
+                    </div>
+                    <div class="custom-checkbox">
+                        <input type="checkbox" name="country[]" value="Израиль" id="country3" />
+                        <label for="country3">Израиль</label>
+                        <span class="count">23</span>
+                    </div>
+                    <div class="custom-checkbox">
+                        <input type="checkbox" name="country[]" value="Литв4" id="country4" />
+                        <label for="country4">Литва</label>
+                        <span class="count">5</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Фильтр по весу-->
+    <div class="aside-filter__block">
+        <div class="afb-title">Вес</div>
+        <div class="afb-inner">
+            <div class="afb-inner__fields">
+                <div class="afb-checkboxes">
+                    <div class="custom-checkbox">
+                        <input type="checkbox" name="weight[]" value="100гр" id="weight1" />
+                        <label for="weight1">100гр</label>
+                        <span class="count">3</span>
+                    </div>
+                    <div class="custom-checkbox">
+                        <input type="checkbox" name="weight[]" value="200гр" id="weight2" />
+                        <label for="weight2">200гр</label>
+                        <span class="count">111</span>
+                    </div>
+                    <div class="custom-checkbox">
+                        <input type="checkbox" name="weight[]" value="300гр" id="weight3" />
+                        <label for="weight3">300гр</label>
+                        <span class="count">7</span>
+                    </div>
+                    <div class="custom-checkbox">
+                        <input type="checkbox" name="weight[]" value="400гр" id="weight4" />
+                        <label for="weight4">400гр</label>
+                        <span class="count">99</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="aside-filter__buttons">
+    <button class="btn btn-grey r10" type="reset">Очистить фильтр</button>
+    <button class="btn btn-fill r10" type="submit">Выбрано: <span>1</span> Показать</button>
+</div>
+
+<script>
+    function toggleTextBtn(element){
+         $(element).hasClass('is_opened') ? $(element).text('Свернуть') : $(element).text('Показать все');
+    }
+    $(document).ready(function(){
+         //Движение ползунка цены
+        let price_slider = $("#p-slider-trigger").ionRangeSlider({
+            onChange: function (data) {
+                const inpts_box = $('#p-slider-values'),
+                    inptMin = inpts_box.find('.js-slider-min'),
+                    inptMax = inpts_box.find('.js-slider-max');
+
+                inptMin.val(data.from);
+                inptMax.val(data.to);
+            },
+        });
+
+        let slider_inst = price_slider.data("ionRangeSlider");
+
+        //Ввод в поля цен
+        $('#p-slider-values input').on('change', function () {
+            let inpt = $(this),
+                v = inpt.val();
+            inpt.val(v.replace(/\D/, ''));
+
+            if (inpt.hasClass('js-slider-min')) {
+                if (v >= slider_inst.options.min && v <= slider_inst.options.max) {
+                    slider_inst.update({
+                        from: v,
+                    });
+                } else {
+                    inpt.val(slider_inst.options.min);
+                }
+            } else {
+                if (v <= slider_inst.options.max && v >= slider_inst.options.min) {
+                    slider_inst.update({
+                        to: v,
+                    });
+                } else {
+                    inpt.val(slider_inst.options.max);
+                }
+            }
+        });
+
+
+         //Поиск по брендам
+        let notFound = $('<p class="not-found"></p>');
+        $("[data-search]").on("keyup", function () {
+            let value = $(this).val().toLowerCase();
+
+            if(value == ''){
+                $('.js-showAll').show().removeClass('is-opened');
+                toggleTextBtn('.js-showAll');
+            }else{
+                $('.js-showAll').hide().addClass('is_opened');
+                toggleTextBtn('.js-showAll');
+            }
+
+            let listbox = $("[data-search-list='" + $(this).data('search') + "']"),
+                list = listbox.find('div');
+
+            /*list.filter(function () {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+            });*/
+
+            list.each(function (){
+                if($(this).text().toLowerCase().indexOf(value) > -1)
+                    $(this).removeClass('--hidden');
+                else
+                    $(this).addClass('--hidden');
+            });
+
+            let hidden = list.filter(function () {
+                return $(this).hasClass("--hidden");
+            });
+
+            if (list.length == hidden.length) {
+                notFound.empty().text('Ничего не найдено').prependTo(listbox);
+            } else {
+                notFound.remove();
+            }
+        });
+
+        
+        //Показ фильтра в мобильном
+        const breakpointCatalogAside = window.matchMedia('(max-width: 1140px)');
+        breakpointCatalogAside.addListener(toggleScrollbar);
+
+        let fiterItems = $('.aside-filter__block:not(.--always-open)');
+
+        function toggleScrollbar(mq) {
+            const ListItems = $("[data-search-list]"),//Список чекбоксов
+                  RowSelf = ListItems.find('.custom-checkbox');//Строка с чекбоксом
+                 
+            if (mq.matches) {
+
+                if($('.cc-dinamic.--hidden').length > 0){
+                    ListItems.next('.js-showAll').show();
+                }
+
+                $('.js-mobile-toggle-aside').on('click', function () {
+                    $('.catalog-aside').addClass('mobile-visible');
+                });
+
+                
+                ListItems.mCustomScrollbar('destroy');
+                fiterItems.addClass('mobile-accordeon');
+
+                $('.mobile-accordeon .afb-title').on('click', function () {
+                    $(this).toggleClass('is-opened');
+                    $(this).next('.afb-inner').stop().fadeToggle();
+                });
+                
+            } else {
+                if ($('.cc-dinamic.--hidden').length > 0) {
+                    ListItems.next('.js-showAll').hide();
+                }
+                ListItems.mCustomScrollbar({
+                    mouseWheel: {
+                        scrollAmount: 300
+                    }
+                });
+                fiterItems.removeClass('mobile-accordeon');
+
+            }
+        }
+        toggleScrollbar(breakpointCatalogAside);
+
+        $('#closeAsideFilter').on('click', function () {
+            $(this).closest('.catalog-aside').removeClass('mobile-visible');
+        });
+
+        $('body').on('click', '.js-showAll', function(){
+            $(this).toggleClass('is_opened')
+                    .prev('[data-search-list]')
+                    .find('.cc-dinamic')
+                    .toggleClass('--hidden');
+
+            toggleTextBtn($(this));
+
+        })
+        
+    });
+</script>

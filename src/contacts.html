@@ -1,0 +1,186 @@
+//= template/header.html
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=cbcdfe6a-f0c7-4bda-b9eb-28f404cb55d8"></script>
+<script src="assets/shops.js"></script>
+//= template/breadcrumbs.html
+
+<div class="box">
+    <div class="header">
+        <h1>Контакты</h1>
+    </div>
+</div>
+
+<div class="box">
+    <div class="shop-product-and-map">
+        <!--LEFT-->
+        <div class="shop-description ">
+            <div class="shop-product">
+                <div class="shop-left-column">
+                    <p class="shop-list__phone strong">+7 495 363 81 18</p>
+                    <p class="shop-list__time">Звоните с 9:00 до 19:00 по будням, <br> 9:00–14:00 в субботу, <br> воскресенье — выходной</p>
+                    <p class="shop-list__address">Москва, ул. Профсоюзная д.64, корп.2</p>
+
+                    <ul class="scl flex">
+                        <li class="scl_item"><a class="i-wt" target="_blank" href="#"></a></li>
+                        <li class="scl_item"><a class="i-tg" target="_blank" href="#"></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="shadow-block">
+                <h3>Реквизиты</h3>
+                <br>
+                <p>Полное наименование организации: ООО «АС-Капитал»</p>
+                <p>ОГРН: 1045006486766</p>
+                <p>Юр. адрес организации: 143003, Московская обл., г. Одинцово, ул. Маршала Жукова, дом 38, помещение 86</p>
+                <p>Обособленный юридический адрес: 121471, г. Москва, Ул. Рябиновая, д.55</p>
+                <p>Фактический адрес организации: 121471, г. Москва, Ул. Рябиновая, д.55</p>
+            </div>
+
+            <div class="shadow-block">
+                <h3>Свяжитесь с нами</h3>
+                <br>
+                <p>
+                    Общие вопросы: <a href="mailto:info@samizoo.ru">info@samizoo.ru</a> <br>
+                    Отдел контроля качества: <a href="mailto:ok@samizoo.ru">ok@samizoo.ru</a>
+                </p>
+                <br>
+                <p>
+                    Если вы региональная сеть зоомагазинов и если вы ищите способы выгодно отличаться от ваших конкурентов - приходите к нам
+                    на стенд, мы покажем и предложим свои проверенные решения!Предоставляем гарантии! Какие? Звоните, приезжайте, узнаете!
+                    Гарантии предоставляются не всем.
+                    Выбери надежного партнера!
+                </p>
+                <div class="shop-left-column">
+                    <p class="shop-list__phone"><b>+7 495 916 94 94</b>, доб.327, 300</p>
+                    <p class="shop-list__mail">zakaz@samizoo.ru</p>
+                </div>
+            </div>
+             
+
+        </div>
+
+        <!--RIGHT-->
+
+        <div class="shop-map">
+            <div class="shop-map-wrapper">
+                <div class="shop-map-box" id="shops-map"></div>
+            </div>
+            <div class="shadow-block">
+                <div class="header">
+                    <h1>Обратная связь</h1>
+                </div>
+                <div class="contacts-form">
+                    <div class="form-row flex-jcsb">
+                        <div class="form-cell __half">
+                            <input type="text" name="name" placeholder="Имя" />
+                        </div>
+                        <div class="form-cell __half">
+                            <input type="text" name="lastname" placeholder="Фамилия" />
+                        </div>
+                    </div>
+                    <div class="form-row flex-jcsb">
+                        <div class="form-cell __half">
+                            <input type="text" name="phone" placeholder="Ваш номер телефона*" data-mask />
+                        </div>
+                        <div class="form-cell __half">
+                            <input type="text" name="email" placeholder="Эл. почта" />
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <textarea name="message" placeholder="Сообщение" rows="8"></textarea>
+                    </div>
+                    <div class="form-row">
+                        <div class="input__file__wrapper">
+                            <input name="file" type="file" id="callback__file" class="input input__file" multiple="">
+                            <label for="callback__file" class="input__file-button">
+                                <span class="input__file-button-text">Прикрепить файл</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-row flex-jcsb">
+                        <div class="form-cell __button">
+                            <button class="btn btn-fill r10" type="submit">Отправить</button>
+                        </div>
+                        <div class="form-cell __policy">
+                            Нажимая кнопку «Отправить», я даю свое согласие на обработку <a target="_blank" href="#">персональных данных</a> и подтверждаю, что ознакомился с
+                            правилами
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="shadow-block">
+        <h3>Реквизиты</h3>
+        <p>Вы можете бесплатно забрать свой заказ в любом из наших розничных зоомагазинов одним из удобных для Вас способов:</p>
+        <p>
+            <b>Самовывоз в день заказа</b> (при наличии товара в зоомагазине)
+            Воспользоваться данным способом можно в том случае, если необходимый Вам товар по Интернет-заказу есть в наличии на
+            Пункте выдачи. Сотрудник отложит товар по Вашему
+            заказу. Как только товар по заказу будет отложен, мы отправим Вам СМС о готовности заказа к выдаче и вы можете его
+            забрать.
+        </p>
+        <p>
+            <b>Самовывоз в другие дни</b> (если не все товары по заказу есть в нужном зоомагазине). При выборе данного способа получения
+            товара, Вам доступен ассортимент для заказа не
+            только из наличия магазина, но и со Склада Интернет-магазина. Мы доставим необходимый Вам товар по заказу в выбранный
+            Пункт выдачи на следующий день, после подтверждения
+            заказа оператором. Возможность доставки товара со Склада Интернет-магазина в Пункт выдачи необходимо уточнять у
+            оператора при подтверждении заказа.
+        </p>
+        <a class="btn btn-fill r10" href="shops.html">Наши магазины</a><br><br>
+        <p>
+            <b>Доставка</b> товара со Склада Интернет-магазина в Пункт выдачи – БЕСПЛАТНО.
+            Как только товар по заказу будет доставлен в Пункт выдачи, мы отправим Вам СМС о готовности заказа к выдаче.
+            Срок хранения заказа – 5 дней.
+        </p>
+        <p>
+            <b>Оплата</b> товара в Пункте выдачи любым удобным для Вас способом:
+           <ul>
+            <li>Наличными средствами;</li>
+            <li>Пластиковой картой при получении.</li>
+           </ul>
+        </p>
+        <a class="btn btn-fill r10" href="shops.html">Наши магазины</a>
+    </div>
+
+</div>
+
+
+<script>
+    window.samizoo_shops = [
+        {
+            'isMain' : true,//Добавить для главного офиса, чтобы на карте показывать балун
+            'id': 'shop-list-item-100000',
+            'shopId': '100000',
+            'url': '/shops/sklad-sami-s-usami/',
+            'shopName': 'Склад &quot;Сами с Усами&quot;',
+            'coordinates': ['55.6911', '37.4278'],
+            'cityName': 'Москва',
+            'cityId': '2672',
+            'subway': 'Кунцевская',
+            'address': 'ул. Рябиновая, 55, стр. 1, склад №10',
+            'phoneNumber': ' +7(495) 363-81-18',
+            'workingHours': ' с 09.00 до 17.00',
+            'categories':
+            {
+                'veterinary-clinic': false,
+                'reptilii': true,
+                'terrariumistika': true,
+                'korma': false,
+                'cats-and-dogs': false,
+                'birds-and-rodents': false,
+                'veterinary-pharmacy': true,
+                'grooming': false,
+                'aquaristics': true,
+                'live-fish': false,
+                'engraving': false,
+                'plants': false
+            }
+        }
+    ];
+    window.samizooVeterinaryClinics = ['54235', '75905', '75878'];
+</script>
+//= template/footer.html

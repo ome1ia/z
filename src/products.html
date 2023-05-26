@@ -1,0 +1,234 @@
+//= template/header.html
+//= template/breadcrumbs.html
+<div class="box">
+    <div class="catalog-wrapper d-grid last-level">
+        <div class="catalog-aside">
+            <div class="catalog-aside__top">
+                <a href="sections.html" class="back-catalog">Вернуться в категории</a>
+            </div>
+
+            <div class="catalog-aside__top__mobile">
+                <div class="mobile-filter-title">Фильтры</div>
+                <button id="closeAsideFilter" type="button"><svg xmlns="http://www.w3.org/2000/svg"version="1" viewBox="0 0 24 24"><path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"></path></svg></button>
+            </div>
+
+            <div class="aside-categories">
+                <span class="aside-categories__item current-category">
+                    <span class="tci-title">Текущая категория</span>
+                </span>
+                <a class="aside-categories__item" href="#">
+                    <span class="tci-title">Сухой</span>
+                </a>
+                <a class="aside-categories__item" href="#">
+                    <span class="tci-title">Влажный</span>
+                </a>
+                <a class="aside-categories__item" href="#">
+                    <span class="tci-title">Консервы</span>
+                </a>
+                <a class="aside-categories__item" href="#">
+                    <span class="tci-title">Лечебный корм</span>
+                </a>
+                <a class="aside-categories__item" href="#">
+                    <span class="tci-title">Заменители молока</span>
+                </a>
+            </div>
+
+        //= template/aside-filter.html
+
+        </div>
+
+        <div class="catalog-main">
+            <div class="header">
+                <h1>Список товаров</h1>
+            </div>
+
+            <div class="catalog-filter">
+                <div class="catalog-filter-categories flex">
+                    <a href="#" class="cfc-item">Пшеничный</a>
+                    <a href="#" class="cfc-item">Ржано-пшеничный</a>
+                    <a href="#" class="cfc-item">Ржаной</a>
+                    <a href="#" class="cfc-item">Зерновой</a>
+                    <a href="#" class="cfc-item">Бородинский</a>
+                    <a href="#" class="cfc-item">Злаковый</a>
+                    <a href="#" class="cfc-item">Безглютеновый</a>
+                    <a href="#" class="cfc-item">Ржаной</a>
+                    <a href="#" class="cfc-item">Зерновой</a>
+                    <a href="#" class="cfc-item">Бородинский</a>
+                    <a href="#" class="cfc-item">Пшеничный</a>
+                    <a href="#" class="cfc-item">Ржано-пшеничный</a>
+                    <a href="#" class="cfc-item">Ржаной</a>
+                </div>
+
+                <div class="catalog-view-settings flex-jcsb">
+                    <div class="catalog-mob__filter js-mobile-toggle-aside">
+                        <span><svg><use href="sprite/sprite.svg#equalizer" /></svg></span>
+                    </div>
+                    <div class="catalog-sort">
+                        <div class="sort-row flex">
+                            <div class="sort-cell">Сортировка:</div>
+                            <div class="sort-cell sort-drop" data-sort="price">
+                                <div class="sort-drop_item current" data-value="asc">По возростанию цены</div>
+                                <div class="sort-drop_item" data-value="desc">По убыванию цены</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-views">
+                        <div class="view__buttons flex">
+                            <div class="view__button" data-view="card"><svg><use href="sprite/sprite.svg#view1" /></svg></div>
+                            <div class="view__button current" data-view="grid"><svg><use href="sprite/sprite.svg#view2" /></svg></div>
+                            <div class="view__button" data-view="line"><svg><use href="sprite/sprite.svg#view3" /></svg></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="catalog-filter-choice flex">
+
+                    <div class="choice-tag flex">
+                        <span class="choice-tag__title">Ржаной</span>
+                        <span class="choice-tag__close"></span>
+                    </div>
+
+                    <div class="choice-tag flex">
+                        <span class="choice-tag__title">Зерновой</span>
+                        <span class="choice-tag__close"></span>
+                    </div>
+
+                    <div class="choice-tag flex">
+                        <span class="choice-tag__title">Ржаной</span>
+                        <span class="choice-tag__close"></span>
+                    </div>
+                    
+                    <div class="choice-tag flex">
+                        <span class="choice-tag__title">Зерновой</span>
+                        <span class="choice-tag__close"></span>
+                    </div>
+                    
+                    <div class="reset-tag">
+                        <span class="reset-tag__title">Сбросить всё</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="catalog-list" data-type="grid" id="template">
+                //= template/prod-item_1.html
+                //= template/prod-item_2.html
+                //= template/prod-item_3.html
+                //= template/prod-item_1.html
+                //= template/prod-item_2.html
+                //= template/prod-item_1.html
+                //= template/prod-item_2.html
+                //= template/prod-item_3.html
+                //= template/prod-item_1.html
+                //= template/prod-item_2.html
+                //= template/prod-item_2.html
+                //= template/prod-item_1.html
+            </div>
+            //= template/pagination.html
+
+
+
+            <!--Ничего не найдено-->
+            
+            <div class="c-notFound">
+                <div class="c-notFound__icon">
+                    <svg><use href="sprite/sprite.svg#not-found" /></svg>
+                </div>
+                <div class="c-notFound__text">
+                    <h3>Ничего не найдено</h3>
+                    <p>К сожалению, в нашем каталоге нет товаров, подходящих под выбранные фильтры.
+                    Попробуйте поменять или <a href="#">очистить фильтры</a>, и товары обязательно найдутся.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="catalog-tags">
+        <h4>Популярные теги продукты</h4>
+        <a href="#" class="cat-tag">Purina</a>
+        <a href="#" class="cat-tag">При заболевании МКБ</a>
+        <a href="#" class="cat-tag">При аллергии</a>
+        <a href="#" class="cat-tag">При беременности</a>
+        <a href="#" class="cat-tag">Purina</a>
+        <a href="#" class="cat-tag">При заболевании МКБ</a>
+        <a href="#" class="cat-tag">При аллергии</a>
+        <a href="#" class="cat-tag">При беременности</a>
+        <a href="#" class="cat-tag">Для котят до года (до 12 месяцев)</a>
+        <a href="#" class="cat-tag">При сахарном диабете</a>
+        <a href="#" class="cat-tag">Purina</a>
+        <a href="#" class="cat-tag">При заболевании МКБ</a>
+        <a href="#" class="cat-tag">При аллергии</a>
+        <a href="#" class="cat-tag">При беременности</a>
+        <a href="#" class="cat-tag">Для котят до года (до 12 месяцев)</a>
+        <a href="#" class="cat-tag">При сахарном диабете</a>
+        <a href="#" class="cat-tag">Для котят до года (до 12 месяцев)</a>
+        <a href="#" class="cat-tag">При сахарном диабете</a>
+        <a href="#" class="cat-tag">Purina</a>
+        <a href="#" class="cat-tag">При заболевании МКБ</a>
+        <a href="#" class="cat-tag">При аллергии</a>
+        <a href="#" class="cat-tag">При беременности</a>
+        <a href="#" class="cat-tag">Для котят до года (до 12 месяцев)</a>
+        <a href="#" class="cat-tag">При сахарном диабете</a>
+    </div>
+
+</div>
+
+
+<div class="discount-dinamic">
+    <div class="dd-row d-grid">
+        <div class="dd-cell __picture">
+            <picture>
+                <source srcset="img/gift-sm.png" media="(max-width: 750px)">
+                <img class="lazy" data-src="img/gift.png" alt="gift">
+            </picture>
+        </div>
+        <div class="dd-cell __data">
+            <div class="dd-cell__items flex-jcsb">
+                <div class="dd-data__field">Вы собрали корзину на <span class="c-pink">1 990 руб!</span></div>
+                <div class="dd-data__field">До скидки 10% вам не хватает <span class="c-pink">3 100 руб</span></div>
+                <a class="dd-more" href="#">Подробнее</a>
+            </div>
+            <div class="dd-cell__range">
+                <div class="dd-range-progress" style="width: 47%;"></div>
+            </div>
+        </div>
+        <div class="dd-cell __button">
+            <button type="button" class="btn btn-transp r10">Отмена</button>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+
+    //смена списка товаров
+    if (localStorage.getItem('temp_view')) {
+        let view = localStorage.getItem('temp_view');
+        $('#template').attr('data-type', view);
+        $('[data-view=' + view + ']').addClass('current').siblings().removeClass('current');
+    }
+
+    $('body').on('click', '[data-view]', function () {
+        let list_view = $(this).data('view')
+        $(this).addClass('current').siblings().removeClass('current');
+        $('#template').attr('data-type', list_view);
+        localStorage.setItem('temp_view', list_view);
+    });
+
+    //Выбор сортировки
+    $('body').on('click', '[data-sort] div.current', function () {
+        $(this).siblings().toggle();
+    });
+
+    
+    $('body').on('click', '[data-sort] div:not(.current)', function () {
+        $(this).addClass('current').siblings().removeClass('current').hide();
+        let key = $(this).parent().data('sort');
+
+        console.log({ [key]: $(this).data('value') });
+        alert('Сортировка: '+ $(this).data('value'));
+    });
+</script>
+//= template/footer.html

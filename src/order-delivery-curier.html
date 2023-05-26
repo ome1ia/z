@@ -1,0 +1,132 @@
+//= template/header.html
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&coordorder=longlat&apikey=cbcdfe6a-f0c7-4bda-b9eb-28f404cb55d8"></script>
+
+
+<div class="box">
+    <a href="order.html" class="back-catalog">Назад в корзину</a>
+    <div class="header">
+        <h1>Укажите способ доставки</h1>
+    </div>
+</div>
+
+<div class="box">
+    <div class="delivery-and-map delivery-page">
+        <div class="delivery-leftBlock order-block">
+            <div class="delivery-tabs --justify">
+                <a href="order-delivery-curier.html" class="delivery-tab-item active">Курьером</a>
+                <a href="order-delivery-self.html"  class="delivery-tab-item">Самовывоз</a>
+                <a href="order-delivery-country.html"  class="delivery-tab-item">Доставка по России</a>
+            </div>
+
+            <div class="ob-title flex-jcsb">
+                <span>Адрес доставки</span>
+                <div class="switchBox">
+                    <input type="checkbox" id="switch" name="no-call">
+                    <span class="check-switcher"></span>
+                    <label for="switch">Частный дом</label>
+                </div>
+            </div>
+
+            <div class="delivery-form"> 
+                <div class="form-row">
+                    <label>Город, улица, дом</label>
+                    <input type="text" class="italic" name="address1" placeholder="Введите адрес, а затем выберите вариант из выпадающего списка" />
+                </div>
+                <div class="form-row flex-jcsb">
+                    <div class="form-cell __half">
+                        <label>№ Квартиры, офиса*</label>
+                        <input type="text" name="address2" />
+                    </div>
+                    <div class="form-cell __four">
+                        <label>№ Подъезда</label>
+                        <input type="text" name="address3" />
+                    </div>
+                    <div class="form-cell __four">
+                        <label>Этаж</label>
+                        <input type="text" name="address3" />
+                    </div>
+                </div>
+                <div class="delivery-note">
+                    Укажите адрес для расчёта стоимости доставки
+                </div>
+                <div class="form-row">
+                    <label>Комментарий для курьера</label>
+                    <textarea name="comment" rows="6"></textarea>
+                </div>
+                <div class="yellow-note">
+                    Стоимость доставки 250 руб. <br>
+                    До бесплатной доставки не хватает 250 руб
+                </div>
+                <div class="form-row__note">
+                    *Доставка по удаленным направлениям за МКАД осуществляется в определенные дни недели.
+                    Уточнить день можно по телефону <br> +7 495 916 94 94
+                </div>
+            </div>
+            <div class="delivery-bottom">
+                <button type="button" class="btn btn-fill r10" disabled >Доставить сюда</button>
+            </div>
+
+        </div>
+        <div class="shop-map paddTop">
+            <div class="shop-map-wrapper">
+                <div class="shop-map-box" id="deliveryMap"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    ymaps.ready(init);
+
+        function init() {
+            var myMap = new ymaps.Map('deliveryMap', {
+                center: [55.753994, 37.622093],
+                zoom: 9
+            });
+
+            // Поиск координат центра Нижнего Новгорода.
+            ymaps.geocode('Московская обл., г. Одинцово, ул.Маршала Жукова, дом 38, помещение 86', {
+                /**
+                 * Опции запроса
+                 * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/geocode.xml
+                 */
+                // Сортировка результатов от центра окна карты.
+                // boundedBy: myMap.getBounds(),
+                // strictBounds: true,
+                // Вместе с опцией boundedBy будет искать строго внутри области, указанной в boundedBy.
+                // Если нужен только один результат, экономим трафик пользователей.
+                results: 1
+            }).then(function (res) {
+                // Выбираем первый результат геокодирования.
+                var firstGeoObject = res.geoObjects.get(0),
+                    // Координаты геообъекта.
+                    coords = firstGeoObject.geometry.getCoordinates(),
+                    // Область видимости геообъекта.
+                    bounds = firstGeoObject.properties.get('boundedBy');
+
+                // Масштабируем карту на область видимости геообъекта.
+                myMap.setBounds(bounds, {
+                    // Проверяем наличие тайлов на данном масштабе.
+                    checkZoomRange: true
+                });
+
+                let balloon_content = '';
+                balloon_content = '<div class="custom-baloon">';
+                balloon_content += '<button id="close-baloon" type="button" class="fancybox-button fancybox-close-small"><svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 24 24"><path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"></path></svg></button>';
+                balloon_content += '<h3>Вы выбрали адрес</h3>';  
+                balloon_content += '<p>'+ firstGeoObject.properties.get('text') +'</p>';  
+                balloon_content += '<button class="btn btn-fill r10">Доставить сюда</button>';
+                balloon_content += '</div>';
+                
+                 var myPlacemark = new ymaps.Placemark(coords, {
+                 balloonContent: balloon_content
+                 }, {
+                    preset: 'islands#greenCircleDotIconWithCaption'
+                 });
+
+                 myMap.geoObjects.add(myPlacemark);
+                 myMap.balloon.open(coords, balloon_content);
+                 
+            });
+        }
+</script>
+//= template/footer.html

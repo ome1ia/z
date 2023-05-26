@@ -1,0 +1,98 @@
+//= template/header.html
+//= template/breadcrumbs.html
+<div class="box">
+    <div class="header">
+        <h1>Личный кабинет</h1>
+    </div>
+</div>
+<div class="box">
+    <div class="profile d-grid">
+        <div class="profile-aside">
+           <ul class="personal-menu">
+                <li><a href="lk-main.html"><span class="p-menu__icon"><svg width="23" height="20"><use href="sprite/sprite.svg#personal-home" /></svg></span>Главная</a></li>
+                <li><a href="lk-history.html"><span class="p-menu__icon"><svg width="23" height="21"><use href="sprite/sprite.svg#personal-history" /></svg></span>История заказов</a></li>
+                <li><a href="lk-bonus.html"><span class="p-menu__icon"><svg width="27" height="23"><use href="sprite/sprite.svg#personal-bonus" /></svg></span>Мои БонУСы</a></li>
+                <li><a href="lk-pets.html"><span class="p-menu__icon"><svg width="27" height="24"><use href="sprite/sprite.svg#personal-pets" /></svg></span>Мои Питомцы</a></li>
+                <li><a class="active" href="lk-messages.html"><span class="p-menu__icon"><svg width="24" height="22"><use href="sprite/sprite.svg#personal-mess" /></svg></span>Сообщения</a></li>
+                <li><a href="lk-favorite.html"><span class="p-menu__icon"><svg width="22" height="19"><use href="sprite/sprite.svg#m_fav" /></svg></span>Избранное</a></li>
+                <li><a href="lk-profile.html"><span class="p-menu__icon"><svg width="22" height="22"><use href="sprite/sprite.svg#personal-profile" /></svg></span>Профиль</a></li>
+                <li><a href="lk-delivery.html"><span class="p-menu__icon"><svg width="18" height="23"><use href="sprite/sprite.svg#personal-delivery" /></svg></span>Адреса доставки</a></li>
+                <li><a href="lk-feedback"><span class="p-menu__icon"><svg width="21" height="18"><use href="sprite/sprite.svg#personal-feedback" /></svg></span>Обратная связь</a></li>
+                <li><a href="?logout=Y"><span class="p-menu__icon"><svg width="21" height="18"><use href="sprite/sprite.svg#personal-out" /></svg></span>Выйти</a></li>
+            </ul>
+            <div class="profile-asideBanner">
+                <a href="lk-pets.html">
+                    <picture>
+                        <source srcset="img/test/lk/lk-banner-mob.png" media="(max-width: 1024px)" />
+                        <img class="lazy" data-src="img/test/lk/lk-banner.png" alt="" />
+                    </picture>
+                </a>
+            </div>
+        </div>
+        <div class="profile-main">
+            <div class="header"><h3>Сообщения</h3></div>
+            <div class="profile-messages">
+                <div class="profile-messages__top flex-jcsb">
+                    <div class="messages__top-count">У вас <b>5 сообщений</b></div>
+                    <a href="#" class="more">Прочитать все</a> 
+                </div>
+                <div class="p-messages-list">
+
+                    <!--Сообщение-->
+
+                    <div class="p-message-item __new">
+                         <div class="p-message-title">Новое поступление в разделе для собак</div>
+                        <div class="p-message-body">
+                            Royal Canin (Роял Канин) Medium Starter Mother & babydog Корм сухой для собак средних размеров (весом от 11 до 25 кг) в
+                            конце беременности и в период лактации, а также для щенков в период отъема от матери и до 2-х месячного возраста. Для
+                            собак средних размеров. Royal Canin (Роял Канин) Medium Starter Mother & babydog Корм сухой для собак средних размеров
+                        </div>
+                        <div class="p-message-bottom flex-jcsb">
+                            <a href="javascript:void(0);" class="more js-moreText">
+                                <span>Прочитать</span>
+                                <span class="hidden">Свернуть</span>
+                            </a>
+                            <span class="p-message-date">12:56 Сегодня</span>
+                        </div>
+                    </div>
+
+                    <!--Сообщение-->
+                    
+                    <div class="p-message-item ">
+                        <div class="p-message-title">Старое поступление в разделе для кошек</div>
+                        <div class="p-message-body">
+                            Royal Canin (Роял Канин) Medium Starter Mother & babydog Корм сухой для собак средних размеров (весом от 11 до
+                            25 кг) в
+                            конце беременности и в период лактации, а также для щенков в период отъема от матери и до 2-х месячного
+                            возраста. Для
+                            собак средних размеров. Royal Canin (Роял Канин) Medium Starter Mother & babydog Корм сухой для собак средних
+                            размеров
+                        </div>
+                        <div class="p-message-bottom flex-jcsb">
+                            <a href="javascript:void(0);" class="more js-moreText">
+                                <span>Прочитать</span>
+                                <span class="hidden">Свернуть</span>
+                            </a>
+                            <span class="p-message-date">12:56 Сегодня</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                //= template/pagination-center.html
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('.js-moreText').on('click', function () {
+            $(this).find('span').toggleClass('hidden')
+            $(this).parent().prev().toggleClass('--full');
+        })
+    });
+</script>
+
+//= template/footer.html

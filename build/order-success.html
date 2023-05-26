@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="robots" content="index, follow, noodp">
+    <meta name="googlebot" content="index, follow">
+    <meta name="google" content="notranslate">
+    <meta name="format-detection" content="telephone=no">
+    <!--CSS-->
+
+
+    <link href="fonts/stylesheet.css?v=dc628b3506a2246214ebc58c2b63393b" rel="stylesheet" />
+    <link href="libs/fancybox/fancybox.css?v=dc628b3506a2246214ebc58c2b63393b" rel="stylesheet" />
+    <link href="libs/select2/select2.min.css?v=dc628b3506a2246214ebc58c2b63393b" rel="stylesheet" />
+    <link href="libs/swiper/swiper-bundle.css?v=dc628b3506a2246214ebc58c2b63393b" rel="stylesheet" />
+    <link href="libs/normalize.css?v=dc628b3506a2246214ebc58c2b63393b" rel="stylesheet" />
+    <link href="libs/ion.rangeSlider/ion.rangeSlider.css?v=dc628b3506a2246214ebc58c2b63393b" rel="stylesheet" />
+    <link href="libs/malihu-scrollbar/jquery.mCustomScrollbar.css?v=dc628b3506a2246214ebc58c2b63393b" rel="stylesheet" />
+    <link href="libs/datepicker/datepicker.css?v=dc628b3506a2246214ebc58c2b63393b" rel="stylesheet" />
+    <!--CSS Корзина, ЛК, Оформление заказа-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.css?v=dc628b3506a2246214ebc58c2b63393b">
+    <link href="personal.css?v=dc628b3506a2246214ebc58c2b63393b" rel="stylesheet" />
+    <link href="style.css?v=dc628b3506a2246214ebc58c2b63393b" rel="stylesheet" />
+    
+    <title>Сами с усами</title>
+    <!--JS-->
+    <script src="libs/jquery-3.6.3.min.js?v=dc628b3506a2246214ebc58c2b63393b"></script>
+    <script src="libs/fancybox/fancybox.min.js?v=dc628b3506a2246214ebc58c2b63393b"></script>
+    <script src="libs/select2/select2.min.js?v=dc628b3506a2246214ebc58c2b63393b"></script>
+    <script src="libs/datepicker/datepicker.min.js?v=dc628b3506a2246214ebc58c2b63393b"></script>
+    <script src="libs/swiper/swiper-bundle.min.js?v=dc628b3506a2246214ebc58c2b63393b"></script>
+    <script src="libs/lazyload.min.js?v=dc628b3506a2246214ebc58c2b63393b"></script>
+    <script src="libs/countdown.min.js?v=dc628b3506a2246214ebc58c2b63393b"></script>
+    <script src="libs/ion.rangeSlider/ion.rangeSlider.js?v=dc628b3506a2246214ebc58c2b63393b"></script>
+    <script src="libs/maskedinput.js?v=dc628b3506a2246214ebc58c2b63393b"></script>
+    <script src="libs/malihu-scrollbar/jquery.mCustomScrollbar.min.js?v=dc628b3506a2246214ebc58c2b63393b"></script>
+    <script src="js/custom.js?v=dc628b3506a2246214ebc58c2b63393b"></script>
+</head>
+<body>
+    <main>
+        <header>
+            <div class="h-top">
+                <div class="mobile-top-header show_mobile">
+                    <div class="mth-half__row flex-jcsb">
+                        <div class="mth-half">
+                            <div class="mob-header hide-menu-button" id="hideMobleMenu">Меню</div>
+                        </div>
+                        <div class="mth-half">
+                            <div class="mob-header__buttons flex">
+                                <!--Мобильные поиск и телефон-->
+                                <div class="h-main__item top-search-button show_mobile">
+                                    <svg>
+                                        <use href="sprite/sprite.svg#search" />
+                                    </svg>
+                                </div>
+                                <div class="h-main__item top-phone-button show_mobile">
+                                    <svg>
+                                        <use href="sprite/sprite.svg#phone"></use>
+                                    </svg>
+                                </div>
+                                <!--конец-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="h-top__set flex-jcsb">
+                        <div class="h-top__item">
+                            <nav class="top-menu" id="dinamicMenu">
+                                <ul class="top-menu_visible js-visib-menu menu">
+                                    <li class="dd_menu">
+                                        <button class="dropdown-toggle" type="button">Ещё</button>
+                                        <ul class="dropdown-menu"></ul>
+                                    </li>
+                                    <li class="item"><a href="about.html">О компании</a></li>
+                                    <li class="item"><a href="delivery-and-payment.html">Доставка и оплата</a></li>
+                                    <li class="item"><a href="shops.html">Наши магазины</a></li>
+                                    <li class="item"><a href="advice.html">Статьи</a></li>
+                                    <li class="item"><a href="faq.html">Вопросы и ответы</a></li>
+                                    <li class="item"><a href="brands.html">Бренды</a></li>
+                                    <li class="item"><a href="contacts.html">Контакты</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                        <div class="h-top__item">
+                            <div class="top-info flex-jcsb">
+
+                                <div class="top-info__item shedule">
+                                    <span class="midd-variant">
+                                        <svg><use href="sprite/sprite.svg#support"/></svg>
+                                    </span> 
+                                    <span class="lg-variant">
+                                        Время работы операторов:
+                                    </span>
+                                    <span class="shed-val">пн-пт 9:00 - 19:00 <br> сб 9:00 - 16:00 <br> вс выходной</span>
+                                </div>
+
+                                <div class="top-info__item phone">
+                                    <a href="tel:+74957752060">
+                                        <span><svg><use href="sprite/sprite.svg#phone"/></svg></span>
+                                        +7 (495) 775-20-60
+                                    </a>
+                                </div>
+
+                                <div class="top-info__item feedback">
+                                    <a href="#feedback" data-fancybox>Заказать звонок</a>
+                                </div>
+
+                                <div class="extra-schedule">
+                                    <div class="es-button js-warningBtn"></div>
+                                    <div class="es-hint" id="top_warning">
+                                        <p><b>23 и 24 февраля -</b> работаем с 9:00 до 16:00</p>
+                                        <p><b>25 и 26 февраля</b> - выходной</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="h-main">
+                <div class="box">
+                    <div class="h-main__set flex-jcsb">
+                        <div class="show_mobile h-main__item menu_button" id="toggleMobleMenu">
+                            <svg><use href="sprite/sprite.svg#mobile-show-menu" /></svg>
+                        </div>
+                        <div class="h-main__item top-logo">
+                            <a href="index.html" title="На главную"><img src="img/logo.svg" alt="Сами с усами"></a>
+                        </div>
+                        <div class="h-main__item catalog-trigger hide_mobile" id="trigger-cat-menu">
+                            <span class="btn btn-fill r5"><svg><use href="sprite/sprite.svg#cat_btn" /></svg>Каталог</span>
+                        </div>
+                        <div class="h-main__item top-search hide_mobile">
+                            <form action="">
+                                <div class="top-search__form">
+                                    <input type="text" name="q" placeholder="Искать на Сами с усами" autocomplete="off"/>
+                                    <button type="submit"><svg><use href="sprite/sprite.svg#search" /></svg></button>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <!--Мобильные поиск и телефон-->
+                        <div class="h-main__item top-search-button show_mobile">
+                            <svg><use href="sprite/sprite.svg#search" /></svg>
+                        </div>
+                        <div class="h-main__item top-phone-button show_mobile">
+                            <svg><use href="sprite/sprite.svg#phone"></use></svg>
+                        </div>
+                        <!--конец-->
+
+                        <div class="h-main__item fixed_mobile">
+                            <div class="top-user-menu flex-jcsb">
+                                <a href="#" class="top-user-menu__item _item-catalog show_mobile selected" id="mobile-catalog-trigger">
+                                    <span class="item-icon"><svg><use href="sprite/sprite.svg#mob-bottom-cat" /></svg></span>
+                                    <span class="item-title">Каталог</span>
+                                </a>
+                                <a class="top-user-menu__item _item-sales action-active" href="sales.html"> <!--Если акция не активна, то убрать класс .action-active-->
+                                    <span class="item-icon"><svg><use href="sprite/sprite.svg#m_sales" /></svg></span>
+                                    <span class="item-title">Акции</span>
+                                    <!--Если акция активна-->
+                                    <div class="action-time flex-jcsb" id="sale-countdown"></div>
+                                    <script>
+                                        var options = {
+                                                value: 86400, //количество секунд до конца акции
+                                                warn: {
+                                                    secondsLeft: 60
+                                                },
+                                                onFinish: function () {
+                                                    alert('Конец акции! Что-нибудь делаем');
+                                                    $('#sale-countdown').empty();
+                                                }
+                                            };
+                                        var ft0 = new FancyTimer(
+                                            document.getElementById('sale-countdown'),
+                                            options
+                                        );
+                                        ft0.start(-1);   
+                                    </script>
+                                    <!--//-->
+                                </a>
+                                <a class="top-user-menu__item _item-favorite" href="#"><span class="item-icon"><svg><use href="sprite/sprite.svg#m_fav" /></svg></span><span class="item-title">Избранное</span></a>
+                                <!--Не авторизован
+                                <a class="top-user-menu__item" data-fancybox="#login" href="#"><span class="item-icon"><svg><use href="sprite/sprite.svg#m_user" /></svg></span><span class="item-title">Войти</span></a>
+                                -->
+                                <div class="top-user-menu__item _item-user js-personal" href="#"><span class="item-icon"><svg><use href="sprite/sprite.svg#m_user" /></svg></span>
+                                    <span class="item-title">Дмитрий</span>
+                                    <div class="top-personal">
+                                        <ul class="top-personal__menu">
+                                            <li><a href="lk-main.html"><span class="p-menu__icon"><svg width="23" height="20"><use href="sprite/sprite.svg#personal-home" /></svg></span>Главная</a></li>
+                                            <li><a href="lk-history.html"><span class="p-menu__icon"><svg width="23" height="21"><use href="sprite/sprite.svg#personal-history" /></svg></span>История заказов</a></li>
+                                            <li><a href="lk-bonus.html"><span class="p-menu__icon"><svg width="27" height="23"><use href="sprite/sprite.svg#personal-bonus" /></svg></span>Мои БонУСы</a></li>
+                                            <li><a href="lk-pets.html"><span class="p-menu__icon"><svg width="27" height="24"><use href="sprite/sprite.svg#personal-pets" /></svg></span>Мои Питомцы</a></li>
+                                            <li><a class="have-new" href="lk-messages.html"><span class="p-menu__icon"><svg width="24" height="22"><use href="sprite/sprite.svg#personal-mess" /></svg></span>Сообщения</a></li>
+                                            <li><a href="lk-favorite.html"><span class="p-menu__icon"><svg width="22" height="19"><use href="sprite/sprite.svg#m_fav" /></svg></span>Избранное</a></li>
+                                            <li><a href="lk-profile.html"><span class="p-menu__icon"><svg width="22" height="22"><use href="sprite/sprite.svg#personal-profile" /></svg></span>Профиль</a></li>
+                                            <li><a href="lk-delivery.html"><span class="p-menu__icon"><svg width="18" height="23"><use href="sprite/sprite.svg#personal-delivery" /></svg></span>Адреса доставки</a></li>
+                                            <li><a href="lk-feedback.html"><span class="p-menu__icon"><svg width="21" height="18"><use href="sprite/sprite.svg#personal-feedback" /></svg></span>Обратная связь</a></li>
+                                            <li><a href="?logout=Y"><span class="p-menu__icon"><svg width="21" height="18"><use href="sprite/sprite.svg#personal-out" /></svg></span>Выйти</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!--при пустой корзине добавить класс --empty-->
+                                <a class="top-user-menu__item _item-cart" href="basket.html"><span class="item-icon"><svg><use href="sprite/sprite.svg#m_cart" /></svg></span>
+                                    <!--<span class="basket-empty">Корзина</span>-->
+                                    <div class="basket">
+                                        <span class="basket-count">3</span>
+                                        <span class="basket-title">На сумму</span>
+                                        <span class="basket-sum">52 190 ₽</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="main-catalog-menu is_hidden" id="hidden-catalog">
+                        <div class="catalog-menu-area d-grid">
+                            <div class="catalog-menu-aside">
+                                <div class="top-categories">
+                                    <a class="top-categories__item selected" href="catalog-root.html" data-trigger-sect="id_1">
+                                        <span class="tci-icon"><svg width="23" height="23">
+                                                <use href="sprite/sprite.svg#apteka"></use>
+                                            </svg></span>
+                                        <span class="tci-title">Ветаптека</span>
+                                    </a>
+                                    <a class="top-categories__item" href="catalog-root.html" data-trigger-sect="id_2">
+                                        <span class="tci-icon"><svg width="30" height="26">
+                                                <use href="sprite/sprite.svg#dog"></use>
+                                            </svg></span>
+                                        <span class="tci-title">Собаки</span>
+                                    </a>
+                                    <a class="top-categories__item" href="catalog-root.html" data-trigger-sect="id_3">
+                                        <span class="tci-icon"><svg width="30" height="26">
+                                                <use href="sprite/sprite.svg#cat"></use>
+                                            </svg></span>
+                                        <span class="tci-title">Кошки</span>
+                                    </a>
+                                    <a class="top-categories__item" href="catalog-root.html" data-trigger-sect="id_4">
+                                        <span class="tci-icon"><svg width="33" height="23 ">
+                                                <use href="sprite/sprite.svg#fish"></use>
+                                            </svg></span>
+                                        <span class="tci-title">Рыбки</span>
+                                    </a>
+                                    <a class="top-categories__item" href="catalog-root.html" data-trigger-sect="id_5">
+                                        <span class="tci-icon"><svg width="27 " height="26">
+                                                <use href="sprite/sprite.svg#mouse"></use>
+                                            </svg></span>
+                                        <span class="tci-title">Грызуны</span>
+                                    </a>
+                                    <a class="top-categories__item" href="catalog-root.html" data-trigger-sect="id_6">
+                                        <span class="tci-icon"><svg width="27 " height="27 ">
+                                                <use href="sprite/sprite.svg#bird"></use>
+                                            </svg></span>
+                                        <span class="tci-title">Птицы</span>
+                                    </a>
+                                    <a class="top-categories__item" href="catalog-root.html" data-trigger-sect="id_7">
+                                        <span class="tci-icon"><svg width="29" height="28">
+                                                <use href="sprite/sprite.svg#horse"></use>
+                                            </svg></span>
+                                        <span class="tci-title">Лошади</span>
+                                    </a>
+                                    <a class="top-categories__item" href="catalog-root.html" data-trigger-sect="id_8">
+                                        <span class="tci-icon"><svg width="31" height="31">
+                                                <use href="sprite/sprite.svg#turtle"></use>
+                                            </svg></span>
+                                        <span class="tci-title">Рептилии</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="catalog-menu-main">
+
+                                <!--Раздел 1-->
+                                <div class="catalog-menu__section selected cust-scroll" data-target-sect="id_1">
+                                    <div class="catalog-menu__columns d-grid">
+                                        <div class="catalog-menu__col">
+                                            <a class="cmc-parent" href="#">Ветаптека</a>
+                                            <ul>
+                                                <li class="item-parent">
+                                                    <span class="item-parent-box">
+                                                        <a href="#">Для ушей мышей карандашей и прочих животных</a>
+                                                        <ul class="child">
+                                                            <li><a href="#">Сухой корм</a></li>
+                                                            <li><a href="#">Влажный корм</a></li>
+                                                            <li><a href="#">Консервы</a></li>
+                                                            <li><a href="#">Лечебный корм drg</a></li>
+                                                            <li><a href="#">Сухой корм</a></li>
+                                                            <li><a href="#">Влажный корм dhdt</a></li>
+                                                            <li><a href="#">Консервы</a></li>
+                                                            <li><a href="#">Профессиональная амуниция для дрессировки собак</a></li>
+                                                            <li><a href="#">Лечебный корм</a></li>
+                                                        </ul>
+                                                    </span>
+                                                </li>
+                                                <li><a href="#">От блох и клещей</a></li>
+                                                <li class="item-parent">
+                                                    <span class="item-parent-box">
+                                                        <a href="#">От глистов</a>
+                                                        <ul class="child">
+                                                            <li><a href="#">аыупакп</a></li>
+                                                            <li><a href="#">роплорббор якпке</a></li>
+                                                            <li><a href="#">ывкпявякпряе</a></li>
+                                                            <li><a href="#">Лакомства и витамины </a></li>
+                                                        </ul>
+                                                    </span>
+                                                </li>
+                                                <li><a href="#">От стресса</a></li>
+                                            </ul>
+                                        </div>
+                                    
+                                        <div class="catalog-menu__col">
+                                            <a class="cmc-parent" href="#">Корм</a>
+                                            <ul>
+                                                <li><a href="#">Сухой корм</a></li>
+                                                <li><a href="#">Влажный корм</a></li>
+                                                <li><a href="#">Консервы</a></li>
+                                                <li><a href="#">Лечебный корм</a></li>
+                                                <li class="item-parent">
+                                                    <span class="item-parent-box">
+                                                        <a href="#">Заменители молока</a>
+                                                        <ul class="child">
+                                                            <li><a href="#">Сухой корм</a></li>
+                                                            <li><a href="#">Влажный корм</a></li>
+                                                            <li><a href="#">Консервы</a></li>
+                                                            <li><a href="#">Заменители молока</a></li>
+                                                        </ul>
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    
+                                        <div class="catalog-menu__col">
+                                            <a class="cmc-parent" href="#">Лакомства и витамины </a>
+                                            <ul>
+                                                <li><a href="#">Лакомства и кости</a></li>
+                                                <li><a href="#">Витамины и пищевые добавки</a></li>
+                                            </ul>
+                                        </div>
+                                    
+                                        <div class="catalog-menu__col">
+                                            <a class="cmc-parent" href="#">Содержание и перевозка</a>
+                                            <ul>
+                                                <li class="item-parent">
+                                                    <span class="item-parent-box">
+                                                        <a href="#">Переноски, клетки</a>
+                                                        <ul class="child">
+                                                            <li><a href="#">Сухой корм</a></li>
+                                                            <li><a href="#">Влажный корм</a></li>
+                                                            <li><a href="#">Консервы</a></li>
+                                                            <li><a href="#">Лечебный корм drg</a></li>
+                                                            <li><a href="#">Сухой корм</a></li>
+                                                            <li><a href="#">Влажный корм dhdt</a></li>
+                                                            <li><a href="#">Консервы</a></li>
+                                                            <li><a href="#">Профессиональная амуниция для дрессировки собак</a></li>
+                                                            <li><a href="#">Лечебный корм</a></li>
+                                                        </ul>
+                                                    </span>
+                                                </li>
+                                                <li><a href="#">Лежаки, домики</a></li>
+                                                <li><a href="#">Миски, контейнеры, кормушки</a></li>
+                                                <li><a href="#">Автобоксы</a></li>
+                                            </ul>
+                                        </div>
+                                    
+                                        <div class="catalog-menu__col">
+                                            <a class="cmc-parent" href="#">Тренировки и игры</a>
+                                            <ul>
+                                                <li><a href="#">Игрушки</a></li>
+                                                <li><a href="#">Ошейники и поводки</a></li>
+                                                <li><a href="#">Профессиональная амуниция</a></li>
+                                            </ul>
+                                        </div>
+                                    
+                                        <div class="catalog-menu__col">
+                                            <a class="cmc-parent" href="#">Уход за собакой</a>
+                                            <ul>
+                                                <li><a href="#">Груминг</a></li>
+                                                <li><a href="#">Косметика</a></li>
+                                                <li><a href="#">Пеленки</a></li>
+                                                <li><a href="#">Средства для уборки</a></li>
+                                                <li><a href="#">Бассейны</a></li>
+                                            </ul>
+                                        </div>
+                                    
+                                        <div class="catalog-menu__col">
+                                            <a class="cmc-parent" href="#">Аксессуары</a>
+                                            <ul>
+                                                <li><a href="#">Одежда</a></li>
+                                                <li><a href="#">Поводки</a></li>
+                                                <li><a href="#">Поводки-рулетки</a></li>
+                                                <li><a href="#">Намордники</a></li>
+                                                <li><a href="#">Шлейки</a></li>
+                                            </ul>
+                                        </div>
+                                    
+                                        <div class="catalog-menu__col">
+                                            <a class="cmc-parent" href="#">Сувернирная продукция</a>
+                                            <ul>
+                                                <li><a href="#">Бижутерия</a></li>
+                                                <li><a href="#">Брелки</a></li>
+                                                <li><a href="#">Значки</a></li>
+                                            </ul>
+                                        </div>
+                                    
+                                    </div>
+                                    
+                                    <!--Акции в меню-->
+                                    <div class="catalog-menu__actions d-grid">
+                                        <a href="#" class="cmenu__action">
+                                            <span class="cmenu__action__img">
+                                                <picture>
+                                                    <source type="image/webp" src-set="img/test/actions/1.webp" />
+                                                    <img class="lazy" data-src="img/test/actions/1.png" alt="1" />
+                                                </picture>
+                                            </span>
+                                            <span class="cmenu__action__title">
+                                                Скидка на аквариумы от фирмы
+                                                “Природа” до 10%
+                                            </span>
+                                        </a>
+                                        <a href="#" class="cmenu__action">
+                                            <span class="cmenu__action__img">
+                                                <picture>
+                                                    <source type="image/webp" src-set="img/test/actions/2.webp" />
+                                                    <img class="lazy" data-src="img/test/actions/2.png" alt="2" />
+                                                </picture>
+                                            </span>
+                                            <span class="cmenu__action__title">
+                                                Одежда для собак
+                                            </span>
+                                        </a>
+                                        <a href="#" class="cmenu__action">
+                                            <span class="cmenu__action__img">
+                                                <picture>
+                                                    <source type="image/webp" src-set="img/test/actions/3.webp" />
+                                                    <img class="lazy" data-src="img/test/actions/3.png" alt="3" />
+                                                </picture>
+                                            </span>
+                                            <span class="cmenu__action__title">
+                                                Скидка на аквариумы от фирмы
+                                                “Природа” до 10%
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <!--Конец акций в меню-->
+                                </div>
+
+                                <!--Раздел 2-->
+                                <div class="catalog-menu__section" data-target-sect="id_2">
+                                    Собаки
+                                </div>
+
+                                <!--Раздел 3-->
+                                <div class="catalog-menu__section" data-target-sect="id_3">
+                                    Кошки
+                                </div>
+
+                                <!--Раздел 4-->
+                                <div class="catalog-menu__section" data-target-sect="id_4">
+                                    Рыбки
+                                </div>
+
+                                <!--Раздел 5-->
+                                <div class="catalog-menu__section" data-target-sect="id_5">
+                                    Грызуны
+                                </div>
+
+                                <!--Раздел 6-->
+                                <div class="catalog-menu__section" data-target-sect="id_6">
+                                    Птицы
+                                </div>
+
+                                <!--Раздел 7-->
+                                <div class="catalog-menu__section" data-target-sect="id_7">
+                                    Лошади
+                                </div>
+
+                                <!--Раздел 8-->
+                                <div class="catalog-menu__section" data-target-sect="id_8">
+                                    Рептилии
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+            <div class="h-bottom desctop-only">
+                    <div class="box">
+                        <div class="top-categories flex-jcsb">
+                            <a class="top-categories__item" href="catalog-root.html">
+                                <span class="tci-icon"><svg width="23" height="23"><use href="sprite/sprite.svg#apteka" /></svg></span>
+                                <span class="tci-title">Ветаптека</span>
+                            </a>
+                            <a class="top-categories__item" href="catalog-root.html">
+                                <span class="tci-icon"><svg width="30" height="26"><use href="sprite/sprite.svg#dog" /></svg></span>
+                                <span class="tci-title">Собаки</span>
+                            </a>
+                            <a class="top-categories__item" href="catalog-root.html">
+                                <span class="tci-icon"><svg width="30" height="26"><use href="sprite/sprite.svg#cat" /></svg></span>
+                                <span class="tci-title">Кошки</span>
+                            </a>
+                            <a class="top-categories__item" href="catalog-root.html">
+                                <span class="tci-icon"><svg width="33" height="23 "><use href="sprite/sprite.svg#fish" /></svg></span>
+                                <span class="tci-title">Рыбки</span>
+                            </a>
+                            <a class="top-categories__item" href="catalog-root.html">
+                                <span class="tci-icon"><svg width="27 " height="26"><use href="sprite/sprite.svg#mouse" /></svg></span>
+                                <span class="tci-title">Грызуны</span>
+                            </a>
+                            <a class="top-categories__item" href="catalog-root.html">
+                                <span class="tci-icon"><svg width="27 " height="27 "><use href="sprite/sprite.svg#bird" /></svg></span>
+                                <span class="tci-title">Птицы</span>
+                            </a>
+                            <a class="top-categories__item" href="catalog-root.html">
+                                <span class="tci-icon"><svg width="29" height="28"><use href="sprite/sprite.svg#horse" /></svg></span>
+                                <span class="tci-title">Лошади</span>
+                            </a>
+                            <a class="top-categories__item" href="catalog-root.html">
+                                <span class="tci-icon"><svg width="31" height="31"><use href="sprite/sprite.svg#turtle" /></svg></span>
+                                <span class="tci-title">Рептилии</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            <section class="content">
+<div class="box">
+    <div class="breadcrumbs">
+        <ul class="breadcrumbs__list" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+            <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                <a class="breadcrumbs__link" href="/" itemprop="item">
+                    <span itemprop="name">Главная</span>
+                    <meta itemprop="position" content="1">
+                </a>
+            </li>
+            <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                <a class="breadcrumbs__link" href="/dlya-sobak/" itemprop="item">
+                    <span itemprop="name">Первый уровень</span>
+                    <meta itemprop="position" content="2">
+                </a>
+            </li>
+            <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                <span itemprop="name">Текущая страница</span>
+                <meta itemprop="position" content="3">
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="box">
+    <div class="header">
+        <h1>Спасибо за заказ!</h1>
+    </div>
+</div>
+<div class="box">
+    <div class="double d-grid">
+        <div class="double-half --image hide_mobile">
+            <img class="lazy" data-src="img/s-order.png" alt="image" />
+        </div>
+        <div class="double-half">
+            <div class="s-order">
+                <p class="s-order__description">Карина, наша команда приняла в работу <span class="order-num">Ваш заказ 163907!</span></p>
+                <p>Наши операторы обязательно с Вами свяжутся. Напоминаем, что Вам доступен <a href="lk-main.html">личный кабинет!</a></p>
+                <br>
+                <b>Зачем он нужен? Сейчас расскажем:</b>
+                <br>
+                <ul class="check-style">
+                    <li>Забыли, что понравилось Вашему питомцу в прошлый раз? Не страшно, ведь можно посмотреть историю заказов и с лёгкостью их
+                    повторить!</li>
+                    <li>Вы не планируете переезжать каждую неделю? Супер, ведь Ваш адрес уже будет заполнен в оформлении заказа, потому что мы с
+                    вами уже знакомы!</li>
+                    <li>Вы также как и мы любите рассказывать о своём питомце?</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="s-order-note d-grid">
+        <div class="s-order-note__text">
+            Загрузите их фотографии, чтобы мы тоже о них узнали, и смогли лучше понимать, для кого мы стараемся!
+            Не забывайте спрашивать наших операторов о новинках и других крайне интересных товарах. Нам есть, что Вам посоветовать
+        </div>
+        <div class="s-order-note__scl">
+            <p>Давайте дружить в социальных сетях:</p>
+            <ul class="scl flex">
+                <li class="scl_item"><a class="i-yt" target="_blank" href="#"></a></li>
+                <li class="scl_item"><a class="i-vk" target="_blank" href="#"></a></li>
+                <li class="scl_item"><a class="i-ok" target="_blank" href="#"></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+</section>
+
+<!--*************** Мобильное меню каталога  ******************-->
+<section class="m-catalog-menu-wrapper" id="catalog-menu-mobile">
+
+    <!--Первый экран-->
+    <div class="m-catalog-menu-page --first-screen" id="catalog-1">
+        <div class="catalog-aside__top__mobile">
+            <div class="mobile-filter-title">Каталог товаров</div>
+            <button type="button" class="js-close-section-menu">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 24 24"> <path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"></path></svg>
+            </button>
+        </div>
+
+        <div class="m-catalog-menu__filter">
+            <form action="">
+                <div class="top-search__form">
+                    <input type="text" name="q" placeholder="Искать на Сами с усами" autocomplete="off" class="js-catalogSearch">
+                    <button type="submit"><svg><use href="sprite/sprite.svg#search"></use></svg></button>
+                </div>
+                <div class="top-search__result" id="searchResult">
+                    <div class="tsr__tags flex">
+                        <a href="#">Корма</a>
+                        <a href="#">Для собак</a>
+                        <a href="#">Для кошек</a>
+                        <a href="#">Корма</a>
+                        <a href="#">Для собак</a>
+                        <a href="#">Для кошек</a>
+                        <a href="#">Корма</a>
+                        <a href="#">Для собак</a>
+                        <a href="#">Для кошек</a>
+                        <a href="#">Корма</a>
+                        <a href="#">Для собак</a>
+                        <a href="#">Для кошек</a>
+                    </div>
+                    <div class="tsr__list">
+                        <div class="tsr__row flex-jcsb">
+                            <div class="tsr__cell --name">Собачий корм</div>
+                            <div class="tsr__cell --delete"></div>
+                        </div>
+                        <div class="tsr__row flex-jcsb">
+                            <div class="tsr__cell --name">Кошачий корм</div>
+                            <div class="tsr__cell --delete"></div>
+                        </div>
+                        <div class="tsr__row flex-jcsb">
+                            <div class="tsr__cell --name">Хомячий корм</div>
+                            <div class="tsr__cell --delete"></div>
+                        </div>
+                        <div class="tsr__row flex-jcsb">
+                            <div class="tsr__cell --name">Крысиный корм</div>
+                            <div class="tsr__cell --delete"></div>
+                        </div>
+                        <div class="tsr__row flex-jcsb">
+                            <div class="tsr__cell --name">Поросячий корм</div>
+                            <div class="tsr__cell --delete"></div>
+                        </div>
+                        <div class="tsr__row flex-jcsb">
+                            <div class="tsr__cell --name">Кошачий корм</div>
+                            <div class="tsr__cell --delete"></div>
+                        </div>
+                        <div class="tsr__row flex-jcsb">
+                            <div class="tsr__cell --name">Хомячий корм</div>
+                            <div class="tsr__cell --delete"></div>
+                        </div>
+                        <div class="tsr__row flex-jcsb">
+                            <div class="tsr__cell --name">Крысиный корм</div>
+                            <div class="tsr__cell --delete"></div>
+                        </div>
+                        <div class="tsr__row flex-jcsb">
+                            <div class="tsr__cell --name">Собачий корм</div>
+                            <div class="tsr__cell --delete"></div>
+                        </div>
+                        <div class="tsr__row flex-jcsb">
+                            <div class="tsr__cell --name">Кошачий корм</div>
+                            <div class="tsr__cell --delete"></div>
+                        </div>
+                        <div class="tsr__row flex-jcsb">
+                            <div class="tsr__cell --name">Хомячий корм</div>
+                            <div class="tsr__cell --delete"></div>
+                        </div>
+                        <div class="tsr__row flex-jcsb">
+                            <div class="tsr__cell --name">Крысиный корм</div>
+                            <div class="tsr__cell --delete"></div>
+                        </div>
+
+
+                        <div class="tsr__no-result">
+                            <div class="c-notFound">
+                                <div class="c-notFound__icon no-border">
+                                    <img src="img/not-found.png" alt="" />
+                                </div>
+                                <div class="c-notFound__text">
+                                    <h3>Ничего не нашлось</h3>
+                                    <p>У нас 80 млн. товаров, но ни один из них не подходит под этот запрос</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="box autoscroll">
+            <div class="sections-grid_wrapper mobile-only">
+                <div class="sections-grid --frontPage d-grid">
+                    <span data-category="category-code" class="sections-grid__item type_1" style="background-color: #FFF4E7;">
+                        <span class="section-text">
+                            <h3>Собаки</h3>
+                            <div class="section-elCount">1450 товаров</div>
+                        </span>
+                        <span class="section-img">
+                            <picture>
+                                <source type="image/webp" src-set="img/test/sections-grid/1.webp">
+                                <img class="lazy" data-src="img/test/sections-grid/1.png" alt="Собаки"
+                                    src="img/test/sections-grid/1.png">
+                            </picture>
+                        </span>
+                    </span>
+                    <span data-category="category-code" class="sections-grid__item type_1"
+                        style="background-color: #F4EEEA;">
+                        <span class="section-text">
+                            <h3>Кошки</h3>
+                            <div class="section-elCount">1450 товаров</div>
+                        </span>
+                        <span class="section-img">
+                            <picture>
+                                <source type="image/webp" src-set="img/test/sections-grid/2.webp">
+                                <img class="lazy" data-src="img/test/sections-grid/2.png" alt="Кошки"
+                                    src="img/test/sections-grid/2.png">
+                            </picture>
+                        </span>
+                    </span>
+                    <span data-category="category-code" class="sections-grid__item type_2"
+                        style="background-color: #FFDCDC">
+                        <span class="section-text">
+                            <h3>Ветаптека</h3>
+                            <div class="section-elCount">1450 товаров</div>
+                        </span>
+                        <span class="section-img">
+                            <picture>
+                                <source type="image/webp" src-set="img/test/sections-grid/3.webp">
+                                <img class="lazy" data-src="img/test/sections-grid/3.png" alt="Ветаптека"
+                                    src="img/test/sections-grid/3.png">
+                            </picture>
+                        </span>
+                    </span>
+                    <span data-category="category-code" class="sections-grid__item type_3" style="background-color: #FFE9D8">
+                        <span class="section-text">
+                            <h3>Грызуны</h3>
+                            <div class="section-elCount">1450 товаров</div>
+                        </span>
+                        <span class="section-img">
+                            <picture>
+                                <source type="image/webp" src-set="img/test/sections-grid/4.webp">
+                                <img class="lazy" data-src="img/test/sections-grid/4.png" alt="Грызуны"
+                                    src="img/test/sections-grid/4.png">
+                            </picture>
+                        </span>
+                    </span>
+                    <span data-category="category-code" class="sections-grid__item type_3" style="background-color: #D6F5FF">
+                        <span class="section-text">
+                            <h3>Птицы</h3>
+                            <div class="section-elCount">1450 товаров</div>
+                        </span>
+                        <span class="section-img">
+                            <picture>
+                                <source type="image/webp" src-set="img/test/sections-grid/5.webp">
+                                <img class="lazy" data-src="img/test/sections-grid/5.png" alt="Птицы"
+                                    src="img/test/sections-grid/5.png">
+                            </picture>
+                        </span>
+                    </span>
+                    <span data-category="category-code" class="sections-grid__item type_3" style="background-color: #E2E5FF">
+                        <span class="section-text">
+                            <h3>Рыбки</h3>
+                            <div class="section-elCount">1450 товаров</div>
+                        </span>
+                        <span class="section-img">
+                            <picture>
+                                <source type="image/webp" src-set="img/test/sections-grid/6.webp">
+                                <img class="lazy" data-src="img/test/sections-grid/6.png" alt="Рыбки"
+                                    src="img/test/sections-grid/6.png">
+                            </picture>
+                        </span>
+                    </span>
+                    <span data-category="category-code" class="sections-grid__item type_4" style="background-color: #E8F2D2">
+                        <span class="section-text">
+                            <h3>Рептилии</h3>
+                            <div class="section-elCount">1450 товаров</div>
+                        </span>
+                        <span class="section-img">
+                            <picture>
+                                <source type="image/webp" src-set="img/test/sections-grid/7.webp">
+                                <img class="lazy" data-src="img/test/sections-grid/7.png" alt="Рептилии"
+                                    src="img/test/sections-grid/7.png">
+                            </picture>
+                        </span>
+                    </span>
+                    <span data-category="category-code" class="sections-grid__item type_4" style="background-color: #F2E7DD">
+                        <span class="section-text">
+                            <h3>Лошади</h3>
+                            <div class="section-elCount">1450 товаров</div>
+                        </span>
+                        <span class="section-img">
+                            <picture>
+                                <source type="image/webp" src-set="img/test/sections-grid/8.webp">
+                                <img class="lazy" data-src="img/test/sections-grid/8.png" alt="Рептилии"
+                                    src="img/test/sections-grid/8.png">
+                            </picture>
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--//-->
+
+    <!--Второй экран-->
+    <div class="m-catalog-menu-page" data-target-category="category-code">
+        <div class="catalog-aside__top__mobile">
+            <div class="mobile-filter-title js-category-back">Собаки</div>
+            <button type="button"  class="js-close-section-menu">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 24 24">
+                    <path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"></path>
+                </svg>
+            </button>
+        </div>
+
+        <div class="m-catalog-menu__filter">
+            <form action="">
+                <div class="top-search__form">
+                    <input type="text" name="q" placeholder="Искать на Сами с усами" autocomplete="off">
+                    <button type="submit"><svg><use href="sprite/sprite.svg#search"></use></svg></button>
+                </div>
+            </form>
+        </div>
+
+        <div class="box autoscroll">
+            <div class="m-categiry-list">
+                <div class="m-categiry-item" data-category="category-code-next">
+                    <span class="m-categiry__title">Ветаптека</span>
+                </div>
+                <div class="m-categiry-item" data-category="category-code-next">
+                    <span class="m-categiry__title">Корм</span>
+                </div>
+                <div class="m-categiry-item" data-category="category-code-next">
+                    <span class="m-categiry__title">Лакомства и витамины</span>
+                </div>
+                <div class="m-categiry-item" data-category="category-code-next">
+                    <span class="m-categiry__title">Содержание и перевозка</span>
+                </div>
+                <div class="m-categiry-item" data-category="category-code-next">
+                    <span class="m-categiry__title">Тренировки и игры</span>
+                </div>
+                <div class="m-categiry-item" data-category="category-code-next">
+                    <span class="m-categiry__title">Уход за собакой</span>
+                </div>
+                <div class="m-categiry-item" data-category="category-code-next">
+                    <span class="m-categiry__title">Аксессуары</span>
+                </div>
+                <div class="m-categiry-item" data-category="category-code-next">
+                    <span class="m-categiry__title">Сувернирная продукция</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--//-->
+
+    <!--Третий экран-->
+    <div class="m-catalog-menu-page" data-target-category="category-code-next">
+        <div class="catalog-aside__top__mobile">
+            <div class="mobile-filter-title js-category-back">Ветаптека</div>
+            <button type="button" class="js-close-section-menu">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 24 24">
+                    <path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"></path>
+                </svg>
+            </button>
+        </div>
+
+        <div class="m-catalog-menu__filter">
+            <form action="">
+                <div class="top-search__form">
+                    <input type="text" name="q" placeholder="Искать на Сами с усами" autocomplete="off">
+                    <button type="submit"><svg><use href="sprite/sprite.svg#search"></use></svg></button>
+                </div>
+            </form>
+        </div>
+
+        <div class="box autoscroll">
+            <div class="m-categiry-list">
+                <a class="m-categiry-item" href="products.html">
+                    <span class="m-categiry__title">Для ушей</span>
+                </a>
+                <a class="m-categiry-item" href="products.html">
+                    <span class="m-categiry__title">От блох и клещей</span>
+                </a>
+                <a class="m-categiry-item" href="products.html">
+                    <span class="m-categiry__title">От глистов</span>
+                </a>
+                <a class="m-categiry-item" href="products.html">
+                    <span class="m-categiry__title">От стресса</span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+    <!--//-->
+</section>
+<!--*************** Конец Мобильного меню каталога  ******************-->
+
+        <footer>
+            <div class="f-top">
+                <div class="box">
+                    <div class="f-subscribe flex-jcsb">
+                        <div class="f-subscribe__cell">
+                            <div class="f-subscribe__title">
+                                Лучшие предложения у вас на почте 
+                            </div>
+                        </div>
+                        <div class="f-subscribe__cell">
+                            <form action="">
+                                <div class="f-subscribe__form">
+                                    <input type="text" name="email" placeholder="Email" autocomplete="off" />
+                                    <button class="btn btn-fill r5" type="submit">Подписаться</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="f-subscribe__cell">
+                            <div class="f-policy">
+                                Я согласен на обработку своих персональных данных и принимаю условия <a href="#">политики конфиденциальности</a> и <a href="#">пользовательского соглашения</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="f-main flex-jcsb">
+                    <div class="f-main__info">
+                        <div class="f-main__item">
+                            <a href="index.html" title="На главную"><img src="img/logo.svg" alt="Сами с усами"></a>
+                        </div>
+                        <div class="f-main__item">
+                            <div class="f-main__item__title">Телефон</div>
+                            <div class="f-main__item__content f-phone">+7 495 363 81 18</div>
+                        </div>
+                        <div class="f-main__item">
+                            <div class="f-main__item__title">Режим работы интернет-магазина:</div>
+                            <div class="f-main__item__content">
+                                На сайте круглосуточно <br>
+                                По телефону Пн-Пт 9:00-19:00 <br>
+                                Сб 9:00-16:00, Вс - выходной
+                            </div>
+                        </div>
+                        <div class="f-main__item">
+                            <div class="f-main__item__title">Социальные сети</div>
+                            <div class="f-main__item__content">
+                                <ul class="scl flex">
+                                    <li class="scl_item"><a class="i-yt" target="_blank" href="#"></a></li>
+                                    <li class="scl_item"><a class="i-vk" target="_blank" href="#"></a></li>
+                                    <li class="scl_item"><a class="i-ok" target="_blank" href="#"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="f-main__item">
+                            <div class="f-main__item__title">Мессенджеры</div>
+                            <div class="f-main__item__content">
+                                <ul class="scl flex">
+                                    <li class="scl_item"><a class="i-wt" target="_blank" href="#"></a></li>
+                                    <li class="scl_item"><a class="i-tg" target="_blank" href="#"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="f-main__menu">
+                        <nav class="f-menu flex-jcsb">
+
+                            <!--****  Если в колонке пунктов больше 5, то добавить к ul класс mobile-toggle-height и span скрать/показать****-->
+
+                            <!--1 колонка-->
+                            <div class="f-menu__col">
+                                <a href="#" class="f-menu__col__title">Каталог</a>
+                                <ul class="mobile-toggle-height">
+                                    <li><a href="#">Собаки</a></li>
+                                    <li><a class="selected" href="#">Кошки</a></li>
+                                    <li><a href="#">Рыбки</a></li>
+                                    <li><a href="#">Грызуны</a></li>
+                                    <li><a href="#">Птицы</a></li>
+                                    <li><a href="#">Лошади</a></li>
+                                    <li><a href="#">Рептилии</a></li>
+                                    <li><a href="#">Террариумистика</a></li>
+                                    <li><a href="#">Бренды и производители</a></li>
+                                    <li><a href="#">Акции и скидки</a></li>
+                                    <li><a href="#">Распродажа</a></li>
+                                </ul>
+                                <span data-full="Скрыть" data-cut="Показать ещё"></span>
+                            </div>
+                            <!--2 колонка-->
+                            <div class="f-menu__col">
+                                <a href="#" class="f-menu__col__title">Покупателям</a>
+                                <ul>
+                                    <li><a href="sales.html">Акции</a></li>
+                                    <li><a href="brands.html">Бренды</a></li>
+                                    <li><a href="#">Бонусная программа</a></li>
+                                    <li><a href="#">Как купить</a></li>
+                                    <li><a href="delivery-and-payment.html">Доставка и оплата</a></li>
+                                    <li><a href="#">Возврат товара</a></li>
+                                </ul>
+                            </div>
+                            <!--3 колонка-->
+                            <div class="f-menu__col">
+                                <a href="#" class="f-menu__col__title">Покупателям</a>
+                                <ul class="mobile-toggle-height">
+                                    <li><a href="#">Подписка на доставку</a></li>
+                                    <li><a href="#">Подбор корма</a></li>
+                                    <li><a href="#">Сравнение кормов</a></li>
+                                    <li><a href="#">Партнерская программа</a></li>
+                                    <li><a href="advice.html">Статьи</a></li>
+                                    <li><a href="#">Груминг</a></li>
+                                    <li><a href="#">Ветаптека</a></li>  
+                                </ul>
+                                <span data-full="Скрыть" data-cut="Показать ещё"></span>
+                            </div>
+                            <!--4 колонка-->
+                            <div class="f-menu__col">
+                                <a href="#" class="f-menu__col__title">Компания</a>
+                                <ul>
+                                    <li><a href="#">Новости</a></li>
+                                    <li><a href="shops.html">Магазины</a></li>
+                                    <li><a href="about.html">О нас</a></li>
+                                    <li><a href="vacancies.html">Вакансии</a></li>
+                                    <li><a href="#">Тендеры</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>   
+            <div class="f-bottom">
+                <div class="box">
+                    <div class="f-bottom__inner">
+                        <div class="f-bottom__pays">
+                            <img src="img/pay_systems.png" alt="PAYS" />
+                        </div>
+                        <div class="f-bottom__popyright">
+                            © 1992-2021. Зоомагазин «Сами с Усами» г. Москва. Все права защищены.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="cookee-wrapper" id="cookie_notification">
+            <div class="notif-row flex-jcsb">
+                <div class="notif-cell cell-icon">
+                    <svg><use href="sprite/sprite.svg#cat-cookie"></use></svg>
+                </div>
+                <div class="notif-cell cell-text">Продолжая пользоваться сайтом, вы соглашаетесь с использованием файлов cookie.</div>
+                <div class="notif-cell"><button class="btn btn-fill r10 cookie_accept">Согласен</button></div>
+            </div>
+        </div>
+        <div class="catalog-menu-overlay" id="menu-overlay"></div><!-- ///Овелей для меню каталога-->
+        <div class="mobile-overlay" id="mobile-overlay" style="display: none;"></div><!-- ///Овелей для меню каталога-->
+    </main>
+
+<!--
+    ****************  JS ниже ТОЛЬКО ДЛЯ ДЕМОНСТРАЦИИ  ****************
+    Проставление айдишников в инпуты
+-->
+<script>
+   $(document).ready(function(){
+    const item = $('.prod-item');
+     if (item.length > 0){
+        for(let i = 0; i < item.length; i++){
+            $(item).eq(i).find('input[type=radio]').each(function(inx, el){
+                
+                $(el).attr('name', $(el).prop('name')+'_'+i);
+                let newName = $(el).attr('name');
+                $(el).attr('id', 'prod_'+i+'_'+ newName +'_'+inx);
+                $(el).next('label').attr('for', 'prod_'+i+'_'+$(el).prop('name')+'_'+inx);
+                if(inx == 0){
+                    $(el).attr('checked', true);
+                }
+            });
+        }
+     }
+           
+   })
+</script>
+
+</body>
+</html>

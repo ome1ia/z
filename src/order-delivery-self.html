@@ -1,0 +1,70 @@
+//= template/header.html
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=cbcdfe6a-f0c7-4bda-b9eb-28f404cb55d8"></script>
+<script src="assets/shops-list.js"></script>
+<script src="assets/deliv-obects.js"></script>
+
+<div class="box">
+    <a href="order.html" class="back-catalog">Назад в корзину</a>
+    <div class="header">
+        <h1>Укажите способ доставки</h1>
+    </div>
+</div>
+
+<div class="box">
+    <div class="delivery-and-map delivery-page">
+        <div class="delivery-leftBlock order-block">
+            <div class="delivery-tabs --justify">
+                <a href="order-delivery-curier.html" class="delivery-tab-item">Курьером</a>
+                <a href="order-delivery-self.html" class="delivery-tab-item active">Самовывоз</a>
+                <a href="order-delivery-country.html" class="delivery-tab-item">Доставка по России</a>
+            </div>
+
+            <div class="ob-title">Пукнты самовывоза</div>
+            <p>Выберите пункт выдачи на карте и удобную службу доставки</p>
+
+            <div class="shop-list-and-map__list js-detail-wrapp"  data-custom-scroll data-shop-list data-scroll-amount="200">
+                <div id="shops-list-panel"></div>
+                <div class="shop-list-reset js-list-reset">
+                    <span>Таких магазинов еще нет, давай сбросим фильтры</span>
+                    <button class="btn btn-grey r10">Очистить фильтр</button>
+                </div>
+            </div>
+                
+            <div class="delivery-bottom">
+                <button type="button" class="btn btn-fill r10" disabled>Доставить сюда</button>
+            </div>
+
+        </div>
+        <div class="shop-map">
+            <div class="pickup-choice">
+                <div class="custom-checkbox">
+                    <input type="checkbox" name="pickup1" value="pickup1" id="pickup1" checked />
+                    <label for="pickup1">
+                        <img src="img/test/pickup/1.png" alt="1" />
+                        Бесплатно
+                    </label>
+                </div>
+
+                <div class="custom-checkbox">
+                    <input type="checkbox" name="pickup2" value="pickup2" id="pickup2" checked />
+                    <label for="pickup2">
+                        <img src="img/test/pickup/2.png" alt="2" />
+                        От 150р в пункты ПВЗ
+                    </label>
+                </div>
+
+                <div class="custom-checkbox">
+                    <input type="checkbox" name="pickup3" value="pickup3" id="pickup3" checked />
+                    <label for="pickup3">
+                        <img src="img/test/pickup/3.png" alt="3" />
+                        От 150р в пункты ПВЗ
+                    </label>
+                </div>
+            </div>
+            <div class="shop-list-and-map__map">
+                <div class="shop-map-box" id="shops-map"></div>
+            </div>
+        </div>
+    </div>
+</div> 
+//= template/footer.html

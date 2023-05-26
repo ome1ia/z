@@ -1,0 +1,155 @@
+//= template/header.html
+//= template/breadcrumbs.html
+<div class="box">
+    <div class="header">
+        <h1>Акции</h1>
+    </div>
+
+    <div class="header-sections__list">
+        <div class="h-categories">
+            <a href="/advice/" class="header-sections__list_item selected">Все</a>
+            <a href="/advice/sobaki/" class="header-sections__list_item">Собаки</a>
+            <a href="/advice/koshki/" class="header-sections__list_item">Кошки</a>
+            <a href="/advice/ryby/" class="header-sections__list_item">Рыбы</a>
+            <a href="/advice/ptitsy/" class="header-sections__list_item">Птицы</a>
+            <a href="/advice/gryzuny/" class="header-sections__list_item">Грызуны</a>
+            <a href="/advice/reptilii/" class="header-sections__list_item">Рептилии</a>
+            <a href="/advice/loshadi/" class="header-sections__list_item">Лошади</a>
+        </div>
+    </div>
+
+</div>
+
+<div class="box"> 
+    <div class="main-sale">
+         <a href="sale-detail.html" class="main-sale-inner">
+            <picture>
+                <source srcset="img/test/main-sale-sm.png" media="(max-width: 420px)"/>
+                <img class="lazy" data-src="img/test/main-sale.jpg" alt="main-sale" />
+            </picture> 
+            <div class="main-action-time flex-jcsb" id="main-countdown"></div>
+            <script>
+                var options = {
+                    value: 86400, //количество секунд до конца акции
+                    warn: {
+                        secondsLeft: 60
+                    },
+                    onFinish: function () {
+                        alert('Конец акции! Что-нибудь делаем');
+                        $('#main-countdown').empty();
+                    },
+                    captions: {
+                        days: 'ДН',
+                        hours: 'ЧАС',
+                        minutes: 'МИН',
+                        seconds: 'СЕК'
+                    }
+                };
+                var ft0 = new FancyTimer(
+                    document.getElementById('main-countdown'),
+                    options
+                );
+                ft0.start(-1);   
+            </script>
+         </a>
+    </div>
+
+    <div class="grid-list four-grid">
+    
+        <div class="grid-item">
+            <div class="grid-item-img">
+                <a href="#">
+                    <picture>
+                        <source type="image/webp" src-set="img/test/actions/1.webp">
+                        <img class="lazy" data-src="img/test/actions/1.png" alt="2" >
+                    </picture>
+                </a>
+            </div>
+            <div class="grid-item-text">
+                <h3><a href="#">-20% на консервы для собак. Если текст длинный, то обрежем его, чтобы не ломал</a></h3>
+                <p class="sale-date">с 01.01.2021 до 01.01.2025</p>
+            </div>
+        </div>
+    
+        <div class="grid-item">
+            <div class="grid-item-img">
+                <a href="#">
+                    <picture>
+                        <source type="image/webp" src-set="img/test/actions/2.webp">
+                        <img class="lazy" data-src="img/test/actions/2.png" alt="2" >
+                    </picture>
+                </a>
+            </div>
+            <div class="grid-item-text">
+                <h3><a href="#">Модные и полезные аксессуары для кошек: ошейники и шлейки</a></h3>
+                <p class="sale-date">с 01.01.2021 до 01.01.2025</p>
+            </div>
+        </div>
+    
+
+        <div class="grid-item">
+            <div class="grid-item-img">
+                <a href="#">
+                    <picture>
+                        <source type="image/webp" src-set="img/test/actions/3.webp">
+                        <img class="lazy" data-src="img/test/actions/3.png" alt="3" >
+                    </picture>
+                </a>
+            </div>
+            <div class="grid-item-text">
+                <h3><a href="#">Почему лечить питомца так дорого?</a></h3>
+                <p class="sale-date">с 01.01.2021 до 01.01.2025</p>
+            </div>
+        </div>
+
+    
+        <div class="grid-item">
+            <div class="grid-item-img">
+                <a href="#">
+                    <picture>
+                        <source type="image/webp" src-set="img/test/advice/4.webp">
+                        <img class="lazy" data-src="img/test/advice/4.png" alt="4" >
+                    </picture>
+                </a>
+            </div>
+            <div class="grid-item-text">
+                <h3><a href="#">Почему лечить питомца так дорого?</a></h3>
+                <p class="sale-date">с 01.01.2021 до 01.01.2025</p>
+            </div>
+        </div>
+    
+    
+        <div class="grid-item">
+            <div class="grid-item-img">
+                <a href="#">
+                    <picture>
+                        <source type="image/webp" src-set="img/test/advice/1.webp">
+                        <img class="lazy" data-src="img/test/advice/1.png" alt="1">
+                    </picture>
+                </a>
+            </div>
+            <div class="grid-item-text">
+                <h3><a href="#">Почему лечить питомца так дорого?</a></h3>
+                <p class="sale-date">с 01.01.2021 до 01.01.2025</p>
+            </div>
+        </div>
+    
+        <div class="grid-item">
+            <div class="grid-item-img">
+                <a href="#">
+                    <picture>
+                        <source type="image/webp" src-set="img/test/advice/2.webp">
+                        <img class="lazy" data-src="img/test/advice/2.png" alt="2">
+                    </picture>
+                </a>
+            </div>
+            <div class="grid-item-text">
+                <h3><a href="#">Почему лечить питомца так дорого?</a></h3>
+                <p class="sale-date">с 01.01.2021 до 01.01.2025</p>
+            </div>
+        </div>
+    
+    </div>
+//= template/pagination.html
+</div>
+//= template/footer.html

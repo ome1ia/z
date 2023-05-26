@@ -1,0 +1,8 @@
+/node_modules
+/.vscode
+// /src
+// gulpfile.js
+// package.json
+// package-lock.json
+smartgrid.js
+README.md

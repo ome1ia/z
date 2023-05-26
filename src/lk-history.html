@@ -1,0 +1,601 @@
+//= template/header.html
+//= template/breadcrumbs.html
+<div class="box">
+    <div class="header">
+        <h1>Личный кабинет</h1>
+    </div>
+</div>
+<div class="box">
+    <div class="profile d-grid">
+        <div class="profile-aside">
+           <ul class="personal-menu">
+                <li><a href="lk-main.html"><span class="p-menu__icon"><svg width="23" height="20"><use href="sprite/sprite.svg#personal-home" /></svg></span>Главная</a></li>
+                <li><a class="active" href="lk-history.html"><span class="p-menu__icon"><svg width="23" height="21"><use href="sprite/sprite.svg#personal-history" /></svg></span>История заказов</a></li>
+                <li><a href="lk-bonus.html"><span class="p-menu__icon"><svg width="27" height="23"><use href="sprite/sprite.svg#personal-bonus" /></svg></span>Мои БонУСы</a></li>
+                <li><a href="lk-pets.html"><span class="p-menu__icon"><svg width="27" height="24"><use href="sprite/sprite.svg#personal-pets" /></svg></span>Мои Питомцы</a></li>
+                <li><a href="lk-messages.html"><span class="p-menu__icon"><svg width="24" height="22"><use href="sprite/sprite.svg#personal-mess" /></svg></span>Сообщения</a></li>
+                <li><a href="lk-favorite.html"><span class="p-menu__icon"><svg width="22" height="19"><use href="sprite/sprite.svg#m_fav" /></svg></span>Избранное</a></li>
+                <li><a href="lk-profile.html"><span class="p-menu__icon"><svg width="22" height="22"><use href="sprite/sprite.svg#personal-profile" /></svg></span>Профиль</a></li>
+                <li><a href="lk-delivery.html"><span class="p-menu__icon"><svg width="18" height="23"><use href="sprite/sprite.svg#personal-delivery" /></svg></span>Адреса доставки</a></li>
+                <li><a href="lk-feedback.html"><span class="p-menu__icon"><svg width="21" height="18"><use href="sprite/sprite.svg#personal-feedback" /></svg></span>Обратная связь</a></li>
+                <li><a href="?logout=Y"><span class="p-menu__icon"><svg width="21" height="18"><use href="sprite/sprite.svg#personal-out" /></svg></span>Выйти</a></li>
+            </ul>
+            <div class="profile-asideBanner">
+                <a href="lk-pets.html">
+                    <picture>
+                        <source srcset="img/test/lk/lk-banner-mob.png" media="(max-width: 1024px)" />
+                        <img class="lazy" data-src="img/test/lk/lk-banner.png" alt="" />
+                    </picture>
+                </a>
+            </div>
+        </div>
+        <div class="profile-main">
+            <div class="header"><h3>История заказов</h3></div>
+
+            <div class="p-order-list">
+                <div class="p-order-list__caption d-grid">
+                    <div class="orders-caption-cell">Дата</div>
+                    <div class="orders-caption-cell">№ Заказа</div>
+                    <div class="orders-caption-cell">Статус</div>
+                    <div class="orders-caption-cell">БонУсы</div>
+                    <div class="orders-caption-cell">Сумма заказа</div>
+                    <div class="orders-caption-cell">Оплата</div>
+                    <div class="orders-caption-cell">Чек</div>
+                    <div class="orders-caption-cell">Действия</div>
+                    <div class="orders-caption-cell"></div>
+                </div>
+                <div class="p-order-list__table">
+                    <!--Строка заказа-->
+                    <div class="order-row">
+                        <div class="order-row-caption d-grid">
+                            <div class="order-cell _date">12.03.2023</div>
+                            <div class="order-cell _number"><span class="order-num">16515415</span></div>
+                            <div class="order-cell _status"><span class="status __new">Новый</span></div>
+                            <div class="order-cell _bonus"> <span class="bonus up">+20</span> / <span class="bonus down">-100</span></div>
+                            <div class="order-cell _price"><span class="price">92 400 ₽</span></div>
+                            <div class="order-cell _pay">
+                                <a href="#" class="btn btn-fill r5">Оплатить</a>
+                            </div>
+                            <div class="order-cell _check">
+                                <span class="round check-download"></span>
+                            </div>
+                            <div class="order-cell _buttons">
+                                <div class="action-buttons flex">
+                                    <a href="#" class="btn btn-transp r5">Повторить</a>
+                                    <a href="#" class="btn btn-transp r5">Отменить</a>
+                                </div>
+                            </div>
+                            <div class="order-cell _trigger">
+                                <span class="round row-trigger js-row-trigger"></span>
+                            </div>
+                        </div>
+                        <!--Товары-->
+                        <div class="orderList-item --hidden">
+                            <div class="orderList-basket b-border">
+                                <div class="orderList-basket-caption d-grid">
+                                    <div class="obc__cell">Название позиции</div>
+                                    <div class="obc__cell">Количество <br> шт в заказе</div>
+                                    <div class="obc__cell">Цена за 1 шт</div>
+                                    <div class="obc__cell">Сумма</div>
+                                    <div class="obc__cell">Действия</div>
+                                    <div class="obc__cell --empty"></div>
+                                </div>
+                                
+                                //= template/basket-in-lk.html
+                                //= template/basket-in-lk.html
+                                //= template/basket-in-lk.html
+
+                                
+                            </div>
+                            <!--Конец товаров-->
+
+                            <div class="orderList-item__bottom flex-jcsb">
+                                <div class="oib-half --props">
+                                    <div class="oib-item">
+                                        <span class="oib-item__label">Адрес доставки</span>
+                                        <span class="oib-half__value">143003, Московская обл., г. Одинцово, ул. Маршала Жукова, дом 38, помещение
+                                            86</span>
+                                    </div>
+                                    <div class="oib-item">
+                                        <span class="oib-item__label">Способ оплаты:</span>
+                                        <span class="oib-half__value">Наличными при получении</span>
+                                    </div>
+                                </div>
+                                <div class="oib-half --total">
+                                    <div class="orderList-total">
+                                        <div class="oib-item flex-jcsb">
+                                            <span class="oib-item__label">Кол-во Товаров</span>
+                                            <span class="oib-half__value _bold">25</span>
+                                        </div>
+                                        <div class="oib-item flex-jcsb">
+                                            <span class="oib-item__label">Скидка на заказ</span>
+                                            <span class="oib-half__value _bold">500 ₽</span>
+                                        </div>
+                                        <div class="oib-item flex-jcsb">
+                                            <span class="oib-item__label">Промокод</span>
+                                            <span class="oib-half__value _bold">256 ₽</span>
+                                        </div>
+                                        <div class="oib-item flex-jcsb">
+                                            <span class="oib-item__label">Стоимость доставки</span>
+                                            <span class="oib-half__value _bold">1000 ₽</span>
+                                        </div>
+                                        <div class="oib-item flex-jcsb">
+                                            <span class="oib-item__label">Итого со скидкой</span>
+                                            <span class="oib-half__value _bold">305 000 ₽</span>
+                                        </div>
+                                        <div class="oib-item flex-jcsb">
+                                            <span class="oib-item__total">Итого со скидкой</span>
+                                            <span class="oib-item__total">305 000 ₽</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                    <!--Конец строки-->
+
+                    <!--Строка заказа-->
+                    <div class="order-row">
+                        <div class="order-row-caption d-grid">
+                            <div class="order-cell _date">12.03.2023</div>
+                            <div class="order-cell _number"><span class="order-num">16515415</span></div>
+                            <div class="order-cell _status"><span class="status __yell">Оформлен</span></div>
+                            <div class="order-cell _bonus"><span class="bonus down">-100</span></div>
+                            <div class="order-cell _price"><span class="price">92 400 ₽</span></div>
+                            <div class="order-cell _pay">
+                                <a href="#" class="btn sbPay"></a>
+                            </div>
+                            <div class="order-cell _check">
+                                <span class="round check-download"></span>
+                            </div>
+                            <div class="order-cell _buttons">
+                                <div class="action-buttons flex">
+                                    <a href="#" class="btn btn-transp r5">Повторить</a>
+                                </div>
+                            </div>
+                            <div class="order-cell _trigger">
+                                <span class="round row-trigger js-row-trigger"></span>
+                            </div>
+                        </div>
+                        <!--Товары-->
+                        <div class="orderList-item --hidden">
+                            <div class="orderList-basket b-border">
+                                <div class="orderList-basket-caption d-grid">
+                                    <div class="obc__cell">Название позиции</div>
+                                    <div class="obc__cell">Количество <br> шт в заказе</div>
+                                    <div class="obc__cell">Цена за 1 шт</div>
+                                    <div class="obc__cell">Сумма</div>
+                                    <div class="obc__cell">Действия</div>
+                                    <div class="obc__cell --empty"></div>
+                                </div>
+                    
+                                //= template/basket-in-lk.html
+                                //= template/basket-in-lk.html
+                                //= template/basket-in-lk.html
+                    
+                    
+                            </div>
+                            <!--Конец товаров-->
+                    
+                            <div class="orderList-item__bottom flex-jcsb">
+                                <div class="oib-half --props">
+                                    <div class="oib-item">
+                                        <span class="oib-item__label">Адрес доставки</span>
+                                        <span class="oib-half__value">143003, Московская обл., г. Одинцово, ул. Маршала Жукова, дом 38,
+                                            помещение
+                                            86</span>
+                                    </div>
+                                    <div class="oib-item">
+                                        <span class="oib-item__label">Способ оплаты:</span>
+                                        <span class="oib-half__value">Наличными при получении</span>
+                                    </div>
+                                </div>
+                                <div class="oib-half --total">
+                                    <div class="orderList-total">
+                                        <div class="oib-item flex-jcsb">
+                                            <span class="oib-item__label">Кол-во Товаров</span>
+                                            <span class="oib-half__value _bold">25</span>
+                                        </div>
+                                        <div class="oib-item flex-jcsb">
+                                            <span class="oib-item__label">Скидка на заказ</span>
+                                            <span class="oib-half__value _bold">500 ₽</span>
+                                        </div>
+                                        <div class="oib-item flex-jcsb">
+                                            <span class="oib-item__label">Промокод</span>
+                                            <span class="oib-half__value _bold">256 ₽</span>
+                                        </div>
+                                        <div class="oib-item flex-jcsb">
+                                            <span class="oib-item__label">Стоимость доставки</span>
+                                            <span class="oib-half__value _bold">1000 ₽</span>
+                                        </div>
+                                        <div class="oib-item flex-jcsb">
+                                            <span class="oib-item__label">Итого со скидкой</span>
+                                            <span class="oib-half__value _bold">305 000 ₽</span>
+                                        </div>
+                                        <div class="oib-item flex-jcsb">
+                                            <span class="oib-item__total">Итого со скидкой</span>
+                                            <span class="oib-item__total">305 000 ₽</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Конец строки-->
+
+                    <!--Строка заказа-->
+                    <div class="order-row">
+                        <div class="order-row-caption d-grid">
+                            <div class="order-cell _date">10.03.2023</div>
+                            <div class="order-cell _number"><span class="order-num">16515415</span></div>
+                            <div class="order-cell _status"><span class="status __blue">Собран</span></div>
+                            <div class="order-cell _bonus"><span class="bonus down">-100</span></div>
+                            <div class="order-cell _price"><span class="price">2 500 ₽</span></div>
+                            <div class="order-cell _pay">
+                                <a href="#" class="btn btn-grey r5">Оплачен</a>
+                            </div>
+                            <div class="order-cell _check">
+                                <span class="round check-download"></span>
+                            </div>
+                            <div class="order-cell _buttons">
+                                <div class="action-buttons flex">
+                                    <a href="#" class="btn btn-transp r5">Повторить</a>
+                                    <a href="#" class="btn btn-transp r5">Отменить</a>
+                                </div>
+                            </div>
+                            <div class="order-cell _trigger">
+                                <span class="round row-trigger js-row-trigger"></span>
+                            </div>
+                        </div>
+                        <!--Товары-->
+                        <div class="orderList-item --hidden">
+                            <div class="orderList-basket b-border">
+                                <div class="orderList-basket-caption d-grid">
+                                    <div class="obc__cell">Название позиции</div>
+                                    <div class="obc__cell">Количество <br> шт в заказе</div>
+                                    <div class="obc__cell">Цена за 1 шт</div>
+                                    <div class="obc__cell">Сумма</div>
+                                    <div class="obc__cell">Действия</div>
+                                    <div class="obc__cell --empty"></div>
+                                </div>
+                    
+                                //= template/basket-in-lk.html
+                                //= template/basket-in-lk.html
+                                //= template/basket-in-lk.html
+                    
+                    
+                            </div>
+                            <!--Конец товаров-->
+                    
+                            <div class="orderList-item__bottom flex-jcsb">
+                                <div class="oib-half --props">
+                                    <div class="oib-item">
+                                        <span class="oib-item__label">Адрес доставки</span>
+                                        <span class="oib-half__value">143003, Московская обл., г. Одинцово, ул. Маршала Жукова, дом 38,
+                                            помещение
+                                            86</span>
+                                    </div>
+                                    <div class="oib-item">
+                                        <span class="oib-item__label">Способ оплаты:</span>
+                                        <span class="oib-half__value">Наличными при получении</span>
+                                    </div>
+                                </div>
+                                <div class="oib-half --total">
+                                    <div class="orderList-total">
+                                        <div class="oib-item flex-jcsb">
+                                            <span class="oib-item__label">Кол-во Товаров</span>
+                                            <span class="oib-half__value _bold">25</span>
+                                        </div>
+                                        <div class="oib-item flex-jcsb">
+                                            <span class="oib-item__label">Скидка на заказ</span>
+                                            <span class="oib-half__value _bold">500 ₽</span>
+                                        </div>
+                                        <div class="oib-item flex-jcsb">
+                                            <span class="oib-item__label">Промокод</span>
+                                            <span class="oib-half__value _bold">256 ₽</span>
+                                        </div>
+                                        <div class="oib-item flex-jcsb">
+                                            <span class="oib-item__label">Стоимость доставки</span>
+                                            <span class="oib-half__value _bold">1000 ₽</span>
+                                        </div>
+                                        <div class="oib-item flex-jcsb">
+                                            <span class="oib-item__label">Итого со скидкой</span>
+                                            <span class="oib-half__value _bold">305 000 ₽</span>
+                                        </div>
+                                        <div class="oib-item flex-jcsb">
+                                            <span class="oib-item__total">Итого со скидкой</span>
+                                            <span class="oib-item__total">305 000 ₽</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Конец строки-->
+
+                    <!--Строка заказа-->
+                    <div class="order-row">
+                        <div class="order-row-caption d-grid">
+                            <div class="order-cell _date">10.03.2023</div>
+                            <div class="order-cell _number"><span class="order-num">16515415</span></div>
+                            <div class="order-cell _status"><span class="status __red">Доставка</span></div>
+                            <div class="order-cell _bonus"><span class="bonus down">-100</span></div>
+                            <div class="order-cell _price"><span class="price">2 500 ₽</span></div>
+                            <div class="order-cell _pay">
+                                <a href="#" class="btn btn-grey r5">Оплачен</a>
+                            </div>
+                            <div class="order-cell _check">
+                                <span class="round check-download"></span>
+                            </div>
+                            <div class="order-cell _buttons">
+                                <div class="action-buttons flex">
+                                    <a href="#" class="btn btn-transp r5">Повторить</a>
+                                    <a href="#" class="btn btn-transp r5">Отменить</a>
+                                </div>
+                            </div>
+                            <div class="order-cell _trigger">
+                                <span class="round row-trigger js-row-trigger"></span>
+                            </div>
+                        </div>
+                        <!--Товары-->
+                        <div class="orderList-item --hidden">
+                            <div class="orderList-basket b-border">
+                                <div class="orderList-basket-caption d-grid">
+                                    <div class="obc__cell">Название позиции</div>
+                                    <div class="obc__cell">Количество <br> шт в заказе</div>
+                                    <div class="obc__cell">Цена за 1 шт</div>
+                                    <div class="obc__cell">Сумма</div>
+                                    <div class="obc__cell">Действия</div>
+                                    <div class="obc__cell --empty"></div>
+                                </div>
+                    
+                                //= template/basket-in-lk.html
+                                //= template/basket-in-lk.html
+                                //= template/basket-in-lk.html
+                    
+                    
+                            </div>
+                            <!--Конец товаров-->
+                    
+                            <div class="orderList-item__bottom flex-jcsb">
+                                <div class="oib-half --props">
+                                    <div class="oib-item">
+                                        <span class="oib-item__label">Адрес доставки</span>
+                                        <span class="oib-half__value">143003, Московская обл., г. Одинцово, ул. Маршала Жукова, дом 38,
+                                            помещение
+                                            86</span>
+                                    </div>
+                                    <div class="oib-item">
+                                        <span class="oib-item__label">Способ оплаты:</span>
+                                        <span class="oib-half__value">Наличными при получении</span>
+                                    </div>
+                                </div>
+                                <div class="oib-half --total">
+                                    <div class="orderList-total">
+                                        <div class="oib-item flex-jcsb">
+                                            <span class="oib-item__label">Кол-во Товаров</span>
+                                            <span class="oib-half__value _bold">25</span>
+                                        </div>
+                                        <div class="oib-item flex-jcsb">
+                                            <span class="oib-item__label">Скидка на заказ</span>
+                                            <span class="oib-half__value _bold">500 ₽</span>
+                                        </div>
+                                        <div class="oib-item flex-jcsb">
+                                            <span class="oib-item__label">Промокод</span>
+                                            <span class="oib-half__value _bold">256 ₽</span>
+                                        </div>
+                                        <div class="oib-item flex-jcsb">
+                                            <span class="oib-item__label">Стоимость доставки</span>
+                                            <span class="oib-half__value _bold">1000 ₽</span>
+                                        </div>
+                                        <div class="oib-item flex-jcsb">
+                                            <span class="oib-item__label">Итого со скидкой</span>
+                                            <span class="oib-half__value _bold">305 000 ₽</span>
+                                        </div>
+                                        <div class="oib-item flex-jcsb">
+                                            <span class="oib-item__total">Итого со скидкой</span>
+                                            <span class="oib-item__total">305 000 ₽</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Конец строки-->
+
+                    <!--Строка заказа-->
+                    <div class="order-row">
+                        <div class="order-row-caption d-grid">
+                            <div class="order-cell _date">10.03.2023</div>
+                            <div class="order-cell _number"><span class="order-num">16515415</span></div>
+                            <div class="order-cell _status"><span class="status __purple">Доставлен</span></div>
+                            <div class="order-cell _bonus"><span class="bonus up">+200</span></div>
+                            <div class="order-cell _price"><span class="price">2 500 ₽</span></div>
+                            <div class="order-cell _pay">
+                                <a href="#" class="btn btn-grey r5">Оплачен</a>
+                            </div>
+                            <div class="order-cell _check">
+                                <span class="round check-download"></span>
+                            </div>
+                            <div class="order-cell _buttons">
+                                <div class="action-buttons flex">
+                                    <a href="#" class="btn btn-transp r5">Повторить</a>
+                                    <a href="#" class="btn btn-transp r5">Отменить</a>
+                                </div>
+                            </div>
+                            <div class="order-cell _trigger">
+                                <span class="round row-trigger js-row-trigger"></span>
+                            </div>
+                        </div>
+                        <!--Товары-->
+                        <div class="orderList-item --hidden">
+                            <div class="orderList-basket b-border">
+                                <div class="orderList-basket-caption d-grid">
+                                    <div class="obc__cell">Название позиции</div>
+                                    <div class="obc__cell">Количество <br> шт в заказе</div>
+                                    <div class="obc__cell">Цена за 1 шт</div>
+                                    <div class="obc__cell">Сумма</div>
+                                    <div class="obc__cell">Действия</div>
+                                    <div class="obc__cell --empty"></div>
+                                </div>
+                    
+                                //= template/basket-in-lk.html
+                                //= template/basket-in-lk.html
+                                //= template/basket-in-lk.html
+                    
+                    
+                            </div>
+                            <!--Конец товаров-->
+                    
+                            <div class="orderList-item__bottom flex-jcsb">
+                                <div class="oib-half --props">
+                                    <div class="oib-item">
+                                        <span class="oib-item__label">Адрес доставки</span>
+                                        <span class="oib-half__value">143003, Московская обл., г. Одинцово, ул. Маршала Жукова, дом 38,
+                                            помещение
+                                            86</span>
+                                    </div>
+                                    <div class="oib-item">
+                                        <span class="oib-item__label">Способ оплаты:</span>
+                                        <span class="oib-half__value">Наличными при получении</span>
+                                    </div>
+                                </div>
+                                <div class="oib-half --total">
+                                    <div class="orderList-total">
+                                        <div class="oib-item flex-jcsb">
+                                            <span class="oib-item__label">Кол-во Товаров</span>
+                                            <span class="oib-half__value _bold">25</span>
+                                        </div>
+                                        <div class="oib-item flex-jcsb">
+                                            <span class="oib-item__label">Скидка на заказ</span>
+                                            <span class="oib-half__value _bold">500 ₽</span>
+                                        </div>
+                                        <div class="oib-item flex-jcsb">
+                                            <span class="oib-item__label">Промокод</span>
+                                            <span class="oib-half__value _bold">256 ₽</span>
+                                        </div>
+                                        <div class="oib-item flex-jcsb">
+                                            <span class="oib-item__label">Стоимость доставки</span>
+                                            <span class="oib-half__value _bold">1000 ₽</span>
+                                        </div>
+                                        <div class="oib-item flex-jcsb">
+                                            <span class="oib-item__label">Итого со скидкой</span>
+                                            <span class="oib-half__value _bold">305 000 ₽</span>
+                                        </div>
+                                        <div class="oib-item flex-jcsb">
+                                            <span class="oib-item__total">Итого со скидкой</span>
+                                            <span class="oib-item__total">305 000 ₽</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Конец строки-->
+
+                    <!--Строка заказа-->
+                    <div class="order-row">
+                        <div class="order-row-caption d-grid">
+                            <div class="order-cell _date">10.03.2023</div>
+                            <div class="order-cell _number"><span class="order-num">16515415</span></div>
+                            <div class="order-cell _status"><span class="status __grey">Возврат</span></div>
+                            <div class="order-cell _bonus"><span class="bonus up">+100</span> / <span class="bonus down">-10</span></div>
+                            <div class="order-cell _price"><span class="price">2 500 ₽</span></div>
+                            <div class="order-cell _pay">
+                                <a href="#" class="btn btn-grey r5">Оплачен</a>
+                            </div>
+                            <div class="order-cell _check">
+                                <span class="round check-download"></span>
+                            </div>
+                            <div class="order-cell _buttons">
+                                <div class="action-buttons flex">
+                                    <a href="#" class="btn btn-transp r5">Повторить</a>
+                                    <a href="#" class="btn btn-transp r5">Отменить</a>
+                                </div>
+                            </div>
+                            <div class="order-cell _trigger">
+                                <span class="round row-trigger js-row-trigger"></span>
+                            </div>
+                        </div>
+                        <!--Товары-->
+                        <div class="orderList-item --hidden">
+                            <div class="orderList-basket b-border">
+                                <div class="orderList-basket-caption d-grid">
+                                    <div class="obc__cell">Название позиции</div>
+                                    <div class="obc__cell">Количество <br> шт в заказе</div>
+                                    <div class="obc__cell">Цена за 1 шт</div>
+                                    <div class="obc__cell">Сумма</div>
+                                    <div class="obc__cell">Действия</div>
+                                    <div class="obc__cell --empty"></div>
+                                </div>
+                    
+                                //= template/basket-in-lk.html
+                                //= template/basket-in-lk.html
+                                //= template/basket-in-lk.html
+                    
+                    
+                            </div>
+                            <!--Конец товаров-->
+                    
+                            <div class="orderList-item__bottom flex-jcsb">
+                                <div class="oib-half --props">
+                                    <div class="oib-item">
+                                        <span class="oib-item__label">Адрес доставки</span>
+                                        <span class="oib-half__value">143003, Московская обл., г. Одинцово, ул. Маршала Жукова, дом 38,
+                                            помещение
+                                            86</span>
+                                    </div>
+                                    <div class="oib-item">
+                                        <span class="oib-item__label">Способ оплаты:</span>
+                                        <span class="oib-half__value">Наличными при получении</span>
+                                    </div>
+                                </div>
+                                <div class="oib-half --total">
+                                    <div class="orderList-total">
+                                        <div class="oib-item flex-jcsb">
+                                            <span class="oib-item__label">Кол-во Товаров</span>
+                                            <span class="oib-half__value _bold">25</span>
+                                        </div>
+                                        <div class="oib-item flex-jcsb">
+                                            <span class="oib-item__label">Скидка на заказ</span>
+                                            <span class="oib-half__value _bold">500 ₽</span>
+                                        </div>
+                                        <div class="oib-item flex-jcsb">
+                                            <span class="oib-item__label">Промокод</span>
+                                            <span class="oib-half__value _bold">256 ₽</span>
+                                        </div>
+                                        <div class="oib-item flex-jcsb">
+                                            <span class="oib-item__label">Стоимость доставки</span>
+                                            <span class="oib-half__value _bold">1000 ₽</span>
+                                        </div>
+                                        <div class="oib-item flex-jcsb">
+                                            <span class="oib-item__label">Итого со скидкой</span>
+                                            <span class="oib-half__value _bold">305 000 ₽</span>
+                                        </div>
+                                        <div class="oib-item flex-jcsb">
+                                            <span class="oib-item__total">Итого со скидкой</span>
+                                            <span class="oib-item__total">305 000 ₽</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Конец строки-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('body').on('click', '.js-row-trigger', function(){
+            $(this).toggleClass('is-opened')
+                .closest('.order-row').toggleClass('is-opened')
+                .find('.orderList-item').toggleClass('--hidden');
+        });
+    });
+</script>
+
+//= template/footer.html

@@ -1,0 +1,258 @@
+//= template/header.html
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&coordorder=longlat&apikey=cbcdfe6a-f0c7-4bda-b9eb-28f404cb55d8"></script>
+<script src="assets/delivery-map.js"></script>
+//= template/breadcrumbs.html
+<div class="box">
+    <div class="header">
+        <h1>Доставка и оплата</h1>
+    </div>
+</div>
+
+
+<div class="box">
+    <div class="shadow-block delivery-block">
+        <div class="shadow-block-title with-icon">
+            <svg><use href="sprite/sprite.svg#truck"></use></svg>
+            <h3>Бесплатная доставка от 2500 ₽*</h3>
+        </div>
+        <div class="delivery-items">
+
+            <div class="delivery-item">
+                <div class="delivery-item__title">
+                    Закажите просто!
+                </div>
+                <div class="delivery__row">
+                    <span class="d-icon i-cart"></span>
+                    <span class="d-info">
+                        <b>На сайте:</b> <br> круглосуточно
+                    </span>
+                </div>
+                <div class="delivery__row">
+                    <span class="d-icon i-phone"></span>
+                    <span class="d-info">
+                        <b>По телефону:</b> <br> пн-пт 9:00 - 19:00, сб 9:00 - 16:00
+                    </span>
+                </div>
+            </div>
+
+            <div class="delivery-item">
+                <div class="delivery-item__title">
+                    ПРИЕДЕМ, КУДА СКАЖЕТЕ!
+                </div>
+                <div class="delivery__row">
+                    <span class="d-icon i-pin"></span>
+                    <span class="d-info">
+                        Доставка по всему <b>Подмосковью!*</b>
+                    </span>
+                </div>
+                <div class="delivery__row">
+                    <span class="d-icon i-cash"></span>
+                    <span class="d-info">
+                        Стоимость доставки* <br> <b>от 250 ₽*</b>
+                    </span>
+                </div>
+            </div>
+
+            <div class="delivery-item">
+                <div class="delivery-item__title">
+                   ДОСТАВИМ БЫСТРО!
+                </div>
+                <div class="delivery__row">
+                    <span class="d-icon i-pin"></span>
+                    <span class="d-info">
+                        <b>В пределах МКАД</b> – доставка день в день!*
+                       
+                    </span>
+                </div>
+                <div class="delivery__row">
+                    <span class="d-icon i-phone"></span>
+                    <span class="d-info">
+                        При условии подтверждения заказа оператором <b>до 12:00</b>
+                    </span>
+                </div>
+            </div>
+
+            <div class="delivery-item">
+                <div class="delivery-item__title">
+                    САМОВЫВОЗ ДЛЯ САМЫХ НЕТЕРПЕЛИВЫХ!
+                </div>
+                <div class="delivery__row">
+                    <span class="d-icon i-pin"></span>
+                    <span class="d-info">
+                        Москва, ул. Рябиновая, д.55, стр.1 <br>
+                        пн-пт 9:00 - 17:00,сб с 9:00 - 13:00
+                    </span>
+                </div>
+                <div class="delivery__row">
+                    <span class="d-icon i-pin"></span>
+                    <span class="d-info">
+                        <b>Розничные магазины сети</b> <br> с 10:00 до 22:00
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="delivery-and-map">
+        <div class="delivery-list">
+            <h3>Доставка в Подмосковье</h3>
+            <div class="delivery-description">
+                Стоимость и день доставки зависит от зоны Вашего расположения
+            </div>
+            <div id="delivery-zonez" class="delivery-zonez">
+                <div class="delivery-row flex-jcsb">
+                    <span class="delivery-marker"></span>
+                    <div class="delivery-cell __price">250 ₽</div>
+                    <div class="delivery-cell __description">(Бесплатно при заказе от <b>2500 ₽</b>)</div>
+                </div>
+                <div class="delivery-row flex-jcsb">
+                    <span class="delivery-marker"></span>
+                    <div class="delivery-cell __price">250 ₽</div>
+                    <div class="delivery-cell __description">(Бесплатно при заказе от <b>2500 ₽</b>)</div>
+                </div>
+                <div class="delivery-row -sale flex-jcsb">
+                    <span class="delivery-marker"></span>
+                    <div class="delivery-cell __price">250 ₽</div>
+                    <div class="delivery-cell __description">(Бесплатно при заказе от <s>3000</s> <b>2500* ₽</b>)</div>
+                </div>
+                <div class="delivery-row -sale flex-jcsb">
+                    <span class="delivery-marker"></span>
+                    <div class="delivery-cell __price">300 ₽</div>
+                    <div class="delivery-cell __description">(Бесплатно при заказе от <s>3600</s> <b>3000 ₽</b>)</div>
+                </div>
+                <div class="delivery-row -sale flex-jcsb">
+                    <span class="delivery-marker"></span>
+                    <div class="delivery-cell __price">400 ₽</div>
+                    <div class="delivery-cell __description">(Бесплатно при заказе от <s>4000</s> <b>3000 ₽</b>)</div>
+                </div>
+                <div class="delivery-row -sale flex-jcsb">
+                    <span class="delivery-marker"></span>
+                    <div class="delivery-cell __price">500 ₽</div>
+                    <div class="delivery-cell __description">(Бесплатно при заказе от <s>7000</s> <b>5000 ₽</b>)</div>
+                </div>
+            </div>
+            <div class="zones-note">
+                Для остальных адресов стоимость доставки <b>700 ₽</b>. <br> (Бесплатно при заказе от <b>7000 ₽</b> )
+                <div class="delivery-description">
+                    * сроки и условия уточняйте у операторов
+                </div>
+            </div>
+           
+            
+        </div>
+        <div class="shop-map">
+            <div class="shop-map-wrapper">
+                <div class="shop-map-box" id="samiMap"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="shadow-block pays-block page-style">
+        <div class="shadow-block-title">
+            <h3>Оплата любым удобным способом</h3>
+        </div>
+        <div class="pays flex">
+            <div class="pays-item">
+                <div class="pay-item__inner">
+                    <div class="pays-item__icon"><img src="img/pays/1.png" alt="1"></div>
+                    <div class="pays-item__text">
+                        Наличными при получении
+                    </div>
+                </div>
+            </div>
+            <div class="pays-item">
+                <div class="pay-item__inner">
+                    <div class="pays-item__icon"><img src="img/pays/2.png" alt="2"></div>
+                    <div class="pays-item__text">
+                        Картой при получении
+                    </div>
+                </div>
+            </div>
+            <div class="pays-item">
+                <div class="pay-item__inner">
+                    <div class="pays-item__icon"><img src="img/pays/3.png" alt="3"></div>
+                    <div class="pays-item__text">
+                        Онлайн оплата
+                    </div>
+                </div>
+            </div>
+            <div class="pays-item mob-half">
+                <div class="pay-item__inner">
+                    <div class="pays-item__icon"><img src="img/pays/4.png" alt="4"></div>
+                    <div class="pays-item__text">
+                        SberPay
+                    </div>
+                </div>
+            </div>
+            <div class="pays-item mob-half">
+                <div class="pay-item__inner">
+                    <div class="pays-item__icon"><img src="img/pays/5.png" alt="5"></div>
+                    <div class="pays-item__text">
+                        СБП
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h4>Порядок онлайн-оплаты банковскими картами</h4>
+        <ul>
+            <li>
+                Вы можете оплатить свой заказ онлайн с помощью предложенных методов оплат через платежный сервис компании
+                PayKeeper.
+                После подтверждения заказа Вы будете перенаправлены на защищенную платежную страницу PayKeeper, где необходимо
+                будет
+                ввести данные для оплаты заказа. После успешной оплаты на указанную в форме оплаты электронную почту будет
+                направлен
+                электронный чек с информацией о заказе и данными по произведенной оплате.
+            </li>
+            <li>
+                В процессе оплаты банковской картой введите ее номер, срок действия, код CVV, указанный на обороте, а также имя
+                и
+                фамилию владельца на английском языке (как на карте).
+            </li>
+            <li>Убедитесь, что Вы ввели корректные данные, а затем нажмите на кнопку «Оплатить».</li>
+            <li>
+                Если ваша банковская карта поддерживает технологию 3D Secure, Вы автоматически перейдете на сайт своего банка,
+                где Вас
+                попросят ввести секретный код активации, который будет отправлен Вам на телефон.
+            </li>
+            <li>
+                Если реквизиты карты введены верно и на счете достаточно денег, Вы увидите подтверждение оплаты заказа. После
+                чего Вам
+                будет предложено вернуться на страницу оплаченного заказа.
+            </li>
+        </ul>
+        
+        <h4>Правила оплаты Paykeeper</h4>
+        <p>
+            К оплате принимаются платежные карты: VISA Inc, MasterCard WorldWide, МИР. При оплате заказа банковской картой с
+            помощью
+            системы PayKeeper, обработка платежа происходит на авторизационной странице банка, где Вам необходимо ввести данные
+            Вашей банковской карты:
+            <ul>
+                <li>тип карты</li>
+                <li>номер карты</li>
+                <li>срок действия карты (указан на лицевой стороне карты)</li>
+                <li>Имя держателя карты (латинскими буквами, точно также как указано на карте)</li>
+                <li>CVC2/CVV2 код</li>
+            </ul>
+        </p>
+
+        <img src="img/pay-card.jpg" alt="CARD" />
+        <br>
+        <h4>Условия доставки по Москве в пределах МКАД</h4>
+        <ul>
+            <li>С понедельника по субботу с 9:00 до 15:00 или с 14:00 до 22:00.</li>
+            <li>Доставка за пределы МКАД осуществляется только в течение дня с 9:00 до 22:00.</li>
+            <li>Доставка к точному времени не осуществляется.</li>
+        </ul>
+
+        <img src="img/test/parking.jpg" alt="IMG" />
+
+
+    </div>
+
+</div>
+
+//= template/footer.html

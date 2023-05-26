@@ -1,0 +1,139 @@
+//= template/header.html
+//= template/breadcrumbs.html
+
+<div class="box">
+   <div class="sale-detail shadow-block">
+        <div class="sale-detail__inner d-grid">
+            <div class="sale-detail__img">
+                <picture>
+                    <source type="image/webp" src-set="img/test/advice/2.webp">
+                    <img class="lazy" data-src="img/test/advice/2.png" alt="2">
+                </picture>
+            </div>
+            <div class="sale-detail__contant">
+                <h1>30% на вторую упаковку корма для кошек и собак</h1>
+                <p>
+                    Cкидки действуют при покупках онлайн. Не суммируются с другими акциями и промокодами.
+                </p>
+                <span class="sale-period">с 01.01.2021 до 01.01.2025</span>
+            </div>
+        </div>
+        <div class="sale-value hide_mobile"><span>-30%</span></div>
+   </div>
+
+
+   <!--*******************  ТОВАРЫ  **************-->
+
+    <div class="catalog-wrapper d-grid last-level">
+        <div class="catalog-aside">
+            <div class="catalog-aside__top">
+                <a href="sections.html" class="back-catalog">На страницу акций</a>
+            </div>
+            //= template/aside-filter.html
+        </div>
+
+        <div class="catalog-main">
+            
+            //= template/horizont-filter.html
+
+            <div class="catalog-list" data-type="card" id="template">
+                //= template/prod-item_1.html
+                //= template/prod-item_2.html
+                //= template/prod-item_3.html
+                //= template/prod-item_1.html
+                //= template/prod-item_2.html
+                //= template/prod-item_1.html
+                //= template/prod-item_2.html
+                //= template/prod-item_3.html
+                //= template/prod-item_1.html
+                //= template/prod-item_2.html
+                //= template/prod-item_2.html
+                //= template/prod-item_1.html
+            </div>
+
+            //= template/pagination.html
+        </div>
+
+    </div>
+
+
+<script>
+    //Движение ползунка цены
+    let price_slider = $("#p-slider-trigger").ionRangeSlider({
+        onChange: function (data) {
+            const inpts_box = $('#p-slider-values'),
+                inptMin = inpts_box.find('.js-slider-min'),
+                inptMax = inpts_box.find('.js-slider-max');
+
+            inptMin.val(data.from);
+            inptMax.val(data.to);
+        },
+    });
+
+    let slider_inst = price_slider.data("ionRangeSlider");
+
+    //Ввод в поля цен
+    $('#p-slider-values input').on('change', function () {
+        let inpt = $(this),
+            v = inpt.val();
+        inpt.val(v.replace(/\D/, ''));
+
+        if (inpt.hasClass('js-slider-min')) {
+            if (v >= slider_inst.options.min && v <= slider_inst.options.max) {
+                slider_inst.update({
+                    from: v,
+                });
+            } else {
+                inpt.val(slider_inst.options.min);
+            }
+        } else {
+            if (v <= slider_inst.options.max && v >= slider_inst.options.min) {
+                slider_inst.update({
+                    to: v,
+                });
+            } else {
+                inpt.val(slider_inst.options.max);
+            }
+        }
+    });
+
+    //Поиск по брендам
+    $("[data-search]").on("keyup", function () {
+        let value = $(this).val().toLowerCase();
+        $("[data-search-list='" + $(this).data('search') + "'] div").filter(function () {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+        });
+    });
+
+    //смена списка товаров
+        if (localStorage.getItem('temp_view')) {
+            let view = localStorage.getItem('temp_view');
+            $('#template').attr('data-type', view);
+            $('[data-view=' + view + ']').addClass('current').siblings().removeClass('current');
+        }
+
+        $('body').on('click', '[data-view]', function () {
+            let list_view = $(this).data('view')
+            $(this).addClass('current').siblings().removeClass('current');
+            $('#template').attr('data-type', list_view);
+            localStorage.setItem('temp_view', list_view);
+        });
+
+    //Выбор сортировки
+    $('body').on('click', '[data-sort] div.current', function () {
+        $(this).siblings().show();
+    });
+
+
+    $('body').on('click', '[data-sort] div:not(.current)', function () {
+        $(this).addClass('current').siblings().removeClass('current').hide();
+        let key = $(this).parent().data('sort');
+
+        console.log({ [key]: $(this).data('value') });
+    });
+</script>
+
+</div>
+
+
+//= template/footer.html

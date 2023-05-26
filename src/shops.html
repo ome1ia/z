@@ -1,0 +1,137 @@
+//= template/header.html
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=cbcdfe6a-f0c7-4bda-b9eb-28f404cb55d8"></script>
+<script src="assets/shops-list.js"></script>
+<script src="assets/shops.js"></script>
+//= template/breadcrumbs.html
+
+<div class="box">
+    <div class="header">
+        <h1>Наши магазины</h1>
+    </div>
+</div>
+
+<div class="box">
+    <div class="shop-filter">
+       
+        <div class="shop-filter__types" id="shop-filter">
+            <div class="shop-type custom-checkbox">
+                <input type="checkbox" name="veterinary-clinic" id="veterinary-clinic" value="77342" class="checked">
+                <label for="veterinary-clinic">Ветклиника</label>
+            </div>
+            <div class="shop-type custom-checkbox">
+                <input type="checkbox" name="reptilii" id="reptilii" value="75701">
+                <label for="reptilii">Рептилии</label>
+            </div>
+            <div class="shop-type custom-checkbox">
+                <input type="checkbox" name="terrariumistika" id="terrariumistika" value="75702">
+                <label for="terrariumistika">Террариумистика</label>
+            </div>
+            <div class="shop-type custom-checkbox">
+                <input type="checkbox" name="korma" id="korma" value="75703">
+                <label for="korma">Живые и замороженные корма</label>
+            </div>
+            <div class="shop-type custom-checkbox">
+                <input type="checkbox" name="cats-and-dogs" id="cats-and-dogs" value="54216">
+                <label for="cats-and-dogs">Котята и щенки</label>
+            </div>
+            <div class="shop-type custom-checkbox">
+                <input type="checkbox" name="birds-and-rodents" id="birds-and-rodents" value="54217">
+                <label for="birds-and-rodents">Птицы и грызуны</label>
+            </div>
+            <div class="shop-type custom-checkbox">
+                <input type="checkbox" name="veterinary-pharmacy" id="veterinary-pharmacy" value="54218">
+                <label for="veterinary-pharmacy">Ветеринарная аптека</label>
+            </div>
+            <div class="shop-type custom-checkbox">
+                <input type="checkbox" name="grooming" id="grooming" value="54219">
+                <label for="grooming">Груминг-салон</label>
+            </div>
+            <div class="shop-type custom-checkbox">
+                <input type="checkbox" name="aquaristics" id="aquaristics" value="54220">
+                <label for="aquaristics">Аквариумистика</label>
+            </div>
+            <div class="shop-type custom-checkbox">
+                <input type="checkbox" name="live-fish" id="live-fish" value="54221">
+                <label for="live-fish">Живые рыбы</label>
+            </div>
+            <div class="shop-type custom-checkbox">
+                <input type="checkbox" name="engraving" id="engraving" value="54222">
+                <label for="engraving">Гравировка</label>
+            </div>
+            <div class="shop-type custom-checkbox">
+                <input type="checkbox" name="plants" id="plants" value="54223">
+                <label for="plants">Живые растения для аквариумов</label>
+            </div>
+            <div class="reset-tag"  id="reset-filter">
+                <span class="reset-tag__title">Сбросить всё</span>
+            </div>
+        </div>
+
+
+    <section class="shop-list-and-map">
+        <div class="shop-map-l">
+            <div class="shop-search">
+                <div class="search-inner">
+                    <input list="shops_adress" autocomplete="false" type="text" name="shop-s"
+                        placeholder="Введите адрес или станцию метро" class="shop-input" id="shop-input">
+                        <datalist id="shops_adress"></datalist>
+                    <button type="submit" class="search-shop__btn" name="s">
+                        <svg><use href="sprite/sprite.svg#search"></use></svg>
+                    </button>
+    
+                </div>
+            </div>
+            <div class="shop-list-and-map__list" data-custom-scroll data-shop-list data-scroll-amount="200">
+                <div id="shops-list-panel" ></div>
+                <div class="shop-list-reset js-list-reset">
+                    <span>Таких магазинов еще нет, давай сбросим фильтры</span>
+                    <button class="btn btn-grey r10">Очистить фильтр</button>
+                </div>
+            </div>
+        </div>
+        <div class="shop-list-and-map__map">
+            <div class="shops-map" id="shops-map"></div>
+        </div>
+    </section>
+
+
+    <div class="shop-product">
+        <h3>Самовывоз из наших розничных зоомагазинов</h3>
+        
+        <p>
+            Вы можете бесплатно забрать свой заказ в любом из наших розничных зоомагазинов одним из удобных для Вас способов:
+        </p>
+        
+        <p>
+            <b>Самовывоз в день заказа</b> (при наличии товара в зоомагазине)
+            Воспользоваться данным способом можно в том случае, если необходимый Вам товар по Интернет-заказу есть в наличии на
+            Пункте выдачи. Сотрудник отложит товар по Вашему
+            заказу. Как только товар по заказу будет отложен, мы отправим Вам СМС о готовности заказа к выдаче и вы можете его
+            забрать.
+        </p>
+        <p>
+            <b>Самовывоз в другие дни</b>(если не все товары по заказу есть в нужном зоомагазине). При выборе данного способа получения
+            товара, Вам доступен ассортимент для заказа не
+            только из наличия магазина, но и со Склада Интернет-магазина. Мы доставим необходимый Вам товар по заказу в выбранный
+            Пункт выдачи на следующий день, после подтверждения
+            заказа оператором. Возможность доставки товара со Склада Интернет-магазина в Пункт выдачи необходимо уточнять у
+            оператора при подтверждении заказа.
+        </p>
+        <p>
+            <b>Доставка</b> товара со Склада Интернет-магазина в Пункт выдачи – БЕСПЛАТНО.
+            Как только товар по заказу будет доставлен в Пункт выдачи, мы отправим Вам СМС о готовности заказа к выдаче.
+            Срок хранения заказа – 5 дней.
+        </p>
+        <p>
+            <b>Оплата</b> товара в Пункте выдачи любым удобным для Вас способом:
+            Наличными средствами;
+            Пластиковой картой при получении.
+        </p>
+    </div>
+
+
+</div>
+
+
+
+//= template/footer.html

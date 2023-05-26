@@ -1,0 +1,688 @@
+//= template/header.html
+//= template/breadcrumbs.html
+<div class="box">
+    <div class="header">
+        <h1>Личный кабинет</h1>
+    </div>
+</div>
+<div class="box">
+    <div class="profile d-grid">
+        <div class="profile-aside">
+            <ul class="personal-menu">
+                <li><a class="active" href="lk-main.html"><span class="p-menu__icon"><svg width="23" height="20"><use href="sprite/sprite.svg#personal-home" /></svg></span>Главная</a></li>
+                <li><a href="lk-history.html"><span class="p-menu__icon"><svg width="23" height="21"><use href="sprite/sprite.svg#personal-history" /></svg></span>История заказов</a></li>
+                <li><a href="lk-bonus.html"><span class="p-menu__icon"><svg width="27" height="23"><use href="sprite/sprite.svg#personal-bonus" /></svg></span>Мои БонУСы</a></li>
+                <li><a href="lk-pets.html"><span class="p-menu__icon"><svg width="27" height="24"><use href="sprite/sprite.svg#personal-pets" /></svg></span>Мои Питомцы</a></li>
+                <li><a href="lk-messages.html" class="have-new"><span class="p-menu__icon"><svg width="24" height="22"><use href="sprite/sprite.svg#personal-mess" /></svg></span>Сообщения</a></li>
+                <li><a href="lk-favorite.html"><span class="p-menu__icon"><svg width="22" height="19"><use href="sprite/sprite.svg#m_fav" /></svg></span>Избранное</a></li>
+                <li><a href="lk-profile.html"><span class="p-menu__icon"><svg width="22" height="22"><use href="sprite/sprite.svg#personal-profile" /></svg></span>Профиль</a></li>
+                <li><a href="lk-delivery.html"><span class="p-menu__icon"><svg width="18" height="23"><use href="sprite/sprite.svg#personal-delivery" /></svg></span>Адреса доставки</a></li>
+                <li><a href="lk-feedback.html"><span class="p-menu__icon"><svg width="21" height="18"><use href="sprite/sprite.svg#personal-feedback" /></svg></span>Обратная связь</a></li>
+                <li><a href="?logout=Y"><span class="p-menu__icon"><svg width="21" height="18"><use href="sprite/sprite.svg#personal-out" /></svg></span>Выйти</a></li>
+            </ul>
+        </div>
+        <div class="profile-main">
+            <div class="profile-topBanner">
+                <a href="lk-pets.html">
+                    <picture>
+                        <source srcset="img/main-sale-sm.png" media="(max-width: 420px)" />
+                        <img class="lazy" data-src="img/add-pet-big.png" alt="" />
+                    </picture>
+                </a>
+            </div>
+
+            <div class="profile-main-tiles d-grid">
+                <div class="profile-main-tile shadow-block">
+                    <div class="pmt-header flex-jcsb">
+                        <div class="pmt-header__title">
+                            <svg width="22" height="22"><use href="sprite/sprite.svg#personal-profile" /></svg>
+                            Профиль
+                        </div>
+                        <a href="lk-profile.html" class="pmt-header__link --edit"><svg><use href="sprite/sprite.svg#pencil"></use></svg>Изменить</a>
+                    </div>
+                    <div class="pmt-body">
+                        <div class="user d-grid">
+                            <div class="user__avatar" data-modal="avatar" title="Изменить">
+                                <div class="user__avatar-picture">
+                                    <img src="img/test/lk/avatar.png" alt="User">
+                                </div>
+                            </div>
+                            <div class="user__info">
+                                <div class="user__info__name">Анна Котлова</div>
+                                <div class="user__info__phone">8 969 584 52 14</div>
+                                <div class="user__info__email">dsdsddfdfdf@dsdad.rudsdsdd-fdfdf@dsdad.ru</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-main-tile shadow-block">
+                    <div class="pmt-header flex-jcsb">
+                        <div class="pmt-header__title">
+                            <svg width="18" height="23"><use href="sprite/sprite.svg#personal-delivery" /></svg>
+                            Адреса доставки
+                        </div>
+                        <a href="lk-delivery.html" class="pmt-header__link">Все адреса</a>
+                    </div>
+
+                    <div class="address-list --preview">
+
+                        <div class="address-item">
+                            <div class="address-item-row d-grid">
+                                <div class="address-item-cell">
+                                    <span class="cell-icon"><img src="img/svg/deliv_green.svg" alt="Icon"></span>
+                                </div>
+                                <div class="address-item-cell --text">
+                                    <div class="address-title">Доставка по адресу</div>
+                                    <div class="address-text">143003, Московская обл., г. Одинцово, ул. Маршала Жукова, дом 38, помещение 86
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="address-item">
+                            <div class="address-item-row d-grid">
+                                <div class="address-item-cell">
+                                    <span class="cell-icon"><img src="img/adv-icons/country.svg" alt="Icon"></span>
+                                </div>
+                                <div class="address-item-cell --text">
+                                    <div class="address-title">Доставка по адресу</div>
+                                    <div class="address-text">143003, Московская обл., г. Одинцово, ул. Маршала Жукова, дом 38, помещение 86
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="profile-main-tile shadow-block --bonus">
+                    <div class="pmt-header flex-jcsb">
+                        <div class="pmt-header__title">
+                            <svg width="27" height="23"><use href="sprite/sprite.svg#personal-bonus"></use></svg>
+                            Мои бонусы
+                        </div>
+                        <a href="lk-bonus.html" class="pmt-header__link">Подробнее</a>
+                    </div>
+                    <div class="bonus-card flex">
+                        <div class="bonus-card-row flex-jcsb">
+                            <div class="bonus-card-cell b-count">
+                                <div class="b-count__title">БонУсов</div>
+                                <div class="b-count__value">1 205</div>
+                            </div>
+                            <div class="bonus-card-cell">
+                                <img src="img/test/lk/code.png" alt="CODE" />
+                            </div>
+                        </div>
+
+                        <div class="bonus-card-row flex-jcsb b-number">
+                            <div class="bonus-card-cell">
+                                <div class="b-number__title">Номер карты</div>
+                                <div class="b-number__value">0000 0000 0000 0001</div>
+                            </div>
+                            <div class="bonus-card-cell">
+                                <span class="b-final">Бонусы сгорят через 25 дней</span>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+
+                <div class="profile-main-tile shadow-block ">
+                    <div class="pmt-header flex-jcsb">
+                        <div class="pmt-header__title">
+                            <svg width="27" height="24"><use href="sprite/sprite.svg#personal-pets"></use></svg>
+                            Мои питомцы
+                        </div>
+                        <a href="lk-pets.html" class="pmt-header__link">Все питомцы</a>
+                    </div>
+                    <div class="pets-list flex">
+                        <div class="pets-item-prev">
+                            <div class="pets-item-prev__img">
+                                <img src="img/test/lk/dog.png" alt="dog" />
+                            </div>
+                            <div class="pets-item-prev__name">Оливер</div>
+                        </div>
+
+                        <div class="pets-item-prev">
+                            <div class="pets-item-prev__img">
+                                <img src="img/test/lk/avatar.png" alt="dog" />
+                            </div>
+                            <div class="pets-item-prev__name">Маргарин</div>
+                        </div>
+
+                        <div class="pets-item-prev">
+                            <div class="pets-item-prev__img --add">
+                                <div class="roundAdd__icon">
+                                    <svg>
+                                        <use href="sprite/sprite.svg#plus"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="profile-main-tile shadow-block ">
+                    <div class="pmt-header flex-jcsb">
+                        <div class="pmt-header__title">
+                            <svg width="23" height="21"><use href="sprite/sprite.svg#personal-history"></use></svg>
+                            История заказов
+                        </div>
+                        <a href="lk-history.html" class="pmt-header__link">Все заказы</a>
+                    </div>
+                    <div class="orders-count b-border">
+                        У вас <b>3</b> заказа в работе
+                    </div>
+                    <div class="orders-preview">
+                        <div class="order-preview-item flex-jcsb">
+                            <div class="opi-num">№3141</div>
+                            <div class="opi-status __blue">Ожидает оплату</div>
+                        </div>
+
+                        <div class="order-preview-item flex-jcsb">
+                            <div class="opi-num">№3140</div>
+                            <div class="opi-status __green">Оплачено</div>
+                        </div>
+
+                        <div class="order-preview-item flex-jcsb">
+                            <div class="opi-num">№3139</div>
+                            <div class="opi-status __red">Отгрузка</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-main-tile shadow-block ">
+                    <div class="pmt-header flex-jcsb">
+                        <div class="pmt-header__title have-new">
+                            <svg width="24" height="22"><use href="sprite/sprite.svg#personal-mess"></use></svg>
+                            Сообщения
+                        </div>
+                        <a href="lk-history.html" class="pmt-header__link">Все сообщения</a>
+                    </div>
+                    
+                    <div class="p-message-item --preview">
+                        <div class="p-message-title">Новое поступление в разделе для собак в разделе для собак</div>
+                        <div class="p-message-body">
+                            Royal Canin (Роял Канин) Medium Starter Mother & babydog Корм сухой для собак средних размеров (весом от 11 до 2) для собак
+                            средних размеров (весом от 11 до 25 кг) Mother & babydog Корм сухой для собак средних размеров
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+
+            <!--Варианты если не заполнены-->
+            Если не заполнены <br><br><hr><br><br>
+
+            <div class="profile-main-tiles d-grid">
+
+                <div class="profile-main-tile shadow-block">
+                    <div class="pmt-header flex-jcsb">
+                        <div class="pmt-header__title">
+                            <svg width="22" height="22">
+                                <use href="sprite/sprite.svg#personal-profile" />
+                            </svg>
+                            Профиль
+                        </div>
+                        <a href="lk-profile.html" class="pmt-header__link --edit"><svg>
+                                <use href="sprite/sprite.svg#pencil"></use>
+                            </svg>Изменить</a>
+                    </div>
+                    <div class="pmt-body">
+                        <div class="user d-grid">
+                            <div class="user__avatar" data-modal="avatar" title="Изменить">
+                                <div class="user__avatar-picture">
+                                    <svg class="no-image"><use href="sprite/sprite.svg#m_user"></use></svg>
+                                </div>
+                            </div>
+                            <div class="user__info">
+                                <div class="user__info__name">Анна Котлова</div>
+                                <div class="user__info__phone">8 969 584 52 14</div>
+                                <div class="yellow-note">
+                                    Укажите электронную почту и получите 200 БонУсов
+                                </div>
+                                <a href="lk-profile.html" class="add-button">
+                                    <svg><use href="sprite/sprite.svg#plus"></use></svg>Добавить
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-main-tile shadow-block">
+                    <div class="pmt-header flex-jcsb">
+                        <div class="pmt-header__title">
+                            <svg width="18" height="23">
+                                <use href="sprite/sprite.svg#personal-delivery" />
+                            </svg>
+                            Адреса доставки
+                        </div>
+                    </div>
+                    <div class="empty-tile">
+                        <div class="empty-tile-inner flex">
+                            <div class="empty-tile__icon">
+                                <svg width="18" height="23">
+                                    <use href="sprite/sprite.svg#personal-delivery"></use>
+                                </svg>
+                            </div>
+                            <div class="empty-tile__title">
+                                У вас нет адресов
+                            </div>
+                            <a href="lk-delivery.html" class="btn btn-light r5 add-button">
+                                <svg><use href="sprite/sprite.svg#plus"></use></svg>Добавить адрес
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-main-tile shadow-block --bonus">
+                    <div class="pmt-header flex-jcsb">
+                        <div class="pmt-header__title">
+                            <svg width="27" height="23">
+                                <use href="sprite/sprite.svg#personal-bonus"></use>
+                            </svg>
+                            Мои бонусы
+                        </div>
+                        <a href="lk-bonus.html" class="pmt-header__link">Подробнее</a>
+                    </div>
+                    <div class="bonus-card flex">
+                        <div class="bonus-card-row flex-jcsb">
+                            <div class="bonus-card-cell b-count">
+                                <div class="b-count__title">БонУсов</div>
+                                <div class="b-count__value">0</div>
+                            </div>
+                            <div class="bonus-card-cell">
+                                <img src="img/test/lk/code.png" alt="CODE" />
+                            </div>
+                        </div>
+                
+                        <div class="bonus-card-row flex-jcsb b-number">
+                            <div class="bonus-card-cell">
+                                <div class="b-number__title">Номер карты</div>
+                                <div class="b-number__value">0000 0000 0000 0001</div>
+                            </div>
+                            
+                            <div class="yellow-note">
+                                Покупаейте товары и получите БонУсы
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-main-tile shadow-block">
+                    <div class="pmt-header flex-jcsb">
+                        <div class="pmt-header__title">
+                            <svg width="27" height="24">
+                                <use href="sprite/sprite.svg#personal-pets"></use>
+                            </svg>
+                            Мои питомцы
+                        </div>
+                    </div>
+                    <div class="empty-tile">
+                        <div class="empty-tile-inner flex">
+                            <div class="empty-tile__icon">
+                                <svg width="27" height="24">
+                                    <use href="sprite/sprite.svg#personal-pets"></use>
+                                </svg>
+                            </div>
+                            <div class="empty-tile__title">
+                                Питомцы не добавлены
+                            </div>
+                            <a href="lk-pets.html" class="btn btn-light r5 add-button">
+                                <svg>
+                                    <use href="sprite/sprite.svg#plus"></use>
+                                </svg>Добавить питомца
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-main-tile shadow-block">
+                    <div class="pmt-header flex-jcsb">
+                        <div class="pmt-header__title">
+                            <svg width="23" height="21">
+                                <use href="sprite/sprite.svg#personal-history"></use>
+                            </svg>
+                            История заказов
+                        </div>
+                    </div>
+                    <div class="empty-tile">
+                        <div class="empty-tile-inner flex">
+                            <div class="empty-tile__icon">
+                                <svg width="48" height="25">
+                                    <use href="sprite/sprite.svg#truck_2"></use>
+                                </svg>
+                            </div>
+                            <div class="empty-tile__title">
+                                У вас нет заказов
+                            </div>
+                            <a href="products.html" class="btn btn-fill r5">За покупками</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-main-tile shadow-block ">
+                    <div class="pmt-header flex-jcsb">
+                        <div class="pmt-header__title">
+                            <svg width="24" height="22">
+                                <use href="sprite/sprite.svg#personal-mess"></use>
+                            </svg>
+                            Сообщения
+                        </div>
+                    </div>
+                    <div class="empty-tile">
+                        <div class="empty-tile-inner flex">
+                            <div class="empty-tile__icon">
+                                <svg width="30" height="30">
+                                    <use href="sprite/sprite.svg#send"></use>
+                                </svg>
+                            </div>
+                            <div class="empty-tile__title">
+                                У вас нет новых сообщений
+                            </div>
+                            <a href="lk-feedback.html" class="btn btn-light">Обратная связь</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="action-frend">
+                <div class="action-frend-bg">
+                    <picture>
+                        <source media="(max-width: 660px)" srcset="img/test/actions/a-frend_SM.png">
+                        <img src="img/test/actions/a-frend.png" alt="action" />
+                    </picture>
+                </div>
+
+                <div class="action-frend__form">
+                    <div class="aff-name">
+                        Приведи друга и получи <span class="bonuses" style="color: #42AB10">100 бонУсов</span>
+                    </div>
+                    <div class="aff-note">
+                        Поделитесь ссылкой, бонусы будут начислены вам в личном кабинете после того, как друг оформит заказ
+                    </div>
+                    <div class="aff-field flex-jcsb">
+                        <div class="aff-field__cell">
+                            <input type="text" disabled readonly value="https://samizoo.ru/vdivdivdivnbiovbnga165156g"/>
+                        </div>
+                        <div class="aff-field__cell">
+                            <button type="submit" class="btn btn-fill r10">Скопировать ссылку</button>
+                        </div>
+                    </div>
+
+                    <div class="aff-bottom">
+                        <a href="sale-detail.html">Условия акции</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+<div class="modal modal-sm" id="modal-avatar">
+    <div class="modal-inner">
+        <div class="modal-title">Добавить фотографию</div>
+        <div class="m-addForm b-border">
+            <div class="m-addForm__file">
+
+                <!--Загрузка картинки-->
+                <!--Если картинка есть, то прописываем display:none -->
+                <div class="upload-area" id="upload-area">
+                    <div class="m-addForm__file-label">Фотография питомца</div>
+
+                    <div class="drag-frame" id="drop_zone">
+                        <div class="drag-frame-inner">
+                            <div class="upload-icon"></div>
+                            <div class="upload-note">
+                                Перетащите фото мышкой или нажмите выбрать (.png, .jpg, .jpeg)
+                                Размер — не более 10 МБ
+                            </div>
+                            <div class="upload-button">
+                                <input name="file" type="file" id="avatar__file" class="avatar__file" />
+                                <button class="btn btn-fill r5">Выбрать</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="upload-controls is_hidden">
+                        <div class="result-avatar-buttons">
+                            <button type="button" class="save-avatar" id="upload-save">Применить</button>
+                            <button type="button" class="upload-avatar" id="upload-other">Заменить</button>
+                            <button type="button" class="delete-avatar" id="upload-delete">Удалить</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Загруженная картинки-->
+
+                <div class="result-avatar" style="display: none;">
+                    <div class="result-avatar-preview">
+                        <!--Если картинка есть, то прописываем сюда и убираем display:none выше-->
+                        <img src="img/test/lk/dog.png" alt="dog" />
+                    </div>
+                    <div class="result-avatar-buttons">
+                        <button type="button" class="upload-avatar" id="edit-avatar">Заменить</button>
+                        <button type="button" class="delete-avatar" id="delete-avatar">Удалить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-bottom-buttons">
+            <button class="btn btn-fill r10" style="width: 100%;" onclick="document.location.reload();">Сохранить</button>
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $(document).ready(function () {
+
+            //Вызов попапа
+            $('body').on('click', '[data-modal="avatar"]', function () {
+                $.fancybox.open({
+                    src: '#modal-avatar',
+                    opts: {
+                        touch: false,
+                        afterShow: function (instance, current) {
+
+                            //загрузка файла
+                            $("html").on("dragover drop", function (e) {
+                                e.preventDefault();
+                                e.stopPropagation();
+                            });
+
+                            $('body').on('dragover', '#drop_zone', function () {
+                                $(this).addClass('drag_over');
+                                return false;
+                            });
+
+                            $('body').on('dragleave', '#drop_zone', function () {
+                                $(this).removeClass('drag_over');
+                                return false;
+                            });
+
+                            avatarUpload();
+
+                        }
+                    }
+                });
+            });
+
+        });
+
+
+    });
+
+    function avatarUpload() {
+            var $uploadCrop;
+            const messBox = $('#avatar-form .js-result-message');
+            function readFile(file) {
+                if (file) {
+                    var reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        $('.upload-controls').removeClass('is_hidden');
+                        $('#drop_zone').addClass('ready');
+                        $('#drop_zone').removeClass('drag_over');
+                        $uploadCrop.croppie('bind', {
+                            url: e.target.result
+                        }).then(function () {
+                            console.log('complete');
+                        });
+
+                    }
+
+                    reader.readAsDataURL(file);
+                }
+                else {
+                    alert("Sorry - you're browser doesn't support the FileReader API");
+                }
+            }
+
+            $uploadCrop = $('#drop_zone').croppie({
+                viewport: {
+                    width: 150,
+                    height: 150,
+                    type: 'circle'
+                },
+                boundary: {
+                    width: 215,
+                    height: 215
+                },
+                enableExif: true
+            });
+
+            $('#avatar__file').on('change', function () {
+                console.log(this.files[0]['type']);
+                if (this.files[0]['type'].indexOf('image') !== -1) {
+                    if (validateSize(this.files[0], 1)) {
+
+                        readFile(this.files[0]);
+                    } else {
+                        alert('Файл не должен превышать 1 Мб!');
+                        return false;
+                    }
+
+                } else {
+                    alert('Возможна загрузка только изображения!');
+                    return false;
+                }
+
+            });
+
+            $("#drop_zone").on("drop", function (e) {
+                e.preventDefault(); e.stopPropagation();
+                let files = e.originalEvent.dataTransfer.files;
+                if (files.length > 0) {
+                    if (files[0]['type'].indexOf('image') !== -1) {
+                        if (validateSize(files[0], 1)) {
+                            messBox.empty();
+                            readFile(files[0]);
+                        } else {
+                            alert('Файл не должен превышать 1 Мб!');
+                            return false;
+                        }
+                    } else {
+                        alert('Возможна загрузка только изображения!');
+                        return false;
+                    }
+                }
+            });
+
+
+
+            //Нажатие
+            $('#upload-other').on('click', function () {
+                $('#avatar__file').trigger('click');
+            });
+
+            //Нажатие на Удалить
+            $('#upload-delete').on('click', function () {
+                resetCroppie();
+                $uploadCrop = $('#drop_zone').croppie({
+                    viewport: {
+                        width: 150,
+                        height: 150,
+                        type: 'circle'
+                    },
+                    boundary: {
+                        width: 215,
+                        height: 215
+                    },
+                    enableExif: true
+                });
+            });
+
+            //Нажатие на кнопку Сохранить
+            $('#upload-save').on('click', function (ev) {
+                ev.preventDefault();
+                $uploadCrop.croppie('result', {
+                    type: 'canvas',
+                    size: 'viewport',
+                }).then(function (resp) {
+
+                    let file = $('#avatar__file').prop('files')[0];
+                    console.log(file);//данные файла
+
+
+                    $('#upload-area').hide();
+
+                    $resAvat = $('.result-avatar');
+                    $resAvat.find('.result-avatar-preview').html('<img src="' + resp + '" />');
+                    $resAvat.show();
+
+                    //Всё сбрасываем 
+                    resetCroppie();
+                    $uploadCrop = $('#drop_zone').croppie({
+                        viewport: {
+                            width: 150,
+                            height: 150,
+                            type: 'circle'
+                        },
+                        boundary: {
+                            width: 215,
+                            height: 215
+                        },
+                        enableExif: true
+                    });
+
+
+                });
+            });
+
+
+            $('body').on('click', '#edit-avatar, #delete-avatar', function () {
+                $(this).closest('.result-avatar').hide();
+                $('#upload-area').show();
+            })
+
+        }
+
+
+
+        function resetCroppie() {
+            $('#upload').val('');
+            $('#drop_zone').croppie('destroy');
+            $('#drop_zone').removeClass('ready');
+            $('.upload-controls').addClass('is_hidden');
+        }
+
+        //Ограничение размера - 
+        function validateSize(file, sizeMb) {
+            if (file.size > sizeMb * 1024 * 1024) {
+                return false
+            }
+            return true;
+        }
+</script>
+
+//= template/footer.html

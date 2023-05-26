@@ -1,0 +1,117 @@
+//= template/header.html
+//= template/breadcrumbs.html
+<div class="box">
+    <div class="header">
+        <h1>Личный кабинет</h1>
+    </div>
+</div>
+<div class="box">
+    <div class="profile d-grid">
+        <div class="profile-aside">
+            <ul class="personal-menu">
+                <li><a href="lk-main.html"><span class="p-menu__icon"><svg width="23" height="20"><use href="sprite/sprite.svg#personal-home" /></svg></span>Главная</a></li>
+                <li><a href="lk-history.html"><span class="p-menu__icon"><svg width="23" height="21"><use href="sprite/sprite.svg#personal-history" /></svg></span>История заказов</a></li>
+                <li><a href="lk-bonus.html"><span class="p-menu__icon"><svg width="27" height="23"><use href="sprite/sprite.svg#personal-bonus" /></svg></span>Мои БонУСы</a></li>
+                <li><a href="lk-pets.html"><span class="p-menu__icon"><svg width="27" height="24"><use href="sprite/sprite.svg#personal-pets" /></svg></span>Мои Питомцы</a></li>
+                <li><a href="lk-messages.html"><span class="p-menu__icon"><svg width="24" height="22"><use href="sprite/sprite.svg#personal-mess" /></svg></span>Сообщения</a></li>
+                <li><a href="lk-favorite.html"><span class="p-menu__icon"><svg width="22" height="19"><use href="sprite/sprite.svg#m_fav" /></svg></span>Избранное</a></li>
+                <li><a class="active" href="lk-profile.html"><span class="p-menu__icon"><svg width="22" height="22"><use href="sprite/sprite.svg#personal-profile" /></svg></span>Профиль</a></li>
+                <li><a href="lk-delivery.html"><span class="p-menu__icon"><svg width="18" height="23"><use href="sprite/sprite.svg#personal-delivery" /></svg></span>Адреса доставки</a></li>
+                <li><a href="lk-feedback.html"><span class="p-menu__icon"><svg width="21" height="18"><use href="sprite/sprite.svg#personal-feedback" /></svg></span>Обратная связь</a></li>
+                <li><a href="?logout=Y"><span class="p-menu__icon"><svg width="21" height="18"><use href="sprite/sprite.svg#personal-out" /></svg></span>Выйти</a></li>
+            </ul>
+            <div class="profile-asideBanner">
+                <a href="lk-pets.html">
+                    <picture>
+                        <source srcset="img/test/lk/lk-banner-mob.png" media="(max-width: 1024px)" />
+                        <img class="lazy" data-src="img/test/lk/lk-banner.png" alt="" />
+                    </picture>
+                </a>
+            </div>
+        </div>
+        <div class="profile-main">
+            <div class="header"><h3>Профиль</h3></div>
+
+            <div class="profile-form">
+                <div class="form-row">
+                    <label>Имя</label>
+                    <input type="text" name="user-name" value="Анна" />
+                </div>
+
+                <div class="form-row --phonesDinamic">
+                    <div class="form-cell __full --main-phone">
+                        <label>Телефон</label>
+                        <input type="text" name="user-phone[]" placeholder="+7(___)___ __ __" value="+7(999) 123 45 67"
+                            data-mask />
+                        <span title="Добавить" class="field-trigger add-button js-addPhone"><svg>
+                                <use href="sprite/sprite.svg#plus"></use>
+                            </svg></span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <label>Эл. почта</label>
+                    <input type="text" name="user-name" value="anna123456@mail.ru" />
+                    <span class="email-confirm">Почта подтверждена</span>
+                </div>
+
+                <div class="form-row">
+                    <label>Пароль</label>
+                    <input class="pass-dinamic" type="password" name="user-name" value="123456" />
+                    <a href="#edit-password" data-fancybox class="pass-edit">Изменить</a>
+                </div>
+
+                <div class="form-row">
+                    <button class="btn btn-fill r10" type="submit">Сохранить изменения</button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+
+        $('body').on('click', '.js-addPhone', function () {
+
+            let wrapp = $('<div>', { class: 'form-cell __full' });
+            let inpt = $('<input>', { 'type': 'text', 'placeholder': '+7(___)___ __ __', 'name': 'user-phone[]' });
+            inpt.mask("+7(999) 999-99-99");
+            let btn = $('<span title="Удалить" class="field-trigger del-button js-delPhone"></span>');
+
+            inpt.appendTo(wrapp);
+            btn.appendTo(wrapp);
+            $(this).parent().after(wrapp);
+        });
+
+        $('body').on('click', '.js-delPhone', function () {
+            $(this).parent().remove();
+        });
+    });
+</script>
+
+
+<div class="modal modal-sm" id="edit-password">
+    <div class="modal-inner">
+        <div class="modal-title --center">Изменение пароля</div>
+        
+        <div class="modal-fields">
+            <div class="form-row">
+                <input class="pass-dinamic" type="password" name="pass" value="123456" placeholder="Новый пароль"/>
+            </div>
+            <div class="form-row">
+                <input class="pass-dinamic" type="password" name="pass-confirm" value="123456" placeholder="Подтвердите новый пароль" />
+            </div>
+            <br>
+            <div class="form-row flex-jcsb">
+                <div class="form-cell __full"><button type="submit" class="btn btn-fill r10">Изменить пароль</button></div>
+                <div class="form-cell __full"><button type="submit" class="btn btn-grey r10">Отменить</button></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+//= template/footer.html

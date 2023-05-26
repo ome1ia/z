@@ -1,0 +1,243 @@
+//= template/header.html
+//= template/breadcrumbs.html
+<div class="box">
+    <div class="header">
+        <h1>Личный кабинет</h1>
+    </div>
+</div>
+<div class="box">
+    <div class="profile d-grid">
+        <div class="profile-aside">
+           <ul class="personal-menu">
+                <li><a href="lk-main.html"><span class="p-menu__icon"><svg width="23" height="20"><use href="sprite/sprite.svg#personal-home" /></svg></span>Главная</a></li>
+                <li><a href="lk-history.html"><span class="p-menu__icon"><svg width="23" height="21"><use href="sprite/sprite.svg#personal-history" /></svg></span>История заказов</a></li>
+                <li><a href="lk-bonus.html"><span class="p-menu__icon"><svg width="27" height="23"><use href="sprite/sprite.svg#personal-bonus" /></svg></span>Мои БонУСы</a></li>
+                <li><a href="lk-pets.html"><span class="p-menu__icon"><svg width="27" height="24"><use href="sprite/sprite.svg#personal-pets" /></svg></span>Мои Питомцы</a></li>
+                <li><a href="lk-messages.html"><span class="p-menu__icon"><svg width="24" height="22"><use href="sprite/sprite.svg#personal-mess" /></svg></span>Сообщения</a></li>
+                <li><a href="lk-favorite.html"><span class="p-menu__icon"><svg width="22" height="19"><use href="sprite/sprite.svg#m_fav" /></svg></span>Избранное</a></li>
+                <li><a href="lk-profile.html"><span class="p-menu__icon"><svg width="22" height="22"><use href="sprite/sprite.svg#personal-profile" /></svg></span>Профиль</a></li>
+                <li><a class="active" href="lk-delivery.html"><span class="p-menu__icon"><svg width="18" height="23"><use href="sprite/sprite.svg#personal-delivery" /></svg></span>Адреса доставки</a></li>
+                <li><a href="lk-feedback.html"><span class="p-menu__icon"><svg width="21" height="18"><use href="sprite/sprite.svg#personal-feedback" /></svg></span>Обратная связь</a></li>
+                <li><a href="?logout=Y"><span class="p-menu__icon"><svg width="21" height="18"><use href="sprite/sprite.svg#personal-out" /></svg></span>Выйти</a></li>
+            </ul>
+            <div class="profile-asideBanner">
+                <a href="lk-pets.html">
+                    <picture>
+                        <source srcset="img/test/lk/lk-banner-mob.png" media="(max-width: 1024px)" />
+                        <img class="lazy" data-src="img/test/lk/lk-banner.png" alt="" />
+                    </picture>
+                </a>
+            </div>
+        </div>
+        <div class="profile-main">
+            <div class="header"><h3>Адреса доставки</h3></div>
+
+            <div class="address-list">
+
+                <div class="address-item">
+                     <div class="address-item-row d-grid">
+                        <div class="address-item-cell">
+                            <span class="cell-icon"><img src="img/svg/deliv_green.svg" alt="Icon"></span>
+                        </div>
+                        <div class="address-item-cell --text">
+                            <div class="address-title">Доставка по адресу</div>
+                            <div class="address-text">143003, Московская обл., г. Одинцово, ул. Маршала Жукова, дом 38, помещение 86</div>
+                        </div>
+                        <div class="address-item-cell --trigger">
+                            <div class="corner-controls">
+                                <div class="corner-controls__button"><svg><use href="sprite/sprite.svg#points"></use></svg></div>
+                                <div class="corner-controls__block">
+                                    <a class="corner-edit" data-modal="delivery" href="#"><svg><use href="sprite/sprite.svg#pencil"></use></svg>Редактировать</a>
+                                    <a class="corner-delete"><svg><use href="sprite/sprite.svg#bucket"></use></svg>Удалить</a>
+                                </div>
+                            </div>     
+                        </div>
+                     </div>
+                </div>
+
+                <div class="address-item">
+                     <div class="address-item-row d-grid">
+                        <div class="address-item-cell">
+                            <span class="cell-icon"><img src="img/adv-icons/country.svg" alt="Icon"></span>
+                        </div>
+                        <div class="address-item-cell --text">
+                            <div class="address-title">Доставка по России</div>
+                            <div class="address-text">143003, Московская обл., г. Одинцово, ул. Маршала, дом 38, квартира 86</div>
+                        </div>
+                        <div class="address-item-cell --trigger">
+                            <div class="corner-controls">
+                                <div class="corner-controls__button"><svg><use href="sprite/sprite.svg#points"></use></svg></div>
+                                <div class="corner-controls__block">
+                                    <a class="corner-edit" data-modal="delivery" href="#"><svg><use href="sprite/sprite.svg#pencil"></use></svg>Редактировать</a>
+                                    <a class="corner-delete"><svg><use href="sprite/sprite.svg#bucket"></use></svg>Удалить</a>
+                                </div>
+                            </div>     
+                        </div>
+                     </div>
+                </div>
+
+                <div class="address-item-add" data-modal="delivery">
+                    <div class="address-item-row-add" >
+                        <div class="roundAdd__icon">
+                            <svg><use href="sprite/sprite.svg#plus"></use></svg>
+                        </div>
+                        <div class="roundAdd__text">
+                            Добавить новый адрес доставки
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+ 
+
+<!--Модалка-->
+
+<div class="modal modal-delivery-map" id="modal-delivery">
+    <div class="modal-inner">
+        <div class="modal-title">Добавить новый адрес доставки</div>
+        <div class="m-delivery-map b-border">
+            <div class="delivery-leftBlock order-block">
+                <div class="delivery-tabs --justify">
+                    <a href="order-delivery-curier.html" class="delivery-tab-item active">Курьером</a>
+                    <a href="order-delivery-self.html" class="delivery-tab-item">Самовывоз</a>
+                    <a href="order-delivery-country.html" class="delivery-tab-item">Доставка по России</a>
+                </div>
+        
+                <div class="ob-title flex-jcsb">
+                    <span>Адрес доставки</span>
+                    <div class="switchBox">
+                        <input type="checkbox" id="switch" name="no-call">
+                        <span class="check-switcher"></span>
+                        <label for="switch">Частный дом</label>
+                    </div>
+                </div>
+        
+                <div class="delivery-form">
+                    <div class="form-row">
+                        <label>Город, улица, дом</label>
+                        <input type="text" class="italic" name="address1"
+                            placeholder="Введите адрес, а затем выберите вариант из выпадающего списка" />
+                    </div>
+                    <div class="form-row flex-jcsb mobile-flex">
+                        <div class="form-cell __half">
+                            <label>№ Квартиры, офиса*</label>
+                            <input type="text" name="address2" />
+                        </div>
+                        <div class="form-cell __four">
+                            <label>№ Подъезда</label>
+                            <input type="text" name="address3" />
+                        </div>
+                        <div class="form-cell __four">
+                            <label>Этаж</label>
+                            <input type="text" name="address3" />
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <label>Комментарий для курьера</label>
+                        <textarea name="comment" rows="6"></textarea>
+                    </div>
+                    
+                    <div class="form-row__note">
+                        *Доставка по удаленным направлениям за МКАД осуществляется в определенные дни недели.
+                        Уточнить день можно по телефону <br> +7 495 916 94 94
+                    </div>
+                </div>
+            </div>
+            <div class="delivery-map paddTop">
+                <div class="delivery-map-wrapper">
+                    <div class="delivery-map-box" id="deliveryMap"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-bottom-buttons">
+            <div class="form-cell __auto">
+                <button class="btn btn-white r10">Отмена</button>
+            </div>
+            <div class="form-cell __auto">
+                <button class="btn btn-fill r10" onclick="document.location.reload();">Сохранить</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&coordorder=longlat&apikey=cbcdfe6a-f0c7-4bda-b9eb-28f404cb55d8"></script>
+<script>
+    $(document).ready(function () {
+        $('body').on('click', '[data-modal="delivery"]', function () {
+            $.fancybox.open({
+                src: '#modal-delivery',
+                opts: {
+                    touch: false,
+                    afterShow: function (instance, current) {
+
+                       ymaps.ready(init);
+
+                    }
+                }
+            });
+        });
+    });
+
+    
+
+        function init() {
+            var myMap = new ymaps.Map('deliveryMap', {
+                center: [55.753994, 37.622093],
+                zoom: 9
+            });
+
+            // Поиск координат центра Нижнего Новгорода.
+            ymaps.geocode('Московская обл., г. Одинцово, ул.Маршала Жукова, дом 38, помещение 86', {
+                /**
+                 * Опции запроса
+                 * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/geocode.xml
+                 */
+                // Сортировка результатов от центра окна карты.
+                // boundedBy: myMap.getBounds(),
+                // strictBounds: true,
+                // Вместе с опцией boundedBy будет искать строго внутри области, указанной в boundedBy.
+                // Если нужен только один результат, экономим трафик пользователей.
+                results: 1
+            }).then(function (res) {
+                // Выбираем первый результат геокодирования.
+                var firstGeoObject = res.geoObjects.get(0),
+                    // Координаты геообъекта.
+                    coords = firstGeoObject.geometry.getCoordinates(),
+                    // Область видимости геообъекта.
+                    bounds = firstGeoObject.properties.get('boundedBy');
+
+                // Масштабируем карту на область видимости геообъекта.
+                myMap.setBounds(bounds, {
+                    // Проверяем наличие тайлов на данном масштабе.
+                    checkZoomRange: true
+                });
+
+                let balloon_content = '';
+                balloon_content = '<div class="custom-baloon">';
+                balloon_content += '<button id="close-baloon" type="button" class="fancybox-button fancybox-close-small"><svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 24 24"><path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"></path></svg></button>';
+                balloon_content += '<h3>Вы выбрали адрес</h3>';
+                balloon_content += '<p>' + firstGeoObject.properties.get('text') + '</p>';
+                balloon_content += '<button class="btn btn-fill r10">Доставить сюда</button>';
+                balloon_content += '</div>';
+
+                var myPlacemark = new ymaps.Placemark(coords, {
+                    balloonContent: balloon_content
+                }, {
+                    preset: 'islands#greenCircleDotIconWithCaption'
+                });
+
+                myMap.geoObjects.add(myPlacemark);
+                myMap.balloon.open(coords, balloon_content);
+
+            });
+        }
+</script>
+
+//= template/footer.html

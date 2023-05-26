@@ -1,0 +1,143 @@
+//= template/header.html
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=cbcdfe6a-f0c7-4bda-b9eb-28f404cb55d8"></script>
+<script src="assets/shops.js"></script>
+//= template/breadcrumbs.html
+<div class="box">
+    <div class="header">
+        <h1>ТЦ "Атак"</h1>
+    </div>
+</div>
+
+<div class="box">
+    <div class="shop-product-and-map">
+        <!--LEFT-->
+        <div class="shop-description">
+            <div class="shop-left-column">
+                <p class="shop-list__address">Москва, ул. Профсоюзная д.64, корп.2</p>
+                <p class="shop-list__phone">+7(499) 638-63-68</p>
+                <p class="shop-list__time">с 10:00 до 22:00</p>
+            </div>
+
+            <div class="shop-description__availability">
+
+                <div class="shop-product">
+                    <h3>Как добраться</h3>
+                    <div class="shop-product_route">
+                        м. Молодежная авт №121; маршрутное такси №121 до остановки Горки-10, далее 300 метров пешком по ходу движения. В ТЦ АТАК
+                        на первом этаже из центрального входа направо, до конца зала
+                    </div>
+                </div>
+
+                <div class="shop-product">
+                    <h3>В магазине представлены</h3>
+                    <div class="shop-list-availability__item shop-list-availability__item_cat">Котята и щенки</div>
+                    <div class="shop-list-availability__item shop-list-availability__item_bird">Птицы и грызуны</div>
+                    <div class="shop-list-availability__item shop-list-availability__item_terrariumistika">Террариумистика</div>
+                    <div class="shop-list-availability__item shop-list-availability__item_aqua">Аквариумистика</div>
+                
+                    <div class="shop-list-availability__item shop-list-availability__item_vet">Ветеринарная аптека</div>
+                    <div class="shop-list-availability__item shop-list-availability__item_engraving">Гравировка</div>
+                
+                    <div class="shop-list-availability__item shop-list-availability__item_korma">Живые и замороженные корма</div>
+                    <div class="shop-list-availability__item shop-list-availability__item_plants">Живые растения для аквариумов</div>
+                    <div class="shop-list-availability__item shop-list-availability__item_fish">Живые рыбы</div>
+                </div>
+            </div>
+
+        </div>
+
+        <!--RIGHT-->
+        <div class="shop-map">
+            <div class="shop-product">
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est nulla cum soluta itaque iure molestiae adipisci?
+                    Voluptatem distinctio possimus nesciunt maiores corporis sunt error dolorem reiciendis accusantium aliquam, ut veniam!
+                </p>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est nulla cum soluta itaque iure molestiae adipisci?
+                    Voluptatem distinctio possimus nesciunt maiores corporis sunt error dolorem reiciendis accusantium aliquam, ut
+                    veniam!
+                </p>
+            </div>
+            <div class="shop-map-wrapper">
+                <div class="shop-map-box" id="shops-map"></div>
+            </div>
+
+            <div class="shop-gallery d-grid">
+                <a href="img/test/shop1.png" data-caption="Москва, ул. Профсоюзная д.64, корп.2" data-fancybox="shop" class="shop-gallery__item">
+                    <picture>
+                        <source type="image/webp" src-set="img/test/shop1.webp">
+                        <img class="lazy" data-src="img/test/shop1.png" alt="1" />
+                    </picture>
+                </a>
+
+                <a href="img/test/shop2.png" data-caption="Москва, ул. Профсоюзная д.64, корп.2" data-fancybox="shop"
+                    class="shop-gallery__item">
+                    <picture>
+                        <source type="image/webp" src-set="img/test/shop2.webp">
+                        <img class="lazy" data-src="img/test/shop2.png" alt="2" />
+                    </picture>
+                </a>
+
+                <a href="img/test/shop3.png" data-caption="Москва, ул. Профсоюзная д.64, корп.2" data-fancybox="shop"
+                    class="shop-gallery__item">
+                    <picture>
+                        <source type="image/webp" src-set="img/test/shop3.webp">
+                        <img class="lazy" data-src="img/test/shop3.png" alt="3" />
+                    </picture>
+                </a>
+
+                <a href="img/test/shop4.png" data-caption="Москва, ул. Профсоюзная д.64, корп.2" data-fancybox="shop"
+                    class="shop-gallery__item">
+                    <picture>
+                        <source type="image/webp" src-set="img/test/shop4.webp">
+                        <img class="lazy" data-src="img/test/shop4.png" alt="4" />
+                    </picture>
+                </a>
+
+                <a href="img/test/shop2.png" data-caption="Москва, ул. Профсоюзная д.64, корп.2" data-fancybox="shop"
+                    class="shop-gallery__item">
+                    <picture>
+                        <source type="image/webp" src-set="img/test/shop2.webp">
+                        <img class="lazy" data-src="img/test/shop2.png" alt="2" />
+                    </picture>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<script>
+    window.samizoo_shops = [
+        {
+            'id': 'shop-list-item-54224',
+            'shopId': '54224',
+            'url': '/shops/trts-aviapark/',
+            'shopName': 'ТРЦ &quot;Авиапарк&quot;',
+            'coordinates': ['55.7905', '37.5304'],
+            'cityName': 'Москва',
+            'cityId': '2672',
+            'subway': 'ЦСКА',
+            'address': 'г. Москва, Ходынский бульвар, д.4',
+            'phoneNumber': '+7(499) 638-63-96',
+            'workingHours': 'с 10:00 до 22:00',
+            'categories':
+                    {
+                        'veterinary-clinic': false,
+                        'reptilii': false,
+                        'terrariumistika': true,
+                        'korma': true,
+                        'cats-and-dogs': true,
+                        'birds-and-rodents': true,
+                        'veterinary-pharmacy': true,
+                        'grooming': false,
+                        'aquaristics': true,
+                        'live-fish': true,
+                        'engraving': true,
+                        'plants': true
+                    }
+        }
+    ];
+    window.samizooVeterinaryClinics = ['54235', '75905', '75878'];
+</script>
+//= template/footer.html
