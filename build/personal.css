@@ -229,7 +229,7 @@
   gap: 2.5em;
 }
 .basket-item__footer .prop-cell {
-  font-size: 0.95rem;
+  font-size: 12px;
 }
 .basket-item__footer .prop-cell.price-variations {
   display: -ms-flexbox;
@@ -244,8 +244,6 @@
 }
 .basket-item__footer .prop-cell span.p-price {
   color: #101829;
-  font-weight: 500;
-  font-size: 1rem;
 }
 .basket-item__footer .prop-cell span.p-oldprice {
   text-decoration: line-through;
@@ -296,7 +294,7 @@
   display: inline-block;
   white-space: nowrap;
   margin-left: 7px;
-  color: #96a2be;
+  color: #586580;
 }
 .item-trigger .prod-favorite.is_added svg:nth-child(2) {
   display: block;
