@@ -3179,12 +3179,13 @@
   }
   .basket-item__cell.--price {
     position: absolute;
-    margin-left: 115px;
+    margin-left: 108px;
     left: 0;
     top: 15px;
   }
   .basket-item__cell.--price.--gift {
     top: 40px;
+    margin-left: 118px;
   }
   .basket-item__cell.--props {
     -webkit-transform: translateY(-10px);
@@ -3317,7 +3318,7 @@
     border-radius: 6px;
   }
   .basket-item__cell.--price {
-    margin-left: 125px;
+    margin-left: 108px;
   }
   .bf-cell._button button {
     padding: 5px 10px;
