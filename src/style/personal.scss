@@ -40,7 +40,7 @@
 .basket-caption__cell{
     font-size: 12px;
     padding-bottom: 5px;
-    color: #586580;
+    color: $gr45;
 }
 .basket-item__cell{
     &.--delete-gift {
@@ -48,7 +48,7 @@
         text-align: right;
     }
     .prop-name {
-        color: #586580;
+        color: $gr45;
         font-size: 12px;
     }
     &._img-title {
@@ -202,7 +202,7 @@
             gap: 10px;
         }
         span {
-            color: #586580;
+            color: $gr45;
             font-size: 12px;
             &.p-price {
                 color: $text_dark;
@@ -269,14 +269,14 @@
     }
 }
 .basket-item-delete{
-    color: #586580;
+    color: $gr45;
     font-size: 10px;
     line-height: 1.4;
     svg{
         fill: none;
         width: 14px;
         height: 14px;
-        stroke: #586580;
+        stroke: $gr45;
         transform: translateY(2px);
         margin-right: 2px;
     }
@@ -292,7 +292,7 @@
         background-position: center right;
         background-size: 20px;
         padding-right: 30px;
-        color: #586580;
+        color: $gr45;
         cursor: pointer;
         &:hover{
             color: $green;
@@ -361,14 +361,14 @@
     .custom-checkbox label{
         font-size: 11px;
         line-height: 1.4;
-        color: #586580;
+        color: $gr45;
     }
     .custom-checkbox label:before {
         margin-top: 0;
     }
 }
 .basket-total-policy {
-    color: #586580;
+    color: $gr45;
     text-align: left;
     font-size: 11px;
     line-height: 1.4;
@@ -494,7 +494,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #586580;
+    color: $gr45;
     svg {
         width: 13px;
         height: 17px;
@@ -504,7 +504,7 @@
     }
 }
 .to-buy{
-    color: #586580;
+    color: $gr45;
 }
 .bf-cell{
     &._button{
@@ -701,7 +701,7 @@
     
 }
 .code-success, .email-confirm{
-    color: #586580;
+    color: $gr45;
     font-size: 13px;
     padding-left: 27px;
     background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkiIGhlaWdodD0iMTkiIHZpZXdCb3g9IjAgMCAxOSAxOSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iOS41IiBjeT0iOS41IiByPSI5LjUiIGZpbGw9IiM0MkFCMTAiLz4KPHJlY3QgeD0iNS40MTIxMSIgeT0iNy4yNzczNCIgd2lkdGg9IjcuMDQ2NDkiIGhlaWdodD0iMi4yOCIgcng9IjEuMTQiIHRyYW5zZm9ybT0icm90YXRlKDQ1IDUuNDEyMTEgNy4yNzczNCkiIGZpbGw9IndoaXRlIi8+CjxyZWN0IHg9IjUuNDEyMTEiIHk9IjcuMjc3MzQiIHdpZHRoPSI3LjA0NjQ5IiBoZWlnaHQ9IjIuMjgiIHJ4PSIxLjE0IiB0cmFuc2Zvcm09InJvdGF0ZSg0NSA1LjQxMjExIDcuMjc3MzQpIiBmaWxsPSJ3aGl0ZSIvPgo8cmVjdCB4PSIxNi4wMTE3IiB5PSI2LjY0MDYyIiB3aWR0aD0iMTAuMjIzMyIgaGVpZ2h0PSIyLjI4IiByeD0iMS4xNCIgdHJhbnNmb3JtPSJyb3RhdGUoMTM1IDE2LjAxMTcgNi42NDA2MikiIGZpbGw9IndoaXRlIi8+CjxyZWN0IHg9IjE2LjAxMTciIHk9IjYuNjQwNjIiIHdpZHRoPSIxMC4yMjMzIiBoZWlnaHQ9IjIuMjgiIHJ4PSIxLjE0IiB0cmFuc2Zvcm09InJvdGF0ZSgxMzUgMTYuMDExNyA2LjY0MDYyKSIgZmlsbD0id2hpdGUiLz4KPC9zdmc+Cg==);
@@ -1241,7 +1241,7 @@
         @include center-position;
         width: 3px;
         height: 18px;
-        fill: #586580;
+        fill: $gr45;
     }
 }
 .corner-controls__block{
@@ -1288,8 +1288,8 @@
             
         }
     }
-    .corner-edit svg{fill: #586580;}
-    .corner-delete svg{stroke: #586580; fill: none; stroke-width: 1.5;}
+    .corner-edit svg{fill: $gr45;}
+    .corner-delete svg{stroke: $gr45; fill: none; stroke-width: 1.5;}
 }
 .delivery-page{
     .shop-map.paddTop{
@@ -2200,7 +2200,7 @@
 }
 .pet-age{
     white-space: nowrap;
-    color: #586580;
+    color: $gr45;
     .bold{
         font-weight: 700;
     }
