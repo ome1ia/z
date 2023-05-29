@@ -2749,13 +2749,13 @@
         }
         &.--price{
             position: absolute;
-            margin-left: 108px;
+            margin-left: 98px;
             left: 0;
             top: 15px;
 
             &.--gift {
                 top: 40px;
-                margin-left: 118px;
+                margin-left: 108px;
             }
         }
         &.--props{
@@ -2885,9 +2885,21 @@
         margin-bottom: 15px;
         padding: 18px 10px 10px;
         border-radius: 6px;
+
+        &.--gift {
+            box-shadow: none;
+            padding: 0;
+            background: transparent;
+        }
     }
     .basket-item__cell{
-        &.--price{margin-left: 108px;}
+        &.--price{
+            margin-left: 108px;
+        }
+        &.--price.--gift {
+            margin-left: 108px;
+            top: 20px;
+        }
     }
     .bf-cell._button button{
         padding: 5px 10px;
