@@ -29,12 +29,23 @@
 .basket-item__body{
     align-items: center;
     margin-bottom: 10px;
+
+    &.--gift {
+        background: rgba(66, 171, 16, 0.1);
+        border-radius: 10px;
+        grid-template-columns: 45% 1.2fr 0.9fr 0.3fr 0.7fr;
+        padding: 20px 0;
+    }
 }
 .basket-caption__cell{
     font-size: 12px;
     padding-bottom: 5px;
 }
 .basket-item__cell{
+    &.--delete-gift {
+        padding-right: 20px;
+        text-align: right;
+    }
     .prop-name {
         color: #96a2be;
         font-size: 12px;
@@ -42,6 +53,10 @@
     &._img-title {
         display: flex;
         align-items: center;
+
+        &.--gift {
+            padding-left: 20px;
+        }
     }
     .offers-colors{
         margin-top: 0;
@@ -60,6 +75,10 @@
         border: 1px solid #D0D8E9;
         border-radius: 10px;
         transform: translateX(-20px);
+        &.--gift {
+            border: none;
+            justify-content: center;
+        }
         .prod-counter_btn{
             width: 30px;
             text-align: center;
@@ -87,6 +106,9 @@
     color: $text_dark;
     font-weight: 600;
     line-height: 1.4;
+    &.--gift {
+        padding-left: 27px;
+    }
 }
 .bic-img{
     position: relative;
@@ -95,6 +117,10 @@
     border: 1px solid #E0E0E0;
     border-radius: 5px;
     flex-shrink: 0;
+    &.--gift {
+        width: 68px;
+        height: 71px;
+    }
     a{
         display: block;
         height: 100%;
@@ -2691,22 +2717,52 @@
         &._img-title{
             width: 100%;
             align-items: flex-start;
+
+            &.--gift {
+                padding-left: 15px;
+            }
+        }
+        .bic-img {
+            width: 81px;
+            height: 85px;
         }
         .bic-title{
             margin-top: 30px;
             height: 77px;
             padding-bottom: 20px;
             overflow: hidden;
+            &.--gift {
+                height: 67px;
+                padding-left: 12px;
+            }
         }
         &.--price{
             position: absolute;
             margin-left: 115px;
             left: 0;
             top: 15px;
+
+            &.--gift {
+                top: 40px;
+            }
         }
         &.--props{
             transform: translateY(-10px);
             margin-right: auto;
+            padding-left: 115px;
+        }
+        &.--delete-gift {
+            position: absolute;
+            left: 20px;
+            bottom: 35px;
+        }
+        &.--gift-image {
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+        }
+        &.--gift-counter {
+            width: 100%;
             padding-left: 115px;
         }
     }
@@ -2716,6 +2772,11 @@
             position: absolute;
             bottom: 15px;
             right: 10px;
+            &.--gift {
+                position: static;
+                transform: none;
+                justify-content: start;
+            }
         }
     }
     .bic-title{
