@@ -12,32 +12,32 @@
     <!--CSS-->
 
 
-    <link href="fonts/stylesheet.css?v=67a8d640de3cd427d2a958e9ab826e33" rel="stylesheet" />
-    <link href="libs/fancybox/fancybox.css?v=67a8d640de3cd427d2a958e9ab826e33" rel="stylesheet" />
-    <link href="libs/select2/select2.min.css?v=67a8d640de3cd427d2a958e9ab826e33" rel="stylesheet" />
-    <link href="libs/swiper/swiper-bundle.css?v=67a8d640de3cd427d2a958e9ab826e33" rel="stylesheet" />
-    <link href="libs/normalize.css?v=67a8d640de3cd427d2a958e9ab826e33" rel="stylesheet" />
-    <link href="libs/ion.rangeSlider/ion.rangeSlider.css?v=67a8d640de3cd427d2a958e9ab826e33" rel="stylesheet" />
-    <link href="libs/malihu-scrollbar/jquery.mCustomScrollbar.css?v=67a8d640de3cd427d2a958e9ab826e33" rel="stylesheet" />
-    <link href="libs/datepicker/datepicker.css?v=67a8d640de3cd427d2a958e9ab826e33" rel="stylesheet" />
+    <link href="fonts/stylesheet.css" rel="stylesheet" />
+    <link href="libs/fancybox/fancybox.css" rel="stylesheet" />
+    <link href="libs/select2/select2.min.css" rel="stylesheet" />
+    <link href="libs/swiper/swiper-bundle.css" rel="stylesheet" />
+    <link href="libs/normalize.css" rel="stylesheet" />
+    <link href="libs/ion.rangeSlider/ion.rangeSlider.css" rel="stylesheet" />
+    <link href="libs/malihu-scrollbar/jquery.mCustomScrollbar.css" rel="stylesheet" />
+    <link href="libs/datepicker/datepicker.css" rel="stylesheet" />
     <!--CSS Корзина, ЛК, Оформление заказа-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.css?v=67a8d640de3cd427d2a958e9ab826e33">
-    <link href="personal.css?v=67a8d640de3cd427d2a958e9ab826e33" rel="stylesheet" />
-    <link href="style.css?v=67a8d640de3cd427d2a958e9ab826e33" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.css">
+    <link href="personal.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
     
     <title>Сами с усами</title>
     <!--JS-->
-    <script src="libs/jquery-3.6.3.min.js?v=67a8d640de3cd427d2a958e9ab826e33"></script>
-    <script src="libs/fancybox/fancybox.min.js?v=67a8d640de3cd427d2a958e9ab826e33"></script>
-    <script src="libs/select2/select2.min.js?v=67a8d640de3cd427d2a958e9ab826e33"></script>
-    <script src="libs/datepicker/datepicker.min.js?v=67a8d640de3cd427d2a958e9ab826e33"></script>
-    <script src="libs/swiper/swiper-bundle.min.js?v=67a8d640de3cd427d2a958e9ab826e33"></script>
-    <script src="libs/lazyload.min.js?v=67a8d640de3cd427d2a958e9ab826e33"></script>
-    <script src="libs/countdown.min.js?v=67a8d640de3cd427d2a958e9ab826e33"></script>
-    <script src="libs/ion.rangeSlider/ion.rangeSlider.js?v=67a8d640de3cd427d2a958e9ab826e33"></script>
-    <script src="libs/maskedinput.js?v=67a8d640de3cd427d2a958e9ab826e33"></script>
-    <script src="libs/malihu-scrollbar/jquery.mCustomScrollbar.min.js?v=67a8d640de3cd427d2a958e9ab826e33"></script>
-    <script src="js/custom.js?v=67a8d640de3cd427d2a958e9ab826e33"></script>
+    <script src="libs/jquery-3.6.3.min.js"></script>
+    <script src="libs/fancybox/fancybox.min.js"></script>
+    <script src="libs/select2/select2.min.js"></script>
+    <script src="libs/datepicker/datepicker.min.js"></script>
+    <script src="libs/swiper/swiper-bundle.min.js"></script>
+    <script src="libs/lazyload.min.js"></script>
+    <script src="libs/countdown.min.js"></script>
+    <script src="libs/ion.rangeSlider/ion.rangeSlider.js"></script>
+    <script src="libs/maskedinput.js"></script>
+    <script src="libs/malihu-scrollbar/jquery.mCustomScrollbar.min.js"></script>
+    <script src="js/custom.js"></script>
 </head>
 <body>
     <main>
@@ -671,8 +671,11 @@
                 
                         <div class="basket-item__cell --price">
                             <div class="item-price flex">
-                                <span class="price-value">1 190 ₽</span>
-                                <div class="price-bonus">+20</div>
+                                <span class="price-value discount-price">1 190 ₽</span>
+                                <div class="item-discount">
+                                    <span class="price-old">2 190 ₽</span>
+                                    <span class="discount-value">-10%</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -737,7 +740,7 @@
                         </div>
                         <div class="basket-item__cell --delete-gift">
                             <span title="Удалить" class="basket-item-delete"
-                                onclick="BasketItemDelete('itemId-2');">
+                                onclick="BasketItemDelete('itemId-3');">
                                 <svg><use href="sprite/sprite.svg#bucket"></use></svg>
                                 Убрать
                             </span>
