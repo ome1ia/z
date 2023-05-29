@@ -46,6 +46,7 @@
 .basket-caption__cell {
   font-size: 12px;
   padding-bottom: 5px;
+  color: #586580;
 }
 
 .basket-item__cell.--delete-gift {
@@ -53,7 +54,7 @@
   text-align: right;
 }
 .basket-item__cell .prop-name {
-  color: #96a2be;
+  color: #586580;
   font-size: 12px;
 }
 .basket-item__cell._img-title {
@@ -123,6 +124,9 @@
 }
 .bic-title.--gift {
   padding-left: 27px;
+}
+.bic-title.--basket {
+  font-weight: 500;
 }
 
 .bic-img {
@@ -235,7 +239,7 @@
   gap: 10px;
 }
 .basket-item__footer .prop-cell span {
-  color: #96a2be;
+  color: #586580;
   font-size: 12px;
 }
 .basket-item__footer .prop-cell span.p-price {
@@ -304,7 +308,7 @@
 }
 
 .basket-item-delete {
-  color: #96a2be;
+  color: #586580;
   font-size: 10px;
   line-height: 1.4;
 }
@@ -312,7 +316,7 @@
   fill: none;
   width: 14px;
   height: 14px;
-  stroke: #96a2be;
+  stroke: #586580;
   -webkit-transform: translateY(2px);
           transform: translateY(2px);
   margin-right: 2px;
@@ -332,7 +336,7 @@
   background-position: center right;
   background-size: 20px;
   padding-right: 30px;
-  color: #96a2be;
+  color: #586580;
   cursor: pointer;
 }
 .is-deletedItem span:hover {
@@ -346,7 +350,7 @@
   padding: 10px;
   font-size: 12px;
   font-weight: 700;
-  line-height: 1.5;
+  line-height: 1.6;
   margin-bottom: 15px;
 }
 
@@ -376,6 +380,7 @@
       justify-content: space-between;
   border-bottom: 2px dotted #D0D8E9;
   margin-bottom: 5px;
+  font-size: 12px;
 }
 
 .total-row__value {
@@ -416,14 +421,14 @@
 .subscribe-agree .custom-checkbox label {
   font-size: 11px;
   line-height: 1.4;
-  color: #5f6c8b;
+  color: #586580;
 }
 .subscribe-agree .custom-checkbox label:before {
   margin-top: 0;
 }
 
 .basket-total-policy {
-  color: #5f6c8b;
+  color: #586580;
   text-align: left;
   font-size: 11px;
   line-height: 1.4;
@@ -582,7 +587,7 @@
       align-items: center;
   -ms-flex-pack: center;
       justify-content: center;
-  color: #5f6c8b;
+  color: #586580;
 }
 .delete-basket svg {
   width: 13px;
@@ -593,7 +598,7 @@
 }
 
 .to-buy {
-  color: #5f6c8b;
+  color: #586580;
 }
 
 .bf-cell._button button {
@@ -800,7 +805,7 @@
 }
 
 .code-success, .email-confirm {
-  color: #5f6c8b;
+  color: #586580;
   font-size: 13px;
   padding-left: 27px;
   background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkiIGhlaWdodD0iMTkiIHZpZXdCb3g9IjAgMCAxOSAxOSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iOS41IiBjeT0iOS41IiByPSI5LjUiIGZpbGw9IiM0MkFCMTAiLz4KPHJlY3QgeD0iNS40MTIxMSIgeT0iNy4yNzczNCIgd2lkdGg9IjcuMDQ2NDkiIGhlaWdodD0iMi4yOCIgcng9IjEuMTQiIHRyYW5zZm9ybT0icm90YXRlKDQ1IDUuNDEyMTEgNy4yNzczNCkiIGZpbGw9IndoaXRlIi8+CjxyZWN0IHg9IjUuNDEyMTEiIHk9IjcuMjc3MzQiIHdpZHRoPSI3LjA0NjQ5IiBoZWlnaHQ9IjIuMjgiIHJ4PSIxLjE0IiB0cmFuc2Zvcm09InJvdGF0ZSg0NSA1LjQxMjExIDcuMjc3MzQpIiBmaWxsPSJ3aGl0ZSIvPgo8cmVjdCB4PSIxNi4wMTE3IiB5PSI2LjY0MDYyIiB3aWR0aD0iMTAuMjIzMyIgaGVpZ2h0PSIyLjI4IiByeD0iMS4xNCIgdHJhbnNmb3JtPSJyb3RhdGUoMTM1IDE2LjAxMTcgNi42NDA2MikiIGZpbGw9IndoaXRlIi8+CjxyZWN0IHg9IjE2LjAxMTciIHk9IjYuNjQwNjIiIHdpZHRoPSIxMC4yMjMzIiBoZWlnaHQ9IjIuMjgiIHJ4PSIxLjE0IiB0cmFuc2Zvcm09InJvdGF0ZSgxMzUgMTYuMDExNyA2LjY0MDYyKSIgZmlsbD0id2hpdGUiLz4KPC9zdmc+Cg==);
