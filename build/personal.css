@@ -3137,7 +3137,7 @@
 }
 @media (max-width: 1024px) {
   .basket-area {
-    grid-template-columns: 5fr 3fr;
+    grid-template-columns: 70% 30%;
   }
   .basket-caption {
     display: none;
@@ -3291,6 +3291,14 @@
   .action-frend__form {
     padding: 15px 30px;
     max-width: 450px;
+  }
+}
+@media (max-width: 940px) {
+  .basket-area {
+    display: block;
+  }
+  .basket-aside {
+    padding: 20px 0;
   }
 }
 @media (max-width: 750px) {

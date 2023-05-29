@@ -226,6 +226,9 @@
     .time-buy.--inner {grid-template-columns: 1fr 1fr 1fr 1fr;}
 }
 @media (max-width: 1024px){
+    .show_tablet {
+        display: none;
+    }
     .top-menu ul.top-menu_visible li a {
         padding: 10px 3px;
     }
@@ -285,6 +288,12 @@
 @media (max-width: 940px) {
    html{
     font-size: 11px;
+   }
+   .show_tablet {
+    display: block;
+   }
+   .hide_tablet {
+    display: none !important;
    }
    .promo__slider .swiper-wrapper .swiper-slide img{
     max-width: 100%;
