@@ -2637,7 +2637,14 @@
 
 }
 @media (max-width: 1280px){
-    .basket-area{gap: 20px;}
+    .basket-area{
+        grid-template-columns: 8fr 5fr;
+        gap: 20px;
+
+        .total-price__value {
+            white-space: nowrap;
+        }
+    }
     .basket-aside{
         padding: 15px;
     }
