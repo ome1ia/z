@@ -582,6 +582,13 @@
   margin-right: 10px;
 }
 
+.delete-promocode__text {
+  display: none;
+}
+.delete-promocode__button {
+  display: none;
+}
+
 .delete-basket {
   display: -ms-flexbox;
   display: flex;
@@ -647,6 +654,8 @@
 .bpf-row {
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -ms-flex-pack: justify;
       justify-content: space-between;
   position: relative;
@@ -694,6 +703,7 @@
 .bpf-warning {
   color: #DC3D3C;
   font-size: 0.925rem;
+  width: 100%;
 }
 
 /*Оформление заказа*/
@@ -3905,6 +3915,32 @@
   .bf-cell.__code .add-promocode svg {
     stroke: #586580;
   }
+  .delete-promocode {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    -webkit-column-gap: 28px;
+            column-gap: 28px;
+    padding-top: 5px;
+  }
+  .delete-promocode .add-promocode {
+    display: none;
+  }
+  .delete-promocode__text {
+    display: block;
+    font-size: 12px;
+    line-height: 1.2;
+    color: #57C224;
+  }
+  .delete-promocode__button {
+    display: block;
+    font-size: 13px;
+    height: 44px;
+    background: #586580;
+    color: #fff;
+    width: 50%;
+  }
   .basket-item__footer .prop-cell span.p-warning {
     padding: 2px 5px 0;
     font-size: 8px;
@@ -3915,7 +3951,19 @@
         justify-content: space-between;
   }
   .bpf-row {
-    display: block;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
+  .bpf-row .bpf-warning {
+    -ms-flex-order: 2;
+        order: 2;
+    margin-bottom: 10px;
+  }
+  .bpf-row .bpf-cell.--submit {
+    -ms-flex-order: 3;
+        order: 3;
   }
   .basket-promoCode {
     position: fixed;
@@ -3935,7 +3983,7 @@
     width: 100%;
   }
   .basket-promoCode .bpf-cell {
-    margin-bottom: 30px;
+    margin-bottom: 12px;
   }
   .basket-promoCode .basket-total-title {
     border-bottom: 1px solid #DFE2E9;

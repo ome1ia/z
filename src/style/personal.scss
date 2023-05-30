@@ -492,6 +492,14 @@
         margin-right: 10px;
     }
 }
+.delete-promocode {
+    &__text {
+        display: none;
+    }
+    &__button {
+        display: none;
+    }
+}
 .delete-basket{
     display: flex;
     align-items: center;
@@ -550,6 +558,7 @@
 }
 .bpf-row{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     position: relative;
     gap: 10px;
@@ -595,6 +604,7 @@
 .bpf-warning{
     color: #DC3D3C;
     font-size: 0.925rem;
+    width: 100%;
 }
 
 
@@ -3337,6 +3347,29 @@
             }
         }
     }
+    .delete-promocode {
+        display: flex;
+        align-items: center;
+        column-gap: 28px;
+        padding-top: 5px;
+        .add-promocode {
+            display: none;
+        }
+        &__text {
+            display: block;
+            font-size: 12px;
+            line-height: 1.2;
+            color: $green;
+        }
+        &__button {
+            display: block;
+            font-size: 13px;
+            height: 44px;
+            background: $gr45;
+            color: $white;
+            width: 50%;
+        }
+    }
     .basket-item__footer .prop-cell span.p-warning {
         padding: 2px 5px 0;
         font-size: 8px;
@@ -3346,7 +3379,17 @@
         justify-content: space-between;
     }
     .bpf-row{
-        display: block;
+        display: flex;
+        flex-direction: column;
+
+        .bpf-warning {
+            order: 2;
+            margin-bottom: 10px;
+        }
+
+        .bpf-cell.--submit {
+            order: 3;
+        }
     }
     .basket-promoCode{
         position: fixed;
@@ -3365,7 +3408,7 @@
             width: 100%;
         }
         .bpf-cell{
-            margin-bottom: 30px;
+            margin-bottom: 12px;
         }
         .basket-total-title{
             border-bottom: 1px solid #DFE2E9;

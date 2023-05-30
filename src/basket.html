@@ -203,10 +203,22 @@
                 <span class="bf-cell _params __count">Товаров: 3шт.</span>
                 <span class="bf-cell _params __weight">Общий вес: 0.80кг.</span>
                 <span class="bf-cell _button __code">
-                    <button type="button" class="add-promocode" id="addPromocode">
+                    <!--состояние, когда промокод не применен - раскомментировать-->
+                    <!--button type="button" class="add-promocode" id="addPromocode">
                         <svg><use href="sprite/sprite.svg#ticket"></use></svg>
                         Использовать промокод
-                    </button>
+                    </button-->
+                    <!--состояние, когда промокод применен-->
+                    <div class="delete-promocode">
+                        <button type="button" class="add-promocode" id="addPromocode">
+                            <svg><use href="sprite/sprite.svg#ticket"></use></svg>
+                            Использовать промокод
+                        </button>
+                        <span class="delete-promocode__text">Промокод успешно применен</span>
+                        <button type="button" class="delete-promocode__button" id="deletePromocode">
+                            Отменить промокод
+                        </button>
+                    </div>
                 </span>
                 <span class="bf-cell _button __delete">
                     <button type="button" class="delete-basket">
@@ -229,12 +241,12 @@
                             <div class="bpf-cell _input --used" data-note="Уже использован">
                                 <input type="text" value="12345" class="promoCode" placeholder="Введите промокод" />
                             </div>
-                            <div class="bpf-cell">
+                            <div class="bpf-cell --submit">
                                 <!--<button type="button" class="btn btn-fill r10">Применить</button>-->
                                 <button type="button" class="btn btn-dark r10">Отменить промокод</button>
                             </div>
+                            <div class="bpf-warning">Промокод действует только от суммы заказа 200 руб</div>
                         </div>
-                        <div class="bpf-warning">Промокод действует только от суммы заказа 200 руб</div>
                     </div>
                     <div class="basket-promoCode__pict">
                         <img src="img/test/pngwing.png" alt="img" />
@@ -467,9 +479,9 @@
 
      $(document).ready(function(){
         //Кнопка добавить промокод
-        $('#addPromocode').on('click', function(){
+        $('#addPromocode, #deletePromocode').on('click', function(){
             let close_btn = $('<div/>', {class: 'mobile-close js-close'});
-            $('[data-block="'+$(this).prop('id')+'"]').fadeIn().prepend(close_btn);
+            $('[data-block="addPromocode"]').fadeIn().prepend(close_btn);
             $('#mobile-overlay').fadeIn();
         });
 
