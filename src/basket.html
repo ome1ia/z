@@ -325,7 +325,10 @@
 
                     <div class="basket-total-buttons">
                         <button type="submit" onclick="window.open('order.html'); " class="btn btn-fill r10">Оформить заказ</button>
-                        <a href="#one-click" data-fancybox class="btn btn-transp r10">Купить в 1 клик</a>
+                        <!--Когда две кнопки, нужно удалить button.basket-total-buttons__button--promocode-->
+                        <button id="addPromocodeMobile" class="btn btn-transp r10 basket-total-buttons__button--promocode">Промокод</button>
+                        <a href="#one-click" data-fancybox class="btn btn-transp r10"><span class="basket-total-buttons__text--hidden">Купить в</span> 1 клик</a>
+
                     </div>
 
                     <div class="basket-total-info">
@@ -479,7 +482,7 @@
 
      $(document).ready(function(){
         //Кнопка добавить промокод
-        $('#addPromocode, #deletePromocode').on('click', function(){
+        $('#addPromocode, #addPromocodeMobile, #deletePromocode').on('click', function(){
             let close_btn = $('<div/>', {class: 'mobile-close js-close'});
             $('[data-block="addPromocode"]').fadeIn().prepend(close_btn);
             $('#mobile-overlay').fadeIn();

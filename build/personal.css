@@ -419,6 +419,9 @@
 .basket-total-buttons a {
   padding: 16px 22px;
 }
+.basket-total-buttons .basket-total-buttons__button--promocode {
+  display: none;
+}
 
 .subscribe-agree .custom-checkbox label {
   font-size: 11px;
@@ -3376,6 +3379,24 @@
     padding: 16px 22px;
     -ms-flex-positive: 1;
         flex-grow: 1;
+  }
+  .basket-total-buttons .basket-total-buttons__button--promocode {
+    display: block;
+    width: calc(25% - 8px);
+    padding: 11px 5px;
+    -ms-flex-positive: 0;
+        flex-grow: 0;
+    -ms-flex-order: 3;
+        order: 3;
+  }
+  .basket-total-buttons .basket-total-buttons__button--promocode + a {
+    width: calc(25% - 8px);
+    padding: 16px 5px;
+    -ms-flex-positive: 0;
+        flex-grow: 0;
+  }
+  .basket-total-buttons .basket-total-buttons__button--promocode + a .basket-total-buttons__text--hidden {
+    display: none;
   }
   .basket-promoCode__pict {
     text-align: right;

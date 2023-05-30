@@ -358,6 +358,9 @@
     a {
         padding: 16px 22px;
     }
+    & &__button--promocode {
+        display: none;
+    }
 }
 .subscribe-agree{
     .custom-checkbox label{
@@ -2943,6 +2946,23 @@
         a {
             padding: 16px 22px;
             flex-grow: 1;
+        }
+        & &__button--promocode {
+            display: block;
+            width: calc(25% - 8px);
+            padding: 11px 5px;
+            flex-grow: 0;
+            order: 3;
+
+            & + a {
+                width: calc(25% - 8px);
+                padding: 16px 5px;
+                flex-grow: 0;
+
+                & .basket-total-buttons__text--hidden {
+                    display: none;
+                }
+            } 
         }
     }
     .basket-promoCode__pict {
