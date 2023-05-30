@@ -12,32 +12,32 @@
     <!--CSS-->
 
 
-    <link href="fonts/stylesheet.css?v=1e3253d96baaf1bf1102673ee340c5bc" rel="stylesheet" />
-    <link href="libs/fancybox/fancybox.css?v=1e3253d96baaf1bf1102673ee340c5bc" rel="stylesheet" />
-    <link href="libs/select2/select2.min.css?v=1e3253d96baaf1bf1102673ee340c5bc" rel="stylesheet" />
-    <link href="libs/swiper/swiper-bundle.css?v=1e3253d96baaf1bf1102673ee340c5bc" rel="stylesheet" />
-    <link href="libs/normalize.css?v=1e3253d96baaf1bf1102673ee340c5bc" rel="stylesheet" />
-    <link href="libs/ion.rangeSlider/ion.rangeSlider.css?v=1e3253d96baaf1bf1102673ee340c5bc" rel="stylesheet" />
-    <link href="libs/malihu-scrollbar/jquery.mCustomScrollbar.css?v=1e3253d96baaf1bf1102673ee340c5bc" rel="stylesheet" />
-    <link href="libs/datepicker/datepicker.css?v=1e3253d96baaf1bf1102673ee340c5bc" rel="stylesheet" />
+    <link href="fonts/stylesheet.css" rel="stylesheet" />
+    <link href="libs/fancybox/fancybox.css" rel="stylesheet" />
+    <link href="libs/select2/select2.min.css" rel="stylesheet" />
+    <link href="libs/swiper/swiper-bundle.css" rel="stylesheet" />
+    <link href="libs/normalize.css" rel="stylesheet" />
+    <link href="libs/ion.rangeSlider/ion.rangeSlider.css" rel="stylesheet" />
+    <link href="libs/malihu-scrollbar/jquery.mCustomScrollbar.css" rel="stylesheet" />
+    <link href="libs/datepicker/datepicker.css" rel="stylesheet" />
     <!--CSS Корзина, ЛК, Оформление заказа-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.css?v=1e3253d96baaf1bf1102673ee340c5bc">
-    <link href="personal.css?v=1e3253d96baaf1bf1102673ee340c5bc" rel="stylesheet" />
-    <link href="style.css?v=1e3253d96baaf1bf1102673ee340c5bc" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.css">
+    <link href="personal.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
     
     <title>Сами с усами</title>
     <!--JS-->
-    <script src="libs/jquery-3.6.3.min.js?v=1e3253d96baaf1bf1102673ee340c5bc"></script>
-    <script src="libs/fancybox/fancybox.min.js?v=1e3253d96baaf1bf1102673ee340c5bc"></script>
-    <script src="libs/select2/select2.min.js?v=1e3253d96baaf1bf1102673ee340c5bc"></script>
-    <script src="libs/datepicker/datepicker.min.js?v=1e3253d96baaf1bf1102673ee340c5bc"></script>
-    <script src="libs/swiper/swiper-bundle.min.js?v=1e3253d96baaf1bf1102673ee340c5bc"></script>
-    <script src="libs/lazyload.min.js?v=1e3253d96baaf1bf1102673ee340c5bc"></script>
-    <script src="libs/countdown.min.js?v=1e3253d96baaf1bf1102673ee340c5bc"></script>
-    <script src="libs/ion.rangeSlider/ion.rangeSlider.js?v=1e3253d96baaf1bf1102673ee340c5bc"></script>
-    <script src="libs/maskedinput.js?v=1e3253d96baaf1bf1102673ee340c5bc"></script>
-    <script src="libs/malihu-scrollbar/jquery.mCustomScrollbar.min.js?v=1e3253d96baaf1bf1102673ee340c5bc"></script>
-    <script src="js/custom.js?v=1e3253d96baaf1bf1102673ee340c5bc"></script>
+    <script src="libs/jquery-3.6.3.min.js"></script>
+    <script src="libs/fancybox/fancybox.min.js"></script>
+    <script src="libs/select2/select2.min.js"></script>
+    <script src="libs/datepicker/datepicker.min.js"></script>
+    <script src="libs/swiper/swiper-bundle.min.js"></script>
+    <script src="libs/lazyload.min.js"></script>
+    <script src="libs/countdown.min.js"></script>
+    <script src="libs/ion.rangeSlider/ion.rangeSlider.js"></script>
+    <script src="libs/maskedinput.js"></script>
+    <script src="libs/malihu-scrollbar/jquery.mCustomScrollbar.min.js"></script>
+    <script src="js/custom.js"></script>
 </head>
 <body>
     <main>
@@ -864,7 +864,7 @@
 
                     <div class="basket-total-buttons">
                         <button type="submit" onclick="window.open('order.html'); " class="btn btn-fill r10">Оформить заказ</button>
-                        <button type="button" class="btn btn-transp r10">Купить в 1 клик</button>
+                        <a href="#one-click" data-fancybox class="btn btn-transp r10">Купить в 1 клик</a>
                     </div>
 
                     <div class="basket-total-info">
@@ -1645,6 +1645,40 @@
 
 
 
+</div>
+
+<!--forms-->
+<div class="modal modal-sm" id="one-click">
+    <div class="modal-inner">
+        <div class="modal-title --center">Купить в 1 клик</div>
+
+        <div class="modal-fields">
+            <div class="form-row">
+                <input type="text" name="aaa" placeholder="Имя" />
+            </div>
+            <div class="form-row">
+                <input type="text" name="bbb" placeholder="Ваш номер телефона*" data-phone />
+            </div>
+            <div class="form-row">
+                <textarea name="text" rows="6" placeholder="Сообщение"></textarea>
+            </div>
+            <div class="form-row --text _center">
+                Оператор свяжется с вами для<br />
+                подтверждения заказа.<br /><br />
+                <b>Время работы магазина:</b><br />
+                ПН-ПТ с 9:00 до 19: СБ с 9:00 до 16:00<br /><br />
+                Бесплатная доставка осуществляется от&nbsp;2500&nbsp;рублей.
+            </div>
+            <div class="form-row">
+                <button type="submit" class="btn btn-fill r10">Отправить заявку</button>
+            </div>
+            <div class="form-policy">
+                Нажимая кнопку «Отправить», я даю свое согласие на обработку <a target="_blank" href="#">персональных данных</a> и
+                подтверждаю, что ознакомился с
+                правилами
+            </div>
+        </div>
+    </div>
 </div>
 
 <script>

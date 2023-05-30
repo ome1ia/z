@@ -416,6 +416,9 @@
 .basket-total-buttons button {
   height: 50px;
 }
+.basket-total-buttons a {
+  padding: 16px 22px;
+}
 
 .subscribe-agree .custom-checkbox label {
   font-size: 11px;
@@ -3356,6 +3359,11 @@
   }
   .basket-total-buttons button {
     height: 45px;
+    -ms-flex-positive: 1;
+        flex-grow: 1;
+  }
+  .basket-total-buttons a {
+    padding: 16px 22px;
     -ms-flex-positive: 1;
         flex-grow: 1;
   }

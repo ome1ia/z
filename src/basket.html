@@ -313,7 +313,7 @@
 
                     <div class="basket-total-buttons">
                         <button type="submit" onclick="window.open('order.html'); " class="btn btn-fill r10">Оформить заказ</button>
-                        <button type="button" class="btn btn-transp r10">Купить в 1 клик</button>
+                        <a href="#one-click" data-fancybox class="btn btn-transp r10">Купить в 1 клик</a>
                     </div>
 
                     <div class="basket-total-info">
@@ -398,6 +398,40 @@
 
 
 
+</div>
+
+<!--forms-->
+<div class="modal modal-sm" id="one-click">
+    <div class="modal-inner">
+        <div class="modal-title --center">Купить в 1 клик</div>
+
+        <div class="modal-fields">
+            <div class="form-row">
+                <input type="text" name="aaa" placeholder="Имя" />
+            </div>
+            <div class="form-row">
+                <input type="text" name="bbb" placeholder="Ваш номер телефона*" data-phone />
+            </div>
+            <div class="form-row">
+                <textarea name="text" rows="6" placeholder="Сообщение"></textarea>
+            </div>
+            <div class="form-row --text _center">
+                Оператор свяжется с вами для<br />
+                подтверждения заказа.<br /><br />
+                <b>Время работы магазина:</b><br />
+                ПН-ПТ с 9:00 до 19: СБ с 9:00 до 16:00<br /><br />
+                Бесплатная доставка осуществляется от&nbsp;2500&nbsp;рублей.
+            </div>
+            <div class="form-row">
+                <button type="submit" class="btn btn-fill r10">Отправить заявку</button>
+            </div>
+            <div class="form-policy">
+                Нажимая кнопку «Отправить», я даю свое согласие на обработку <a target="_blank" href="#">персональных данных</a> и
+                подтверждаю, что ознакомился с
+                правилами
+            </div>
+        </div>
+    </div>
 </div>
 
 <script>
