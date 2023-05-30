@@ -6636,6 +6636,10 @@ h3.shop-list__title {
   padding: 0 15px;
 }
 
+.show_tablet {
+  display: none;
+}
+
 @media (max-width: 1500px) {
   .es-hint {
     margin-left: 0;
@@ -6871,9 +6875,6 @@ h3.shop-list__title {
   }
 }
 @media (max-width: 1024px) {
-  .show_tablet {
-    display: none;
-  }
   .top-menu ul.top-menu_visible li a {
     padding: 10px 3px;
   }

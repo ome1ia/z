@@ -1,3 +1,6 @@
+.show_tablet {
+    display: none;
+}
 @media (max-width: 1500px){
     .es-hint {
         margin-left: 0;
@@ -226,9 +229,6 @@
     .time-buy.--inner {grid-template-columns: 1fr 1fr 1fr 1fr;}
 }
 @media (max-width: 1024px){
-    .show_tablet {
-        display: none;
-    }
     .top-menu ul.top-menu_visible li a {
         padding: 10px 3px;
     }
