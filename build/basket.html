@@ -1670,12 +1670,29 @@
                 Бесплатная доставка осуществляется от&nbsp;2500&nbsp;рублей.
             </div>
             <div class="form-row">
-                <button type="submit" class="btn btn-fill r10">Отправить заявку</button>
+                <!--button type="submit" class="btn btn-fill r10">Отправить заявку</button-->
+                <a href="#success" onclick="$.fancybox.close();" data-fancybox class="btn btn-fill r10">Отправить заявку</a>
             </div>
             <div class="form-policy">
                 Нажимая кнопку «Отправить», я даю свое согласие на обработку <a target="_blank" href="#">персональных данных</a> и
                 подтверждаю, что ознакомился с
                 правилами
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-sm" id="success">
+    <div class="modal-inner">
+        <div class="modal-title --center">Покупка в 1 клик</div>
+        <div class="modal-pict">
+            <div class="pict-success"></div>
+        </div>
+        <div class="modal-fields">
+            <div class="form-row --text --center">
+                Благодарим Вас за заказ<br><br>
+                Номер Вашего заказа <b>176235</b><br><br>
+                Скоро с Вами свяжется наш менеджер для уточнения деталей заказа
             </div>
         </div>
     </div>
