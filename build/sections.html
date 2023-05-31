@@ -631,7 +631,11 @@
                         <a href="#"><span>Консервы</span></a>
                         <a href="#"><span>Лечебный корм</span></a>
                         <a href="#"><span>Заменители молока</span></a>
-                        <a class="more" href="#">Ещё 3 категории</a>
+                        <button class="js-more more">Ещё 3 категории</button>
+                        <div class="js-more-items sections-item__more-item">
+                            <a href="#"><span>Сухой корм</span></a>
+                            <a href="#"><span>Влажный корм</span></a>
+                        </div>
                     </div>
                 </div>
 
@@ -710,7 +714,11 @@
                         <a href="#"><span>Пеленки</span></a>
                         <a href="#"><span>Средства для уборки</span></a>
                         <a href="#"><span>Бассейны</span></a>
-                        <a class="more" href="#">Ещё 3 категории</a>
+                        <button class="js-more more">Ещё 3 категории</button>
+                        <div class="js-more-items sections-item__more-item">
+                            <a href="#"><span>Сухой корм</span></a>
+                            <a href="#"><span>Влажный корм</span></a>
+                        </div>
                     </div>
                 </div>
 
@@ -718,6 +726,14 @@
         </div>
     </div>
 </div>
+<script>
+    $(document).ready(function(){
+        $('.js-more').one('click', function(){
+            $(this).next().addClass('--is-shown');
+            $(this).hide();
+        })
+    });
+</script>
 
 </section>
 

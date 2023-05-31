@@ -542,6 +542,23 @@
         }
     }
 }
+.sections-item__more-item {
+    display: none;
+    &.--is-shown {
+        display: block;
+    }
+}
+.more {
+    border:none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    line-height: 1.7;
+    color: $green;
+    &:hover {
+        color: $green_hov;
+    }
+}
 .aside-filter__block{
     margin-bottom: 20px;
     &.mobile-accordeon{

@@ -4075,6 +4075,25 @@ h3.shop-list__title {
   color: #57C224;
 }
 
+.sections-item__more-item {
+  display: none;
+}
+.sections-item__more-item.--is-shown {
+  display: block;
+}
+
+.more {
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  line-height: 1.7;
+  color: #57C224;
+}
+.more:hover {
+  color: #35860E;
+}
+
 .aside-filter__block {
   margin-bottom: 20px;
 }
