@@ -257,10 +257,12 @@ $(document).ready(function () {
                 return enableSwiper();
             }
         };
+
+        const slidesCount = $(slider).data('slides') || 6;
         
         const enableSwiper = function () {
             prodCarousel = new Swiper(slider, {
-                slidesPerView: 6,
+                slidesPerView: slidesCount,
                 spaceBetween: 15,
                 watchOverflow: true,
                 watchSlidesVisibility: true,
