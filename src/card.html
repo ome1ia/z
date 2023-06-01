@@ -805,60 +805,6 @@
             prodMain.slideTo(prodThumbs.activeIndex);
         });
 
-
-        //Карусели 
-
-        $('[data-prod-carousel]').each(function (i, slider) {
-
-            const breakpoint = window.matchMedia('(max-width: 1024px)');
-
-            let prodCarousel;
-            let pagination = $(slider).data('prod-carousel');
-
-            const breakpointChecker = function () {
-                if (breakpoint.matches === true) {
-                    slider.classList.add("not-slider");
-                    if (prodCarousel !== undefined) {
-                        prodCarousel.destroy(true, true);
-
-                    }
-                    return;
-                } else if (breakpoint.matches === false) {
-                    slider.classList.remove("not-slider");
-                    return enableSwiper();
-                }
-            };
-
-            const enableSwiper = function () {
-                prodCarousel = new Swiper(slider, {
-                    slidesPerView: 6,
-                    spaceBetween: 15,
-                    watchOverflow: true,
-                    watchSlidesVisibility: true,
-                    watchSlidesProgress: true,
-                    followFinger: false,
-                    navigation: {
-                        prevEl: '[data-buttons="'+ pagination +'"] .pagination__item_prev',
-                        nextEl: '[data-buttons="' + pagination +'"] .pagination__item_next'
-                    },
-                    on: {
-                        init: function () {
-                            if(this.slides.length <= this.params.slidesPerView){
-                                $('[data-buttons="' + pagination +'"]').remove();
-                            }
-                        },
-                    },
-                });
-
-            };
-
-            breakpoint.addListener(breakpointChecker);
-
-            breakpointChecker();
-
-
-        });
-
     });
 
 </script>
