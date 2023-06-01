@@ -1538,6 +1538,11 @@
     gap: 40px;
     margin-bottom: 30px;
 }
+.profile-aside {
+    width: 220px;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
 .profile-asideBanner{
     text-align: center;
 }
@@ -1579,6 +1584,7 @@
     }
 }
 .profile-main {
+    width: calc(100% - 260px);
     & > .header{
         padding-top: 20px;
         h3{
@@ -2902,16 +2908,21 @@
             margin-right: 45px;
         }
     } 
-    .profile.d-grid{
+    .profile.d-grid,
+    .profile.d-flex{
         display: block;
     }
     .profile-aside{
+        width: 100%;
         .personal-menu{
             display: grid;
             grid-auto-flow: column;
             grid-auto-columns: max-content;
             overflow-x: auto;
         }
+    }
+    .profile-main {
+        width: 100%;
     }
     .orderList-basket-prod {
         padding: 15px 10px 15px 15px;

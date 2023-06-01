@@ -1734,6 +1734,14 @@
   margin-bottom: 30px;
 }
 
+.profile-aside {
+  width: 220px;
+  -ms-flex-positive: 0;
+      flex-grow: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
 .profile-asideBanner {
   text-align: center;
 }
@@ -1785,6 +1793,9 @@
   fill: #57C224;
 }
 
+.profile-main {
+  width: calc(100% - 260px);
+}
 .profile-main > .header {
   padding-top: 20px;
 }
@@ -3329,8 +3340,12 @@
   .profile-form .--phonesDinamic {
     margin-right: 45px;
   }
-  .profile.d-grid {
+  .profile.d-grid,
+  .profile.d-flex {
     display: block;
+  }
+  .profile-aside {
+    width: 100%;
   }
   .profile-aside .personal-menu {
     display: grid;
@@ -3338,6 +3353,9 @@
     grid-auto-columns: -webkit-max-content;
     grid-auto-columns: max-content;
     overflow-x: auto;
+  }
+  .profile-main {
+    width: 100%;
   }
   .orderList-basket-prod {
     padding: 15px 10px 15px 15px;

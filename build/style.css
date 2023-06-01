@@ -313,6 +313,11 @@ textarea {
   display: grid;
 }
 
+.d-flex {
+  display: -ms-flexbox;
+  display: flex;
+}
+
 ul {
   list-style: none;
   color: #000;
