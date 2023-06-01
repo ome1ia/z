@@ -131,6 +131,14 @@ $(document).ready(function () {
         //$('#trigger-cat-menu').trigger('click');
     });
 
+    $('.js-more-menu').on('click', function() {
+        const menuColumn = $(this).parents('ul');
+        const target = $(this).parents('.catalog-menu__col').find('.js-more-menu-items');
+        
+        menuColumn.append( target.html() );
+        $(this).remove();
+        target.remove();
+    });
 
     //Поиск в мобильном меню каталога
     //для демонстрации

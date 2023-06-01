@@ -768,6 +768,10 @@ article ol {
   margin-bottom: 20px;
 }
 
+.hide {
+  display: none;
+}
+
 .h-top {
   height: 45px;
   background: #101832;
