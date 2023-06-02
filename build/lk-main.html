@@ -970,10 +970,10 @@
                     </div>
                     <div class="aff-field flex-jcsb">
                         <div class="aff-field__cell">
-                            <input type="text" disabled readonly value="https://samizoo.ru/vdivdivdivnbiovbnga165156g"/>
+                            <input type="text" disabled readonly value="https://samizoo.ru/vdivdivdivnbiovbnga165156g" class="js-copy-link-text" />
                         </div>
                         <div class="aff-field__cell">
-                            <button type="submit" class="btn btn-fill r10">Скопировать ссылку</button>
+                            <button type="submit" class="js-copy-link btn btn-fill r10">Скопировать ссылку</button>
                         </div>
                     </div>
 
@@ -2564,41 +2564,66 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.js"></script>
 <script>
     $(document).ready(function(){
-        $(document).ready(function () {
+        //Вызов попапа
+        $('body').on('click', '[data-modal="avatar"]', function () {
+            $.fancybox.open({
+                src: '#modal-avatar',
+                opts: {
+                    touch: false,
+                    afterShow: function (instance, current) {
 
-            //Вызов попапа
-            $('body').on('click', '[data-modal="avatar"]', function () {
-                $.fancybox.open({
-                    src: '#modal-avatar',
-                    opts: {
-                        touch: false,
-                        afterShow: function (instance, current) {
+                        //загрузка файла
+                        $("html").on("dragover drop", function (e) {
+                            e.preventDefault();
+                            e.stopPropagation();
+                        });
 
-                            //загрузка файла
-                            $("html").on("dragover drop", function (e) {
-                                e.preventDefault();
-                                e.stopPropagation();
-                            });
+                        $('body').on('dragover', '#drop_zone', function () {
+                            $(this).addClass('drag_over');
+                            return false;
+                        });
 
-                            $('body').on('dragover', '#drop_zone', function () {
-                                $(this).addClass('drag_over');
-                                return false;
-                            });
+                        $('body').on('dragleave', '#drop_zone', function () {
+                            $(this).removeClass('drag_over');
+                            return false;
+                        });
 
-                            $('body').on('dragleave', '#drop_zone', function () {
-                                $(this).removeClass('drag_over');
-                                return false;
-                            });
+                        avatarUpload();
 
-                            avatarUpload();
-
-                        }
                     }
-                });
+                }
             });
-
         });
 
+        $('.js-copy-link').on('click', function() {
+            const text = $('.js-copy-link-text').val();
+
+            if(navigator.clipboard) {
+                navigator.clipboard.writeText(text)
+                .then(function() {
+                    // успешно записали
+                })
+                .catch(function(err) {
+                    // error
+                });
+            } else {
+                console.log('copy range')
+                const range = document.createRange();// выделим текст
+                range.selectNode($('.js-copy-link-text')[0]);
+                window.getSelection().addRange(range);
+                try {
+                    var successful = document.execCommand("copy");// скопируем
+                    if(successful) {
+                        // успешно записали
+                    } else {
+                        // error
+                    }
+                } catch(err) {
+                    // error
+                }
+                window.getSelection().removeAllRanges();// снимем выделение
+            }
+        });
 
     });
 
