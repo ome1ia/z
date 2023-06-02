@@ -2457,6 +2457,12 @@
         img{
             max-width: 35px;
         }
+        &.--deliv img {
+            margin-top: 0px;
+        }
+        &.--country img {
+            margin-top: -5px;
+        }
    }
    .address-title{
         text-transform: uppercase;
@@ -2470,6 +2476,11 @@
    }
    .corner-controls, .cell-icon, .cell-icon img{
         @include center-position;
+
+        &.--deliv,
+        &.--country {
+            margin-top: 0;
+        }
    }
 }
 

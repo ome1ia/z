@@ -2826,6 +2826,12 @@
 .address-item-cell .cell-icon img {
   max-width: 35px;
 }
+.address-item-cell .cell-icon.--deliv img {
+  margin-top: 0px;
+}
+.address-item-cell .cell-icon.--country img {
+  margin-top: -5px;
+}
 .address-item-cell .address-title {
   text-transform: uppercase;
   font-size: 12px;
@@ -2843,6 +2849,9 @@
   bottom: 0;
   left: 0;
   margin: auto;
+}
+.address-item-cell .corner-controls.--deliv, .address-item-cell .corner-controls.--country, .address-item-cell .cell-icon.--deliv, .address-item-cell .cell-icon.--country, .address-item-cell .cell-icon img.--deliv, .address-item-cell .cell-icon img.--country {
+  margin-top: 0;
 }
 
 .action-frend {
