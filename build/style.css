@@ -777,6 +777,10 @@ article ol {
   display: none;
 }
 
+.break-word {
+  word-break: break-word;
+}
+
 .h-top {
   height: 45px;
   background: #101832;
