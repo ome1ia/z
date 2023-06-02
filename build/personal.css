@@ -2147,6 +2147,13 @@
   font-size: 12px;
 }
 
+.pets-item-prev__add {
+  text-align: center;
+  color: #57C224;
+  font-size: 12px;
+  cursor: pointer;
+}
+
 .user__avatar-picture {
   width: 91px;
   height: 91px;
