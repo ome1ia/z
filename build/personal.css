@@ -1795,6 +1795,7 @@
 
 .profile-main {
   width: calc(100% - 260px);
+  word-break: break-word;
 }
 .profile-main > .header {
   padding-top: 20px;

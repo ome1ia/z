@@ -1585,6 +1585,7 @@
 }
 .profile-main {
     width: calc(100% - 260px);
+    word-break: break-word;
     & > .header{
         padding-top: 20px;
         h3{
