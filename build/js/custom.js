@@ -359,6 +359,14 @@ $(document).ready(function () {
 
     $("[data-mask]").mask("+7(999) 999-99-99");
 
+    $('.js-button-save').each(function() {
+        const button = $(this);
+        const form = button.parents('form');
+        form.find('input, textarea').one('change, input', function() {
+            button.prop('disabled', false);
+        })
+    })
+
     //Показ меню каталога
     $body.on('click', '#trigger-cat-menu', function(){
         $(this).toggleClass('activity');
