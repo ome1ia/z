@@ -86,6 +86,10 @@ $(document).ready(function () {
 
     });
 
+    $('.js-closeModal').on('click', function(evt) {
+        $.fancybox.close();
+    });
+
 
     checkCookies();//Куки
     checkYellowWarning();
