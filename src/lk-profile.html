@@ -93,7 +93,7 @@
 </script>
 
 
-<div class="modal modal-sm" id="edit-password">
+<div class="modal modal-sm mobile-bottom" id="edit-password">
     <div class="modal-inner">
         <div class="modal-title --center">Изменение пароля</div>
         
@@ -112,6 +112,28 @@
         </div>
     </div>
 </div>
-
+<div class="modal modal-sm" id="changePasswordSuccess">
+    <div class="modal-inner">
+        <div class="modal-pict">
+            <div class="pict-success"></div>
+        </div>
+        <div class="modal-fields">
+            <div class="form-row --text --center">
+                Пароль успешно изменен!
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function(){
+        $('.js-changePassword').on('click', function() {
+            // после успешного изменения пароля
+            $.fancybox.close();
+            $.fancybox.open({
+                src: '#changePasswordSuccess'
+            });
+        })
+    });
+</script>
 
 //= template/footer.html
