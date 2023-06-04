@@ -1584,7 +1584,9 @@
     }
 }
 .profile-main {
-    width: calc(100% - 260px);
+    .profile.d-flex & {
+        width: calc(100% - 260px);
+    }
     & > .header{
         padding-top: 20px;
         h3{
@@ -2938,7 +2940,8 @@
             overflow-x: auto;
         }
     }
-    .profile-main {
+    .profile-main,
+    .profile.d-flex .profile-main {
         width: 100%;
     }
     .orderList-basket-prod {

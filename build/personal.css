@@ -1793,7 +1793,7 @@
   fill: #57C224;
 }
 
-.profile-main {
+.profile.d-flex .profile-main {
   width: calc(100% - 260px);
 }
 .profile-main > .header {
@@ -3370,7 +3370,8 @@
     grid-auto-columns: max-content;
     overflow-x: auto;
   }
-  .profile-main {
+  .profile-main,
+  .profile.d-flex .profile-main {
     width: 100%;
   }
   .orderList-basket-prod {
