@@ -567,7 +567,7 @@
                 <!--Загрузка картинки-->
                 <!--Если картинка есть, то прописываем display:none -->
                 <div class="upload-area" id="upload-area">
-                    <div class="m-addForm__file-label">Фотография питомца</div>
+                    <div class="m-addForm__file-label">Фотография</div>
 
                     <div class="drag-frame" id="drop_zone">
                         <div class="drag-frame-inner">
@@ -606,9 +606,9 @@
                 </div>
             </div>
         </div>
-        <div class="modal-bottom-buttons">
+        <!--div class="modal-bottom-buttons">
             <button class="btn btn-fill r10" style="width: 100%;" onclick="document.location.reload();">Сохранить</button>
-        </div>
+        </div-->
     </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.js"></script>
@@ -786,9 +786,11 @@
                 }).then(function (resp) {
 
                     let file = $('#avatar__file').prop('files')[0];
-                    console.log(file);//данные файла
-
-
+                    var data_img = {
+                        "img": resp
+                    }
+                    // нужно отправлять не base64, а изображение? blob? https://foliotek.github.io/Croppie/
+                    $('.user__avatar-picture img').prop('src', resp);
                     $('#upload-area').hide();
 
                     $resAvat = $('.result-avatar');
@@ -810,6 +812,50 @@
                         enableExif: true
                     });
 
+                    // $.ajax({
+                    //     type: "POST",
+                    //     url: '/local/ajax/avatar.php',
+                    //     data: JSON.stringify(data_img),
+                    //     contentType: "application/json; charset=utf-8",
+                    //     dataType: "json",
+                    //     timeout: 3000,
+                    //     error: function(request,error) {
+                    //         if (error == "timeout") {
+                    //             alert('timeout');
+                    //         }
+                    //         else {
+                    //             alert('Error! Please try again!');
+                    //         }
+                    //     },
+                    //     success: function(result) {
+                    //         console.log(result);
+                    //         //TODO - Меняем картинку
+                    //         $('.user__avatar-picture img').prop('src', resp);
+                    //     },
+                    //     complete: function() {
+                    //         //console.log(file);//данные файла
+                    //         $('#upload-area').hide();
+
+                    //         $resAvat = $('.result-avatar');
+                    //         $resAvat.find('.result-avatar-preview').html('<img src="' + resp + '" />');
+                    //         $resAvat.show();
+
+                    //         //Всё сбрасываем 
+                    //         resetCroppie();
+                    //         $uploadCrop = $('#drop_zone').croppie({
+                    //             viewport: {
+                    //                 width: 150,
+                    //                 height: 150,
+                    //                 type: 'circle'
+                    //             },
+                    //             boundary: {
+                    //                 width: 215,
+                    //                 height: 215
+                    //             },
+                    //             enableExif: true
+                    //         });
+                    //     },
+                    // });
 
                 });
             });
