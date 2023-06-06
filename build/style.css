@@ -2443,7 +2443,7 @@ h3.shop-list__title {
 }
 
 .custom-baloon {
-  width: 300px;
+  width: 100%;
   padding: 15px 10px;
 }
 .custom-baloon .aval-value::before {

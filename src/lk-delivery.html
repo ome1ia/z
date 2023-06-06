@@ -228,13 +228,13 @@
                 balloon_content += '</div>';
 
                 var myPlacemark = new ymaps.Placemark(coords, {
-                    balloonContent: balloon_content
+                    balloonContent: balloon_content,
                 }, {
-                    preset: 'islands#greenCircleDotIconWithCaption'
+                    preset: 'islands#greenCircleDotIconWithCaption',
                 });
 
                 myMap.geoObjects.add(myPlacemark);
-                myMap.balloon.open(coords, balloon_content);
+                myMap.balloon.open(coords, balloon_content, {maxWidth: 250, margin: [10, 50]});
 
             });
         }
