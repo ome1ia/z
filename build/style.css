@@ -5767,6 +5767,10 @@ h3.shop-list__title {
   border: 1px solid #DC3D3C;
   background-color: rgba(220, 61, 60, 0.05);
 }
+.form-row select.error + .select2 .select2-selection--single {
+  border: 1px solid #DC3D3C;
+  background-color: rgba(220, 61, 60, 0.05);
+}
 .form-row h2, .form-row h3 {
   font-size: 16px;
   line-height: 18px;
