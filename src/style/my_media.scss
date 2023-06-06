@@ -1275,6 +1275,9 @@
     }
     .catalog-view-settings{
         justify-content: flex-start;
+        &.--favorite {
+            justify-content: space-between;
+        }
     }
     .catalog-views{margin-left: auto;}
     .sort-row{

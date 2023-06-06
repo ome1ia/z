@@ -7979,6 +7979,10 @@ h3.shop-list__title {
     -ms-flex-pack: start;
         justify-content: flex-start;
   }
+  .catalog-view-settings.--favorite {
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+  }
   .catalog-views {
     margin-left: auto;
   }
