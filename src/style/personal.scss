@@ -3400,6 +3400,10 @@
         height: auto;
     }
 
+    .profile-form{
+        .btn[type="submit"]{width: 100%;}
+    }
+
 }
 @media (max-width: 570px){
     .delivery-tab-grid{
