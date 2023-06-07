@@ -1846,7 +1846,7 @@
 .profile-main-tiles .profile-main-tile {
   margin-bottom: 0;
   padding: 20px;
-  height: 218px;
+  min-height: 218px;
   overflow: hidden;
   position: relative;
 }
@@ -3968,6 +3968,9 @@
   }
   .address-list.--preview .address-item-cell .address-text.--lk-main {
     line-height: 1.25;
+  }
+  .profile-main-tiles .profile-main-tile.--lk-address {
+    height: auto;
   }
 }
 @media (max-width: 570px) {
