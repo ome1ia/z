@@ -2698,6 +2698,9 @@
   text-align: center;
   padding-right: 30px;
 }
+.result-avatar.--full-width {
+  padding-right: 0;
+}
 
 .result-avatar-preview {
   width: 108px;

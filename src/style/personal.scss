@@ -2348,6 +2348,10 @@
 .result-avatar{
     text-align: center;
     padding-right: 30px;
+
+    &.--full-width {
+        padding-right: 0;
+    }
 }
 .result-avatar-preview{
     width: 108px;

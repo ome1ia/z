@@ -2524,7 +2524,7 @@
 <div class="modal modal-sm" id="modal-avatar">
     <div class="modal-inner">
         <div class="modal-title">Добавить фотографию</div>
-        <div class="m-addForm">
+        <div class="m-addForm b-bottom">
             <div class="m-addForm__file">
 
                 <!--Загрузка картинки-->
@@ -2548,7 +2548,6 @@
 
                     <div class="upload-controls is_hidden">
                         <div class="result-avatar-buttons">
-                            <button type="button" class="save-avatar" id="upload-save">Применить</button>
                             <button type="button" class="upload-avatar" id="upload-other">Заменить</button>
                             <button type="button" class="delete-avatar" id="upload-delete">Удалить</button>
                         </div>
@@ -2557,7 +2556,7 @@
 
                 <!--Загруженная картинки-->
 
-                <div class="result-avatar" style="display: none;">
+                <div class="result-avatar --full-width" style="display: none;">
                     <div class="result-avatar-preview">
                         <!--Если картинка есть, то прописываем сюда и убираем display:none выше-->
                         <img src="img/test/lk/dog.png" alt="dog" />
@@ -2569,9 +2568,9 @@
                 </div>
             </div>
         </div>
-        <!--div class="modal-bottom-buttons">
-            <button class="btn btn-fill r10" style="width: 100%;" onclick="document.location.reload();">Сохранить</button>
-        </div-->
+        <div class="upload-controls is_hidden modal-bottom-buttons">
+            <button id="upload-save" class="save-avatar btn btn-fill r10" style="width: 100%;">Сохранить</button>
+        </div>
     </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.js"></script>
@@ -2755,12 +2754,20 @@
                         "img": resp
                     }
                     // нужно отправлять не base64, а изображение? blob? https://foliotek.github.io/Croppie/
+                    // успешная загрузка:
+                    // обновим изображение в профиле
                     $('.user__avatar-picture img').prop('src', resp);
-                    $('#upload-area').hide();
 
-                    $resAvat = $('.result-avatar');
-                    $resAvat.find('.result-avatar-preview').html('<img src="' + resp + '" />');
-                    $resAvat.show();
+                    // варианты - оставить нужно один
+                    // вариант 1 - продолжаем редактировать:
+                    // $('#upload-area').hide();
+
+                    // $resAvat = $('.result-avatar');
+                    // $resAvat.find('.result-avatar-preview').html('<img src="' + resp + '" />');
+                    // $resAvat.show();
+
+                    // вариант 2 - закрываем модальное окно
+                    $.fancybox.close();
 
                     //Всё сбрасываем 
                     resetCroppie();
@@ -2796,15 +2803,9 @@
                     //         console.log(result);
                     //         //TODO - Меняем картинку
                     //         $('.user__avatar-picture img').prop('src', resp);
+                    //          $.fancybox.close();
                     //     },
                     //     complete: function() {
-                    //         //console.log(file);//данные файла
-                    //         $('#upload-area').hide();
-
-                    //         $resAvat = $('.result-avatar');
-                    //         $resAvat.find('.result-avatar-preview').html('<img src="' + resp + '" />');
-                    //         $resAvat.show();
-
                     //         //Всё сбрасываем 
                     //         resetCroppie();
                     //         $uploadCrop = $('#drop_zone').croppie({
