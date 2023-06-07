@@ -2656,6 +2656,9 @@
 .p-message-body.--full {
   height: auto;
 }
+.p-message-body.--lk-messages {
+  height: auto;
+}
 
 .p-message-bottom .more .hidden {
   display: none;
