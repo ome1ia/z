@@ -2524,7 +2524,7 @@
 <div class="modal modal-sm" id="modal-avatar">
     <div class="modal-inner">
         <div class="modal-title">Добавить фотографию</div>
-        <div class="m-addForm b-border">
+        <div class="m-addForm">
             <div class="m-addForm__file">
 
                 <!--Загрузка картинки-->
@@ -2603,7 +2603,10 @@
 
                         avatarUpload();
 
-                    }
+                    },
+                    afterClose: function (instance, current) {
+                        resetCroppie();
+                    },
                 }
             });
         });
@@ -2638,9 +2641,8 @@
             }
         });
 
-    });
 
-    function avatarUpload() {
+        function avatarUpload() {
             var $uploadCrop;
             const messBox = $('#avatar-form .js-result-message');
             function readFile(file) {
@@ -2847,6 +2849,7 @@
             }
             return true;
         }
+    });
 </script>
 
 
