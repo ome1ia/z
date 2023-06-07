@@ -3348,10 +3348,16 @@
         button:last-child{margin-bottom: 0;}
     }
     .profile-main-tiles.d-grid {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
         .profile-main-tile {
             width: 340px;
             margin: 0 auto 20px;
+
+            &.--bonus {
+                order: -1;
+            }
         }
     }
     .p-message-title::before{top: 2px;}
