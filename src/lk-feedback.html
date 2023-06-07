@@ -32,7 +32,7 @@
         <div class="profile-main">
             <div class="header"><h3>Обратная связь </h3></div>
 
-            <div class="contacts-form">
+            <form action="" class="js-contactForm contacts-form">
                 <div class="form-row flex-jcsb">
                     <div class="form-cell __half">
                         <label>Имя</label>
@@ -66,7 +66,7 @@
                         правилами
                     </div>
                 </div>
-            </div>
+            </form>
 
 
             <div class="p-messages-list">
@@ -119,9 +119,29 @@
     </div>
 </div>
 
+<div class="modal modal-sm" id="success">
+    <div class="modal-inner">
+        <div class="modal-title --center">Сообщение отправлено</div>
+        <div class="modal-pict">
+            <div class="pict-success"></div>
+        </div>
+        <div class="modal-fields">
+            <div class="form-row --text --center"> Спасибо! Мы ответим вам в ближайшее время.</div>
+        </div>
+    </div>
+</div>
+
 <script>
     $(document).ready(function () {
+        $('.js-contactForm').on('submit', function(evt) {
+            evt.preventDefault();
 
+            //send data
+            //if success:
+            $.fancybox.open({
+                src: '#success'
+            });
+        })
     });
 </script>
 
