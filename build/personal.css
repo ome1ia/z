@@ -3963,6 +3963,12 @@
     margin: auto;
     text-align: center;
   }
+  .address-title.--lk-main {
+    margin-bottom: 4px;
+  }
+  .address-list.--preview .address-item-cell .address-text.--lk-main {
+    line-height: 1.25;
+  }
 }
 @media (max-width: 570px) {
   .delivery-tab-grid {
