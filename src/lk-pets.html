@@ -29,8 +29,8 @@
                     <div class="corner-controls">
                         <div class="corner-controls__button"><svg><use href="sprite/sprite.svg#points"></use></svg></div>
                         <div class="corner-controls__block">
-                            <span class="corner-edit" data-modal="pet"><svg><use href="sprite/sprite.svg#pencil"></use></svg>Редактировать</span>
-                            <a class="corner-delete"><svg><use href="sprite/sprite.svg#bucket"></use></svg>Удалить</a>
+                            <span class="corner-edit" data-modal="pet" data-id="1"><svg><use href="sprite/sprite.svg#pencil"></use></svg>Редактировать</span>
+                            <a class="corner-delete"  data-id="1"><svg><use href="sprite/sprite.svg#bucket"></use></svg>Удалить</a>
                         </div>
                     </div>
                     <div class="pets-item__inner flex">
@@ -53,8 +53,8 @@
                                 <use href="sprite/sprite.svg#points"></use>
                             </svg></div>
                         <div class="corner-controls__block">
-                            <span class="corner-edit" data-modal="pet"><svg><use href="sprite/sprite.svg#pencil"></use></svg>Редактировать</span>
-                            <a class="corner-delete"><svg><use href="sprite/sprite.svg#bucket"></use></svg>Удалить</a>
+                            <span class="corner-edit" data-modal="pet" data-id="2"><svg><use href="sprite/sprite.svg#pencil"></use></svg>Редактировать</span>
+                            <a class="corner-delete" data-id="2"><svg><use href="sprite/sprite.svg#bucket"></use></svg>Удалить</a>
                         </div>
                     </div>
                     <div class="pets-item__inner flex">
@@ -191,6 +191,7 @@
                 <div class="form-row">
                     <label>Разновидность</label>
                     <input type="text" name="user-name" placeholder="К примеру “Немецкая”" />
+                    <input type="hidden" name="pet-id" value="" />
                 </div>
             </div>
         </div>
@@ -212,6 +213,36 @@
 
          //Вызов попапа
         $('body').on('click', '[data-modal="pet"]', function () {
+            // код из https://dev-samizoo.smartraf.ru/local/templates/samizoo/components/bitrix/news.list/pets/script.js
+            if($(this).hasClass('corner-edit')){
+                $("#modal-pet .modal-title").html("Изменить данные питомца");
+                $('#modal-pet input[name=pets-name]').val( $(this).parent().parent().parent().find( ".pet-name" ).text() );
+                let date=$(this).parent().parent().parent().find( ".pet-date" ).text().split('.');
+                $("#modal-pet select[name=bitrth-day]").val(date[0]).trigger('change');
+                $("#modal-pet select[name=bitrth-mon]").val(date[1]).trigger('change');
+                $("#modal-pet select[name=bitrth-year]").val(date[2]).trigger('change');
+                $("#modal-pet select[name=type]").val( $(this).parent().parent().parent().find( ".pet-vid" ).text() ).trigger('change');
+                $('#modal-pet input[name=pet-porov]').val( $(this).parent().parent().parent().find( ".pet-breed" ).text() );
+                $('#modal-pet input[name=pet-kind]').val( $(this).parent().parent().parent().find( ".pet-kind" ).text() );
+                $('#modal-pet input[name=pet-id]').val( $(this).attr('data-id') );
+                // Если редактируем питомца - покажем  изображение
+                $('#modal-pet .result-avatar-preview img').prop('src', $(this).parents('.pets-item').find('.pets-item__img img').prop('src'));
+                $('#modal-pet #upload-area').hide();
+                $('#modal-pet .result-avatar').show();
+            } else {
+                $("#modal-pet .modal-title").html("Добавить питомца");
+                $('#modal-pet input[name=pets-name]').val( '' );
+                let date=$(this).parent().parent().parent().find( ".pet-date" ).text().split('.');
+                $("#modal-pet select[name=bitrth-day]").val(0).trigger('change');
+                $("#modal-pet select[name=bitrth-mon]").val(0).trigger('change');
+                $("#modal-pet select[name=bitrth-year]").val(0).trigger('change');
+                $("#modal-pet select[name=type]").val( 0 ).trigger('change');
+                $('#modal-pet input[name=pet-porov]').val( '' );
+                $('#modal-pet input[name=pet-kind]').val( '' );
+                $('#modal-pet input[name=pet-id]').val( '' );
+            }
+            //конец кода из https://dev-samizoo.smartraf.ru/local/templates/samizoo/components/bitrix/news.list/pets/script.js
+
             $.fancybox.open({
                 src: '#modal-pet',
                 opts: {
@@ -234,9 +265,11 @@
                             return false;
                         });
 
-                        avatarUpload();
-                        
-                    }
+                        avatarUpload();                        
+                    },
+                    afterClose: function (instance, current) {
+                        resetCroppie();
+                    },
                 }
             });
         });
@@ -267,157 +300,158 @@
     });
 
     function avatarUpload() {
-            var $uploadCrop;
-            const messBox = $('#avatar-form .js-result-message');
-            function readFile(file) {
-                if (file) {
-                    var reader = new FileReader();
+        var $uploadCrop;
+        const messBox = $('#avatar-form .js-result-message');
+        function readFile(file) {
+            if (file) {
+                var reader = new FileReader();
 
-                    reader.onload = function (e) {
-                        $('.upload-controls').removeClass('is_hidden');
-                        $('#drop_zone').addClass('ready');
-                        $('#drop_zone').removeClass('drag_over');
-                        $uploadCrop.croppie('bind', {
-                            url: e.target.result
-                        }).then(function () {
-                            console.log('complete');
-                        });
+                reader.onload = function (e) {
+                    $('.upload-controls').removeClass('is_hidden');
+                    $('#drop_zone').addClass('ready');
+                    $('#drop_zone').removeClass('drag_over');
+                    $uploadCrop.croppie('bind', {
+                        url: e.target.result
+                    }).then(function () {
+                        //console.log('complete');
+                    });
 
-                    }
-
-                    reader.readAsDataURL(file);
                 }
-                else {
-                    alert("Sorry - you're browser doesn't support the FileReader API");
+
+                reader.readAsDataURL(file);
+            }
+            else {
+                alert("Sorry - you're browser doesn't support the FileReader API");
+            }
+        }
+
+        $uploadCrop = setEmptyCroppie();
+
+        $('#avatar__file').on('change', function () {
+            //console.log(this.files[0]['type']);
+            if (this.files[0]['type'].indexOf('image') !== -1) {
+                if (validateSize(this.files[0], 1)) {
+                    readFile(this.files[0]);
+                } else {
+                    alert('Файл не должен превышать 1 Мб!');
+                    return false;
                 }
+
+            } else {
+                alert('Возможна загрузка только изображения!');
+                return false;
             }
 
-            $uploadCrop = $('#drop_zone').croppie({
-                viewport: {
-                    width: 150,
-                    height: 150,
-                    type: 'circle'
-                },
-                boundary: {
-                    width: 215,
-                    height: 215
-                },
-                enableExif: true
-            });
+        });
 
-            $('#avatar__file').on('change', function () {
-                console.log(this.files[0]['type']);
-                if (this.files[0]['type'].indexOf('image') !== -1) {
-                    if (validateSize(this.files[0], 1)) {
-                        
-                        readFile(this.files[0]);
+        $("#drop_zone").on("drop", function (e) {
+            e.preventDefault(); e.stopPropagation();
+            let files = e.originalEvent.dataTransfer.files;
+            if (files.length > 0) {
+                if (files[0]['type'].indexOf('image') !== -1) {
+                    if (validateSize(files[0], 1)) {
+                        messBox.empty();
+                        readFile(files[0]);
                     } else {
-                       alert('Файл не должен превышать 1 Мб!');
+                        alert('Файл не должен превышать 1 Мб!');
                         return false;
                     }
-
                 } else {
                     alert('Возможна загрузка только изображения!');
                     return false;
                 }
+            }
+        });
 
-            });
+        //Нажатие
+        $('#upload-other').on('click', function () {
+            $('#avatar__file').trigger('click');
+        });
 
-            $("#drop_zone").on("drop", function (e) {
-                e.preventDefault(); e.stopPropagation();
-                let files = e.originalEvent.dataTransfer.files;
-                if (files.length > 0) {
-                    if (files[0]['type'].indexOf('image') !== -1) {
-                        if (validateSize(files[0], 1)) {
-                            messBox.empty();
-                            readFile(files[0]);
-                        } else {
-                            alert('Файл не должен превышать 1 Мб!');
-                            return false;
-                        }
-                    } else {
-                        alert('Возможна загрузка только изображения!');
-                        return false;
-                    }
-                }
-            });
+        //Нажатие на Удалить
+        $('#upload-delete, #delete-avatar').on('click', function () {
+            // если нужно заменять аватар на сервере - предлагаю отправлять дефолтное изображение в качестве аватара
+            // картинка в base64, но можно и загружать с сервера - для уменьшения размера кода
+            const petId = $('#modal-pet input[name="pet-id"]').val();
+            const defaultImage = 'data:image/png;base64,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';
 
-
-
-            //Нажатие
-            $('#upload-other').on('click', function () {
-                $('#avatar__file').trigger('click');
-            });
-
-            //Нажатие на Удалить
-            $('#upload-delete').on('click', function () {
+            if(petId) {
+                // перезапишем аватар на дефолтный
+                sendImage(defaultImage, petId);
+                messBox.empty();
+            } else {
+                // просто сбросим
                 resetCroppie();
-                $uploadCrop = $('#drop_zone').croppie({
-                    viewport: {
-                        width: 150,
-                        height: 150,
-                        type: 'circle'
-                    },
-                    boundary: {
-                        width: 215,
-                        height: 215
-                    },
-                    enableExif: true
-                });
+                $uploadCrop = setEmptyCroppie();
+            }
+        });
+
+        //Нажатие на кнопку Применить
+        $('#upload-save').on('click', function (ev) {
+            const petId = $('#modal-pet input[name="pet-id"]').val();
+            ev.preventDefault();
+            $uploadCrop.croppie('result', {
+                type: 'canvas',
+                size: 'viewport',
+            }).then(function (resp) {
+
+                //let file = $('#avatar__file').prop('files')[0];
+                //console.log(file);//данные файла
+
+                sendImage(resp, petId);
             });
+        });
 
-            //Нажатие на кнопку Сохранить
-            $('#upload-save').on('click', function (ev) {
-                ev.preventDefault();
-                $uploadCrop.croppie('result', {
-                    type: 'canvas',
-                    size: 'viewport',
-                }).then(function (resp) {
+        $('body').on('click', '#edit-avatar', function () {
+            $(this).closest('.result-avatar').hide();
+            $('#upload-area').show();
+        });
 
-                    let file = $('#avatar__file').prop('files')[0];
-                    console.log(file);//данные файла
+    }
 
+    function sendImage(file, id) {
+        const data_img = {
+            "img": file
+        };
 
-                    $('#upload-area').hide();
+        // Отправляем изображение на сервер,
+        // если успешно успешно отправили, меняем файл ($.ajax.success):
+        $('#upload-area').hide();
 
-                    $resAvat = $('.result-avatar');
-                    $resAvat.find('.result-avatar-preview').html('<img src="'+resp+'" />');
-                    $resAvat.show();
+        $resAvat = $('.result-avatar');
+        $resAvat.find('.result-avatar-preview').html('<img src="'+file+'" />');
+        $resAvat.show();
 
-                    //Всё сбрасываем 
-                    resetCroppie();
-                    $uploadCrop = $('#drop_zone').croppie({
-                        viewport: {
-                            width: 150,
-                            height: 150,
-                            type: 'circle'
-                        },
-                        boundary: {
-                            width: 215,
-                            height: 215
-                        },
-                        enableExif: true
-                    });
-             
-
-                });
-            });
-
-
-             $('body').on('click', '#edit-avatar, #delete-avatar', function () {
-                $(this).closest('.result-avatar').hide();
-                $('#upload-area').show();
-            })
-
+        if(id) {
+            const petBlock = $(`.corner-edit[data-id="${id}"]`).parents('.pets-item');
+            petBlock.find('.pets-item__img img').prop('src', file);
         }
 
-
+        //Всё сбрасываем - продублировать это в $.ajax.error или перенести в $.ajax.complete:
+        resetCroppie();
+        $uploadCrop = setEmptyCroppie();
+    }
 
     function resetCroppie() {
         $('#upload').val('');
         $('#drop_zone').croppie('destroy');
         $('#drop_zone').removeClass('ready');
         $('.upload-controls').addClass('is_hidden');
+    }
+
+    function setEmptyCroppie() {
+        return $('#drop_zone').croppie({
+            viewport: {
+                width: 150,
+                height: 150,
+                type: 'circle'
+            },
+            boundary: {
+                width: 215,
+                height: 215
+            },
+            enableExif: true
+        });
     }
 
     //Ограничение размера - 
