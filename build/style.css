@@ -7982,6 +7982,7 @@ h3.shop-list__title {
   .catalog-view-settings.--favorite {
     -ms-flex-pack: justify;
         justify-content: space-between;
+    padding-bottom: 20px;
   }
   .catalog-views {
     margin-left: auto;

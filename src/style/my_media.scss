@@ -1277,6 +1277,7 @@
         justify-content: flex-start;
         &.--favorite {
             justify-content: space-between;
+            padding-bottom: 20px;
         }
     }
     .catalog-views{margin-left: auto;}
