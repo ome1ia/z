@@ -5756,7 +5756,7 @@ h3.shop-list__title {
   display: block;
 }
 .form-row button.btn-fill:disabled {
-  opacity: 0.7;
+  opacity: 0.3;
 }
 .form-row button.btn-fill:disabled:hover {
   background: #57C224;

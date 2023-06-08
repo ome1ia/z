@@ -61,7 +61,7 @@
         display: block;
     }
     button.btn-fill:disabled{
-        opacity: 0.7;
+        opacity: 0.3;
         &:hover{
             background: $green;
             border-color: $green;
