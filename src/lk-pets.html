@@ -89,7 +89,7 @@
 
 
 <div class="modal modal-pet" id="modal-pet">
-    <div class="modal-inner">
+    <form action="" class="js-checkPetForm modal-inner">
         <div class="modal-title">Добавить питомца</div>
         <div class="m-addForm d-grid b-border">
             <div class="m-addForm__file">
@@ -174,13 +174,13 @@
             
                 <div class="form-row">
                     <label>Вид животного</label>
-                    <select name="type" style="width: 100%" class="error">
+                    <select name="type" style="width: 100%">
+                        <option value="">Выберите вид:</option>
                         <option value="1">Собака</option>
                         <option value="2">Кошка</option>
                         <option value="2">Мышка</option>
                         <option value="2">Корова</option>
                     </select>
-                    <label class="error">Вид животного - обязательное поле</label>
                 </div>
             
                 <div class="form-row">
@@ -199,10 +199,10 @@
                 <button class="js-closeModal btn btn-white r10">Отмена</button>
             </div>
             <div class="form-cell __auto">
-                <button class="btn btn-fill r10" onclick="document.location.reload();">Сохранить</button>
+                <button type=""submit class="btn btn-fill r10">Сохранить</button>
             </div>
         </div>
-    </div>
+    </form>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.js"></script>
@@ -241,6 +241,29 @@
             });
         });
 
+        $('.js-checkPetForm').on('submit', function(evt){
+            const requiredInput = $(this).find('[name="type"]');
+            const errorText = 'Вид животного - обязательное поле';
+
+            if( !requiredInput.val() ) {
+                console.log('error');
+                addError(requiredInput, errorText);
+
+                evt.preventDefault();
+            }
+
+            requiredInput.on('change', removeError);
+
+            function addError(input, errorText) {
+                input.addClass('error');
+                input.parents('.form-row').append(`<label class="error">${errorText}</label>`);
+            }
+            function removeError() {
+                const input = $(this);
+                input.removeClass('error');
+                input.nextAll('label.error').remove();
+            }
+        });
     });
 
     function avatarUpload() {

@@ -12,32 +12,32 @@
     <!--CSS-->
 
 
-    <link href="fonts/stylesheet.css?v=34e15e1a125a952b0586fe286054f464" rel="stylesheet" />
-    <link href="libs/fancybox/fancybox.css?v=34e15e1a125a952b0586fe286054f464" rel="stylesheet" />
-    <link href="libs/select2/select2.min.css?v=34e15e1a125a952b0586fe286054f464" rel="stylesheet" />
-    <link href="libs/swiper/swiper-bundle.css?v=34e15e1a125a952b0586fe286054f464" rel="stylesheet" />
-    <link href="libs/normalize.css?v=34e15e1a125a952b0586fe286054f464" rel="stylesheet" />
-    <link href="libs/ion.rangeSlider/ion.rangeSlider.css?v=34e15e1a125a952b0586fe286054f464" rel="stylesheet" />
-    <link href="libs/malihu-scrollbar/jquery.mCustomScrollbar.css?v=34e15e1a125a952b0586fe286054f464" rel="stylesheet" />
-    <link href="libs/datepicker/datepicker.css?v=34e15e1a125a952b0586fe286054f464" rel="stylesheet" />
+    <link href="fonts/stylesheet.css" rel="stylesheet" />
+    <link href="libs/fancybox/fancybox.css" rel="stylesheet" />
+    <link href="libs/select2/select2.min.css" rel="stylesheet" />
+    <link href="libs/swiper/swiper-bundle.css" rel="stylesheet" />
+    <link href="libs/normalize.css" rel="stylesheet" />
+    <link href="libs/ion.rangeSlider/ion.rangeSlider.css" rel="stylesheet" />
+    <link href="libs/malihu-scrollbar/jquery.mCustomScrollbar.css" rel="stylesheet" />
+    <link href="libs/datepicker/datepicker.css" rel="stylesheet" />
     <!--CSS Корзина, ЛК, Оформление заказа-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.css?v=34e15e1a125a952b0586fe286054f464">
-    <link href="personal.css?v=34e15e1a125a952b0586fe286054f464" rel="stylesheet" />
-    <link href="style.css?v=34e15e1a125a952b0586fe286054f464" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.css">
+    <link href="personal.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
     
     <title>Сами с усами</title>
     <!--JS-->
-    <script src="libs/jquery-3.6.3.min.js?v=34e15e1a125a952b0586fe286054f464"></script>
-    <script src="libs/fancybox/fancybox.min.js?v=34e15e1a125a952b0586fe286054f464"></script>
-    <script src="libs/select2/select2.min.js?v=34e15e1a125a952b0586fe286054f464"></script>
-    <script src="libs/datepicker/datepicker.min.js?v=34e15e1a125a952b0586fe286054f464"></script>
-    <script src="libs/swiper/swiper-bundle.min.js?v=34e15e1a125a952b0586fe286054f464"></script>
-    <script src="libs/lazyload.min.js?v=34e15e1a125a952b0586fe286054f464"></script>
-    <script src="libs/countdown.min.js?v=34e15e1a125a952b0586fe286054f464"></script>
-    <script src="libs/ion.rangeSlider/ion.rangeSlider.js?v=34e15e1a125a952b0586fe286054f464"></script>
-    <script src="libs/maskedinput.js?v=34e15e1a125a952b0586fe286054f464"></script>
-    <script src="libs/malihu-scrollbar/jquery.mCustomScrollbar.min.js?v=34e15e1a125a952b0586fe286054f464"></script>
-    <script src="js/custom.js?v=34e15e1a125a952b0586fe286054f464"></script>
+    <script src="libs/jquery-3.6.3.min.js"></script>
+    <script src="libs/fancybox/fancybox.min.js"></script>
+    <script src="libs/select2/select2.min.js"></script>
+    <script src="libs/datepicker/datepicker.min.js"></script>
+    <script src="libs/swiper/swiper-bundle.min.js"></script>
+    <script src="libs/lazyload.min.js"></script>
+    <script src="libs/countdown.min.js"></script>
+    <script src="libs/ion.rangeSlider/ion.rangeSlider.js"></script>
+    <script src="libs/maskedinput.js"></script>
+    <script src="libs/malihu-scrollbar/jquery.mCustomScrollbar.min.js"></script>
+    <script src="js/custom.js"></script>
 </head>
 <body>
     <main>
@@ -647,7 +647,7 @@
 
 
 <div class="modal modal-pet" id="modal-pet">
-    <div class="modal-inner">
+    <form action="" class="js-checkPetForm modal-inner">
         <div class="modal-title">Добавить питомца</div>
         <div class="m-addForm d-grid b-border">
             <div class="m-addForm__file">
@@ -732,13 +732,13 @@
             
                 <div class="form-row">
                     <label>Вид животного</label>
-                    <select name="type" style="width: 100%" class="error">
+                    <select name="type" style="width: 100%">
+                        <option value="">Выберите вид:</option>
                         <option value="1">Собака</option>
                         <option value="2">Кошка</option>
                         <option value="2">Мышка</option>
                         <option value="2">Корова</option>
                     </select>
-                    <label class="error">Вид животного - обязательное поле</label>
                 </div>
             
                 <div class="form-row">
@@ -757,13 +757,13 @@
                 <button class="js-closeModal btn btn-white r10">Отмена</button>
             </div>
             <div class="form-cell __auto">
-                <button class="btn btn-fill r10" onclick="document.location.reload();">Сохранить</button>
+                <button type=""submit class="btn btn-fill r10">Сохранить</button>
             </div>
         </div>
-    </div>
+    </form>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.js?v=34e15e1a125a952b0586fe286054f464"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.js"></script>
 <script>
     
     $(document).ready(function () {
@@ -799,6 +799,29 @@
             });
         });
 
+        $('.js-checkPetForm').on('submit', function(evt){
+            const requiredInput = $(this).find('[name="type"]');
+            const errorText = 'Вид животного - обязательное поле';
+
+            if( !requiredInput.val() ) {
+                console.log('error');
+                addError(requiredInput, errorText);
+
+                evt.preventDefault();
+            }
+
+            requiredInput.on('change', removeError);
+
+            function addError(input, errorText) {
+                input.addClass('error');
+                input.parents('.form-row').append(`<label class="error">${errorText}</label>`);
+            }
+            function removeError() {
+                const input = $(this);
+                input.removeClass('error');
+                input.nextAll('label.error').remove();
+            }
+        });
     });
 
     function avatarUpload() {
