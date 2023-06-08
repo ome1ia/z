@@ -802,7 +802,7 @@
 
                 let balloon_content = '';
                 balloon_content = '<div class="custom-baloon">';
-                balloon_content += '<button id="close-baloon" type="button" class="fancybox-button fancybox-close-small"><svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 24 24"><path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"></path></svg></button>';
+                //balloon_content += '<button id="close-baloon" type="button" class="fancybox-button fancybox-close-small"><svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 24 24"><path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"></path></svg></button>';
                 balloon_content += '<h3>Вы выбрали адрес</h3>';
                 balloon_content += '<p>' + firstGeoObject.properties.get('text') + '</p>';
                 balloon_content += '<button class="btn btn-fill r10">Доставить сюда</button>';
@@ -816,7 +816,6 @@
 
                 myMap.geoObjects.add(myPlacemark);
                 myMap.balloon.open(coords, balloon_content, {maxWidth: 250, margin: [10, 50]});
-
             });
         }
 </script>

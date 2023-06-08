@@ -8204,16 +8204,7 @@ h3.shop-list__title {
     width: 100%;
   }
   .custom-baloon {
-    width: 100%;
-    padding: 0px;
-  }
-  .custom-baloon button.btn {
-    width: 119px;
-    padding: 8px 0;
-    border-radius: 7px;
-    position: absolute;
-    right: -18px;
-    bottom: 2px;
+    width: 170px;
   }
   .custom-baloon p {
     margin-bottom: 2px;
