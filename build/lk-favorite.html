@@ -1517,7 +1517,18 @@
 
 <script>
     $(document).ready(function () {
+        //Выбор сортировки
+        $('body').on('click', '[data-sort] div.current', function () {
+            $(this).siblings().show();
+        });
 
+
+        $('body').on('click', '[data-sort] div:not(.current)', function () {
+            $(this).addClass('current').siblings().removeClass('current').hide();
+            let key = $(this).parent().data('sort');
+
+            console.log({ [key]: $(this).data('value') });
+        });
     });
 </script>
 
