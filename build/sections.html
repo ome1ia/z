@@ -743,7 +743,7 @@
     $('.js-more').on('click tap', function() {
         if (!$(this).data('status')) {
             $(this).parent().addClass('--is-open');
-            const moreHTML = $(this).find('span').html();
+            const moreHTML = $(this).html();
             $(this).data('text', moreHTML);
             $(this).html('Свернуть');
             $(this).data('status', true);
