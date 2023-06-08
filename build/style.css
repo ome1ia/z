@@ -6283,6 +6283,12 @@ h3.shop-list__title {
   left: 0;
   margin: auto;
   z-index: 2;
+  cursor: pointer;
+}
+.drag-frame-inner .upload-button .avatar__file:hover + .btn-fill {
+  cursor: pointer;
+  background: #35860E;
+  border-color: #35860E;
 }
 .drag-frame-inner .upload-button .btn {
   height: 30px;

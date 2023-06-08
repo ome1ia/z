@@ -539,6 +539,13 @@
             
             @include center-position;
             z-index: 2;
+            cursor: pointer;
+
+            &:hover + .btn-fill {
+                cursor: pointer;
+                background: $green_hov;
+                border-color: $green_hov;
+            }
         }
         .btn {
             height: 30px;
