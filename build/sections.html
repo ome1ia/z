@@ -638,11 +638,9 @@
                         <a href="#"><span>Консервы</span></a>
                         <a href="#"><span>Лечебный корм</span></a>
                         <a href="#"><span>Заменители молока</span></a>
+                        <a href="#"><span>Сухой корм</span></a>
+                        <a href="#"><span>Влажный корм</span></a>
                         <button class="js-more more">Ещё 3 категории</button>
-                        <div class="js-more-items sections-item__more-item">
-                            <a href="#"><span>Сухой корм</span></a>
-                            <a href="#"><span>Влажный корм</span></a>
-                        </div>
                     </div>
                 </div>
 
@@ -721,11 +719,9 @@
                         <a href="#"><span>Пеленки</span></a>
                         <a href="#"><span>Средства для уборки</span></a>
                         <a href="#"><span>Бассейны</span></a>
+                        <a href="#"><span>Сухой корм</span></a>
+                        <a href="#"><span>Влажный корм</span></a>
                         <button class="js-more more">Ещё 3 категории</button>
-                        <div class="js-more-items sections-item__more-item">
-                            <a href="#"><span>Сухой корм</span></a>
-                            <a href="#"><span>Влажный корм</span></a>
-                        </div>
                     </div>
                 </div>
 
@@ -734,12 +730,31 @@
     </div>
 </div>
 <script>
-    $(document).ready(function(){
-        $('.js-more').one('click', function(){
-            $(this).next().addClass('--is-shown');
-            $(this).hide();
-        })
+    // $(document).ready(function(){
+    //     $('.js-more').one('click', function(){
+    //         $(this).next().addClass('--is-shown');
+    //         $(this).hide();
+    //     })
+    // });
+    $(document).ready(function() {
+    /**
+     * Развернуть/свернуть подкатегории
+     */
+    $('.js-more').on('click tap', function() {
+        if (!$(this).data('status')) {
+            $(this).parent().addClass('--is-open');
+            const moreHTML = $(this).find('span').html();
+            $(this).data('text', moreHTML);
+            $(this).html('Свернуть');
+            $(this).data('status', true);
+        } else {
+            $(this).parent().removeClass('--is-open');
+            const moreHTML = $(this).data('text');
+            $(this).html(moreHTML);
+            $(this).data('status', false);
+        }
     });
+});
 </script>
 
 </section>

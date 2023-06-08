@@ -4077,15 +4077,21 @@ h3.shop-list__title {
 }
 
 .sections-item__childs a {
-  display: block;
+  display: none;
   padding: 3px 0;
   color: #101829;
+}
+.sections-item__childs a:nth-child(-n+5) {
+  display: block;
 }
 .sections-item__childs a span {
   text-decoration: underline;
 }
 .sections-item__childs a:hover {
   color: #57C224;
+}
+.sections-item__childs.--is-open a {
+  display: block;
 }
 
 .sections-item__more-item {

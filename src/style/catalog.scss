@@ -531,15 +531,22 @@
 }
 .sections-item__childs{
     a{
-        display: block;
+        display: none;
         padding: 3px 0;
         color: $text_dark;
+
+        &:nth-child(-n + 5) {
+            display: block;
+        }
         span{
             text-decoration: underline;
         }
         &:hover{
             color: $green;
         }
+    }
+    &.--is-open a {
+        display: block;
     }
 }
 .sections-item__more-item {
