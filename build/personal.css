@@ -3104,21 +3104,21 @@
   position: absolute;
 }
 
-.basket-empty {
+.basket-empty.--page {
   display: -ms-flexbox;
   display: flex;
   -webkit-column-gap: 60px;
           column-gap: 60px;
   padding-top: 50px;
 }
-.basket-empty__content {
+.basket-empty.--page .basket-empty__content {
   width: 50%;
   max-width: 540px;
   padding-left: 140px;
   text-align: center;
   margin: auto 0 auto auto;
 }
-.basket-empty__title {
+.basket-empty.--page .basket-empty__title {
   margin-bottom: 1em;
   font-family: Ubuntu, Arial, Helvetica, sans-serif;
   font-size: 30px;
@@ -3126,23 +3126,23 @@
   line-height: 1.1;
   color: #000;
 }
-.basket-empty__text {
+.basket-empty.--page .basket-empty__text {
   margin: 0 auto 2em;
   font-size: 16px;
   line-height: 1.25em;
 }
-.basket-empty__text--marked {
+.basket-empty.--page .basket-empty__text--marked {
   display: block;
   margin-bottom: 1em;
   color: #a72755;
 }
-.basket-empty__button {
+.basket-empty.--page .basket-empty__button {
   width: 90%;
   pading: 15px 22px;
   font-weight: 700;
   font-size: 16px;
 }
-.basket-empty__image {
+.basket-empty.--page .basket-empty__image {
   width: 50%;
   max-width: 540px;
   margin: auto auto auto 0;
@@ -3404,12 +3404,12 @@
     padding: 15px 30px;
     max-width: 450px;
   }
-  .basket-empty {
+  .basket-empty.--page {
     -webkit-column-gap: 40px;
             column-gap: 40px;
     padding-top: 40px;
   }
-  .basket-empty__content {
+  .basket-empty.--page .basket-empty__content {
     padding-left: 40px;
   }
 }
@@ -3953,20 +3953,20 @@
   .bonus-view, .bonus-buttons {
     margin-bottom: 20px;
   }
-  .basket-empty {
+  .basket-empty.--page {
     -ms-flex-direction: column;
         flex-direction: column;
   }
-  .basket-empty__content {
+  .basket-empty.--page .basket-empty__content {
     margin: 0 auto;
     width: 100%;
     padding-left: 0;
   }
-  .basket-empty__title {
+  .basket-empty.--page .basket-empty__title {
     margin-top: 56px;
     margin-bottom: 1em;
   }
-  .basket-empty__image {
+  .basket-empty.--page .basket-empty__image {
     -ms-flex-order: -1;
         order: -1;
     width: 100%;
