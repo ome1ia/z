@@ -116,8 +116,15 @@ $(document).ready(function () {
     });
 
 
-    $('.js-personal').on('click', function () {
+    $('.js-personal').on('click', function (evt) {
         $(this).find('.top-personal').toggleClass('is_active');
+    });
+
+    $('.js-personal-mobile').on('click', function (evt) {
+        // для больших экранов дизейблим для показа выпадающего меню
+        if(window.innerWidth >= 750) {
+            evt.preventDefault();
+        }
     });
     
 

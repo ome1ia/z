@@ -1136,6 +1136,12 @@ article ol {
   line-height: 1;
 }
 
+.item-title.--text,
+.item-title.--text:hover {
+  color: #101829;
+  cursor: default;
+}
+
 .top-personal {
   position: absolute;
   top: calc(100% + 10px);
