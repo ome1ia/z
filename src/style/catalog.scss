@@ -250,6 +250,25 @@
         cursor: pointer;
     }
 }
+.color-variant {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 66px;
+    height: 66px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 2px solid $grey_border;
+    cursor: pointer;
+    text-align: center;
+    cursor: pointer;
+
+    &.--current {
+        border: 2px solid $green;
+        cursor: default;
+    }
+}
 .offers-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;

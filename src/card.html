@@ -100,16 +100,19 @@
                     </div>
                     <div class="offers-colors flex">
                         <div class="offers-color_item">
-                            <input id="prod_0_color_0_0" type="radio" name="color_0" value="#49B900" checked="checked">
-                            <label for="prod_0_color_0_0" class="color-value" style="background-color: #49B900"></label>
+                            <a href="./card.html" class="color-variant --current">
+                                <img src="img/test/card/1.png" alt="Сухой диетический корм для собак Purina Pro Plan Veterinary diets EN" class="" />
+                            </a>
                         </div>
                         <div class="offers-color_item">
-                            <input id="prod_0_color_0_1" type="radio" name="color_0" value="#E14927">
-                            <label for="prod_0_color_0_1" class="color-value" style="background-color: #E14927"></label>
+                            <a href="./card.html" class="color-variant">
+                                <img src="img/test/card/2.png" alt="Сухой диетический корм для собак Purina Pro Plan Veterinary diets EN" class="" />
+                            </a>
                         </div>
                         <div class="offers-color_item">
-                            <input id="prod_0_color_0_2" type="radio" name="color_0" value="#C727E1">
-                            <label for="prod_0_color_0_2" class="color-value" style="background-color: #C727E1"></label>
+                            <a href="./card.html" class="color-variant">
+                                <img src="img/test/card/3.png" alt="Сухой диетический корм для собак Purina Pro Plan Veterinary diets EN" class="" />
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -768,54 +771,57 @@
             }
         });
         
-        var prodThumbs = new Swiper(".product-thumbs", {
-            slidesPerView: 4,
-            watchOverflow: true,
-            watchSlidesVisibility: true,
-            watchSlidesProgress: true,
-            direction: 'vertical',
-            spaceBetween: 35,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            breakpoints: {
-                0 : {
-                    direction: 'horizontal',
-                    spaceBetween: 15,
+        if( $(".product-thumbs") && $(".product-thumbs").find('.swiper-wrapper').length ) {
+            var prodThumbs = new Swiper(".product-thumbs", {
+                slidesPerView: 4,
+                watchOverflow: true,
+                watchSlidesVisibility: true,
+                watchSlidesProgress: true,
+                direction: 'vertical',
+                spaceBetween: 35,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
                 },
-                1141: {
-                    direction: 'vertical',
-                },  
-            }
-        });
+                breakpoints: {
+                    0 : {
+                        direction: 'horizontal',
+                        spaceBetween: 15,
+                    },
+                    1141: {
+                        direction: 'vertical',
+                    },  
+                }
+            });
 
-        var prodMain = new Swiper(".product-main", {
-            watchOverflow: true,
-            spaceBetween: 30,
-            watchSlidesVisibility: true,
-            watchSlidesProgress: true,
-            preventInteractionOnTransition: true,
-            effect: 'fade',
-            pagination: {
-                el: '.swiper-pagination',
-                type: 'bullets',
-            },
-            fadeEffect: {
-                crossFade: true
-            },
-            thumbs: {
-                swiper: prodThumbs
-            }
-        });
+            var prodMain = new Swiper(".product-main", {
+                watchOverflow: true,
+                spaceBetween: 30,
+                watchSlidesVisibility: true,
+                watchSlidesProgress: true,
+                preventInteractionOnTransition: true,
+                effect: 'fade',
+                pagination: {
+                    el: '.swiper-pagination',
+                    type: 'bullets',
+                },
+                fadeEffect: {
+                    crossFade: true
+                },
+                thumbs: {
+                    swiper: prodThumbs
+                }
+            });
 
-        prodMain.on('slideChangeTransitionStart', function () {
-            prodThumbs.slideTo(prodMain.activeIndex);
-        });
+            prodMain.on('slideChangeTransitionStart', function () {
+                prodThumbs.slideTo(prodMain.activeIndex);
+            });
 
-        prodThumbs.on('transitionStart', function () {
-            prodMain.slideTo(prodThumbs.activeIndex);
-        });
+            prodThumbs.on('transitionStart', function () {
+                prodMain.slideTo(prodThumbs.activeIndex);
+            });
+        }
+
 
     });
 

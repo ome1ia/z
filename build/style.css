@@ -3781,6 +3781,28 @@ h3.shop-list__title {
   cursor: pointer;
 }
 
+.color-variant {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 66px;
+  height: 66px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 2px solid #A9B5CF;
+  cursor: pointer;
+  text-align: center;
+  cursor: pointer;
+}
+.color-variant:hover {
+  border-color: #57c224;
+}
+.color-variant.--current {
+  border: 2px solid #57C224;
+  cursor: default;
+}
+
 .offers-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
