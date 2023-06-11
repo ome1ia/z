@@ -208,10 +208,24 @@
                                 <svg width="26" height="24"><use href="sprite/sprite.svg#heart-full"></use></svg> 
                             </span>
                         </div>
-                        <div class="buy_cell">
-                            <span class="but_cell__btn __shared" title="Поделиться">
+                        <div class="buy_cell --share">
+                            <span class="js-share but_cell__btn __shared" title="Поделиться">
                                 <svg width="30" height="25"><use href="sprite/sprite.svg#personal-out"></use></svg>
                             </span>
+                            <div class="share-modal" style="display: none;">
+                                <button type="button" class="js-copyUrl share-modal__link">
+                                    <svg width="28" height="20" class="share-modal__icon"><use href="sprite/sprite.svg#share_copy"></use></svg> 
+                                    <span class="share-modal__text">Скопировать ссылку</span>
+                                </button>
+                                <a href="#" class="js-shareTg share-modal__link">
+                                    <svg width="22" height="22" class="share-modal__icon"><use href="sprite/sprite.svg#share_tg"></use></svg> 
+                                    <span class="share-modal__text">Поделиться в Телеграмм</span>
+                                </a>
+                                <a href="#" class="js-shareWhatsApp share-modal__link" data-action="share/whatsapp/share">
+                                    <svg width="24" height="24" class="share-modal__icon"><use href="sprite/sprite.svg#share_whatsapp"></use></svg> 
+                                    <span class="share-modal__text">Поделиться в What’s App</span>
+                                </a>
+                            </div>
                         </div>
                         <div class="buy_cell buy-on-click">
                             <a href="#" class="buy-click">Купить в 1 клик</a>
@@ -822,7 +836,63 @@
             });
         }
 
+        // share modal
+        (function fillShareModal() {
+            const url = window.location;
+            const text = $('title').text();
 
+            $('.js-copyUrl').on('click', function(evt) {
+                const copyLink = $(this);
+                if(navigator.clipboard) {
+                    navigator.clipboard.writeText(url)
+                    .then(function() {
+                        successMessage();
+                    })
+                    .catch(function(err) {
+                        // error
+                    });
+                }
+
+                function successMessage() {
+                    copyLink.addClass('--active')
+                        .find('.share-modal__text').text('Ссылка скопирована');
+                    copyLink.find('.share-modal__icon use').attr('href', 'sprite/sprite.svg#share_copy_success');
+                    
+                    setTimeout(function() {
+                        copyLink.removeClass('--active')
+                            .find('.share-modal__text').text('Скопировать ссылку');
+                        copyLink.find('.share-modal__icon use').attr('href', 'sprite/sprite.svg#share_copy');
+                    }, 5000);
+                }
+            });
+            $(".js-shareTg").prop('href', `https://t.me/share/url?url=${encodeURI(url)}&text=${encodeURI(text)}`);
+            $(".js-shareWhatsApp").prop('href', `whatsapp://send?text=${encodeURI(url)}`);
+
+            $('.js-share').on('click', function(evt) {
+                const buttonShare = $(this);
+                const modal = $('.share-modal');
+                const closeModal = function() {
+                    modal.hide();
+                    buttonShare.removeClass('--active');
+                    $('body').off('click', closeModal);
+                };
+
+                modal.on('click', function(evt) {
+                    evt.stopPropagation();
+                });
+
+                if(modal.css('display') === "none") {
+                    modal.show();
+                    buttonShare.addClass('--active');
+                    $('body').on('click', closeModal);
+                } else {
+                    closeModal();
+                }
+
+                evt.stopPropagation();
+            });
+        }());
+        
     });
 
 </script>

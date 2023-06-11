@@ -3795,9 +3795,6 @@ h3.shop-list__title {
   text-align: center;
   cursor: pointer;
 }
-.color-variant:hover {
-  border-color: #57c224;
-}
 .color-variant.--current {
   border: 2px solid #57C224;
   cursor: default;
@@ -4959,6 +4956,65 @@ h3.shop-list__title {
   text-decoration: underline;
 }
 
+.buy_cell.--share {
+  position: relative;
+}
+
+.share-modal {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  left: 65px;
+  top: 0;
+  padding: 10px 14px 10px 20px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0px 15px 55px rgba(115, 133, 107, 0.55);
+}
+.share-modal:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: -8px;
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.share-modal__link {
+  display: block;
+  position: relative;
+  height: 40px;
+  padding-left: 45px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.share-modal__link.--active {
+  cursor: default;
+}
+.share-modal__icon {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -11px;
+  fill: #5f6c8b;
+}
+.share-modal__link:hover .share-modal__icon, .share-modal__link.--active .share-modal__icon {
+  fill: #57C224;
+}
+.share-modal__text {
+  font-size: 13px;
+  line-height: 40px;
+  white-space: nowrap;
+  color: #5f6c8b;
+}
+.share-modal__link:hover .share-modal__text, .share-modal__link.--active .share-modal__text {
+  color: #57C224;
+}
+
 .but_cell__btn {
   width: 50px;
   height: 50px;
@@ -4980,6 +5036,12 @@ h3.shop-list__title {
 .but_cell__btn.__shared svg {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
+}
+.buy_cell.--share:hover .but_cell__btn.__shared, .but_cell__btn.__shared.--active {
+  border-color: #57C224;
+}
+.buy_cell.--share:hover .but_cell__btn.__shared svg, .but_cell__btn.__shared.--active svg {
+  fill: #57C224;
 }
 .but_cell__btn.__favorite svg:last-child {
   fill: #C02356;

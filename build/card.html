@@ -12,32 +12,32 @@
     <!--CSS-->
 
 
-    <link href="fonts/stylesheet.css?v=60ad4b7701fdd3553a3d497a03e055a1" rel="stylesheet" />
-    <link href="libs/fancybox/fancybox.css?v=60ad4b7701fdd3553a3d497a03e055a1" rel="stylesheet" />
-    <link href="libs/select2/select2.min.css?v=60ad4b7701fdd3553a3d497a03e055a1" rel="stylesheet" />
-    <link href="libs/swiper/swiper-bundle.css?v=60ad4b7701fdd3553a3d497a03e055a1" rel="stylesheet" />
-    <link href="libs/normalize.css?v=60ad4b7701fdd3553a3d497a03e055a1" rel="stylesheet" />
-    <link href="libs/ion.rangeSlider/ion.rangeSlider.css?v=60ad4b7701fdd3553a3d497a03e055a1" rel="stylesheet" />
-    <link href="libs/malihu-scrollbar/jquery.mCustomScrollbar.css?v=60ad4b7701fdd3553a3d497a03e055a1" rel="stylesheet" />
-    <link href="libs/datepicker/datepicker.css?v=60ad4b7701fdd3553a3d497a03e055a1" rel="stylesheet" />
+    <link href="fonts/stylesheet.css" rel="stylesheet" />
+    <link href="libs/fancybox/fancybox.css" rel="stylesheet" />
+    <link href="libs/select2/select2.min.css" rel="stylesheet" />
+    <link href="libs/swiper/swiper-bundle.css" rel="stylesheet" />
+    <link href="libs/normalize.css" rel="stylesheet" />
+    <link href="libs/ion.rangeSlider/ion.rangeSlider.css" rel="stylesheet" />
+    <link href="libs/malihu-scrollbar/jquery.mCustomScrollbar.css" rel="stylesheet" />
+    <link href="libs/datepicker/datepicker.css" rel="stylesheet" />
     <!--CSS Корзина, ЛК, Оформление заказа-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.css?v=60ad4b7701fdd3553a3d497a03e055a1">
-    <link href="personal.css?v=60ad4b7701fdd3553a3d497a03e055a1" rel="stylesheet" />
-    <link href="style.css?v=60ad4b7701fdd3553a3d497a03e055a1" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.css">
+    <link href="personal.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
     
     <title>Сами с усами</title>
     <!--JS-->
-    <script src="libs/jquery-3.6.3.min.js?v=60ad4b7701fdd3553a3d497a03e055a1"></script>
-    <script src="libs/fancybox/fancybox.min.js?v=60ad4b7701fdd3553a3d497a03e055a1"></script>
-    <script src="libs/select2/select2.min.js?v=60ad4b7701fdd3553a3d497a03e055a1"></script>
-    <script src="libs/datepicker/datepicker.min.js?v=60ad4b7701fdd3553a3d497a03e055a1"></script>
-    <script src="libs/swiper/swiper-bundle.min.js?v=60ad4b7701fdd3553a3d497a03e055a1"></script>
-    <script src="libs/lazyload.min.js?v=60ad4b7701fdd3553a3d497a03e055a1"></script>
-    <script src="libs/countdown.min.js?v=60ad4b7701fdd3553a3d497a03e055a1"></script>
-    <script src="libs/ion.rangeSlider/ion.rangeSlider.js?v=60ad4b7701fdd3553a3d497a03e055a1"></script>
-    <script src="libs/maskedinput.js?v=60ad4b7701fdd3553a3d497a03e055a1"></script>
-    <script src="libs/malihu-scrollbar/jquery.mCustomScrollbar.min.js?v=60ad4b7701fdd3553a3d497a03e055a1"></script>
-    <script src="js/custom.js?v=60ad4b7701fdd3553a3d497a03e055a1"></script>
+    <script src="libs/jquery-3.6.3.min.js"></script>
+    <script src="libs/fancybox/fancybox.min.js"></script>
+    <script src="libs/select2/select2.min.js"></script>
+    <script src="libs/datepicker/datepicker.min.js"></script>
+    <script src="libs/swiper/swiper-bundle.min.js"></script>
+    <script src="libs/lazyload.min.js"></script>
+    <script src="libs/countdown.min.js"></script>
+    <script src="libs/ion.rangeSlider/ion.rangeSlider.js"></script>
+    <script src="libs/maskedinput.js"></script>
+    <script src="libs/malihu-scrollbar/jquery.mCustomScrollbar.min.js"></script>
+    <script src="js/custom.js"></script>
 </head>
 <body>
     <main>
@@ -766,10 +766,24 @@
                                 <svg width="26" height="24"><use href="sprite/sprite.svg#heart-full"></use></svg> 
                             </span>
                         </div>
-                        <div class="buy_cell">
-                            <span class="but_cell__btn __shared" title="Поделиться">
+                        <div class="buy_cell --share">
+                            <span class="js-share but_cell__btn __shared" title="Поделиться">
                                 <svg width="30" height="25"><use href="sprite/sprite.svg#personal-out"></use></svg>
                             </span>
+                            <div class="share-modal" style="display: none;">
+                                <button type="button" class="js-copyUrl share-modal__link">
+                                    <svg width="28" height="20" class="share-modal__icon"><use href="sprite/sprite.svg#share_copy"></use></svg> 
+                                    <span class="share-modal__text">Скопировать ссылку</span>
+                                </button>
+                                <a href="#" class="js-shareTg share-modal__link">
+                                    <svg width="22" height="22" class="share-modal__icon"><use href="sprite/sprite.svg#share_tg"></use></svg> 
+                                    <span class="share-modal__text">Поделиться в Телеграмм</span>
+                                </a>
+                                <a href="#" class="js-shareWhatsApp share-modal__link" data-action="share/whatsapp/share">
+                                    <svg width="24" height="24" class="share-modal__icon"><use href="sprite/sprite.svg#share_whatsapp"></use></svg> 
+                                    <span class="share-modal__text">Поделиться в What’s App</span>
+                                </a>
+                            </div>
                         </div>
                         <div class="buy_cell buy-on-click">
                             <a href="#" class="buy-click">Купить в 1 клик</a>
@@ -1574,9 +1588,9 @@
                         </div>
                         <div class="available-list" data-target="map">
 
-                            <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=cbcdfe6a-f0c7-4bda-b9eb-28f404cb55d8&v=60ad4b7701fdd3553a3d497a03e055a1"></script>
-                            <script src="assets/shops-list.js?v=60ad4b7701fdd3553a3d497a03e055a1"></script>
-                            <script src="assets/shopsInCard.js?v=60ad4b7701fdd3553a3d497a03e055a1"></script>
+                            <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=cbcdfe6a-f0c7-4bda-b9eb-28f404cb55d8"></script>
+                            <script src="assets/shops-list.js"></script>
+                            <script src="assets/shopsInCard.js"></script>
 
                             <section class="card-shop-list-and-map">
                                 <div class="shop-map-l">
@@ -2540,7 +2554,63 @@
             });
         }
 
+        // share modal
+        (function fillShareModal() {
+            const url = window.location;
+            const text = $('title').text();
 
+            $('.js-copyUrl').on('click', function(evt) {
+                const copyLink = $(this);
+                if(navigator.clipboard) {
+                    navigator.clipboard.writeText(url)
+                    .then(function() {
+                        successMessage();
+                    })
+                    .catch(function(err) {
+                        // error
+                    });
+                }
+
+                function successMessage() {
+                    copyLink.addClass('--active')
+                        .find('.share-modal__text').text('Ссылка скопирована');
+                    copyLink.find('.share-modal__icon use').attr('href', 'sprite/sprite.svg#share_copy_success');
+                    
+                    setTimeout(function() {
+                        copyLink.removeClass('--active')
+                            .find('.share-modal__text').text('Скопировать ссылку');
+                        copyLink.find('.share-modal__icon use').attr('href', 'sprite/sprite.svg#share_copy');
+                    }, 5000);
+                }
+            });
+            $(".js-shareTg").prop('href', `https://t.me/share/url?url=${encodeURI(url)}&text=${encodeURI(text)}`);
+            $(".js-shareWhatsApp").prop('href', `whatsapp://send?text=${encodeURI(url)}`);
+
+            $('.js-share').on('click', function(evt) {
+                const buttonShare = $(this);
+                const modal = $('.share-modal');
+                const closeModal = function() {
+                    modal.hide();
+                    buttonShare.removeClass('--active');
+                    $('body').off('click', closeModal);
+                };
+
+                modal.on('click', function(evt) {
+                    evt.stopPropagation();
+                });
+
+                if(modal.css('display') === "none") {
+                    modal.show();
+                    buttonShare.addClass('--active');
+                    $('body').on('click', closeModal);
+                } else {
+                    closeModal();
+                }
+
+                evt.stopPropagation();
+            });
+        }());
+        
     });
 
 </script>
