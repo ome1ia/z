@@ -1323,6 +1323,18 @@
     border-radius: 10px;
     background: $white;
     box-shadow: 0px 15px 55px rgb(115 133 107 / 55%);
+
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(30px, 0);
+    transition: opacity 0.25s linear, transform 0.25s linear, -webkit-transform 0.25s linear;
+
+    &.--active {
+        visibility: visible;
+        opacity: 1;
+        transform: translate(0, 0)
+    }
+
     &:before {
         content: '';
         display: block;

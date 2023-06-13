@@ -771,7 +771,7 @@
                             <span class="js-share but_cell__btn __shared" title="Поделиться">
                                 <svg width="30" height="25"><use href="sprite/sprite.svg#personal-out"></use></svg>
                             </span>
-                            <div class="share-modal" style="display: none;">
+                            <div class="share-modal">
                                 <button type="button" class="js-copyUrl share-modal__link">
                                     <svg width="28" height="20" class="share-modal__icon"><use href="sprite/sprite.svg#share_copy"></use></svg> 
                                     <span class="share-modal__text">Скопировать ссылку</span>
@@ -2591,7 +2591,7 @@
                 const buttonShare = $(this);
                 const modal = $('.share-modal');
                 const closeModal = function() {
-                    modal.hide();
+                    modal.removeClass('--active');
                     buttonShare.removeClass('--active');
                     $('body').off('click', closeModal);
                 };
@@ -2600,8 +2600,8 @@
                     evt.stopPropagation();
                 });
 
-                if(modal.css('display') === "none") {
-                    modal.show();
+                if( !modal.hasClass('--active') ) {
+                    modal.addClass('--active');
                     buttonShare.addClass('--active');
                     $('body').on('click', closeModal);
                 } else {

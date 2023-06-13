@@ -4974,6 +4974,17 @@ h3.shop-list__title {
   border-radius: 10px;
   background: #fff;
   box-shadow: 0px 15px 55px rgba(115, 133, 107, 0.55);
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transform: translate(30px, 0);
+          transform: translate(30px, 0);
+  transition: opacity 0.25s linear, transform 0.25s linear, -webkit-transform 0.25s linear;
+}
+.share-modal.--active {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
 }
 .share-modal:before {
   content: "";
