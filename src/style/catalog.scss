@@ -270,7 +270,8 @@
     }
 }
 .offers-grid {
-    display: grid;
+    //display: grid;
+    display: flex;
     grid-template-columns: 1fr 1fr;
     gap: 5px;
     margin-top: 15px;
@@ -280,6 +281,9 @@
     display: block;
     flex-basis: calc(50% - 3px);
     text-align: center;
+    &:only-child {
+        flex-basis: 100%;
+    }
     input {
         position: absolute;
         opacity: 0;
@@ -707,6 +711,9 @@
         display: grid;
         gap: 15px;
         grid-template-columns: 1fr 1fr 1fr 1fr;
+        &.--search-results {
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        }
         .prod-item__offers__title{display: none;}
     }
     &[data-type="line"] {

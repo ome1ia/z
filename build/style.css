@@ -3801,7 +3801,8 @@ h3.shop-list__title {
 }
 
 .offers-grid {
-  display: grid;
+  display: -ms-flexbox;
+  display: flex;
   grid-template-columns: 1fr 1fr;
   gap: 5px;
   margin-top: 15px;
@@ -3813,6 +3814,10 @@ h3.shop-list__title {
   -ms-flex-preferred-size: calc(50% - 3px);
       flex-basis: calc(50% - 3px);
   text-align: center;
+}
+.offers-grid_item:only-child {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
 }
 .offers-grid_item input {
   position: absolute;
@@ -4265,6 +4270,9 @@ h3.shop-list__title {
   display: grid;
   gap: 15px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.catalog-list[data-type=grid].--search-results {
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 .catalog-list[data-type=grid] .prod-item__offers__title {
   display: none;
