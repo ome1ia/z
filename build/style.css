@@ -4831,6 +4831,10 @@ h3.shop-list__title {
   border-right: 1px solid #DFE2E9;
   padding-right: 40px;
 }
+.price-cell.__bonus:last-child {
+  margin-right: 0;
+  border-right: none;
+}
 .price-cell.__sale {
   padding-left: 30px;
 }
