@@ -1290,6 +1290,8 @@ h3.shop-list__title{
 .prod-block__img{
     img{
         display: block;
+        width: 100%;
+        height: auto;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
     }
