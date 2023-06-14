@@ -8424,6 +8424,22 @@ h3.shop-list__title {
     font-size: 14px;
     height: 50px;
   }
+  .form-policy {
+    font-size: 12px;
+  }
+  .modal-fields.--feedback {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    height: 100%;
+  }
+  .form-row.--feedback-submit {
+    -ms-flex-order: 100;
+        order: 100;
+    margin-top: auto;
+    margin-bottom: 0;
+  }
   .mobile-overlay {
     position: fixed;
     background: rgba(16, 24, 41, 0.55);
