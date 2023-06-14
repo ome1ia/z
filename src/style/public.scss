@@ -1288,6 +1288,16 @@ h3.shop-list__title{
     margin-bottom: 23px;
 }
 .prod-block__img{
+    a {
+        color: $text_grey;
+
+        &:hover {
+            color: $green;
+            img {
+                opacity: 0.9;
+            }
+        }
+    }
     img{
         display: block;
         width: 100%;

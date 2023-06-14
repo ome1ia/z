@@ -3429,6 +3429,15 @@ h3.shop-list__title {
   margin-bottom: 23px;
 }
 
+.prod-block__img a {
+  color: #5f6c8b;
+}
+.prod-block__img a:hover {
+  color: #57C224;
+}
+.prod-block__img a:hover img {
+  opacity: 0.9;
+}
 .prod-block__img img {
   display: block;
   width: 100%;
