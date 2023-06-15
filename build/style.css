@@ -3817,11 +3817,13 @@ h3.shop-list__title {
 }
 
 .offers-grid {
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 5px;
   margin-top: 15px;
+}
+.offers-grid.--has-one-child {
+  grid-template-columns: 1fr;
 }
 
 .offers-grid_item {

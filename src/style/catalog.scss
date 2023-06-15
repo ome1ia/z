@@ -274,11 +274,14 @@
     }
 }
 .offers-grid {
-    //display: grid;
-    display: flex;
+    display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 5px;
     margin-top: 15px;
+
+    &.--has-one-child {
+        grid-template-columns: 1fr;
+    }
 }
 .offers-grid_item {
     position: relative;
