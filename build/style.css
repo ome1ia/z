@@ -4119,14 +4119,14 @@ h3.shop-list__title {
   color: #101829;
 }
 
-.sections-item__childs li {
+.sections-item__childs a, .sections-item__childs li {
   display: none;
   padding: 3px 0;
 }
-.sections-item__childs li:nth-child(-n+5) {
+.sections-item__childs a:nth-child(-n+5), .sections-item__childs li:nth-child(-n+5) {
   display: block;
 }
-.sections-item__childs li span {
+.sections-item__childs a span, .sections-item__childs li span {
   text-decoration: underline;
 }
 .sections-item__childs a {
