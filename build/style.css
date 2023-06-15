@@ -4119,21 +4119,23 @@ h3.shop-list__title {
   color: #101829;
 }
 
-.sections-item__childs a {
+.sections-item__childs li {
   display: none;
   padding: 3px 0;
-  color: #101829;
 }
-.sections-item__childs a:nth-child(-n+5) {
+.sections-item__childs li:nth-child(-n+5) {
   display: block;
 }
-.sections-item__childs a span {
+.sections-item__childs li span {
   text-decoration: underline;
+}
+.sections-item__childs a {
+  color: #101829;
 }
 .sections-item__childs a:hover {
   color: #57C224;
 }
-.sections-item__childs.--is-open a {
+.sections-item__childs.--is-open a, .sections-item__childs.--is-open li {
   display: block;
 }
 
@@ -4195,7 +4197,7 @@ h3.shop-list__title {
 .aside-filter__block.mobile-accordeon .afb-inner {
   display: none;
 }
-.aside-filter__block.mobile-accordeon .custom-checkbox.--hidden {
+.aside-filter__block.js-mobile-accordeon .custom-checkbox.--hidden {
   display: none;
 }
 
@@ -6681,7 +6683,7 @@ h3.shop-list__title {
   display: block;
   height: 100%;
   width: 100%;
-  background: url("./img/social_sprite.svg") no-repeat;
+  background: url("./img/scl_sprite.svg") no-repeat;
 }
 .scl_item a.i-yt {
   background-position: 0 0;

@@ -553,10 +553,9 @@
     }
 }
 .sections-item__childs{
-    a{
+    li{
         display: none;
         padding: 3px 0;
-        color: $text_dark;
 
         &:nth-child(-n + 5) {
             display: block;
@@ -564,11 +563,15 @@
         span{
             text-decoration: underline;
         }
+    }
+    a {
+        color: $text_dark;
+
         &:hover{
             color: $green;
         }
     }
-    &.--is-open a {
+    &.--is-open a, &.--is-open li {
         display: block;
     }
 }
@@ -626,6 +629,8 @@
         .afb-inner{
             display: none;
         }
+    }
+    &.js-mobile-accordeon{
         .custom-checkbox.--hidden{
             display: none;
         }
