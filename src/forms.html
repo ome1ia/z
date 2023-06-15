@@ -324,18 +324,18 @@
 <div class="modal modal-sm" id="feedback" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-inner">
         <div class="modal-title --center">Заказать обратный звонок</div>
-        <form action="" class="modal-fields --feedback">
+        <form action="" class="js-validateForm modal-fields --feedback">
             <div class="form-row">
                 <input type="text" name="aaa" placeholder="Имя" />
             </div>
             <div class="form-row">
-                <input type="text" name="bbb" required data-mask placeholder="Ваш номер телефона*" />
+                <input type="text" name="bbb" data-required data-mask placeholder="Ваш номер телефона*" />
             </div>
             <div class="form-row">
                 <textarea name="text" rows="6" placeholder="Сообщение"></textarea>
             </div>
             <div class="form-row --feedback-submit">
-                <button type="js-closeModal submit" class="btn btn-fill r10">Отправить</button>
+                <button type="submit" class="btn btn-fill r10">Отправить</button>
             </div>
             <div class="form-policy">
                 Нажимая кнопку «Отправить», я даю свое согласие на обработку <a target="_blank" href="#">персональных данных</a> и
@@ -349,7 +349,7 @@
 <div class="modal modal-sm" id="feedback2" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-inner">
         <div class="modal-title --center">Обратная связь</div>
-        <form action="" class="modal-fields --feedback">
+        <form action="" class="js-validateForm modal-fields --feedback">
             <div class="form-row">
                 <input type="text" name="aaa" placeholder="Имя" />
             </div>
@@ -357,7 +357,7 @@
                 <input type="text" name="aaa2" placeholder="Фамилия" />
             </div>
             <div class="form-row">
-                <input type="text" name="bbb" required data-mask placeholder="Ваш номер телефона*" />
+                <input type="text" name="bbb" data-required data-mask placeholder="Ваш номер телефона*" />
             </div>
             <div class="form-row">
                 <input type="text" name="mail" placeholder="Эл. почта" />
@@ -367,7 +367,7 @@
                 <textarea name="text" rows="6" placeholder="Сообщение"></textarea>
             </div>
             <div class="form-row --feedback-submit">
-                <button type="submit" class="js-closeModal btn btn-fill r10">Отправить</button>
+                <button type="submit" class="btn btn-fill r10">Отправить</button>
             </div>
             <div class="form-policy">
                 Нажимая кнопку «Отправить», я даю свое согласие на обработку <a target="_blank" href="#">персональных данных</a> и

@@ -376,7 +376,36 @@ $(document).ready(function () {
         form.find('input, textarea').one('change, input', function() {
             button.prop('disabled', false);
         })
-    })
+    });
+
+    $('.js-validateForm').on('submit', function(evt) {
+        let isValid = true;
+        $(this).find('input[data-mask]').each(function(){
+            const checkRegexp = /\+7\(\d{3}\)\s\d{3}-\d{2}-\d{2}/;
+            if( $(this).val() && !checkRegexp.test( $(this).val() ) ) {
+                $(this).addClass('error');
+                $(this).parents('.form-row').find('.js-error').remove();
+                $(this).parents('.form-row').append('<label class="js-error error">Номер телефона заполнен неверно</label>');
+                isValid = false;
+            }
+        });
+        if(!isValid) {
+            // прерываем отправку данных
+            return false;
+        }
+        $(this).find('input[required], input[data-required]').each(function(){
+            if( !$(this).val() ) {
+                $(this).addClass('error');
+                $(this).parents('.form-row').find('.js-error').remove();
+                $(this).parents('.form-row').append('<label class="js-error error">Поле должно быть заполнено</label>');
+                isValid = false;
+            }
+        });
+        if(!isValid) {
+            // прерываем отправку данных
+            evt.preventDefault();
+        }
+    });
 
     //Показ меню каталога
     $body.on('click', '#trigger-cat-menu', function(){
