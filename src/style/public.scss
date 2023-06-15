@@ -1320,10 +1320,14 @@ h3.shop-list__title{
     color: $text_dark;
     display: block;
     margin-bottom: 15px;
-    h3{
+    h3, .h3{
         font-size: 0.9rem;
         font-size: 500;
         margin-bottom: 8px;
+    }
+    .h3 {
+        font-weight: 800;
+        font-family: "Montserrat";
     }
     .date{
         font-size: 12px;

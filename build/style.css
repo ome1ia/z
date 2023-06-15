@@ -3462,10 +3462,14 @@ h3.shop-list__title {
   display: block;
   margin-bottom: 15px;
 }
-.preview-article h3 {
+.preview-article h3, .preview-article .h3 {
   font-size: 0.9rem;
   font-size: 500;
   margin-bottom: 8px;
+}
+.preview-article .h3 {
+  font-weight: 800;
+  font-family: "Montserrat";
 }
 .preview-article .date {
   font-size: 12px;
@@ -4064,10 +4068,13 @@ h3.shop-list__title {
   left: 0;
   z-index: 2;
 }
-.sections-grid__item span.section-text h3 {
+.sections-grid__item span.section-text h3, .sections-grid__item span.section-text .h3 {
   font-size: 1.4rem;
   margin-bottom: 8px;
   font-family: inherit;
+}
+.sections-grid__item span.section-text .h3 {
+  font-weight: 800;
 }
 .sections-grid__item span.section-text .section-elCount {
   font-size: 11px;
