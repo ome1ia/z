@@ -8509,3 +8509,12 @@ h3.shop-list__title {
     z-index: 999999998;
   }
 }
+@media (max-height: 600px) {
+  .modal.mobile-bottom.--bonus {
+    top: 0;
+  }
+  .modal.modal-bg .modal-inner {
+    padding-bottom: 50px;
+    padding-top: 0;
+  }
+}
