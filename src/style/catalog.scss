@@ -264,6 +264,10 @@
     text-align: center;
     cursor: pointer;
 
+    &:hover {
+        border: 2px solid rgba($green, 0.3);
+    }
+
     &.--current {
         border: 2px solid $green;
         cursor: default;
