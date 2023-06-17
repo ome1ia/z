@@ -8522,11 +8522,13 @@ h3.shop-list__title {
   }
 }
 @media (max-height: 600px) {
-  .modal.mobile-bottom.--bonus {
-    top: 0;
+  /*.modal{
+      &.mobile-bottom.--bonus{
+          top: 0;
+      }
   }
   .modal.modal-bg .modal-inner {
-    padding-bottom: 50px;
-    padding-top: 0;
-  }
+      padding-bottom: 50px;
+      padding-top: 0;
+  }*/
 }
