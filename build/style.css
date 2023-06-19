@@ -8504,6 +8504,18 @@ h3.shop-list__title {
     height: 30px;
     border-radius: 50%;
   }
+  body.fancybox-active.show-nav main,
+  body.fancybox-active.show-nav header,
+  body.fancybox-active.show-nav .h-main,
+  body.fancybox-active.show-nav .h-main .box,
+  body.fancybox-active.show-nav .h-main__set,
+  body.fancybox-active.show-nav .h-main__item.fixed_mobile * {
+    -webkit-filter: none !important;
+            filter: none !important;
+  }
+  body.fancybox-active.show-nav .h-main__item.fixed_mobile {
+    z-index: 9999999;
+  }
 }
 @media (min-width: 1024px) {
   .cust-scroll {

@@ -77,11 +77,17 @@ $(document).ready(function () {
 
     $('[data-fancybox]').fancybox({
         touch: false,
-        beforeShow: function(){
-            $body.css('overflow', 'hidden')
+        beforeShow: function(instance, slide){
+            $body.css('overflow', 'hidden');
+            if( slide.src === '#bonus' ) {
+                $body.addClass('show-nav');
+            }
         },
-        afterClose: function () {
-            $body.css('overflow', 'visible')
+        afterClose: function (instance, slide) {
+            $body.css('overflow', 'visible');
+            if( slide.src === '#bonus' ) {
+                $body.removeClass('show-nav');
+            }
         },
 
     });

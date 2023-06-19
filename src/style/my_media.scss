@@ -1643,6 +1643,17 @@
         border-radius: 50%;
     }
 
+    body.fancybox-active.show-nav main,
+    body.fancybox-active.show-nav header,
+    body.fancybox-active.show-nav .h-main,
+    body.fancybox-active.show-nav .h-main .box,
+    body.fancybox-active.show-nav .h-main__set,
+    body.fancybox-active.show-nav .h-main__item.fixed_mobile * {
+        filter: none !important;
+    }
+    body.fancybox-active.show-nav .h-main__item.fixed_mobile {
+        z-index: 9999999;
+    }  
 }
 
 @media (min-width: 1024px){
@@ -1664,7 +1675,6 @@
                 z-index: 999999998;
             }
     }
-    
 }
 
 @media (max-height: 600px){
