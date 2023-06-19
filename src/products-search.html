@@ -1,0 +1,41 @@
+//= template/header.html
+//= template/breadcrumbs.html
+<div class="box">
+    <form action="/catalog/search/" method="get">
+        <div class="top-search__form">
+            <input type="text" name="q" value="товар" placeholder="Искать на Сами с усами" autocomplete="off">
+            <button type="submit"><svg><use href="/local/templates/samizoo/sprite/sprite.svg#search"></use></svg></button>
+        </div>
+    </form>
+    <div class="catalog-main">
+        <div class="catalog-list --search-results" data-type="grid" id="template">
+            //= template/prod-item_1.html
+            //= template/prod-item_2.html
+            //= template/prod-item_3.html
+            //= template/prod-item_1.html
+            //= template/prod-item_2.html
+            //= template/prod-item_1.html
+            //= template/prod-item_2.html
+            //= template/prod-item_3.html
+            //= template/prod-item_1.html
+            //= template/prod-item_2.html
+            //= template/prod-item_2.html
+            //= template/prod-item_1.html
+        </div>
+
+
+        <!--Ничего не найдено-->
+        
+        <div class="c-notFound">
+            <div class="c-notFound__icon">
+                <svg><use href="sprite/sprite.svg#not-found" /></svg>
+            </div>
+            <div class="c-notFound__text">
+                <h3>Ничего не найдено</h3>
+                <p>К сожалению, в нашем каталоге нет товаров, подходящих под ваш запрос.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+//= template/footer.html

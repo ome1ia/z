@@ -4290,6 +4290,9 @@ h3.shop-list__title {
   gap: 15px;
   grid-template-columns: 1fr 1fr 1fr;
 }
+.catalog-list[data-type=card].--search-results {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
 .catalog-list[data-type=card] .prod-item__offers__title {
   display: none;
 }
@@ -7058,6 +7061,12 @@ h3.shop-list__title {
   .catalog-list[data-type=line] .prod-item .prod-item__text {
     width: 320px;
   }
+  .catalog-list[data-type=card].--search-results {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .catalog-list[data-type=grid].--search-results {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
   .time-buy.--inner {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
@@ -7275,6 +7284,12 @@ h3.shop-list__title {
   .catalog-list[data-type=line] .prod-item .prod-item__bottom .item_price-row {
     -ms-flex-pack: end;
         justify-content: flex-end;
+  }
+  .catalog-list[data-type=card].--search-results {
+    grid-template-columns: 1fr 1fr;
+  }
+  .catalog-list[data-type=grid].--search-results {
+    grid-template-columns: 1fr 1fr 1fr;
   }
   .top-element {
     max-width: none;

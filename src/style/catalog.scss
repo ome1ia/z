@@ -719,6 +719,9 @@
         display: grid;
         gap: 15px;
         grid-template-columns: 1fr 1fr 1fr;
+        &.--search-results {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
         .prod-item__offers__title{display: none;}
     }
     &[data-type="grid"] {
