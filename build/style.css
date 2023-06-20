@@ -8509,6 +8509,7 @@ h3.shop-list__title {
   body.fancybox-active.show-nav .h-main,
   body.fancybox-active.show-nav .h-main .box,
   body.fancybox-active.show-nav .h-main__set,
+  body.fancybox-active.show-nav .h-main__item.fixed_mobile,
   body.fancybox-active.show-nav .h-main__item.fixed_mobile * {
     -webkit-filter: none !important;
             filter: none !important;
