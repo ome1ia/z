@@ -295,14 +295,16 @@ $(document).ready(function () {
                     balloon_content += '<h3 class="shop-list__title">' + object.shopName + '</h3>';
                     if (object.subway)
                     balloon_content += '<div class="shop-list__metro">' + object.subway + '</div>';
-
                     balloon_content += '<p class="shop-list__address">' + object.address + '</p>';
                     balloon_content += '<p class="shop-list__phone">' + object.phoneNumber + '</p>';
                     balloon_content += '<p class="shop-list__time">' + object.workingHours + '</p>';
+                    balloon_content += '<p class="shop-list__price">Стоимость услуги: Бесплатно</p>';
 
                     if (object.pickUp) {
                         balloon_content += '<p class="shop-list__pickup">Можно забрать: ' + object.pickUp + '</p>';
                     }
+
+                    balloon_content += '<p class="shop-list__note">Как только заказ поступит в пункт выдачи, вам придет смс - сообщение </p>';
                     balloon_content += '<button type="button" class="btn btn-transp r10 js-balloon-choiceShop" onclick=PickShop(this); id="' + object.shopId + '">Выбрать пункт</button>';
                     balloon_content += '</div>';
 
