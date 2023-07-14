@@ -361,6 +361,11 @@
   line-height: 1.5;
   margin-bottom: 15px;
 }
+.yellow-note.--middle {
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: -0.25px;
+}
 
 .basket-total {
   margin: 18px 0;

@@ -51,12 +51,14 @@
                     <div class="delivery-tabs js-delivery-tabs">
                         <span class="delivery-tab-item active" data-tab="courier">Курьером</span>
                         <span class="delivery-tab-item" data-tab="pickup">Самовывоз</span>
-                        <span class="delivery-tab-item" data-tab="country">Доставка по России</span>
+                        <!--для добавления 3й кнопки нужно разкомментировать-->
+                        <!--span class="delivery-tab-item" data-tab="country">Доставка по России</span-->
                     </div>
                 </div>
 
                 <div data-tab-target="courier" class="active">
                     <div class="b-border">
+                        <div class="yellow-note --middle">В вашем заказе есть крупногабаритный товар. Данный товар можно забрать самовывозом только со склада Сами с Усами или курьерской доставкой Сами с Усами.</div>
                         <div class="order-delivery-trigger" data-modal-delivery="#modal-delivery">
                             <div class="delivery-trigger__inner" >
                                 <!--<span class="delivery-empty">Указать адрес доставки</span>-->
@@ -499,7 +501,7 @@
                 </div>
                 <div class="mdi-header">
                     <span class="mdit-icon"><img src="img/adv-icons/pickup.svg" alt="Icon"></span>
-                    <span class="mdit-title">Самоывоз</span>
+                    <span class="mdit-title">Самовывоз</span>
                 </div>
                 <div class="mdi-text">
                     <p>
