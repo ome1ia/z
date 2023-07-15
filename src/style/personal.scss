@@ -3442,6 +3442,10 @@
         .btn[type="submit"]{width: 100%;}
     }
 
+    .order-pays.pays{
+        justify-content: space-between;
+    }
+
 }
 @media (max-width: 570px){
     .delivery-tab-grid{
