@@ -24,24 +24,24 @@
                         </ul>
                     </div> 
                 </div>
-                <div class="order-auth">
+                <form action="" class="js-softValidateForm order-auth">
                     <div class="form-row">
-                        <input class="js-order-name" type="text" placeholder="Имя*"  name="name"/>
+                        <input class="js-order-name" type="text" placeholder="Имя*"  name="name" data-required />
                     </div>
                     <div class="form-row">
                         <input class="js-order-email" type="text" placeholder="Email" name="email" />
                     </div>
                     <div class="form-row flex-jcsb">
-                        <div class="form-cell __full"><input class="js-order-phone" type="text" placeholder="Ваш номер телефона*" name="phone" data-mask /></div>
+                        <div class="form-cell __full"><input class="js-order-phone" type="text" placeholder="Ваш номер телефона*" name="phone" data-mask data-required /></div>
                     </div>
                     <div class="form-row">
                         <div class="sms-note js-sms-note" style="display: none;">Для подтверждения номера Введите код, отправленный в sms на номер </div>
-                        <button type="button" class="send-code btn btn-fill r10 js-order-get-code">Получить код</button>
+                        <button type="submit" class="send-code btn btn-fill r10 js-order-get-code">Получить код</button>
                     </div>
                     <div class="form-row order-to-auth">
                         <a href="#">Авторизоваться для ускорения оформления заказа</a>
                     </div>
-                </div>
+                </form>
             </div>
 
 

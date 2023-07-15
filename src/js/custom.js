@@ -413,6 +413,34 @@ $(document).ready(function () {
         }
     });
 
+    // soft validation - disable button[type="submit"] if not valid
+    function checkValidate(form) {
+        let isValid = true;
+        form.find('input[data-mask]').each(function(){
+            const checkRegexp = /\+7\(\d{3}\)\s\d{3}-\d{2}-\d{2}/;
+            if( $(this).val() && !checkRegexp.test( $(this).val() ) ) {
+                isValid = false;
+            }
+        });
+        form.find('input[required], input[data-required]').each(function(){
+            if( !$(this).val() ) {
+                isValid = false;
+            }
+        });
+        form.find('button[type="submit"]').prop('disabled', !isValid);
+        return isValid;
+    }
+
+    $('.js-softValidateForm').find('input[data-required]').on('input, change', function() {
+        const form = $(this).parents('.js-softValidateForm');
+        checkValidate(form);
+    });
+
+    $('.js-softValidateForm').each(function() {
+        checkValidate( $(this) );
+    });
+    // soft validation - end
+
     //Показ меню каталога
     $body.on('click', '#trigger-cat-menu', function(){
         $(this).toggleClass('activity');
