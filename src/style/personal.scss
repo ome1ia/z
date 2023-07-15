@@ -3010,6 +3010,13 @@
     .basket-aside {
         padding: 20px 0;
     }
+
+    .code-success-block {
+        position: absolute;
+        right: 40px;
+        width: auto !important;
+        margin-top: -35px;
+    }
 }
 @media (max-width: 750px){
     footer{padding-bottom: 140px;}

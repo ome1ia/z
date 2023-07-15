@@ -24,7 +24,7 @@
                         </ul>
                     </div> 
                 </div>
-                <form action="" class="js-softValidateForm order-auth">
+                <div class="js-softValidateForm order-auth">
                     <div class="form-row">
                         <input class="js-order-name" type="text" placeholder="Имя*"  name="name" data-required />
                     </div>
@@ -41,7 +41,7 @@
                     <div class="form-row order-to-auth">
                         <a href="#">Авторизоваться для ускорения оформления заказа</a>
                     </div>
-                </form>
+                </div>
             </div>
 
 
@@ -718,6 +718,7 @@
             if(codeInpt.val() == code){
                 let succesCode = $('<div/>',{class: 'code-success', text: 'Телефон подтвержден'});
                 $(codeInpt).before(succesCode);
+                $(codeInpt).parent('.form-cell').addClass('code-success-block')
                 $(codeInpt).remove();
                 clearInterval(timerId);
                 btnStart.remove();
