@@ -4010,6 +4010,12 @@
     -ms-flex-pack: justify;
         justify-content: space-between;
   }
+  .bonus-hint__text.--order-block {
+    left: -90px;
+  }
+  .bonus-hint__text.--order-block:after {
+    margin-right: 15px;
+  }
 }
 @media (max-width: 570px) {
   .delivery-tab-grid {
