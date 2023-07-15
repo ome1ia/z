@@ -3634,6 +3634,34 @@
         transform: translateY(0);
         width: calc(100vw - 30px);
     }
+    .order-bonus {
+        margin-bottom: 80px;
+
+        .order-bonus-value {
+            min-width: 150px;
+            padding-bottom: 0;
+        }
+        .apply-bonus,
+        .cancel-bonus {
+            position: absolute;
+            bottom: -80px;
+            width: auto !important;
+            left: 0;
+            right: 0;
+        }
+        .apply-bonus {
+            bottom: -80px;
+        }
+        .cancel-bonus {
+            bottom: -60px;
+        }
+
+        .apply-bonus-note {
+            max-width: 100px;
+            line-height: 1.25;
+            bottom: 5px;
+        }
+    }
     .delivery-leftBlock{
         margin-right: 0;
     }
