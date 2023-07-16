@@ -943,13 +943,12 @@ article ol {
 
 .midd-variant {
   position: absolute;
-  top: -7px;
-  left: 0;
+  left: 8px;
   display: none;
 }
 .midd-variant svg {
-  width: 38px;
-  height: 38px;
+  width: 25px;
+  height: 25px;
   fill: #57C224;
   display: block;
 }
