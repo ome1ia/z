@@ -6643,6 +6643,29 @@ h3.shop-list__title {
   border: none;
 }
 
+.f-subscribe__status {
+  position: relative;
+  padding: 8px 8px 8px 36px;
+  height: 39px;
+  background: #fff;
+  border-radius: 5px;
+  color: #101829;
+  font-size: 13px;
+  line-height: 23px;
+}
+.f-subscribe__status:before {
+  content: "";
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  top: 8px;
+  left: 8px;
+}
+.f-subscribe__status.--success:before {
+  background-color: #57C224;
+}
+
 .f-subscribe__cell:first-child {
   width: 30%;
 }

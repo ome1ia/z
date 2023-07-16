@@ -33,6 +33,29 @@
         border: none;
     }
 }
+.f-subscribe__status {
+    position: relative;
+    padding: 8px 8px 8px 36px;
+    height: 39px;
+    background: $white;
+    border-radius: 5px;
+    color: $text_dark;
+    font-size: 13px;
+    line-height: 23px;
+
+    &:before {
+        content: '';
+        position: absolute;
+        width: 23px;
+        height: 23px;
+        border-radius: 50%;
+        top: 8px;
+        left: 8px;
+    }
+    &.--success:before {
+        background-color: $green;
+    }
+}
 .f-subscribe__cell{
     &:first-child{
         width: 30%;
