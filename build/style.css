@@ -973,6 +973,10 @@ article ol {
   width: 33px;
   height: 33px;
   margin-right: 10px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
 }
 .h-main__item.top-search-button svg {
   fill: none;

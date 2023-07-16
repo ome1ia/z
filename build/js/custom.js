@@ -461,13 +461,21 @@ $(document).ready(function () {
     });
 
     //Показ меню каталога на мобильном
-    $body.on('click', '#mobile-catalog-trigger', function () {
+    function showMobileCatalog() {
         $('body').css('overflow', 'hidden');
         
         $('#catalog-menu-mobile').show();
         setTimeout(function(){
             $('#catalog-1').addClass('current');
         }, 100);
+    }
+    $body.on('click', '#mobile-catalog-trigger', function () {
+        showMobileCatalog();
+    });
+    $body.on('click', '.js-mobileSearchTriger', function () {
+        showMobileCatalog();
+        $('.js-catalogSearch').focus();
+        $('#hideMobleMenu').trigger('click');
     });
 
     $body.on('click', '.js-close-section-menu', function () {
