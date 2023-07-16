@@ -687,3 +687,11 @@ article{
 .break-word {
     word-break: break-word;
 }
+.phone-link {
+    font-size: inherit;
+    color: inherit;
+    text-decoration: none;
+    &:hover {
+        color: inherit;
+    }
+}
