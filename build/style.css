@@ -1558,7 +1558,7 @@ ul.menu ul.dropdown-menu li a {
   content: "";
   position: absolute;
   right: -5px;
-  top: 5px;
+  top: 7px;
   margin: auto;
   width: 5px;
   height: 8px;
@@ -4147,7 +4147,7 @@ h3.shop-list__title {
   display: none;
   padding: 3px 0;
 }
-.sections-item__childs a:nth-child(-n+5), .sections-item__childs li:nth-child(-n+5) {
+.sections-item__childs a:nth-child(-n+2), .sections-item__childs a .child a, .sections-item__childs a .child li, .sections-item__childs li:nth-child(-n+2), .sections-item__childs li .child a, .sections-item__childs li .child li {
   display: block;
 }
 .sections-item__childs a span, .sections-item__childs li span {

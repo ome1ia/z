@@ -566,7 +566,8 @@
         display: none;
         padding: 3px 0;
 
-        &:nth-child(-n + 5) {
+        &:nth-child(-n + 2),
+        & .child a, & .child li {
             display: block;
         }
         span{

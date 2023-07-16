@@ -148,13 +148,19 @@ $(document).ready(function () {
         //$('#trigger-cat-menu').trigger('click');
     });
 
-    $('.js-more-menu').on('click', function() {
-        const menuColumn = $(this).parents('ul');
-        const target = $(this).parents('.catalog-menu__col').find('.js-more-menu-items');
-        
-        menuColumn.append( target.html() );
-        $(this).remove();
-        target.remove();
+    $('.more').on('click tap', function() {
+        if (!$(this).data('status')) {
+            $(this).parent().addClass('--is-open');
+            let moreHTML = $(this).html();
+            $(this).data('text', moreHTML);
+            $(this).html('Свернуть');
+            $(this).data('status', true);
+        } else {
+            $(this).parent().removeClass('--is-open');
+            let moreHTML = $(this).data('text');
+            $(this).html(moreHTML);
+            $(this).data('status', false);
+        }
     });
 
     //Поиск в мобильном меню каталога
