@@ -187,10 +187,12 @@
                                     </script>
                                     <!--//-->
                                 </a>
-                                <a class="top-user-menu__item _item-favorite" href="#"><span class="item-icon"><svg><use href="sprite/sprite.svg#m_fav" /></svg></span><span class="item-title">Избранное</span></a>
-                                <!--Не авторизован
-                                <a class="top-user-menu__item" data-fancybox="#login" href="#"><span class="item-icon"><svg><use href="sprite/sprite.svg#m_user" /></svg></span><span class="item-title">Войти</span></a>
-                                -->
+                                <!--Не авторизован-->
+                                <a href="#log-register" data-fancybox class="top-user-menu__item _item-favorite"><span class="item-icon"><svg><use href="sprite/sprite.svg#m_fav" /></svg></span><span class="item-title">Избранное</span></a>
+                                <a href="#log-register" data-fancybox class="top-user-menu__item _not-auth"><span class="item-icon"><svg><use href="sprite/sprite.svg#m_user" /></svg></span><span class="item-title">Войти</span></a>
+                                
+                                <!--Авторизован
+                                <a class="top-user-menu__item _item-favorite" href="lk-favorite.html"><span class="item-icon"><svg><use href="sprite/sprite.svg#m_fav" /></svg></span><span class="item-title">Избранное</span></a>
                                 <div class="top-user-menu__item _item-user js-personal"><span class="item-icon"><svg><use href="sprite/sprite.svg#m_user" /></svg></span>
                                     <a href="lk-main.html" class="js-personal-mobile item-title --text">Дмитрий</a>
                                     <div class="top-personal">
@@ -208,6 +210,7 @@
                                         </ul>
                                     </div>
                                 </div>
+                                -->
                                 <!--при пустой корзине добавить класс --empty-->
                                 <a class="top-user-menu__item _item-cart" href="basket.html"><span class="item-icon"><svg><use href="sprite/sprite.svg#m_cart" /></svg></span>
                                     <span class="basket-empty">Корзина</span>
@@ -760,7 +763,64 @@
     });
 });
 </script>
+    <div class="modal modal-sm mobile-bottom" id="log-register">
+        <div class="modal-inner">
+            <div class="modal-title --center">Вход или регистрация</div>
+            <div class="modal-fields">
+                <div class="form-row">
+                    <input type="text" name="bbb" placeholder="Телефон" data-mask />
+                </div>
+                <div class="form-row">
+                    <input type="text" name="bbb" placeholder="Email" class="error"/>
+                    <label class="error">Ошибка заполнения</label>
+                </div>
+                <div class="form-row">
+                    <input type="password" name="bbb" placeholder="Пароль" class="pass-dinamic" />
+                </div>
+                <div class="form-row">
+                    <button type="submit" class="btn btn-fill r10">Получить код</button>
+                    <button type="reset" class="btn btn-grey r10">Отменить</button>
+                </div>
+                <div class="form-row --text _center">
+                    Для подтверждения номера Введите код, отправленный в sms на номер
+                    <b>+7 978 701-68-84</b>
+                </div>
 
+                <div class="form-row --text _hint">
+                    <span class="hint-title">Не пришла смс?</span>
+                    <span class="bonus-hint phone-info">
+                        <div class="bonus-hint__pic">?</div>
+                        <div class="bonus-hint__text">
+                            <b>• Нет доступа к старому номеру телефона</b><br>
+                            Если вам нужно ввести код из СМС, но доступа к старому номеру телефона нет, позвоните нам, мы отвяжем ваш старый номер
+                            телефона +7 495 916 94 94
+                            <b>• Не приходит СМС с кодом</b><br>
+                            Проверьте, что:
+                            <ul>
+                                <li>- Ваш телефон включен и находится в зоне приема сети;</li>
+                                <li>- Вы ввели правильный номер телефона или адрес электронной почты.</li>
+                                <li>- Иногда СМС приходит не сразу. Если СМС нет 20 минут, попробуйте получить код еще раз.</li>
+                            </ul>
+                        </div>
+                    </span>
+                </div>
+
+                <div class="m-links">
+                    <a href="#">Зелёная ссылка</a>
+                </div>
+
+                <div class="form-social ob-login">
+                    <p>Войти с помощью:</p>
+                    <ul class="scl flex">
+                        <li class="scl_item"><a class="i-ya" target="_blank" href="#"></a></li>
+                        <li class="scl_item"><a class="i-goo" target="_blank" href="#"></a></li>
+                        <li class="scl_item"><a class="i-vkgr" target="_blank" href="#"></a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
 </section>
 
 <!--*************** Мобильное меню каталога  ******************-->
@@ -1230,7 +1290,6 @@
         <div class="catalog-menu-overlay" id="menu-overlay"></div><!-- ///Овелей для меню каталога-->
         <div class="mobile-overlay" id="mobile-overlay" style="display: none;"></div><!-- ///Овелей для меню каталога-->
     </main>
-
 <!--
     ****************  JS ниже ТОЛЬКО ДЛЯ ДЕМОНСТРАЦИИ  ****************
     Проставление айдишников в инпуты

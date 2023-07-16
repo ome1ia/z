@@ -187,10 +187,12 @@
                                     </script>
                                     <!--//-->
                                 </a>
-                                <a class="top-user-menu__item _item-favorite" href="#"><span class="item-icon"><svg><use href="sprite/sprite.svg#m_fav" /></svg></span><span class="item-title">Избранное</span></a>
-                                <!--Не авторизован
-                                <a class="top-user-menu__item" data-fancybox="#login" href="#"><span class="item-icon"><svg><use href="sprite/sprite.svg#m_user" /></svg></span><span class="item-title">Войти</span></a>
-                                -->
+                                <!--Не авторизован-->
+                                <a href="#log-register" data-fancybox class="top-user-menu__item _item-favorite"><span class="item-icon"><svg><use href="sprite/sprite.svg#m_fav" /></svg></span><span class="item-title">Избранное</span></a>
+                                <a href="#log-register" data-fancybox class="top-user-menu__item _not-auth"><span class="item-icon"><svg><use href="sprite/sprite.svg#m_user" /></svg></span><span class="item-title">Войти</span></a>
+                                
+                                <!--Авторизован
+                                <a class="top-user-menu__item _item-favorite" href="lk-favorite.html"><span class="item-icon"><svg><use href="sprite/sprite.svg#m_fav" /></svg></span><span class="item-title">Избранное</span></a>
                                 <div class="top-user-menu__item _item-user js-personal"><span class="item-icon"><svg><use href="sprite/sprite.svg#m_user" /></svg></span>
                                     <a href="lk-main.html" class="js-personal-mobile item-title --text">Дмитрий</a>
                                     <div class="top-personal">
@@ -208,6 +210,7 @@
                                         </ul>
                                     </div>
                                 </div>
+                                -->
                                 <!--при пустой корзине добавить класс --empty-->
                                 <a class="top-user-menu__item _item-cart" href="basket.html"><span class="item-icon"><svg><use href="sprite/sprite.svg#m_cart" /></svg></span>
                                     <span class="basket-empty">Корзина</span>

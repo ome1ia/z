@@ -7616,6 +7616,10 @@ h3.shop-list__title {
     font-size: 9px;
     width: 65px;
   }
+  .top-user-menu__item._not-auth {
+    -ms-flex-order: 4;
+        order: 4;
+  }
   .top-user-menu__item .item-icon {
     display: block;
     position: static;
