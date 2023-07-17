@@ -6045,6 +6045,15 @@ h3.shop-list__title {
   margin-bottom: 20px;
 }
 
+.auth-error-pict {
+  padding: 20px 0;
+  text-align: center;
+}
+.auth-error-pict img {
+  width: 80px;
+  height: 60px;
+}
+
 .pict-success {
   width: 69px;
   height: 69px;
