@@ -673,11 +673,14 @@ ul.menu ul.dropdown-menu {
         li{
             position: relative;
             &.item-parent{
+                padding-top: 0;
+                padding-bottom: 0;
                 .item-parent-box{
                     display: inline-flex;
                     max-width: 200px;
                     flex-wrap: wrap;
                     position: relative;
+                    text-decoration: none;
                     &>a {
                         display: block;
                         margin-right: 10px;

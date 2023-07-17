@@ -571,7 +571,7 @@
         display: none;
         padding: 3px 0;
 
-        &:nth-child(-n + 2),
+        &:nth-child(-n + 5),
         & .child a, & .child li {
             display: block;
         }

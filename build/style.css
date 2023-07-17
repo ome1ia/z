@@ -1540,6 +1540,10 @@ ul.menu ul.dropdown-menu li a {
 .cmc-parent + ul li {
   position: relative;
 }
+.cmc-parent + ul li.item-parent {
+  padding-top: 0;
+  padding-bottom: 0;
+}
 .cmc-parent + ul li.item-parent .item-parent-box {
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -1547,6 +1551,7 @@ ul.menu ul.dropdown-menu li a {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   position: relative;
+  text-decoration: none;
 }
 .cmc-parent + ul li.item-parent .item-parent-box > a {
   display: block;
@@ -4153,7 +4158,7 @@ h3.shop-list__title {
   display: none;
   padding: 3px 0;
 }
-.sections-item__childs a:nth-child(-n+2), .sections-item__childs a .child a, .sections-item__childs a .child li, .sections-item__childs li:nth-child(-n+2), .sections-item__childs li .child a, .sections-item__childs li .child li {
+.sections-item__childs a:nth-child(-n+5), .sections-item__childs a .child a, .sections-item__childs a .child li, .sections-item__childs li:nth-child(-n+5), .sections-item__childs li .child a, .sections-item__childs li .child li {
   display: block;
 }
 .sections-item__childs a span, .sections-item__childs li span {
