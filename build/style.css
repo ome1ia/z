@@ -3919,6 +3919,9 @@ h3.shop-list__title {
   padding-right: 20px;
   background: #fff;
 }
+.catalog-aside.is_hidden {
+  display: none;
+}
 
 .catalog-aside__top__mobile {
   display: none;

@@ -502,12 +502,12 @@ $(document).ready(function () {
 
     //Скрывание/показ бокового меню разделов
     $body.on('click', '.js-hide-menu', function () {
-        $(this).closest('.catalog-aside').addClass('is_hidden');
-        $(this).closest('.js-wrap-dinamic').removeClass('d-grid');
+        $(this).parents('.catalog-aside').addClass('is_hidden');
+        $(this).parents('.js-wrap-dinamic').removeClass('d-grid');
     });
     $body.on('click', '.js-show-menu', function () {
         $('.catalog-aside').removeClass('is_hidden');
-        $(this).closest('.js-wrap-dinamic').addClass('d-grid');
+        $(this).parents('.js-wrap-dinamic').addClass('d-grid');
     });
 
     //Универсальные табы
