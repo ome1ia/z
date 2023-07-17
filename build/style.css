@@ -1532,6 +1532,14 @@ ul.menu ul.dropdown-menu li a {
   width: 0;
 }
 
+.catalog-menu__col > ul {
+  margin: 0;
+}
+.catalog-menu__col > ul > li {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 .cmc-parent {
   font-weight: 700;
   font-size: 1.05rem;
@@ -1539,10 +1547,6 @@ ul.menu ul.dropdown-menu li a {
 }
 .cmc-parent + ul li {
   position: relative;
-}
-.cmc-parent + ul li.item-parent {
-  padding-top: 0;
-  padding-bottom: 0;
 }
 .cmc-parent + ul li.item-parent .item-parent-box {
   display: -ms-inline-flexbox;

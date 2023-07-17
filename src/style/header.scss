@@ -665,6 +665,15 @@ ul.menu ul.dropdown-menu {
         }
     }
 }
+.catalog-menu__col {
+    & > ul {
+        margin: 0;
+        & > li {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+}
 .cmc-parent{
     font-weight: 700;
     font-size: 1.05rem;
@@ -673,8 +682,6 @@ ul.menu ul.dropdown-menu {
         li{
             position: relative;
             &.item-parent{
-                padding-top: 0;
-                padding-bottom: 0;
                 .item-parent-box{
                     display: inline-flex;
                     max-width: 200px;
