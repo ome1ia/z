@@ -3787,6 +3787,10 @@ h3.shop-list__title {
   position: relative;
   margin-top: 15px;
 }
+.offers-colors.--in-card {
+  grid-template-columns: repeat(5, 66px);
+  gap: 10px;
+}
 
 .offers-color_item {
   position: relative;
@@ -6658,6 +6662,7 @@ h3.shop-list__title {
   color: #101829;
   font-size: 13px;
   line-height: 23px;
+  text-align: left;
 }
 .f-subscribe__status:before {
   content: "";
@@ -7996,6 +8001,13 @@ h3.shop-list__title {
   .cookee-wrapper {
     bottom: 63px;
     z-index: 7;
+  }
+  .offers-colors.--in-card {
+    grid-template-columns: repeat(5, 50px);
+  }
+  .offers-colors.--in-card .color-variant {
+    width: 50px;
+    height: 50px;
   }
 }
 @media (max-width: 600px) {

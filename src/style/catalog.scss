@@ -223,6 +223,11 @@
     align-items: center;
     position: relative;
     margin-top: 15px;
+
+    &.--in-card {
+        grid-template-columns: repeat(5, 66px);
+        gap: 10px;
+    }
 }
 .offers-color_item {
     position: relative;
