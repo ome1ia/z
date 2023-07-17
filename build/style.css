@@ -5959,6 +5959,15 @@ h3.shop-list__title {
   line-height: 1.2;
 }
 
+.delivery-bottom button.btn-fill:disabled {
+  opacity: 0.3;
+}
+.delivery-bottom button.btn-fill:disabled:hover {
+  background: #57C224;
+  border-color: #57C224;
+  cursor: default;
+}
+
 .form-row-singlrselect {
   width: 100%;
 }

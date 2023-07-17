@@ -90,6 +90,17 @@
     }
 }
 
+.delivery-bottom {
+    button.btn-fill:disabled{
+        opacity: 0.3;
+        &:hover{
+            background: $green;
+            border-color: $green;
+            cursor: default ;
+        }
+    }
+}
+
 .form-row-singlrselect{
     width: 100%;
     label{margin-bottom: 0 !important}
