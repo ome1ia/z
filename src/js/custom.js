@@ -462,7 +462,6 @@ $(document).ready(function () {
     });
 
     $body.on('click', '#menu-overlay', function () {
-        $(this).removeClass('active');
         $('#trigger-cat-menu').trigger('click');
     });
 
