@@ -188,8 +188,11 @@
                 <div class="order-block__header">
                     <div class="ob-title">Способы оплаты</div>
                 </div>
+                <div class="">
+                    <a href="#pays" class="js-showBlock btn btn-transp r10 order-block__button-show"><span>Выберите способ оплаты</span></a>
+                </div>
 
-                <div class="order-pays pays flex">
+                <div id="pays" class="order-pays pays flex hide_mobile">
                     <div class="pays-item">
                         <input type="radio" name="pay" value="1" hidden checked id="pay-1" />
                         <label class="pay-item__inner" for="pay-1">
@@ -730,6 +733,14 @@
             }
             
         });
+
+        // показ способов оплаты
+        $('.js-showBlock').on('click', function(evt) {
+            const target = $(this).attr('href');
+            $(target).removeClass('hide_mobile');
+            $(this).hide();
+            evt.preventDefault();
+        })
     });
 
     
