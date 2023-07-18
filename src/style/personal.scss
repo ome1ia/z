@@ -3445,8 +3445,31 @@
         .btn[type="submit"]{width: 100%;}
     }
 
-    .order-pays.pays{
-        justify-content: space-between;
+    .order-pays{
+        &.pays{
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .pays-item{
+            width: calc(50% - 10px);
+            .pay-item__inner:before{
+                content: '';
+                display: block;
+                position: absolute;
+                width: 18px;
+                height: 18px;
+                top: 12px;
+                left: 12px;
+                border-radius: 50%;
+                border: 1px solid #DFE2E9;
+            }
+            input:checked + .pay-item__inner{
+                background-position: 12px 12px;
+            }
+            input:checked + .pay-item__inner:before {
+                display: none;
+            }
+        }
     }
 
     .bonus-hint__text.--order-block {
