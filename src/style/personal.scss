@@ -377,6 +377,9 @@
     .custom-checkbox label:before {
         margin-top: 0;
     }
+    .custom-checkbox label:after {
+        margin-top: 3px;
+    }
 }
 .basket-total-policy {
     color: $gr45;
