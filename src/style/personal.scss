@@ -3020,6 +3020,11 @@
         width: auto !important;
         margin-top: -35px;
     }
+    .delivery-page{
+        .shop-list-and-map__map{
+            padding: 20px 0;
+        }
+    }
 }
 @media (max-width: 750px){
     footer{padding-bottom: 140px;}
