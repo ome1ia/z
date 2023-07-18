@@ -5961,10 +5961,12 @@ h3.shop-list__title {
   line-height: 1.3;
   display: block;
 }
-.form-row button.btn-fill:disabled {
+.form-row button.btn-fill:disabled,
+.form-row button.btn-fill.is_disabled {
   opacity: 0.3;
 }
-.form-row button.btn-fill:disabled:hover {
+.form-row button.btn-fill:disabled:hover,
+.form-row button.btn-fill.is_disabled:hover {
   background: #57C224;
   border-color: #57C224;
   cursor: default;
@@ -5986,10 +5988,12 @@ h3.shop-list__title {
   line-height: 1.2;
 }
 
-.delivery-bottom button.btn-fill:disabled {
+.delivery-bottom button.btn-fill:disabled,
+.delivery-bottom button.btn-fill.is_disabled {
   opacity: 0.3;
 }
-.delivery-bottom button.btn-fill:disabled:hover {
+.delivery-bottom button.btn-fill:disabled:hover,
+.delivery-bottom button.btn-fill.is_disabled:hover {
   background: #57C224;
   border-color: #57C224;
   cursor: default;

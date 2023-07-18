@@ -60,7 +60,8 @@
         line-height: 1.3;
         display: block;
     }
-    button.btn-fill:disabled{
+    button.btn-fill:disabled,
+    button.btn-fill.is_disabled{
         opacity: 0.3;
         &:hover{
             background: $green;
@@ -91,7 +92,8 @@
 }
 
 .delivery-bottom {
-    button.btn-fill:disabled{
+    button.btn-fill:disabled,
+    button.btn-fill.is_disabled{
         opacity: 0.3;
         &:hover{
             background: $green;

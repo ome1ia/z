@@ -433,18 +433,46 @@ $(document).ready(function () {
                 isValid = false;
             }
         });
-        form.find('button[type="submit"]').prop('disabled', !isValid);
+        if(isValid) {
+            form.find('button[type="submit"]').removeClass('is_disabled');
+        } else {
+            form.find('button[type="submit"]').addClass('is_disabled');
+        }
+        //form.find('button[type="submit"]').prop('disabled', !isValid);
         return isValid;
     }
 
     $('.js-softValidateForm').find('input[data-required]').on('input, change', function() {
         const form = $(this).parents('.js-softValidateForm');
         checkValidate(form);
+        $(this).removeClass('error');
+        $(this).parents('.form-row').find('.js-error').remove();
     });
 
     $('.js-softValidateForm').each(function() {
         checkValidate( $(this) );
     });
+    $('.js-softValidateForm button.is_disabled').on('click', function() {
+        let isValid = true;
+        const form = $(this).parents('.js-softValidateForm');
+        form.find('input[data-mask]').each(function(){
+            const checkRegexp = /\+7\(\d{3}\)\s\d{3}-\d{2}-\d{2}/;
+            if( $(this).val() && !checkRegexp.test( $(this).val() ) ) {
+                $(this).addClass('error');
+                $(this).parents('.form-row').find('.js-error').remove();
+                $(this).parents('.form-row').append('<label class="js-error error">Номер телефона заполнен неверно</label>');
+                isValid = false;
+            }
+        });
+        form.find('input[required], input[data-required]').each(function(){
+            if( !$(this).val() ) {
+                $(this).addClass('error');
+                $(this).parents('.form-row').find('.js-error').remove();
+                $(this).parents('.form-row').append('<label class="js-error error">Поле должно быть заполнено</label>');
+                isValid = false;
+            }
+        });
+    })
     // soft validation - end
 
     //Показ меню каталога
