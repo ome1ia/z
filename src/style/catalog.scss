@@ -1027,7 +1027,37 @@
             box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
         }
     }
+
+    // custom select
+    .select2-container--default .select2-selection--single {
+        background: transparent;
+        padding: 0;
+        border: none;
+        height: 10px;
+        line-height: 1.2;
+        color: $green;
+    }
+    .select2-container--default .select2-selection--single .select2-selection__rendered {
+        color: $green;
+        font-size: 12px;
+        line-height: 10px;
+        white-space: nowrap;
+    }
+    .select2-container--default .select2-selection--single .select2-selection__arrow b {
+        border-color: transparent;
+        border-style: solid;
+        border-width: 0;
+        width: 9px;
+        height: 8px;
+        right: 0;
+        top: 2px;
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOSIgaGVpZ2h0PSI5IiB2aWV3Qm94PSIwIDAgOSA5IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cmVjdCB4PSIxIiB5PSIzLjAwMTk1IiB3aWR0aD0iNS42NTg1OSIgaGVpZ2h0PSIxLjQxNDY1IiByeD0iMC43MDczMjMiIHRyYW5zZm9ybT0icm90YXRlKDQ1IDEgMy4wMDE5NSkiIGZpbGw9IiM0MkFCMTAiLz4KPHJlY3QgeD0iOC4wMDE5NSIgeT0iNC4wMDE5NSIgd2lkdGg9IjUuNjU4NTkiIGhlaWdodD0iMS40MTQ2NSIgcng9IjAuNzA3MzIzIiB0cmFuc2Zvcm09InJvdGF0ZSgxMzUgOC4wMDE5NSA0LjAwMTk1KSIgZmlsbD0iIzQyQUIxMCIvPgo8L3N2Zz4K);
+        background-size: contain;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+    }
 }
+
 .prod-detail{
     position: relative;
 }
