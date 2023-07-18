@@ -1271,7 +1271,9 @@
         /////
         
         $('body').on( 'click', '.js-order-get-code',function () {
-            getCode();
+            if( !$(this).hasClass('is_disabled') ) {
+                getCode();
+            }
         });
 
         $('body').on('click', '.js-order-confirm-code', function(){
