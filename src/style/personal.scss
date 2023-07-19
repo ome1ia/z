@@ -1406,6 +1406,39 @@
         .dropdown-fade2white {
             right: 5px !important;
         }
+
+        .info {
+            font-size: 12px;
+
+            .info2 {
+                margin-bottom: 50px;
+
+                p {
+                    margin-bottom: 6px;
+                }
+            }
+
+            p {
+                margin-bottom: 11px;;
+            }
+
+            .title {
+                font-size: 16px;
+                font-weight: 700; 
+            }
+
+            .subtitle {
+                color: $grey_text;
+            }
+
+            .delivery-info-row {
+                display: flex;
+                justify-content: space-between;
+            }
+            .delivery-info-row__value {
+                font-size: 14px;
+            }
+        }
     }
     .search-inner{
         margin-bottom: 20px;

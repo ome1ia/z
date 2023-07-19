@@ -1582,6 +1582,34 @@
 .delivery-page.delivery-and-map .dropdown-fade2white {
   right: 5px !important;
 }
+.delivery-page.delivery-and-map .info {
+  font-size: 12px;
+}
+.delivery-page.delivery-and-map .info .info2 {
+  margin-bottom: 50px;
+}
+.delivery-page.delivery-and-map .info .info2 p {
+  margin-bottom: 6px;
+}
+.delivery-page.delivery-and-map .info p {
+  margin-bottom: 11px;
+}
+.delivery-page.delivery-and-map .info .title {
+  font-size: 16px;
+  font-weight: 700;
+}
+.delivery-page.delivery-and-map .info .subtitle {
+  color: #58657f;
+}
+.delivery-page.delivery-and-map .info .delivery-info-row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+.delivery-page.delivery-and-map .info .delivery-info-row__value {
+  font-size: 14px;
+}
 .delivery-page .search-inner {
   margin-bottom: 20px;
 }
