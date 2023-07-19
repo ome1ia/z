@@ -433,10 +433,12 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    //padding: 15px 0;
-    padding: 6px 0 0;
+    padding: 15px 0;
     border-top: 1px solid #D0D8E9;
     color: $text_dark;
+    &.--catalog-root {
+        padding: 6px 0 0;
+    }
     .tci-icon{
         margin-right: 10px;
         width: 40px;
