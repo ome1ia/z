@@ -792,6 +792,13 @@
   right: 8px;
   background-position: center;
 }
+.order-block .order-block__button-show img {
+  width: auto;
+  height: 30px;
+}
+.order-block .order-block__button-show .pays-item__icon {
+  margin: auto 0;
+}
 
 .b-border {
   border-bottom: 1px solid #DFE2E9;

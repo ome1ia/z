@@ -750,11 +750,11 @@
                 <div class="order-block__header">
                     <div class="ob-title">Способы оплаты</div>
                 </div>
-                <div class="">
-                    <a href="#pays" class="js-showBlock btn btn-transp r10 order-block__button-show"><span>Выберите способ оплаты</span></a>
+                <div>
+                    <a href="#pays" data-fancybox class="js-paysActive btn btn-transp r10 order-block__button-show"><span>Выберите способ оплаты</span></a>
                 </div>
 
-                <div id="pays" class="order-pays pays flex hide_mobile">
+                <div class="order-pays pays flex hide_mobile">
                     <div class="pays-item">
                         <input type="radio" name="pay" value="1" hidden checked id="pay-1" />
                         <label class="pay-item__inner" for="pay-1">
@@ -1094,10 +1094,81 @@
     </div>
 </div>
 
+<div class="modal modal-sm" id="pays">
+    <div class="modal-inner modal-pays">
+        <div class="modal-title --center">
+            <button class="js-closeModal modal-title-back">
+                <svg>
+                    <use href="sprite/sprite.svg#back" />
+                </svg>
+                Назад
+            </button>
+        </div>
+
+        <div class="js-paysModal order-pays --modal pays flex">
+            <div class="pays-item">
+                <input type="radio" name="pay" value="1" hidden id="pay-1-m" />
+                <label class="pay-item__inner" for="pay-1-m">
+                    <div class="pays-item__icon"><img src="img/pays/1.png" alt="1"></div>
+                    <div class="pays-item__text">
+                        Наличными при получении
+                    </div>
+                </label>
+            </div>
+            <div class="pays-item">
+                <input type="radio" name="pay" value="2" hidden id="pay-2-m"/>
+                <label class="pay-item__inner" for="pay-2-m">
+                    <div class="pays-item__icon"><img src="img/pays/2.png" alt="2"></div>
+                    <div class="pays-item__text">
+                        Картой при получении
+                    </div>
+                </label>
+            </div>
+            <div class="pays-item">
+                <input type="radio" name="pay" value="3" hidden id="pay-3-m"/>
+                <label class="pay-item__inner" for="pay-3-m">
+                    <div class="pays-item__icon"><img src="img/pays/3.png" alt="3"></div>
+                    <div class="pays-item__text">
+                        Онлайн оплата
+                    </div>
+                </label>
+            </div>
+            <div class="pays-item">
+                <input type="radio" name="pay" value="4" hidden id="pay-4-m"/>
+                <label class="pay-item__inner" for="pay-4">
+                    <div class="pays-item__icon"><img src="img/pays/4.png-m" alt="4"></div>
+                    <div class="pays-item__text">
+                        SberPay
+                    </div>
+                </label>
+            </div>
+            <div class="pays-item">
+                <input type="radio" name="pay" value="5" hidden id="pay-5-m"/>
+                <label class="pay-item__inner" for="pay-5-m">
+                    <div class="pays-item__icon"><img src="img/pays/5.png" alt="5"></div>
+                    <div class="pays-item__text">
+                        СБП
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div class="order-pays__choose-button">
+            <button type="button" class="js-choosePay btn btn-fill r10" disabled>Выбрать</button>
+        </div>
+    </div>
+</div>
+
 
 <script>
     $(document).ready(function () {
-
+        $('.js-paysModal input').on('change', function() {
+            $('.js-choosePay').prop('disabled', false);
+        });
+        $('.js-choosePay').on('click', function() {
+            const text = $('.js-paysModal input:checked ~ .pay-item__inner').html();
+            $('.js-paysActive').html(text);
+            $.fancybox.close();
+        })
        
         const breakpoint750 = window.matchMedia('(max-width: 750px)');
         const breakpoint420 = window.matchMedia('(max-width: 420px)');
@@ -1297,12 +1368,12 @@
         });
 
         // показ способов оплаты
-        $('.js-showBlock').on('click', function(evt) {
-            const target = $(this).attr('href');
-            $(target).removeClass('hide_mobile');
-            $(this).hide();
-            evt.preventDefault();
-        })
+        // $('.js-showBlock').on('click', function(evt) {
+        //     const target = $(this).attr('href');
+        //     $(target).removeClass('hide_mobile');
+        //     $(this).hide();
+        //     evt.preventDefault();
+        // })
     });
 
     

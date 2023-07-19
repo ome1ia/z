@@ -6131,6 +6131,27 @@ h3.shop-list__title {
   margin-bottom: 30px;
 }
 
+.modal-title-back {
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  vertical-align: middle;
+  color: inherit;
+  text-decoration: none;
+}
+.modal-title-back:hover {
+  color: inherit;
+}
+.modal-title-back svg {
+  width: 27px;
+  height: 15px;
+  margin-right: 10px;
+  fill: #5f6c8b;
+}
+
 .modal-fields label {
   font-size: 12px;
   color: #39445C;
@@ -6193,6 +6214,20 @@ h3.shop-list__title {
 }
 .modal-bottom-buttons .btn {
   width: 154px;
+}
+
+.modal-pays {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+.modal-pays .pays {
+  -ms-flex-positive: 10;
+      flex-grow: 10;
+}
+.modal-pays .btn {
+  width: 100%;
 }
 
 .m-prod-title {
