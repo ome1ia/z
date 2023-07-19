@@ -4014,7 +4014,7 @@ h3.shop-list__title {
       justify-content: flex-start;
   -ms-flex-align: center;
       align-items: center;
-  padding: 15px 0;
+  padding: 6px 0 0;
   border-top: 1px solid #D0D8E9;
   color: #101829;
 }
