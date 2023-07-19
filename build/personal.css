@@ -1610,6 +1610,11 @@
 .delivery-page.delivery-and-map .info .delivery-info-row__value {
   font-size: 14px;
 }
+.delivery-page.delivery-and-map .message {
+  font-style: italic;
+  color: #C02356;
+  margin-bottom: 30px;
+}
 .delivery-page .search-inner {
   margin-bottom: 20px;
 }

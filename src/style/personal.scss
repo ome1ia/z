@@ -1439,6 +1439,12 @@
                 font-size: 14px;
             }
         }
+
+        .message {
+            font-style: italic;
+            color: $pink;
+            margin-bottom: 30px;
+        }
     }
     .search-inner{
         margin-bottom: 20px;
