@@ -1042,6 +1042,9 @@
 .dtg-item-title.--price::before {
   background-position: 0 -87px;
 }
+.dtg-item-title.--box::before {
+  background-position: 0 -122px;
+}
 
 .dtg-item-text {
   font-size: 12px;
