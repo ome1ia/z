@@ -672,6 +672,9 @@ ul.menu ul.dropdown-menu {
             padding-top: 0;
             padding-bottom: 0;
         }
+        & > li > a {
+            line-height: 1.3;
+        }
     }
 }
 .cmc-parent{
@@ -698,7 +701,7 @@ ul.menu ul.dropdown-menu {
                             content: '';
                             position: absolute;
                             right: -5px;
-                            top: 7px;
+                            top: 8px;
                             margin: auto;
                             width: 5px;
                             height: 8px;
