@@ -889,11 +889,19 @@
     font-weight: 700;
     line-height: 1.4;
     margin-bottom: 5px;
+
+    &.--another-company {
+        margin-top: 25px;
+    }
 }
 .delivery-tab-grid{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px 30px;
+}
+.dtg-item.--company-name {
+    grid-column: 1 / 3;
+    margin-top: 20px;
 }
 .dtg-item-title{
     color: $field_bord;
@@ -918,10 +926,22 @@
     &.--schedule::before{background-position: 0 -39px;}
     &.--price::before{background-position: 0 -87px;}
     &.--box::before{background-position: 0 -122px;}
+    &.--company-name {
+        padding-left: 0;
+        display: inline-block;
+
+        &:before {
+            display: none;
+        }
+    }
 }
 .dtg-item-text {
     font-size: 12px;
     line-height: 1.3;
+
+    &.--company-name {
+        display: inline-block;
+    }
 }
 .dtg-item-text-grey{
     font-size: 12px;
@@ -3612,6 +3632,25 @@
 @media (max-width: 570px){
     .delivery-tab-grid{
         display: block;
+    }
+    .dci-title-bold{
+        &.--another-company {
+            margin-top: 0px;
+        }
+    }
+    .dtg-item.--company-name {
+        grid-column: 1 / 3;
+        margin-top: 0px;
+    }
+    .dtg-item-title{
+        &.--company-name {
+            display: block;
+        }
+    }
+    .dtg-item-text {
+        &.--company-name {
+            display: block;
+        }
     }
     .dtg-item{
         margin-bottom: 10px;
