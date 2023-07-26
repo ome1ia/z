@@ -4671,6 +4671,9 @@ h3.shop-list__title {
   background: #fff;
   box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
 }
+.sort-cell .select2-container {
+  width: 170px !important;
+}
 .sort-cell .select2-container--default .select2-selection--single {
   background: transparent;
   padding: 0;

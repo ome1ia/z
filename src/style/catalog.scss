@@ -1032,6 +1032,9 @@
     }
 
     // custom select
+    .select2-container {
+        width: 170px !important;
+    }
     .select2-container--default .select2-selection--single {
         background: transparent;
         padding: 0;
