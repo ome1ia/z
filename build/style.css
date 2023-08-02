@@ -3856,6 +3856,9 @@ h3.shop-list__title {
   gap: 5px;
   margin-top: 15px;
 }
+.prods-carousel .offers-grid {
+  height: 32px;
+}
 .offers-grid.--has-one-child {
   grid-template-columns: 1fr;
 }

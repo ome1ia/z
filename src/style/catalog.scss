@@ -284,6 +284,10 @@
     gap: 5px;
     margin-top: 15px;
 
+    .prods-carousel & {
+        height: 32px;
+    }
+
     &.--has-one-child {
         grid-template-columns: 1fr;
     }
