@@ -5557,6 +5557,12 @@ h3.shop-list__title {
 .delivery-list .card-shop-list__item .table-cell.__address {
   padding-left: 0;
 }
+.delivery-list .card-shop-list__item .table-cell.__address:has(> .metro) {
+  padding-left: 30px;
+}
+.delivery-list .card-shop-list__item .table-cell.__address .metro {
+  margin-left: -40px;
+}
 .delivery-list .card-shop-list__item .table-cell.__button .btn {
   width: 100%;
 }

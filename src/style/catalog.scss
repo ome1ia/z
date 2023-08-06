@@ -1848,6 +1848,14 @@
     .card-shop-list__item{
         .table-cell.__address{
             padding-left: 0;
+
+            &:has(> .metro) {
+                padding-left: 30px;
+            }
+
+            .metro {
+                margin-left: -40px;
+            }
         }
         .table-cell.__button {
             .btn{
