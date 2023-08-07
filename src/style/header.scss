@@ -567,7 +567,8 @@ ul.menu ul.dropdown-menu {
 }
 .main-catalog-menu{
     position: absolute;
-    top: calc(100% - 10px);
+    //top: calc(100% - 10px);
+    top: 100%;
     left: 0;
     width: 100%;
     background: #ffffff;
@@ -582,6 +583,7 @@ ul.menu ul.dropdown-menu {
         transform: translate(0, 0);
         visibility: visible;
         opacity: 1;
+        border-radius: 0 0 20px 20px;
     }
 }
 .catalog-menu-area{
@@ -592,6 +594,12 @@ ul.menu ul.dropdown-menu {
 .catalog-menu-aside{
     background-color: #F8F8F8;
     padding: 20px 0;
+    border-bottom-left-radius: 20px;
+
+    .top-categories {
+        height: calc(100vh - 245px);
+        overflow-y: auto;
+    }
 }
 .catalog-menu-main{
     padding: 40px 30px 20px;
@@ -600,7 +608,9 @@ ul.menu ul.dropdown-menu {
     display: none;
     &.selected{
         display: block;
-        max-height: 79vh;
+        //max-height: 79vh;
+        height: calc(100vh - 280px);
+        max-height: calc(100vh - 280px);
         overflow-y: auto;
     }
 }
