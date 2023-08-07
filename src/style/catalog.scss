@@ -256,7 +256,8 @@
     }
 }
 .color-variant {
-    display: block;
+    display: flex;
+    align-items: center;
     position: relative;
     overflow: hidden;
     box-sizing: border-box;

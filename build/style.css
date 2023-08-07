@@ -3829,7 +3829,10 @@ h3.shop-list__title {
 }
 
 .color-variant {
-  display: block;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
   position: relative;
   overflow: hidden;
   box-sizing: border-box;
