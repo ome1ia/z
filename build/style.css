@@ -50,6 +50,12 @@ textarea {
   color: #101829;
   background-color: #F8F8FA;
 }
+.delivery-form input[type=text],
+.delivery-form input[type=password],
+.delivery-form input[type=email],
+.delivery-form textarea {
+  background-color: #fff;
+}
 input[type=text]::-webkit-input-placeholder, input[type=password]::-webkit-input-placeholder, input[type=email]::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   color: rgb(150, 162, 190);
 }

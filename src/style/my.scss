@@ -43,6 +43,10 @@ textarea {
     color: $text_dark;
     background-color: $field_bg;
 
+    .delivery-form & {
+        background-color: $white;
+    }
+
     &::placeholder {
         color: $field_bord;
     }
