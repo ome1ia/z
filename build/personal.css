@@ -2443,64 +2443,156 @@
 }
 .order-cell .status {
   position: relative;
-  display: inline-block;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  gap: 5px;
   width: 105px;
-  padding-left: 22px;
   padding: 5px;
   border-radius: 4px;
-  white-space: nowrap;
-}
-.order-cell .status::before {
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  content: "";
-  background-image: url(./img/svg/order-sprite.svg);
-  margin-right: 5px;
-  -webkit-transform: translateY(2px);
-          transform: translateY(2px);
+  line-height: 1em;
+  text-align: left;
 }
 .order-cell .status.__new {
   color: #57C224;
   background: rgba(87, 194, 36, 0.1);
 }
-.order-cell .status.__new::before {
-  background-position: -17px 0;
+.order-cell .status.__new svg {
+  fill: #57C224;
 }
 .order-cell .status.__yell {
   color: #AD8701;
   background: #FFF7B0;
 }
-.order-cell .status.__yell::before {
-  background-position: -1px 0;
+.order-cell .status.__yell svg {
+  fill: #AD8701;
 }
 .order-cell .status.__blue {
   color: #1B93C8;
   background: #DDF5FF;
 }
-.order-cell .status.__blue::before {
-  background-position: -33px 0;
+.order-cell .status.__blue svg {
+  fill: #1B93C8;
 }
 .order-cell .status.__red {
   color: #FF3D00;
   background: #FFECE6;
 }
-.order-cell .status.__red::before {
-  background-position: -50px 0;
+.order-cell .status.__red svg {
+  fill: #FF3D00;
 }
 .order-cell .status.__purple {
   color: #8A2986;
   background: #FFDDFE;
 }
-.order-cell .status.__purple::before {
-  background-position: -65px 0;
+.order-cell .status.__purple svg {
+  fill: #8A2986;
 }
 .order-cell .status.__grey {
   color: #5C6B8C;
   background: #E8E8E8;
 }
-.order-cell .status.__grey::before {
-  background-position: -82px 0;
+.order-cell .status.__grey svg {
+  fill: #5C6B8C;
+}
+.order-cell .status.__NC {
+  color: #511;
+  background: #FFC0BC;
+}
+.order-cell .status.__NC svg {
+  fill: #511;
+}
+.order-cell .status.__SD, .order-cell .status.__CS, .order-cell .status.__OD, .order-cell .status.__TO {
+  color: #5C6B8C;
+  background: #F6F6F6;
+}
+.order-cell .status.__P {
+  color: #23510D;
+  background: #DEFECE;
+}
+.order-cell .status.__P svg {
+  fill: #23510D;
+}
+.order-cell .status.__F {
+  color: #004F08;
+  background: #BAF1BF;
+}
+.order-cell .status.__F svg {
+  fill: #004F08;
+}
+.order-cell .status.__R {
+  color: #261063;
+  background: #E5DCFF;
+}
+.order-cell .status.__R svg {
+  fill: #261063;
+}
+.order-cell .status.__C {
+  color: #DA0808;
+  background: #F5D9D9;
+}
+.order-cell .status.__C svg {
+  fill: #DA0808;
+}
+.order-cell .status.__SV {
+  color: #733A06;
+  background: #FDE6D1;
+}
+.order-cell .status.__SV svg {
+  fill: #733A06;
+}
+.order-cell .status.__PE {
+  color: #A9018E;
+  background: #FFE3F7;
+}
+.order-cell .status.__PE svg {
+  fill: #A9018E;
+}
+.order-cell .status.__N {
+  color: #004336;
+  background: #D5F9F2;
+}
+.order-cell .status.__N svg {
+  fill: #004336;
+}
+.order-cell .status.__S {
+  color: #48613C;
+  background: #DFE7CA;
+}
+.order-cell .status.__S svg {
+  fill: #48613C;
+}
+.order-cell .status.__CF {
+  color: #866B0D;
+  background: #FBF6CE;
+}
+.order-cell .status.__CF svg {
+  fill: #866B0D;
+}
+.order-cell .status.__OP {
+  color: #08566F;
+  background: #CCE4F2;
+}
+.order-cell .status.__OP svg {
+  fill: #08566F;
+}
+.order-cell .status.__PO {
+  color: #9C4709;
+  background: #FFDABE;
+}
+.order-cell .status.__PO svg {
+  fill: #9C4709;
+}
+.order-cell .status svg {
+  width: 16px;
+  height: 16px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -ms-flex-positive: 0;
+      flex-grow: 0;
 }
 
 .orderList-item.--hidden {
