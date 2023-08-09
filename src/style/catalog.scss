@@ -404,6 +404,7 @@
         margin: auto;
     }
 }
+
 .back-catalog{
     position: relative;
     display: block;
@@ -992,6 +993,11 @@
         height: 21px;
         @include center-position;
         fill: #39445C;
+    }
+    img {
+        width: 21px;
+        height: 21px;
+        @include center-position;
     }
 }
 

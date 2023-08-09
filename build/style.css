@@ -4648,6 +4648,16 @@ h3.shop-list__title {
   margin: auto;
   fill: #39445C;
 }
+.catalog-mob__filter img {
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
 
 .sort-row {
   -ms-flex-align: center;
