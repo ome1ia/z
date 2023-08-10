@@ -4193,9 +4193,6 @@ h3.shop-list__title {
 .sections-item__childs a:nth-child(-n+5), .sections-item__childs a .child a, .sections-item__childs a .child li, .sections-item__childs li:nth-child(-n+5), .sections-item__childs li .child a, .sections-item__childs li .child li {
   display: block;
 }
-.sections-item__childs a span, .sections-item__childs li span {
-  text-decoration: underline;
-}
 .sections-item__childs a {
   color: #101829;
 }
@@ -7265,6 +7262,9 @@ h3.shop-list__title {
   .sections-grid.--innerPage {
     grid-template-columns: 1fr 1fr;
   }
+  .sections-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
   .prod-detail__tabs.flex {
     display: none;
   }
@@ -8167,6 +8167,10 @@ h3.shop-list__title {
   }
   .section-elCount, .swiper-navigation {
     display: none;
+  }
+  .sections-list {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
   }
   .sections-grid.--frontPage .sections-grid__item {
     padding: 30% 0;

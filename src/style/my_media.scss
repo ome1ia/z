@@ -246,6 +246,9 @@
     .sections-grid.--innerPage {
         grid-template-columns: 1fr 1fr;
     }
+    .sections-list{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
     .prod-detail__tabs.flex{
         display: none;
     }
@@ -1133,7 +1136,10 @@
     .section-elCount, .swiper-navigation{
         display: none;
     }
-
+    .sections-list{
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
     .sections-grid.--frontPage .sections-grid__item {
         padding: 30% 0;
     }

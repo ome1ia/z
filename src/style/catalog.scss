@@ -588,9 +588,6 @@
         & .child a, & .child li {
             display: block;
         }
-        span{
-            text-decoration: underline;
-        }
     }
     a {
         color: $text_dark;
@@ -2183,3 +2180,4 @@
         top: 0;
     }
 }
+
