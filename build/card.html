@@ -12,32 +12,32 @@
     <!--CSS-->
 
 
-    <link href="fonts/stylesheet.css?v=a1d2539910b8b252adfc1a3148347494" rel="stylesheet" />
-    <link href="libs/fancybox/fancybox.css?v=a1d2539910b8b252adfc1a3148347494" rel="stylesheet" />
-    <link href="libs/select2/select2.min.css?v=a1d2539910b8b252adfc1a3148347494" rel="stylesheet" />
-    <link href="libs/swiper/swiper-bundle.css?v=a1d2539910b8b252adfc1a3148347494" rel="stylesheet" />
-    <link href="libs/normalize.css?v=a1d2539910b8b252adfc1a3148347494" rel="stylesheet" />
-    <link href="libs/ion.rangeSlider/ion.rangeSlider.css?v=a1d2539910b8b252adfc1a3148347494" rel="stylesheet" />
-    <link href="libs/malihu-scrollbar/jquery.mCustomScrollbar.css?v=a1d2539910b8b252adfc1a3148347494" rel="stylesheet" />
-    <link href="libs/datepicker/datepicker.css?v=a1d2539910b8b252adfc1a3148347494" rel="stylesheet" />
+    <link href="fonts/stylesheet.css" rel="stylesheet" />
+    <link href="libs/fancybox/fancybox.css" rel="stylesheet" />
+    <link href="libs/select2/select2.min.css" rel="stylesheet" />
+    <link href="libs/swiper/swiper-bundle.css" rel="stylesheet" />
+    <link href="libs/normalize.css" rel="stylesheet" />
+    <link href="libs/ion.rangeSlider/ion.rangeSlider.css" rel="stylesheet" />
+    <link href="libs/malihu-scrollbar/jquery.mCustomScrollbar.css" rel="stylesheet" />
+    <link href="libs/datepicker/datepicker.css" rel="stylesheet" />
     <!--CSS Корзина, ЛК, Оформление заказа-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.css?v=a1d2539910b8b252adfc1a3148347494">
-    <link href="personal.css?v=a1d2539910b8b252adfc1a3148347494" rel="stylesheet" />
-    <link href="style.css?v=a1d2539910b8b252adfc1a3148347494" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.css">
+    <link href="personal.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
     
     <title>Сами с усами</title>
     <!--JS-->
-    <script src="libs/jquery-3.6.3.min.js?v=a1d2539910b8b252adfc1a3148347494"></script>
-    <script src="libs/fancybox/fancybox.min.js?v=a1d2539910b8b252adfc1a3148347494"></script>
-    <script src="libs/select2/select2.min.js?v=a1d2539910b8b252adfc1a3148347494"></script>
-    <script src="libs/datepicker/datepicker.min.js?v=a1d2539910b8b252adfc1a3148347494"></script>
-    <script src="libs/swiper/swiper-bundle.min.js?v=a1d2539910b8b252adfc1a3148347494"></script>
-    <script src="libs/lazyload.min.js?v=a1d2539910b8b252adfc1a3148347494"></script>
-    <script src="libs/countdown.min.js?v=a1d2539910b8b252adfc1a3148347494"></script>
-    <script src="libs/ion.rangeSlider/ion.rangeSlider.js?v=a1d2539910b8b252adfc1a3148347494"></script>
-    <script src="libs/maskedinput.js?v=a1d2539910b8b252adfc1a3148347494"></script>
-    <script src="libs/malihu-scrollbar/jquery.mCustomScrollbar.min.js?v=a1d2539910b8b252adfc1a3148347494"></script>
-    <script src="js/custom.js?v=a1d2539910b8b252adfc1a3148347494"></script>
+    <script src="libs/jquery-3.6.3.min.js"></script>
+    <script src="libs/fancybox/fancybox.min.js"></script>
+    <script src="libs/select2/select2.min.js"></script>
+    <script src="libs/datepicker/datepicker.min.js"></script>
+    <script src="libs/swiper/swiper-bundle.min.js"></script>
+    <script src="libs/lazyload.min.js"></script>
+    <script src="libs/countdown.min.js"></script>
+    <script src="libs/ion.rangeSlider/ion.rangeSlider.js"></script>
+    <script src="libs/maskedinput.js"></script>
+    <script src="libs/malihu-scrollbar/jquery.mCustomScrollbar.min.js"></script>
+    <script src="js/custom.js"></script>
 </head>
 <body>
     <main>
@@ -1353,15 +1353,15 @@
                 <!--Табы-->
                 
                 <div class="product-tabs js-tabs">
-                    <ul class="product-tabs-menu flex js-tabs__caption">
-                        <li class="product-tab__item active" data-tab="1">Описание</li>
-                        <li class="product-tab__item show_mobile" data-tab="2">Характеристики</li>
-                        <li class="product-tab__item" data-tab="3">Состав</li>
-                        <li class="product-tab__item" data-tab="4">Рекомендации по питанию</li>
-                        <li class="product-tab__item" data-tab="5">Наличие в магазинах</li>
+                    <ul class="product-tabs-menu flex js-tabs__caption-target">
+                        <li class="product-tab__item active" data-target="#t1">Описание</li>
+                        <li class="product-tab__item show_mobile" data-target="#t2">Характеристики</li>
+                        <li class="product-tab__item" data-target="#t3">Состав</li>
+                        <li class="product-tab__item" data-target="#t4">Рекомендации по питанию</li>
+                        <li class="product-tab__item" data-target="#t5">Наличие в магазинах</li>
                     </ul>
                 
-                    <div class="product-tab__content with-rightBlock js-tabs__content active js-for-charakteristics">
+                    <div id="t1" class="product-tab__content with-rightBlock js-tabs__content active js-for-charakteristics">
                         <h4>Описание</h4>
                         <div class="description-dinamic">
                             <p>
@@ -1415,16 +1415,37 @@
                         </a>
                     </div>
 
-                    <div class="product-tab__content js-tabs__content js-copy">
+                    <div id="t2" class="product-tab__content js-tabs__content js-copy">
                         <h4>Характеристики</h4>
-                        <ul class="prod-characteristics">
-                            <li><span class="ch-title">Страна производства</span><span class="ch-value">Ирландия</span></li>
-                            <li><span class="ch-title">Упаковка</span><span class="ch-value">Квадратная</span></li>
-                            <li><span class="ch-title">Размер:</span><span class="ch-value">150мм. х 150 мм.</span></li>
-                        </ul>
+                        <div class="description-dinamic">
+                            <ul class="prod-characteristics">
+                                <li><span class="ch-title">Страна производства</span><span class="ch-value">Ирландия</span></li>
+                                <li><span class="ch-title">Упаковка</span><span class="ch-value">Квадратная</span></li>
+                                <li><span class="ch-title">Размер:</span><span class="ch-value">150мм. х 150 мм.</span></li>
+                                <li><span class="ch-title">Страна производства</span><span class="ch-value">Ирландия</span></li>
+                                <li><span class="ch-title">Упаковка</span><span class="ch-value">Квадратная</span></li>
+                                <li><span class="ch-title">Размер:</span><span class="ch-value">150мм. х 150 мм.</span></li>
+                                <li><span class="ch-title">Страна производства</span><span class="ch-value">Ирландия</span></li>
+                                <li><span class="ch-title">Упаковка</span><span class="ch-value">Квадратная</span></li>
+                                <li><span class="ch-title">Размер:</span><span class="ch-value">150мм. х 150 мм.</span></li>
+                                <li><span class="ch-title">Страна производства</span><span class="ch-value">Ирландия</span></li>
+                                <li><span class="ch-title">Упаковка</span><span class="ch-value">Квадратная</span></li>
+                                <li><span class="ch-title">Размер:</span><span class="ch-value">150мм. х 150 мм.</span></li>
+                                <li><span class="ch-title">Страна производства</span><span class="ch-value">Ирландия</span></li>
+                                <li><span class="ch-title">Упаковка</span><span class="ch-value">Квадратная</span></li>
+                                <li><span class="ch-title">Размер:</span><span class="ch-value">150мм. х 150 мм.</span></li>
+                                <li><span class="ch-title">Страна производства</span><span class="ch-value">Ирландия</span></li>
+                                <li><span class="ch-title">Упаковка</span><span class="ch-value">Квадратная</span></li>
+                                <li><span class="ch-title">Размер:</span><span class="ch-value">150мм. х 150 мм.</span></li>
+                            </ul>
+                        </div>
+                        <a href="javascript:void(0);" class="more js-moreText">
+                            <span>Посмотреть подробнее</span>
+                            <span class="hidden">Свернуть</span>
+                        </a>
                     </div>
 
-                    <div class="product-tab__content js-tabs__content">
+                    <div id="t3" class="product-tab__content js-tabs__content">
                         <h4>Состав</h4>
                         <p>
                             Дегидратированные белки животного происхождения (птица), рис, пшеница, животные жиры, изолят растительных
@@ -1447,7 +1468,7 @@
                         </p>
                     </div>
 
-                    <div class="product-tab__content js-tabs__content">
+                    <div id="t4" class="product-tab__content js-tabs__content">
                         <h4>Рекомендации по питанию</h4>
                         Дегидратированные белки животного происхождения (птица), рис, пшеница, животные жиры, изолят растительных
                         белков*,
@@ -1467,7 +1488,7 @@
                         кислоты Омега 3: 10,6 г.*L.I.P.: специально отобранные белки с высокой степенью усвояемости.
                     </div>
 
-                    <div class="product-tab__content full-width js-tabs__content">
+                    <div id="t5" class="product-tab__content full-width js-tabs__content">
                         <div class="header flex">
                             <h4>Наличие в магазинах</h4>
                             <ul class="available-list-choice">
@@ -1619,9 +1640,9 @@
                         </div>
                         <div class="available-list" data-target="map">
 
-                            <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=cbcdfe6a-f0c7-4bda-b9eb-28f404cb55d8&v=a1d2539910b8b252adfc1a3148347494"></script>
-                            <script src="assets/shops-list.js?v=a1d2539910b8b252adfc1a3148347494"></script>
-                            <script src="assets/shopsInCard.js?v=a1d2539910b8b252adfc1a3148347494"></script>
+                            <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=cbcdfe6a-f0c7-4bda-b9eb-28f404cb55d8"></script>
+                            <script src="assets/shops-list.js"></script>
+                            <script src="assets/shopsInCard.js"></script>
 
                             <section class="card-shop-list-and-map">
                                 <div class="shop-map-l">

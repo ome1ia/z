@@ -544,6 +544,14 @@ $(document).ready(function () {
             .closest('div.js-tabs').find('div.js-tabs__content').removeClass('active').eq($(this).index()).addClass('active');
     })
 
+    //Универсальные табы-2
+    $('ul.js-tabs__caption-target').on('click', 'li:not(.active)', function () {
+        const target = $(this).data('target')
+        $(this).addClass('active').siblings().removeClass('active')
+            .closest('div.js-tabs').find('div.js-tabs__content').removeClass('active');
+        $(this).closest('div.js-tabs').find(target).addClass('active');
+    })
+
    
     //header fixed
     var a = document.querySelector('header .h-main'), b = null;

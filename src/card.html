@@ -331,15 +331,15 @@
                 <!--Табы-->
                 
                 <div class="product-tabs js-tabs">
-                    <ul class="product-tabs-menu flex js-tabs__caption">
-                        <li class="product-tab__item active" data-tab="1">Описание</li>
-                        <li class="product-tab__item show_mobile" data-tab="2">Характеристики</li>
-                        <li class="product-tab__item" data-tab="3">Состав</li>
-                        <li class="product-tab__item" data-tab="4">Рекомендации по питанию</li>
-                        <li class="product-tab__item" data-tab="5">Наличие в магазинах</li>
+                    <ul class="product-tabs-menu flex js-tabs__caption-target">
+                        <li class="product-tab__item active" data-target="#t1">Описание</li>
+                        <li class="product-tab__item show_mobile" data-target="#t2">Характеристики</li>
+                        <li class="product-tab__item" data-target="#t3">Состав</li>
+                        <li class="product-tab__item" data-target="#t4">Рекомендации по питанию</li>
+                        <li class="product-tab__item" data-target="#t5">Наличие в магазинах</li>
                     </ul>
                 
-                    <div class="product-tab__content with-rightBlock js-tabs__content active js-for-charakteristics">
+                    <div id="t1" class="product-tab__content with-rightBlock js-tabs__content active js-for-charakteristics">
                         <h4>Описание</h4>
                         <div class="description-dinamic">
                             <p>
@@ -393,16 +393,37 @@
                         </a>
                     </div>
 
-                    <div class="product-tab__content js-tabs__content js-copy">
+                    <div id="t2" class="product-tab__content js-tabs__content js-copy">
                         <h4>Характеристики</h4>
-                        <ul class="prod-characteristics">
-                            <li><span class="ch-title">Страна производства</span><span class="ch-value">Ирландия</span></li>
-                            <li><span class="ch-title">Упаковка</span><span class="ch-value">Квадратная</span></li>
-                            <li><span class="ch-title">Размер:</span><span class="ch-value">150мм. х 150 мм.</span></li>
-                        </ul>
+                        <div class="description-dinamic">
+                            <ul class="prod-characteristics">
+                                <li><span class="ch-title">Страна производства</span><span class="ch-value">Ирландия</span></li>
+                                <li><span class="ch-title">Упаковка</span><span class="ch-value">Квадратная</span></li>
+                                <li><span class="ch-title">Размер:</span><span class="ch-value">150мм. х 150 мм.</span></li>
+                                <li><span class="ch-title">Страна производства</span><span class="ch-value">Ирландия</span></li>
+                                <li><span class="ch-title">Упаковка</span><span class="ch-value">Квадратная</span></li>
+                                <li><span class="ch-title">Размер:</span><span class="ch-value">150мм. х 150 мм.</span></li>
+                                <li><span class="ch-title">Страна производства</span><span class="ch-value">Ирландия</span></li>
+                                <li><span class="ch-title">Упаковка</span><span class="ch-value">Квадратная</span></li>
+                                <li><span class="ch-title">Размер:</span><span class="ch-value">150мм. х 150 мм.</span></li>
+                                <li><span class="ch-title">Страна производства</span><span class="ch-value">Ирландия</span></li>
+                                <li><span class="ch-title">Упаковка</span><span class="ch-value">Квадратная</span></li>
+                                <li><span class="ch-title">Размер:</span><span class="ch-value">150мм. х 150 мм.</span></li>
+                                <li><span class="ch-title">Страна производства</span><span class="ch-value">Ирландия</span></li>
+                                <li><span class="ch-title">Упаковка</span><span class="ch-value">Квадратная</span></li>
+                                <li><span class="ch-title">Размер:</span><span class="ch-value">150мм. х 150 мм.</span></li>
+                                <li><span class="ch-title">Страна производства</span><span class="ch-value">Ирландия</span></li>
+                                <li><span class="ch-title">Упаковка</span><span class="ch-value">Квадратная</span></li>
+                                <li><span class="ch-title">Размер:</span><span class="ch-value">150мм. х 150 мм.</span></li>
+                            </ul>
+                        </div>
+                        <a href="javascript:void(0);" class="more js-moreText">
+                            <span>Посмотреть подробнее</span>
+                            <span class="hidden">Свернуть</span>
+                        </a>
                     </div>
 
-                    <div class="product-tab__content js-tabs__content">
+                    <div id="t3" class="product-tab__content js-tabs__content">
                         <h4>Состав</h4>
                         <p>
                             Дегидратированные белки животного происхождения (птица), рис, пшеница, животные жиры, изолят растительных
@@ -425,7 +446,7 @@
                         </p>
                     </div>
 
-                    <div class="product-tab__content js-tabs__content">
+                    <div id="t4" class="product-tab__content js-tabs__content">
                         <h4>Рекомендации по питанию</h4>
                         Дегидратированные белки животного происхождения (птица), рис, пшеница, животные жиры, изолят растительных
                         белков*,
@@ -445,7 +466,7 @@
                         кислоты Омега 3: 10,6 г.*L.I.P.: специально отобранные белки с высокой степенью усвояемости.
                     </div>
 
-                    <div class="product-tab__content full-width js-tabs__content">
+                    <div id="t5" class="product-tab__content full-width js-tabs__content">
                         <div class="header flex">
                             <h4>Наличие в магазинах</h4>
                             <ul class="available-list-choice">

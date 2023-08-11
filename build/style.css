@@ -4257,6 +4257,7 @@ h3.shop-list__title {
 }
 .aside-filter__block.mobile-accordeon .afb-checkboxes {
   margin-top: 0;
+  max-height: 100%;
 }
 .aside-filter__block.mobile-accordeon .afb-inner {
   display: none;
