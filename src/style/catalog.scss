@@ -1624,12 +1624,18 @@
     height: 80px;
     overflow: hidden;
     margin-bottom: 15px;
+    &.--with-title {
+        height: 110px;
+    }
     &.--full{
         height: auto;
     }
     &+.more span.hidden {
         display: none;
     }
+}
+.for-characteristics {
+    gap: 20px;
 }
 .prod-characteristics{
     max-width: 500px;
@@ -1645,11 +1651,15 @@
         }
     }
 }
+
 .desctop-charakteristics{
-    position: absolute;
+    //position: absolute;
     width: 384px;
-    top: 0;
-    left: calc(100% + 20px);
+    flex-shrink: 0;
+    flex-grow: 0;
+    order: 2;
+    //top: 0;
+    //left: calc(100% + 20px);
 }
 .detail-additionals{
     flex-direction: column;

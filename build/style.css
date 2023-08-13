@@ -5326,11 +5326,18 @@ h3.shop-list__title {
   overflow: hidden;
   margin-bottom: 15px;
 }
+.description-dinamic.--with-title {
+  height: 110px;
+}
 .description-dinamic.--full {
   height: auto;
 }
 .description-dinamic + .more span.hidden {
   display: none;
+}
+
+.for-characteristics {
+  gap: 20px;
 }
 
 .prod-characteristics {
@@ -5351,10 +5358,13 @@ h3.shop-list__title {
 }
 
 .desctop-charakteristics {
-  position: absolute;
   width: 384px;
-  top: 0;
-  left: calc(100% + 20px);
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -ms-flex-positive: 0;
+      flex-grow: 0;
+  -ms-flex-order: 2;
+      order: 2;
 }
 
 .detail-additionals {
