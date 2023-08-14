@@ -779,7 +779,8 @@ article ol {
   margin-bottom: 20px;
 }
 
-.hide {
+.hide,
+.hidden {
   display: none;
 }
 
@@ -5298,6 +5299,9 @@ h3.shop-list__title {
   line-height: 2;
   max-width: 885px;
   position: relative;
+}
+.product-tab__content--wide {
+  max-width: 1305px;
 }
 .product-tab__content h4 {
   margin-bottom: 10px;
