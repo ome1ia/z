@@ -60,3 +60,167 @@ $field_bg: #F8F8FA;
         background-color: rgb(159, 158, 158);
     }
 }
+@mixin status {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border-radius: 4px;
+    line-height: 1em;
+    text-align: left;
+
+    &.__new{
+        color: $green;
+        background: $green_light;
+        svg {
+            fill: $green;
+        }
+    }
+    &.__yell{
+        color: #AD8701;
+        background: #FFF7B0;
+        svg {
+            fill: #AD8701;
+        }
+    }
+    &.__blue{
+        color: #1B93C8;
+        background: #DDF5FF;
+        svg {
+            fill: #1B93C8;
+        }
+    }
+    &.__red{
+        color: #FF3D00;
+        background: #FFECE6;
+        svg {
+            fill: #FF3D00;
+        }
+    }
+    &.__purple{
+        color: #8A2986;
+        background: #FFDDFE;
+        svg {
+            fill: #8A2986;
+        }
+    }
+    &.__grey {
+        color: #5C6B8C;
+        background: #E8E8E8;
+        svg {
+            fill: #5C6B8C;
+        }
+    }
+
+    &.__NC {
+        color: #511;
+        background: #FFC0BC;
+        svg {
+            fill: #511;
+        }
+    }
+
+    &.__SD,
+    &.__CS,
+    &.__OD,
+    &.__TO {
+        color: #5C6B8C;
+        background: #F6F6F6;
+    }
+
+    &.__P {
+        color: #23510D;
+        background: #DEFECE;
+        svg {
+            fill: #23510D;
+        }
+    }
+
+    &.__F {
+        color: #004F08;
+        background: #BAF1BF;
+        svg {
+            fill: #004F08;
+        }
+    }
+
+    &.__R {
+        color: #261063;
+        background: #E5DCFF;
+        svg {
+            fill: #261063;
+        }
+    }
+
+    &.__C {
+        color: #DA0808;
+        background: #F5D9D9;
+        svg {
+            fill: #DA0808;
+        }
+    }
+
+    &.__SV {
+        color: #733A06;
+        background: #FDE6D1;
+        svg {
+            fill: #733A06;
+        }
+    }
+
+    &.__PE {
+        color: #A9018E;
+        background: #FFE3F7;
+        svg {
+            fill: #A9018E;
+        }
+    }
+
+    &.__N {
+        color: #004336;
+        background: #D5F9F2;
+        svg {
+            fill: #004336;
+        }
+    }
+
+    &.__S {
+        color: #48613C;
+        background: #DFE7CA;
+        svg {
+            fill: #48613C;
+        }
+    }
+
+    &.__CF {
+        color: #866B0D;
+        background: #FBF6CE;
+        svg {
+            fill: #866B0D;
+        }
+    }
+
+    &.__OP {
+        color: #08566F;
+        background: #CCE4F2;
+        svg {
+            fill: #08566F;
+        }
+    }
+
+    &.__PO {
+        color: #9C4709;
+        background: #FFDABE;
+        svg {
+            fill: #9C4709;
+        }
+    }
+
+    svg {
+        width: 16px;
+        height: 16px;
+        flex-shrink: 0;
+        flex-grow: 0;
+    }
+}
