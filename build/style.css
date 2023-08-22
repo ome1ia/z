@@ -1457,7 +1457,7 @@ ul.menu ul.dropdown-menu li a {
           transform: translate(0, 0);
   visibility: visible;
   opacity: 1;
-  border-radius: 0 0 20px 20px;
+  border-radius: 10px 10px 20px 20px;
 }
 
 .catalog-menu-area {
@@ -1470,6 +1470,7 @@ ul.menu ul.dropdown-menu li a {
   background-color: #F8F8F8;
   padding: 20px 0;
   border-bottom-left-radius: 20px;
+  border-top-left-radius: 10px;
 }
 .catalog-menu-aside .top-categories {
   height: calc(100vh - 245px);
