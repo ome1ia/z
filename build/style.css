@@ -5676,7 +5676,7 @@ h3.shop-list__title {
   position: absolute;
   background: #fff;
 }
-.m-catalog-menu-page .catalog-aside__top__mobile {
+.m-catalog-menu-page.current .catalog-aside__top__mobile {
   display: -ms-flexbox;
   display: flex;
 }

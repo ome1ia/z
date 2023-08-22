@@ -1945,7 +1945,7 @@
     transition: transform 0.25s ease-out;
     position: absolute;
     background: #fff;
-    .catalog-aside__top__mobile{
+    &.current .catalog-aside__top__mobile{
         display: flex;
     }
     &.--first-screen{
