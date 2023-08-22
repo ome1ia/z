@@ -2242,8 +2242,9 @@
   border-radius: 4px;
   line-height: 1em;
   text-align: left;
-  padding: 3px 5px;
+  padding: 7px 5px;
   width: 111px;
+  text-align: center;
 }
 .order-preview-item .opi-status.__new {
   color: #57C224;

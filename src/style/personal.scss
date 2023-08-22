@@ -1993,8 +1993,9 @@
     .opi-status {
         @include status;
 
-        padding: 3px 5px;
+        padding: 7px 5px;
         width: 111px;
+        text-align: center;
     }
 }
 .pets-list{
