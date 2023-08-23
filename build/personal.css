@@ -344,9 +344,6 @@
 
 .delivery-note {
   color: #C02356;
-  background-color: rgba(192, 35, 86, 0.1);
-  border-radius: 4px;
-  padding: 10px;
   font-size: 12px;
   font-weight: 700;
   line-height: 1.6;
@@ -4027,6 +4024,13 @@
     gap: 0;
     position: relative;
     padding: 15px 15px;
+  }
+  .order-cell .status {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    padding-right: 10px;
+    padding-left: 10px;
+    max-width: 90%;
   }
   .order-cell::before, .obp-cell::before {
     color: #58657f;
