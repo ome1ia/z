@@ -1680,7 +1680,19 @@
     }
 }
 
+#pay_form input[type="submit"] {
+    background: $green;
+    color: #ffffff;
+    border: 1px solid $green;
+    border-radius: 5px;
+    margin-bottom: 36px;
 
+    &:hover{
+        background: $green_hov;
+        border-color: $green_hov;
+        cursor: pointer;
+    }
+}
 
 
 /*************  ЛК  **************/

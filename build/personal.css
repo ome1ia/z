@@ -1862,6 +1862,19 @@
   display: block;
 }
 
+#pay_form input[type=submit] {
+  background: #57C224;
+  color: #ffffff;
+  border: 1px solid #57C224;
+  border-radius: 5px;
+  margin-bottom: 36px;
+}
+#pay_form input[type=submit]:hover {
+  background: #35860E;
+  border-color: #35860E;
+  cursor: pointer;
+}
+
 /*************  ЛК  **************/
 .profile {
   grid-template-columns: 220px 11fr;
