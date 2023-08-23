@@ -1580,8 +1580,8 @@
   top: 7px;
   width: 25px;
 }
-.delivery-page.delivery-and-map .bx-ui-sls-clear {
-  display: none !important;
+.delivery-page.delivery-and-map .dropdown-fade2white {
+  background: transparent !important;
 }
 .delivery-page.delivery-and-map .bx-ui-sls-container {
   height: 40px;
