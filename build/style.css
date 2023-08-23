@@ -5953,6 +5953,9 @@ h3.shop-list__title {
   .description-dinamic.--with-title {
     height: 105px;
   }
+  .description-dinamic.--full {
+    height: auto;
+  }
 }
 .form-row {
   margin-bottom: 25px;
