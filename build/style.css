@@ -1094,6 +1094,8 @@ article ol {
   font-weight: 500;
   font-size: 12px;
   cursor: pointer;
+  border: none;
+  background-color: transparent;
 }
 .top-user-menu__item .item-icon {
   display: block;
@@ -5947,6 +5949,11 @@ h3.shop-list__title {
   top: 0;
 }
 
+@media (max-width: 940px) {
+  .description-dinamic.--with-title {
+    height: 105px;
+  }
+}
 .form-row {
   margin-bottom: 25px;
 }

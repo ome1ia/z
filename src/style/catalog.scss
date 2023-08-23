@@ -2195,3 +2195,10 @@
     }
 }
 
+@media (max-width: 940px){
+    .description-dinamic{
+        &.--with-title {
+            height: 105px;
+        }
+    }
+}
