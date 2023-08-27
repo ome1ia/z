@@ -3977,21 +3977,8 @@ h3.shop-list__title {
 
 .mobile-filter-title {
   position: relative;
-  padding-left: 40px;
   font-weight: 700;
   font-size: 16px;
-}
-.mobile-filter-title::before {
-  display: block;
-  position: absolute;
-  content: "";
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjciIGhlaWdodD0iMTUiIHZpZXdCb3g9IjAgMCAyNyAxNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3QgeD0iMC40MjM4MjgiIHk9IjYuNDUzMTIiIHdpZHRoPSIyNiIgaGVpZ2h0PSIyIiByeD0iMSIgZmlsbD0iIzU4NjU4MCIvPgo8cmVjdCB4PSIxLjQ1MTE3IiB5PSI2LjA2NjQxIiB3aWR0aD0iMTAuNTQ1NyIgaGVpZ2h0PSIyIiByeD0iMSIgdHJhbnNmb3JtPSJyb3RhdGUoNDUgMS40NTExNyA2LjA2NjQxKSIgZmlsbD0iIzU4NjU4MCIvPgo8cmVjdCB3aWR0aD0iMTAuNDk0MiIgaGVpZ2h0PSIxLjk5NzIiIHJ4PSIwLjk5ODU5OCIgdHJhbnNmb3JtPSJtYXRyaXgoMC43MDcxMDcgLTAuNzA3MTA3IC0wLjcwNzEwNyAtMC43MDcxMDcgMS40MTIxMSA4LjgzMjAzKSIgZmlsbD0iIzU4NjU4MCIvPgo8L3N2Zz4K);
-  width: 26px;
-  height: 15px;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto;
 }
 
 .back-catalog {
