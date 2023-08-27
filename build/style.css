@@ -3247,6 +3247,9 @@ h3.shop-list__title {
 .b-card:first-child:hover {
   border-top-color: #FFC700;
 }
+.brands-cards .b-card {
+  overflow: hidden;
+}
 
 .b-card__logo {
   padding: 13%;
