@@ -312,7 +312,8 @@ a{
     text-decoration: none;
     color: $green;
     outline: none;
-    &.more{
+    &.more,
+    &.more-items{
         color: $green;
         font-weight: 500;
     }

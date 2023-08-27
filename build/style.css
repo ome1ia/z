@@ -357,7 +357,7 @@ a {
   color: #57C224;
   outline: none;
 }
-a.more {
+a.more, a.more-items {
   color: #57C224;
   font-weight: 500;
 }
