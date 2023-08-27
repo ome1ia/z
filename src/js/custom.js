@@ -55,11 +55,19 @@ function checkYellowWarning() {
         cookietopWarningBtn.classList.add('__active');
     }
 
-    cookietopWarningBtn.addEventListener('click', function () {
+    cookietopWarningBtn.addEventListener('click', function (evt) {
         localStorage.setItem('topWarning', Date.now());
         cookietopWarningHint.classList.toggle('__active');
         this.classList.toggle('__active');
-    })
+        evt.stopPropagation();
+    });
+    if(window.innerWidth < 1024 && cookietopWarningBtn.classList.contains('__active')) {
+        document.body.addEventListener('click', function () {
+            localStorage.setItem('topWarning', Date.now());
+            cookietopWarningHint.classList.remove('__active');
+            cookietopWarningBtn.classList.remove('__active');
+        }, { once: true });
+    }
 }
 
 
