@@ -2583,7 +2583,7 @@
             }
         }
         .address-item-row{
-            grid-template-columns: 45px auto;
+            grid-template-columns: 45px 1fr;
             align-items: flex-start;
             justify-content: space-between;
         }

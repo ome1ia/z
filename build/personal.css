@@ -3197,7 +3197,7 @@
   color: #101829;
 }
 .address-list.--preview .address-item-row {
-  grid-template-columns: 45px auto;
+  grid-template-columns: 45px 1fr;
   -ms-flex-align: start;
       align-items: flex-start;
   -ms-flex-pack: justify;
