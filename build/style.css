@@ -3177,6 +3177,7 @@ h3.shop-list__title {
   text-decoration: underline;
 }
 .catalog-brand-nav__item a.selected {
+  text-decoration: underline;
   cursor: default;
 }
 
