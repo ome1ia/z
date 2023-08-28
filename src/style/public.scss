@@ -1041,8 +1041,12 @@ h3.shop-list__title{
         padding: 0.2em;
         display: block;
         white-space: nowrap;
+        cursor: pointer;
         &:hover{
             text-decoration: underline;
+        }
+        &.selected {
+            cursor: default;
         }
     }
 }

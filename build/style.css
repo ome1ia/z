@@ -3171,9 +3171,13 @@ h3.shop-list__title {
   padding: 0.2em;
   display: block;
   white-space: nowrap;
+  cursor: pointer;
 }
 .catalog-brand-nav__item a:hover {
   text-decoration: underline;
+}
+.catalog-brand-nav__item a.selected {
+  cursor: default;
 }
 
 .brands-wrapper {
