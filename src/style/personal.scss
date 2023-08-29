@@ -1870,6 +1870,18 @@
         margin-bottom: 20px;
         opacity: 0.6;
     }
+    .empty-tile__icon--bonus {
+        opacity: .9;
+    }
+    .empty-tile__title--bonus {
+        color: $gr45;
+        text-align: center;
+        margin-top: 30px;
+        font-weight: 500;
+        opacity: 1;
+        font-size: 12px;
+        line-height: 1.25;
+    }
 }
 .bonus-card{
     height: calc(100% - 45px);
