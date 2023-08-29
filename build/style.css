@@ -390,6 +390,16 @@ a.back-roundArrow::before {
   margin: auto;
 }
 
+.link {
+  text-decoration: none;
+  color: #57C224;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
 .btn {
   display: inline-block;
   text-align: center;

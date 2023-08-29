@@ -346,6 +346,15 @@ a{
         }
     }
 }
+.link {
+    text-decoration: none;
+    color: $green;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+}
 .btn{
     display: inline-block;
     text-align: center;

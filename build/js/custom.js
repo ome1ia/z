@@ -707,4 +707,8 @@ $(document).ready(function () {
             $(this).text(defTitle)
     });
 
+    $('label a[href="#"]').on('click', function(evt) {
+        evt.preventDefault();
+    });
+
 });
