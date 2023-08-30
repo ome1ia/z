@@ -286,7 +286,7 @@
     border-bottom: 1px solid #DFE2E9;
     padding: 20px 0;
     span{
-        background-image: url(./img/adv-icons/country.svg);
+        background-image: url(../img/adv-icons/country.svg);
         background-repeat: no-repeat;
         background-position: center right;
         background-size: 20px;
@@ -914,7 +914,7 @@
         display: block;
         width: 16px;
         height: 16px;
-        background-image: url(./img/gray_map_sprite.svg);
+        background-image: url(../img/gray_map_sprite.svg);
         background-repeat: no-repeat;
         left: 0;
         top: 0;
@@ -1014,7 +1014,7 @@
     }
 }
 .order-bonus-value{
-    background-image: url(./img/price_bonus.svg);
+    background-image: url(../img/price_bonus.svg);
     background-repeat: no-repeat;
     background-position: left center;
     background-size: 60px;
@@ -1109,7 +1109,7 @@
             width: 26px;
             height: 26px;
             border-radius: 50%;
-            background: url(./img/social_sprite.svg) no-repeat -3px -36px;
+            background: url(../img/social_sprite.svg) no-repeat -3px -36px;
         }
         span{
             font-size: 13px;
