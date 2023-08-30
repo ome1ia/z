@@ -1471,13 +1471,13 @@
   right: 10px;
   z-index: 3;
 }
-.corner-controls:hover .corner-controls__button {
+.corner-controls.is-active .corner-controls__button {
   background: #57C224;
 }
-.corner-controls:hover .corner-controls__button svg {
+.corner-controls.is-active .corner-controls__button svg {
   fill: #ffffff;
 }
-.corner-controls:hover .corner-controls__block {
+.corner-controls.is-active .corner-controls__block {
   visibility: visible;
   -webkit-transform: translateX(0);
           transform: translateX(0);

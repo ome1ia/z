@@ -734,7 +734,7 @@ $(document).ready(function () {
         evt.preventDefault();
     });
 
-        // Три точки в адресе доставки
+    // Три точки в адресе доставки
     $('.corner-controls').on('click', function() {
         if( $(this).hasClass('is-active') ) {
             $(this).removeClass('is-active');
