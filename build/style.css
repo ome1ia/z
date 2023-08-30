@@ -4050,6 +4050,9 @@ h3.shop-list__title {
 .aside-categories__item.--catalog-filter {
   padding: 3px 0;
 }
+.aside-categories__item.--catalog-filter {
+  padding: 3px 0;
+}
 .aside-categories__item .tci-icon {
   margin-right: 10px;
   width: 40px;
