@@ -70,6 +70,13 @@ function checkYellowWarning() {
         cookietopWarningHint.classList.toggle('__active');
         this.classList.toggle('__active');
         evt.stopPropagation();
+
+        if(window.innerWidth < 1024) {
+            document.body.addEventListener('click', function () {
+                cookietopWarningBtn.classList.remove('__active');
+                cookietopWarningHint.classList.remove('__active');
+            }, { once: true });
+        }
     });
 }
 
