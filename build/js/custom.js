@@ -27,6 +27,16 @@ function responseMenu() {
     }
 }
 
+function unResponseMenu() {
+    if( !$('ul.dropdown-menu .item').length ) {
+        return;
+    }
+    console.log($('ul.dropdown-menu').html())
+    $('ul.menu').append( $('ul.dropdown-menu').html() );
+    $('ul.dropdown-menu').empty();
+    $('ul.menu li.dd_menu').hide();
+}
+
 //куки
 function checkCookies() {
     let cookieDate = localStorage.getItem('cookieDate');
@@ -117,6 +127,8 @@ $(document).ready(function () {
     $window.on('resize', function () {
         if($window.width() > 750){
             responseMenu();
+        } else if($window.width() <= 750) {
+            unResponseMenu();
         }
     }).trigger('resize');
 
