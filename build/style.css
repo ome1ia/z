@@ -5669,7 +5669,7 @@ h3.shop-list__title {
   bottom: 0;
   left: 0;
   margin: auto;
-  z-index: 9;
+  z-index: 119;
 }
 
 .m-catalog-menu-page {
@@ -7614,7 +7614,7 @@ h3.shop-list__title {
     position: fixed;
     height: 100%;
     width: 100%;
-    z-index: 99;
+    z-index: 199;
     top: 0;
     left: 0;
     display: none;
