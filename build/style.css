@@ -3829,7 +3829,8 @@ h3.shop-list__title {
   margin-top: 15px;
 }
 .offers-colors.--in-card {
-  grid-template-columns: repeat(5, 66px);
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 10px;
 }
 

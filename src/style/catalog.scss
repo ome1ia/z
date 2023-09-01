@@ -224,7 +224,8 @@
     margin-top: 15px;
 
     &.--in-card {
-        grid-template-columns: repeat(5, 66px);
+        //grid-template-columns: repeat(5, 66px);
+        flex-wrap: wrap;
         gap: 10px;
     }
 }
