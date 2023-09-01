@@ -1729,6 +1729,9 @@ ul.menu ul.dropdown-menu li a {
   margin-bottom: 20px;
 }
 
+.promo__slider {
+  border-radius: 15px;
+}
 .promo__slider .swiper-wrapper .swiper-slide {
   border-radius: 15px;
   overflow: hidden;
