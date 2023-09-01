@@ -1819,6 +1819,13 @@
             }
             
         }
+        &.--lk-address {
+            display: flex;
+            flex-direction: column;
+            .address-list.--preview {
+                margin: auto 0;
+            }
+        }
         .yellow-note {
             padding: 5px 10px;
             line-height: 1.2;

@@ -2023,6 +2023,15 @@
   color: #101829;
   padding: 5px 15px;
 }
+.profile-main-tiles .profile-main-tile.--lk-address {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+.profile-main-tiles .profile-main-tile.--lk-address .address-list.--preview {
+  margin: auto 0;
+}
 .profile-main-tiles .profile-main-tile .yellow-note {
   padding: 5px 10px;
   line-height: 1.2;
