@@ -429,8 +429,11 @@
     padding: 15px 0;
     border-top: 1px solid #D0D8E9;
     color: $text_dark;
-    &.--catalog-root {
-        padding: 6px 0 0;
+//    &.--catalog-root {
+//        padding: 6px 0 0;
+//    }
+    &.--catalog-filter {
+        padding: 3px 0;
     }
     .tci-icon{
         margin-right: 10px;

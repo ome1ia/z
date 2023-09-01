@@ -4044,8 +4044,8 @@ h3.shop-list__title {
   border-top: 1px solid #D0D8E9;
   color: #101829;
 }
-.aside-categories__item.--catalog-root {
-  padding: 6px 0 0;
+.aside-categories__item.--catalog-filter {
+  padding: 3px 0;
 }
 .aside-categories__item .tci-icon {
   margin-right: 10px;
