@@ -1367,6 +1367,7 @@
                     padding-left: 66px;
                     .btn.btn-fill {
                         width: 125px;
+                        flex-shrink: 0;
                     }
                     .btn-transp{
                        margin-left: 40px;

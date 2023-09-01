@@ -8431,6 +8431,8 @@ h3.shop-list__title {
   }
   .catalog-list[data-type=line] .prod-item .prod-item__bottom .item-buttons .btn.btn-fill {
     width: 125px;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
   }
   .catalog-list[data-type=line] .prod-item .prod-item__bottom .item-buttons .btn-transp {
     margin-left: 40px;
