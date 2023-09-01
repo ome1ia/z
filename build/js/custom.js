@@ -734,4 +734,14 @@ $(document).ready(function () {
         evt.preventDefault();
     });
 
+        // Три точки в адресе доставки
+    $('.corner-controls').on('click', function() {
+        if( $(this).hasClass('is-active') ) {
+            $(this).removeClass('is-active');
+        } else {
+            $('.corner-controls').removeClass('is-active');
+            $(this).addClass('is-active');
+        }
+    })
+
 });
