@@ -1282,7 +1282,7 @@
     .top-menu {
         ul.top-menu_visible {
             li{
-                width: 30% !important;
+                width: 33% !important;
                 float: left;
             }
         }
@@ -1480,8 +1480,11 @@
     }
 
     .prod-counter_btn {
-        //width: 27px;
         padding: 0;
+
+        .catalog-list[data-type=line] & {
+            width: 27px;
+        }
     }
 
     .m-delivery-item, .m-delivery-add{margin-bottom: 20px; min-height: 172px;}
