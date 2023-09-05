@@ -82,7 +82,7 @@
                         <a href="#"><span>Заменители молока</span></a>
                         <a href="#"><span>Сухой корм</span></a>
                         <a href="#"><span>Влажный корм</span></a>
-                        <button class="js-more more">Ещё 3 категории</button>
+                        <button class="more">Ещё 3 категории</button>
                     </div>
                 </div>
 
@@ -163,7 +163,7 @@
                         <a href="#"><span>Бассейны</span></a>
                         <a href="#"><span>Сухой корм</span></a>
                         <a href="#"><span>Влажный корм</span></a>
-                        <button class="js-more more">Ещё 3 категории</button>
+                        <button class="more">Ещё 3 категории</button>
                     </div>
                 </div>
 
@@ -172,30 +172,6 @@
     </div>
 </div>
 <script>
-    // $(document).ready(function(){
-    //     $('.js-more').one('click', function(){
-    //         $(this).next().addClass('--is-shown');
-    //         $(this).hide();
-    //     })
-    // });
-    $(document).ready(function() {
-    /**
-     * Развернуть/свернуть подкатегории
-     */
-    $('.js-more').on('click tap', function() {
-        if (!$(this).data('status')) {
-            $(this).parent().addClass('--is-open');
-            const moreHTML = $(this).html();
-            $(this).data('text', moreHTML);
-            $(this).html('Свернуть');
-            $(this).data('status', true);
-        } else {
-            $(this).parent().removeClass('--is-open');
-            const moreHTML = $(this).data('text');
-            $(this).html(moreHTML);
-            $(this).data('status', false);
-        }
-    });
-});
+
 </script>
 //= template/footer.html
