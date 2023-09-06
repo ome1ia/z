@@ -56,13 +56,17 @@ function checkCookies() {
 //Жёлтая лапа в шапке
 function checkYellowWarning() {
     let cookietopWarning = localStorage.getItem('topWarning');
-    let cookietopWarningBtn = document.querySelector('.js-warningBtn');
-    let cookietopWarningHint = document.getElementById('top_warning');
+    const cookietopWarningBtn = document.querySelector('.js-warningBtn');
+    const cookietopWarningHint = document.getElementById('top_warning');
+    const cookietopWarningBtnMobile = document.querySelectorAll('.js-warningBtnMobile');
+    const cookietopWarningHintMobile = document.querySelectorAll('.js-topWarningMobile');
     
 
     if (!cookietopWarning || (+cookietopWarning + 31536000000) < Date.now()) {
         cookietopWarningHint.classList.add('__active');
         cookietopWarningBtn.classList.add('__active');
+        cookietopWarningBtnMobile.forEach(btn => btn.classList.add('__active'));
+        cookietopWarningHintMobile.forEach(hint => hint.classList.add('__active'));
     }
 
     cookietopWarningBtn.addEventListener('click', function (evt) {
@@ -70,14 +74,32 @@ function checkYellowWarning() {
         cookietopWarningHint.classList.toggle('__active');
         this.classList.toggle('__active');
         evt.stopPropagation();
-
-        if(window.innerWidth < 1024) {
-            document.body.addEventListener('click', function () {
-                cookietopWarningBtn.classList.remove('__active');
-                cookietopWarningHint.classList.remove('__active');
-            }, { once: true });
-        }
     });
+
+    cookietopWarningBtnMobile.forEach(el => {
+        el.addEventListener('click', function (evt) {
+            localStorage.setItem('topWarning', Date.now());
+            cookietopWarningHintMobile.forEach(hint => {
+                hint.classList.toggle('__active');
+            });
+            cookietopWarningBtnMobile.forEach(btn => {
+                btn.classList.toggle('__active');
+            });
+            evt.stopPropagation();
+        })
+    });
+
+    if(window.innerWidth < 1024) {
+        document.body.addEventListener('click', function () {
+            localStorage.setItem('topWarning', Date.now());
+            cookietopWarningHintMobile.forEach(hint => {
+                hint.classList.remove('__active');
+            });
+            cookietopWarningBtnMobile.forEach(btn => {
+                btn.classList.remove('__active');
+            });
+        }, { once: true });
+    }
 }
 
 

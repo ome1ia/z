@@ -469,6 +469,9 @@ ul.menu ul.dropdown-menu {
 .extra-schedule{
     position: relative;
 }
+.extra-schedule--mobile-top {
+    display: none;
+}
 .es-button{
     width: 20px;
     height: 20px;
@@ -481,6 +484,12 @@ ul.menu ul.dropdown-menu {
     animation: a 1.5s linear infinite;   
     &.__active{
         animation: none;
+    }
+
+    &.es-button--mobile {
+        width: 24px;
+        height: 24px;
+        background-image: url(../img/svg/warning-red.svg);
     }
 }
  @keyframes a {
@@ -500,7 +509,8 @@ ul.menu ul.dropdown-menu {
          transform: scale(1)
      }
  }
-.es-hint{
+.es-hint,
+.es-hint--mobile{
     position: absolute;
     color: #000;
     background: $yell;
@@ -546,6 +556,20 @@ ul.menu ul.dropdown-menu {
         opacity: 1;
         visibility: visible;
         pointer-events: all;
+    }
+}
+
+.es-hint--mobile {
+    left: auto;
+    right: 5px;
+
+    &:before {
+        right: 10px;
+        left: auto;
+    }
+
+    &.__active{
+        z-index: 200;
     }
 }
 
