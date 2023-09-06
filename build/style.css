@@ -7200,7 +7200,7 @@ h3.shop-list__title {
     padding-right: 0;
   }
   .catalog-aside.mobile-visible .aside-filter {
-    padding: 30px;
+    padding: 30px 30px 100px;
     height: calc(100vh - 115px);
     overflow-y: auto;
   }
