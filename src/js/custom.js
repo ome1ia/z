@@ -172,6 +172,10 @@ $(document).ready(function () {
     $('#hideMobleMenu').on('click', function () {
         $('.h-top').fadeOut();
         $body.css('overflow', 'visible');
+
+        setTimeout(function() {
+            $('.h-top').css('display', '');
+        }, 3000)
     });
 
 
