@@ -648,8 +648,9 @@
         }
     }
     .extra-schedule{
-        position: absolute;
-        top: calc(100% + 20px);
+        //position: absolute;
+        //top: calc(100% + 20px);
+        display: none;
     }
     .es-button{
         margin-left: 0;
