@@ -3204,6 +3204,9 @@ h3.shop-list__title {
   overflow-x: auto;
 }
 
+.catalog-brand-nav__item {
+  width: auto;
+}
 .catalog-brand-nav__item a {
   font-size: 1.3rem;
   margin: 0 2px;
