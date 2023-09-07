@@ -5714,10 +5714,9 @@ h3.shop-list__title {
   height: 100%;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
-  transition: -webkit-transform 0.25s ease-out;
-  transition: transform 0.25s ease-out;
-  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
   position: absolute;
+  left: 0;
+  top: 0;
   background: #fff;
 }
 .m-catalog-menu-page.current .catalog-aside__top__mobile {

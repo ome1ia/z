@@ -1939,8 +1939,10 @@
     width: 100%;
     height: 100%;
     transform: translateX(-100%);
-    transition: transform 0.25s ease-out;
+    //transition: transform 0.25s ease-out;
     position: absolute;
+    left: 0;
+    top: 0;
     background: #fff;
     &.current .catalog-aside__top__mobile{
         display: flex;
