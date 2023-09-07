@@ -1695,6 +1695,16 @@
     }  
 }
 
+@media (max-width: 375px) {
+    .catalog-list .prod-item__bottom {
+        .btn-transp {
+            // for "Сообщить о поступлении" btn
+            white-space: normal;
+            margin-bottom: 0;
+        }
+    }
+}
+
 @media (min-width: 1024px){
     .cust-scroll{
         @include scrollbar;

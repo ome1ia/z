@@ -8788,6 +8788,12 @@ h3.shop-list__title {
     z-index: 9999999;
   }
 }
+@media (max-width: 375px) {
+  .catalog-list .prod-item__bottom .btn-transp {
+    white-space: normal;
+    margin-bottom: 0;
+  }
+}
 @media (min-width: 1024px) {
   .cust-scroll {
     scrollbar-color: lightgrey #fbfbfb;
