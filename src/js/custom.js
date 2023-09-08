@@ -439,6 +439,8 @@ $(document).ready(function () {
 
     $("[data-mask]").mask("+7(999) 999-99-99");
 
+    $(".js-code").mask("9999", {placeholder:"-"});
+
     $('.js-button-save').each(function() {
         const button = $(this);
         const form = button.parents('form');

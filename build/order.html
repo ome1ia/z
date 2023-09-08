@@ -602,8 +602,13 @@
                     <div class="form-row">
                         <input class="js-order-email" type="text" placeholder="Email" name="email" />
                     </div>
-                    <div class="form-row flex-jcsb">
+                    <!--div class="form-row flex-jcsb">
                         <div class="form-cell __full"><input class="js-order-phone" type="text" placeholder="Ваш номер телефона*" name="phone" data-mask data-required /></div>
+                    </div-->
+                    <div class="form-row flex-jcsb">
+                        <div class="form-cell __half">
+                            <input class="js-order-phone" type="text" placeholder="Ваш номер телефона*" name="phone" value="" data-mask="">
+                        </div><div class="form-cell __half"><input type="text" name="code" class="sms-code js-order-code-input js-code" value="" placeholder="Введите код" maxlength="4" autocomplete="off"></div>
                     </div>
                     <div class="form-row">
                         <div class="sms-note js-sms-note" style="display: none;">Для подтверждения номера Введите код, отправленный в sms на номер </div>
