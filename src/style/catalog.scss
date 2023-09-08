@@ -596,6 +596,9 @@
 .sections-item.--is-open a, .sections-item.--is-open li {
     display: block;
 }
+.sections-item.--is-open .sections-item__title a {
+    display: inline;
+}
 .sections-item__more-item {
     display: none;
     &.--is-shown {

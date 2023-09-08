@@ -4248,6 +4248,10 @@ h3.shop-list__title {
   display: block;
 }
 
+.sections-item.--is-open .sections-item__title a {
+  display: inline;
+}
+
 .sections-item__more-item {
   display: none;
 }
