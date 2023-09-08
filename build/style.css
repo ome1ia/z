@@ -5727,6 +5727,7 @@ h3.shop-list__title {
   left: 0;
   top: 0;
   background: #fff;
+  will-change: transform;
 }
 .m-catalog-menu-page.current .catalog-aside__top__mobile {
   display: -ms-flexbox;

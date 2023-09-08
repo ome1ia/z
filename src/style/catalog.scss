@@ -1947,6 +1947,7 @@
     left: 0;
     top: 0;
     background: #fff;
+    will-change: transform;
     &.current .catalog-aside__top__mobile{
         display: flex;
     }
