@@ -597,7 +597,7 @@
     display: block;
 }
 .sections-item.--is-open .sections-item__title a {
-    display: inline;
+    display: -webkit-box;
 }
 .sections-item__more-item {
     display: none;

@@ -4249,7 +4249,7 @@ h3.shop-list__title {
 }
 
 .sections-item.--is-open .sections-item__title a {
-  display: inline;
+  display: -webkit-box;
 }
 
 .sections-item__more-item {
