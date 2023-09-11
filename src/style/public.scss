@@ -244,10 +244,18 @@
 }
 .shop-list-and-map__list{
     height: 800px;
+    &.--shops-page {
+        margin-top: -30px;
+
+        .shop-list {
+            padding-top: 30px;
+        }
+    }
     .mCSB_scrollTools{
         right: -7px;
     }
 }
+
 .shop-filter__types{
     display: flex;
     flex-wrap: wrap;

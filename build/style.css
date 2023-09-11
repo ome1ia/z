@@ -2353,6 +2353,12 @@ ul.menu ul.dropdown-menu li a {
 .shop-list-and-map__list {
   height: 800px;
 }
+.shop-list-and-map__list.--shops-page {
+  margin-top: -30px;
+}
+.shop-list-and-map__list.--shops-page .shop-list {
+  padding-top: 30px;
+}
 .shop-list-and-map__list .mCSB_scrollTools {
   right: -7px;
 }
