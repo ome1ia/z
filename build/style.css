@@ -5716,6 +5716,7 @@ h3.shop-list__title {
   left: 0;
   margin: auto;
   z-index: 119;
+  will-change: display;
 }
 
 .m-catalog-menu-page {
