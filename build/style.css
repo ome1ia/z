@@ -6168,28 +6168,28 @@ h3.shop-list__title {
   width: 300px;
 }
 
-.modal {
+.modal, .modal-content {
   display: none;
   border-radius: 10px;
   padding: 40px 70px;
   overflow: hidden;
 }
-.modal.modal-sm {
+.modal.modal-sm, .modal-sm.modal-content {
   width: 440px;
 }
-.modal .--center {
+.modal .--center, .modal-content .--center {
   text-align: center;
 }
-.modal.modal-delivery {
+.modal.modal-delivery, .modal-delivery.modal-content {
   width: 794px;
 }
-.modal.modal-delivery-map {
+.modal.modal-delivery-map, .modal-delivery-map.modal-content {
   width: 1094px;
 }
-.modal.modal-pet {
+.modal.modal-pet, .modal-pet.modal-content {
   width: 709px;
 }
-.modal.modal-bg {
+.modal.modal-bg, .modal-bg.modal-content {
   width: 557px;
   padding: 40px 45px;
   background-color: transparent;
@@ -6197,6 +6197,10 @@ h3.shop-list__title {
   background-repeat: no-repeat;
   min-height: 430px;
   border-radius: 20px;
+}
+
+.modal-content {
+  display: block;
 }
 
 .modal-inner .delivery-note {
@@ -7596,7 +7600,7 @@ h3.shop-list__title {
   .pagination__item span svg {
     width: 11px;
   }
-  .modal.modal-delivery {
+  .modal.modal-delivery, .modal-delivery.modal-content {
     width: auto;
   }
 }
@@ -8198,7 +8202,7 @@ h3.shop-list__title {
   .breadcrumbs__list {
     margin-bottom: 15px;
   }
-  .modal.modal-delivery {
+  .modal.modal-delivery, .modal-delivery.modal-content {
     padding: 20px 20px;
   }
   .m-delivery-grid {
@@ -8680,7 +8684,7 @@ h3.shop-list__title {
   .shop-map-box .ymaps-2-1-79-balloon {
     border-radius: 0;
   }
-  .modal {
+  .modal, .modal-content {
     position: fixed;
     top: 0;
     left: 0;
@@ -8688,37 +8692,37 @@ h3.shop-list__title {
     border-radius: 0;
     padding: 0 0;
   }
-  .modal.mobile-bottom {
+  .modal.mobile-bottom, .mobile-bottom.modal-content {
     top: auto;
     bottom: 0;
     height: auto;
   }
-  .modal.mobile-bottom .modal-title {
+  .modal.mobile-bottom .modal-title, .mobile-bottom.modal-content .modal-title {
     position: absolute;
   }
-  .modal .modal-sm {
+  .modal .modal-sm, .modal-content .modal-sm {
     width: auto;
   }
-  .modal.modal-bg {
+  .modal.modal-bg, .modal-bg.modal-content {
     -webkit-transform: translateY(30px);
             transform: translateY(30px);
     padding: 40px 35px;
   }
-  .modal.modal-bg .modal-inner {
+  .modal.modal-bg .modal-inner, .modal-bg.modal-content .modal-inner {
     padding: 30px 0 200px;
     text-align: center;
   }
-  .modal.modal-bg .form-row button.btn {
+  .modal.modal-bg .form-row button.btn, .modal-bg.modal-content .form-row button.btn {
     height: auto;
   }
-  .modal .m-bonus__fields {
+  .modal .m-bonus__fields, .modal-content .m-bonus__fields {
     width: 100%;
     margin-bottom: 0;
   }
-  .modal .m-bonus__bottom {
+  .modal .m-bonus__bottom, .modal-content .m-bonus__bottom {
     max-width: 100%;
   }
-  .modal .modal-title {
+  .modal .modal-title, .modal-content .modal-title {
     padding: 0 15px;
     font-size: 16px;
     height: 60px;
@@ -8736,16 +8740,16 @@ h3.shop-list__title {
     z-index: 10;
     background-color: #FFFFFF;
   }
-  .modal .modal-title.--center {
+  .modal .modal-title.--center, .modal-content .modal-title.--center {
     text-align: left;
   }
-  .modal .modal-inner {
+  .modal .modal-inner, .modal-content .modal-inner {
     height: 100%;
     padding: 80px 15px 20px;
     position: relative;
     overflow-y: auto;
   }
-  .modal.modal-delivery {
+  .modal.modal-delivery, .modal-delivery.modal-content {
     padding: 0 0;
   }
   .form-row button.btn {

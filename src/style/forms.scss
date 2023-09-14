@@ -179,6 +179,10 @@
         border-radius: 20px;
     }
 }
+.modal-content {
+    @extend .modal;
+    display: block;
+}
 .modal-inner{
     .delivery-note{
         padding: 5px;

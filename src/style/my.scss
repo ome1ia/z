@@ -17,6 +17,10 @@ body {
         -webkit-filter: blur(0.6px);
             filter: blur(0.6px);
     }
+//    &.modal-open *:not(.modal--bootstrap) {
+//        -webkit-filter: blur(0.6px);
+//            filter: blur(0.6px);
+//    }
     
 }
 main{
