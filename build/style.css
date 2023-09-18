@@ -4365,7 +4365,7 @@ h3.shop-list__title {
 
 .afb-checkboxes {
   margin: 20px 0;
-  max-height: 320px;
+  max-height: 260px;
 }
 .afb-checkboxes .count {
   position: absolute;
@@ -4377,6 +4377,9 @@ h3.shop-list__title {
 }
 .afb-checkboxes .not-found {
   color: #5f6c8b;
+}
+.afb-checkboxes .custom-checkbox label {
+  margin-right: 32px;
 }
 
 .aside-filter__buttons .btn {

@@ -701,7 +701,7 @@
 }
 .afb-checkboxes{
     margin: 20px 0;
-    max-height: 320px;
+    max-height: 260px;
     .count{
         position: absolute;
         top: 0;
@@ -712,6 +712,10 @@
     }
     .not-found{
         color: $text_grey
+    }
+
+    .custom-checkbox label {
+        margin-right: 32px;
     }
 }
 .aside-filter__buttons{
