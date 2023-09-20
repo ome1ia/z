@@ -618,7 +618,46 @@
 }
 .aside-filter__block{
     margin-bottom: 20px;
+
+    &.mobile-accordeon{
+        border-bottom: 1px solid #D0D8E9;
+        &:last-child{
+            border: none;
+        }
+        .brands-filter{
+            margin-bottom: 20px;
+        }
+        .afb-title{
+            cursor: pointer;
+            &::after{
+                display: block;
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTEiIGhlaWdodD0iNyIgdmlld0JveD0iMCAwIDExIDciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHg9IjUuMzAyNzMiIHk9IjAuMDAzOTA2MjUiIHdpZHRoPSI3LjUwMTExIiBoZWlnaHQ9IjIiIHJ4PSIxIiB0cmFuc2Zvcm09InJvdGF0ZSg0NSA1LjMwMjczIDAuMDAzOTA2MjUpIiBmaWxsPSIjNTg2NTgwIi8+CjxyZWN0IHk9IjUuMzA4NTkiIHdpZHRoPSI3LjUwNjk3IiBoZWlnaHQ9IjIiIHJ4PSIxIiB0cmFuc2Zvcm09InJvdGF0ZSgtNDUgMCA1LjMwODU5KSIgZmlsbD0iIzU4NjU4MCIvPgo8L3N2Zz4K);
+                width: 11px;
+                height: 7px;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                transform: rotate(180deg);
+            }
+            &.is-opened::after{
+                transform: rotate(0deg);
+            }
+        }
+        .afb-checkboxes{
+            margin-top: 0;
+        }
+        .afb-inner{
+            display: none;
+        }
+    }
 }
+
 .afb__more{
     color: $green;
     text-align: right;
@@ -659,8 +698,12 @@
 }
 .afb-checkboxes{
     margin: 20px 0;
-    max-height: 260px;
-    overflow: hidden;
+
+    &.mCustomScrollbar {
+        max-height: 260px;
+        overflow: hidden;
+    }
+
     .count{
         position: absolute;
         top: 0;
@@ -2165,40 +2208,8 @@
 @media (max-width: 1140px) {
     .aside-filter__block{
         &.mobile-accordeon{
-            border-bottom: 1px solid #D0D8E9;
-            &:last-child{
-                border: none;
-            }
-            .brands-filter{
-                margin-bottom: 20px;
-            }
-            .afb-title{
-                &::after{
-                    display: block;
-                    content: '';
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                    bottom: 0;
-                    margin: auto;
-                    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTEiIGhlaWdodD0iNyIgdmlld0JveD0iMCAwIDExIDciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHg9IjUuMzAyNzMiIHk9IjAuMDAzOTA2MjUiIHdpZHRoPSI3LjUwMTExIiBoZWlnaHQ9IjIiIHJ4PSIxIiB0cmFuc2Zvcm09InJvdGF0ZSg0NSA1LjMwMjczIDAuMDAzOTA2MjUpIiBmaWxsPSIjNTg2NTgwIi8+CjxyZWN0IHk9IjUuMzA4NTkiIHdpZHRoPSI3LjUwNjk3IiBoZWlnaHQ9IjIiIHJ4PSIxIiB0cmFuc2Zvcm09InJvdGF0ZSgtNDUgMCA1LjMwODU5KSIgZmlsbD0iIzU4NjU4MCIvPgo8L3N2Zz4K);
-                    width: 11px;
-                    height: 7px;
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    background-size: contain;
-                    transform: rotate(180deg);
-                }
-                &.is-opened::after{
-                    transform: rotate(0deg);
-                }
-            }
             .afb-checkboxes{
-                margin-top: 0;
                 max-height: 100%;
-            }
-            .afb-inner{
-                display: none;
             }
         }
         &.js-mobile-accordeon{

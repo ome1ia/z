@@ -4280,6 +4280,45 @@ h3.shop-list__title {
 .aside-filter__block {
   margin-bottom: 20px;
 }
+.aside-filter__block.mobile-accordeon {
+  border-bottom: 1px solid #D0D8E9;
+}
+.aside-filter__block.mobile-accordeon:last-child {
+  border: none;
+}
+.aside-filter__block.mobile-accordeon .brands-filter {
+  margin-bottom: 20px;
+}
+.aside-filter__block.mobile-accordeon .afb-title {
+  cursor: pointer;
+}
+.aside-filter__block.mobile-accordeon .afb-title::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTEiIGhlaWdodD0iNyIgdmlld0JveD0iMCAwIDExIDciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHg9IjUuMzAyNzMiIHk9IjAuMDAzOTA2MjUiIHdpZHRoPSI3LjUwMTExIiBoZWlnaHQ9IjIiIHJ4PSIxIiB0cmFuc2Zvcm09InJvdGF0ZSg0NSA1LjMwMjczIDAuMDAzOTA2MjUpIiBmaWxsPSIjNTg2NTgwIi8+CjxyZWN0IHk9IjUuMzA4NTkiIHdpZHRoPSI3LjUwNjk3IiBoZWlnaHQ9IjIiIHJ4PSIxIiB0cmFuc2Zvcm09InJvdGF0ZSgtNDUgMCA1LjMwODU5KSIgZmlsbD0iIzU4NjU4MCIvPgo8L3N2Zz4K);
+  width: 11px;
+  height: 7px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.aside-filter__block.mobile-accordeon .afb-title.is-opened::after {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+.aside-filter__block.mobile-accordeon .afb-checkboxes {
+  margin-top: 0;
+}
+.aside-filter__block.mobile-accordeon .afb-inner {
+  display: none;
+}
 
 .afb__more {
   color: #57C224;
@@ -4325,6 +4364,8 @@ h3.shop-list__title {
 
 .afb-checkboxes {
   margin: 20px 0;
+}
+.afb-checkboxes.mCustomScrollbar {
   max-height: 260px;
   overflow: hidden;
 }
@@ -5972,42 +6013,8 @@ h3.shop-list__title {
 }
 
 @media (max-width: 1140px) {
-  .aside-filter__block.mobile-accordeon {
-    border-bottom: 1px solid #D0D8E9;
-  }
-  .aside-filter__block.mobile-accordeon:last-child {
-    border: none;
-  }
-  .aside-filter__block.mobile-accordeon .brands-filter {
-    margin-bottom: 20px;
-  }
-  .aside-filter__block.mobile-accordeon .afb-title::after {
-    display: block;
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTEiIGhlaWdodD0iNyIgdmlld0JveD0iMCAwIDExIDciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHg9IjUuMzAyNzMiIHk9IjAuMDAzOTA2MjUiIHdpZHRoPSI3LjUwMTExIiBoZWlnaHQ9IjIiIHJ4PSIxIiB0cmFuc2Zvcm09InJvdGF0ZSg0NSA1LjMwMjczIDAuMDAzOTA2MjUpIiBmaWxsPSIjNTg2NTgwIi8+CjxyZWN0IHk9IjUuMzA4NTkiIHdpZHRoPSI3LjUwNjk3IiBoZWlnaHQ9IjIiIHJ4PSIxIiB0cmFuc2Zvcm09InJvdGF0ZSgtNDUgMCA1LjMwODU5KSIgZmlsbD0iIzU4NjU4MCIvPgo8L3N2Zz4K);
-    width: 11px;
-    height: 7px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-  }
-  .aside-filter__block.mobile-accordeon .afb-title.is-opened::after {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
   .aside-filter__block.mobile-accordeon .afb-checkboxes {
-    margin-top: 0;
     max-height: 100%;
-  }
-  .aside-filter__block.mobile-accordeon .afb-inner {
-    display: none;
   }
   .aside-filter__block.js-mobile-accordeon .custom-checkbox.--hidden {
     display: none;
