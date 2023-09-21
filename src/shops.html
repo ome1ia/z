@@ -73,10 +73,10 @@
     <section class="shop-list-and-map">
         <div class="shop-map-l">
             <div class="shop-search">
-                <div class="search-inner">
+                <div class="search-inner autocomplete">
                     <input list="shops_adress" autocomplete="false" type="text" name="shop-s"
                         placeholder="Введите адрес или станцию метро" class="shop-input" id="shop-input">
-                        <datalist id="shops_adress"></datalist>
+                        <div id="shops_adress" class="autocomplete__list"></div>
                     <button type="submit" class="search-shop__btn" name="s">
                         <svg><use href="sprite/sprite.svg#search"></use></svg>
                     </button>

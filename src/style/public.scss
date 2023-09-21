@@ -208,6 +208,40 @@
     }
 }
 
+.autocomplete {
+    position: relative;
+
+    &__list {
+        position: absolute;
+        top: 100%;
+        left: 5px;
+        right: 5px;
+        border: 1px solid $grey;
+        border-bottom: none;
+        border-top: 0;
+        z-index: 99;
+
+        & div {
+            padding: 10px;
+            cursor: pointer;
+            background-color: #fff;
+            border-bottom: 1px solid $grey;
+
+            &:hover,
+            &.--active {
+                background: $field_bg;
+            }
+        }
+    }
+}
+
+.shop-input {
+    position: relative;
+    &:focus {
+        z-index: 99;
+    }
+}
+
 .shop-list-and-map{
     display: grid;
     grid-template-columns: auto 66%;

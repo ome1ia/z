@@ -2313,6 +2313,36 @@ ul.menu ul.dropdown-menu li a {
   margin-left: 10px;
 }
 
+.autocomplete {
+  position: relative;
+}
+.autocomplete__list {
+  position: absolute;
+  top: 100%;
+  left: 5px;
+  right: 5px;
+  border: 1px solid #a4b3d3;
+  border-bottom: none;
+  border-top: 0;
+  z-index: 99;
+}
+.autocomplete__list div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #a4b3d3;
+}
+.autocomplete__list div:hover, .autocomplete__list div.--active {
+  background: #F8F8FA;
+}
+
+.shop-input {
+  position: relative;
+}
+.shop-input:focus {
+  z-index: 99;
+}
+
 .shop-list-and-map {
   display: grid;
   grid-template-columns: auto 66%;

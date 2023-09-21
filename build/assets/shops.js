@@ -9,7 +9,6 @@ window.addEventListener("load", (e) => {
         el.addEventListener('change', function (e) {
             let res = getselectetdDataoption()
             if (document.getElementById(res)) {
-                console.log(res)
                 showShop(res)
                 cleanData()
             }
@@ -49,10 +48,11 @@ window.addEventListener("load", (e) => {
 
             let parent_el = document.getElementById(parent_el_id)
             let el_input = document.getElementById(input_el_id)
+            const options = document.querySelectorAll(`#${parent_el_id} div`);
             let res = false
-            for (var i = 0; i < parent_el.options.length; i++) {
-                if (parent_el.options[i].value == el_input.value) {
-                    res = parent_el.options[i].dataset.shop_id;
+            for (var i = 0; i < options.length; i++) {
+                if (options[i].innerHTML == el_input.value) {
+                    res = options[i].dataset.shop_id;
                     break;
                 }
             }
@@ -67,11 +67,18 @@ window.addEventListener("load", (e) => {
             for (const key in res) {
                 let item = res[key]
 
-                let option = document.createElement('option');
-                option.value = item[item['data_index']]
+                let option = document.createElement('div');
+                option.innerHTML = item[item['data_index']]
                 //   option.innerHTML = item['data_index'] + ": " + item[item['data_index']]
                 option.dataset.shop_id = item['shop_id']
                 parent_el.appendChild(option);
+
+                option.addEventListener('click', function() {
+                    const res = this.dataset.shop_id;
+                    document.getElementById('shop-input').value = this.innerHTML;
+                    showShop(res)
+                    cleanData()
+                });
             }
         }
 
